@@ -6,16 +6,18 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 
+// Cards now route to the per-brand SEO landing pages (/reparatur/<slug>)
+// rather than straight to /preisrechner or /buchen. The landing page owns
+// the brand context and forwards onwards to the right CTA from there.
 const BRANDS = [
-  { id: "apple",   href: "/preisrechner?brand=apple-iphone",    label: "Apple",   count: 97,  hasOnlinePrices: true,  bg: "from-zinc-900 to-zinc-800" },
-  { id: "samsung", href: "/preisrechner?brand=samsung-galaxy",  label: "Samsung", count: 122, hasOnlinePrices: true,  bg: "from-blue-950 to-blue-900" },
-  // Brands without online pricing still routed to /buchen for individual quote
-  { id: "xiaomi",  href: "/buchen?device=Xiaomi",                label: "Xiaomi",  count: 60,  hasOnlinePrices: false, bg: "from-orange-950 to-orange-900" },
-  { id: "google",  href: "/buchen?device=Google+Pixel",          label: "Google",  count: 24,  hasOnlinePrices: false, bg: "from-sky-950 to-sky-900" },
-  { id: "huawei",  href: "/buchen?device=Huawei",                label: "Huawei",  count: 38,  hasOnlinePrices: false, bg: "from-red-950 to-red-900" },
-  { id: "oneplus", href: "/buchen?device=OnePlus",               label: "OnePlus", count: 28,  hasOnlinePrices: false, bg: "from-red-900 to-zinc-900" },
-  { id: "sony",    href: "/buchen?device=Sony+Xperia",           label: "Sony",    count: 18,  hasOnlinePrices: false, bg: "from-slate-900 to-zinc-900" },
-  { id: "nokia",   href: "/buchen?device=Nokia",                 label: "Nokia",   count: 22,  hasOnlinePrices: false, bg: "from-blue-900 to-zinc-900" },
+  { id: "apple",   href: "/reparatur/apple",   label: "Apple",   count: 97,  hasOnlinePrices: true,  bg: "from-zinc-900 to-zinc-800" },
+  { id: "samsung", href: "/reparatur/samsung", label: "Samsung", count: 122, hasOnlinePrices: true,  bg: "from-blue-950 to-blue-900" },
+  { id: "xiaomi",  href: "/reparatur/xiaomi",  label: "Xiaomi",  count: 60,  hasOnlinePrices: false, bg: "from-orange-950 to-orange-900" },
+  { id: "google",  href: "/reparatur/google",  label: "Google",  count: 24,  hasOnlinePrices: false, bg: "from-sky-950 to-sky-900" },
+  { id: "huawei",  href: "/reparatur/huawei",  label: "Huawei",  count: 38,  hasOnlinePrices: false, bg: "from-red-950 to-red-900" },
+  { id: "oneplus", href: "/reparatur/oneplus", label: "OnePlus", count: 28,  hasOnlinePrices: false, bg: "from-red-900 to-zinc-900" },
+  { id: "sony",    href: "/reparatur/sony",    label: "Sony",    count: 18,  hasOnlinePrices: false, bg: "from-slate-900 to-zinc-900" },
+  { id: "nokia",   href: "/reparatur/nokia",   label: "Nokia",   count: 22,  hasOnlinePrices: false, bg: "from-blue-900 to-zinc-900" },
 ] as const;
 
 export function BrandGallery() {

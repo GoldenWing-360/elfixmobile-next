@@ -277,5 +277,54 @@
     "terms": "Terms"
   },
   "calc_preview_disclaimer": "incl. VAT, parts and labour. 12 months warranty.",
-  "brand_card_cta": "Repair"
+  "brand_card_cta": "Repair",
+  "brand_page": {
+    "eyebrow": "{brand} REPAIR",
+    "title_prefix": "Express repair for",
+    "title_suffix": "in Vienna Aspern.",
+    "sub": "Express repair for {brand} ({search}) in Vienna Seestadt. Original or premium refurbished spare parts, 12-month warranty on part and labour.",
+    "trust_warranty": "12-month warranty",
+    "trust_express": "Express in 30 minutes",
+    "trust_parts": "Original or premium refurbished parts",
+    "trust_rating": "4.4 / 5 • 294 reviews",
+    "table_eyebrow": "Pricing",
+    "table_headline": "{brand} repair prices at a glance",
+    "table_sub": "{count} models, fixed prices in {currency} – part and labour included.",
+    "table_col_model": "Model",
+    "table_more": "+ {count} more models in the price calculator",
+    "table_cta_all": "View all models",
+    "quote_eyebrow": "Quote on request",
+    "quote_headline": "{brand} repair – quote in under 1 hour",
+    "quote_sub": "For {brand} ({count}+ models) we draft the quote manually because spare-part prices vary widely between models. You will receive a written estimate the same day.",
+    "quote_primary_cta": "Request a repair quote",
+    "quote_secondary_cta": "Call us",
+    "quote_bullet_diagnose": "Diagnosis & quote always free of charge",
+    "quote_bullet_warranty": "12-month warranty on part and labour",
+    "quote_bullet_pickup": "Free pickup in Vienna and surroundings (from € 70 repair value)",
+    "quote_bullet_walkin": "Walk-in: Mon–Sat 9 a.m.–7 p.m., Sun 9 a.m.–6 p.m.",
+    "faq": {
+      "eyebrow": "FAQ",
+      "headline": "Common questions about {brand} repair",
+      "q_express": {
+        "q": "How long does a {brand} repair take?",
+        "a": "Display and battery swaps take about 30 minutes (express). More complex repairs (mainboard, water damage) need 24–72 hours – we always give you a firm time in advance."
+      },
+      "q_warranty": {
+        "q": "What warranty do I get?",
+        "a": "12 months on part and labour for every {brand} repair. Original display parts additionally carry the manufacturer warranty."
+      },
+      "q_originalparts": {
+        "q": "Do you use original parts for {brand}?",
+        "a": "Yes – we use original refurbished displays (factory-restored by the manufacturer) or certified premium aftermarket parts. Pure OEM parts available on request for an upcharge."
+      },
+      "q_pickup": {
+        "q": "Do you collect the device?",
+        "a": "Free pickup and return for repairs from € 70 within Vienna and Lower Austria. Otherwise drop by (Maria-Tusch-Strasse 17/1, 1220 Vienna) or ship by post."
+      }
+    },
+    "meta": {
+      "title": "{brand} Repair Vienna | Express 30 min | EL Fix Mobile",
+      "description": "Express {brand} repair in Vienna 1220 Aspern. {count}+ models, 12-month warranty, original or premium refurbished parts. 4.4/5 (294 reviews)."
+    }
+  }
 }

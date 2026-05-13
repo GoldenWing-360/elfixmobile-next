@@ -277,5 +277,54 @@
     "terms": "AGB"
   },
   "calc_preview_disclaimer": "inkl. MwSt., Ersatzteil und Einbau. 12 Monate Garantie.",
-  "brand_card_cta": "Reparatur"
+  "brand_card_cta": "Reparatur",
+  "brand_page": {
+    "eyebrow": "{brand} REPARATUR",
+    "title_prefix": "Express-Reparatur für",
+    "title_suffix": "in Wien Aspern.",
+    "sub": "Express-Reparatur für {brand} ({search}) in Wien Seestadt. Original- oder Premium-Refurbished-Ersatzteile, 12 Monate Garantie auf Teil und Einbau.",
+    "trust_warranty": "12 Monate Garantie",
+    "trust_express": "Express in 30 Minuten",
+    "trust_parts": "Originalteile oder Premium-Refurbished",
+    "trust_rating": "4,4 / 5 • 294 Bewertungen",
+    "table_eyebrow": "Preise",
+    "table_headline": "{brand}-Preise auf einen Blick",
+    "table_sub": "{count} Modelle, Festpreise in {currency} – inklusive Ersatzteil und Einbau.",
+    "table_col_model": "Modell",
+    "table_more": "+ {count} weitere Modelle im Preisrechner",
+    "table_cta_all": "Alle Modelle ansehen",
+    "quote_eyebrow": "Auf Anfrage",
+    "quote_headline": "{brand}-Reparatur – Angebot in unter 1 Stunde",
+    "quote_sub": "Für {brand} ({count}+ Modelle) erstellen wir das Angebot manuell, weil die Ersatzteil-Preise stark zwischen den Modellen variieren. Du bekommst eine schriftliche Kostenschätzung noch am gleichen Tag.",
+    "quote_primary_cta": "Reparatur anfragen",
+    "quote_secondary_cta": "Direkt anrufen",
+    "quote_bullet_diagnose": "Diagnose & Kostenvoranschlag immer kostenlos",
+    "quote_bullet_warranty": "12 Monate Garantie auf Ersatzteil und Einbau",
+    "quote_bullet_pickup": "Gratis Abholung in Wien & Umland (ab € 70 Reparaturwert)",
+    "quote_bullet_walkin": "Walk-in: Mo–Sa 9–19 Uhr, So 9–18 Uhr",
+    "faq": {
+      "eyebrow": "FAQ",
+      "headline": "Häufige Fragen zur {brand}-Reparatur",
+      "q_express": {
+        "q": "Wie lange dauert eine {brand}-Reparatur?",
+        "a": "Display- und Akkutausch in der Regel 30 Minuten Express. Komplexere Reparaturen (Mainboard, Wasserschaden) brauchen 24–72 Stunden – wir geben dir vorab eine verbindliche Zeit."
+      },
+      "q_warranty": {
+        "q": "Wie viel Garantie gibt es?",
+        "a": "12 Monate auf Ersatzteil und Einbau, gilt für alle {brand}-Reparaturen. Bei Display-Original-Teilen gilt zusätzlich die Herstellergarantie."
+      },
+      "q_originalparts": {
+        "q": "Verwendet ihr Originalteile für {brand}?",
+        "a": "Ja – wir nutzen Original-Refurbished-Displays (vom Hersteller wiederaufbereitet) oder geprüfte Premium-Nachbauteile. Auf Wunsch reine OEM-Teile gegen Aufpreis."
+      },
+      "q_pickup": {
+        "q": "Holt ihr das Gerät ab?",
+        "a": "Ab € 70 Reparaturwert gratis Abholung und Rücklieferung in Wien und NÖ-Umland. Sonst bring vorbei (Maria-Tusch-Straße 17/1, 1220 Wien) oder schicke per Post."
+      }
+    },
+    "meta": {
+      "title": "{brand} Reparatur Wien | Express 30 Min | EL Fix Mobile",
+      "description": "Express {brand}-Reparatur in Wien 1220 Aspern. {count}+ Modelle, 12 Monate Garantie, Original- oder Premium-Refurbished-Teile. 4,4/5 (294 Bewertungen)."
+    }
+  }
 }

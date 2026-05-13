@@ -277,5 +277,54 @@
     "terms": "Şartlar"
   },
   "calc_preview_disclaimer": "KDV, parça ve işçilik dahil. 12 ay garanti.",
-  "brand_card_cta": "Tamir"
+  "brand_card_cta": "Tamir",
+  "brand_page": {
+    "eyebrow": "{brand} TAMİRİ",
+    "title_prefix": "Ekspres tamir:",
+    "title_suffix": "Viyana Aspern.",
+    "sub": "Viyana Seestadt'ta {brand} ({search}) ekspres tamiri. Orijinal veya premium yenilenmiş yedek parçalar, parça ve işçiliğe 12 ay garanti.",
+    "trust_warranty": "12 ay garanti",
+    "trust_express": "30 dakikada ekspres",
+    "trust_parts": "Orijinal veya premium yenilenmiş parça",
+    "trust_rating": "4,4 / 5 • 294 yorum",
+    "table_eyebrow": "Fiyatlar",
+    "table_headline": "{brand} tamir fiyatları",
+    "table_sub": "{count} model, sabit fiyatlar ({currency}) – parça ve işçilik dahil.",
+    "table_col_model": "Model",
+    "table_more": "+ {count} model daha fiyat hesaplayıcıda",
+    "table_cta_all": "Tüm modelleri gör",
+    "quote_eyebrow": "Talep üzerine",
+    "quote_headline": "{brand} tamiri – 1 saat içinde teklif",
+    "quote_sub": "{brand} ({count}+ model) için teklifi manuel oluşturuyoruz çünkü yedek parça fiyatları modeller arasında çok değişiyor. Aynı gün yazılı fiyat teklifi alırsın.",
+    "quote_primary_cta": "Tamir teklifi al",
+    "quote_secondary_cta": "Bizi ara",
+    "quote_bullet_diagnose": "Teşhis ve teklif her zaman ücretsiz",
+    "quote_bullet_warranty": "Parça ve işçiliğe 12 ay garanti",
+    "quote_bullet_pickup": "Viyana ve çevresinde ücretsiz alım (€ 70'den itibaren)",
+    "quote_bullet_walkin": "Walk-in: Pzt–Cmt 9–19, Paz 9–18",
+    "faq": {
+      "eyebrow": "Sıkça Sorulanlar",
+      "headline": "{brand} tamiri hakkında sık sorulan sorular",
+      "q_express": {
+        "q": "{brand} tamiri ne kadar sürer?",
+        "a": "Ekran ve pil değişimi yaklaşık 30 dakika (ekspres). Daha karmaşık tamirler (ana kart, su hasarı) 24–72 saat – her zaman önceden net süre veriyoruz."
+      },
+      "q_warranty": {
+        "q": "Hangi garantiyi sunuyorsunuz?",
+        "a": "Tüm {brand} tamirleri için parça ve işçiliğe 12 ay garanti. Orijinal ekran parçaları için ayrıca üretici garantisi geçerlidir."
+      },
+      "q_originalparts": {
+        "q": "{brand} için orijinal parça kullanıyor musunuz?",
+        "a": "Evet – orijinal yenilenmiş ekranlar (üretici tarafından fabrikada yenilenen) veya sertifikalı premium muadil parçalar. Talep üzerine ek ücretle saf OEM parça."
+      },
+      "q_pickup": {
+        "q": "Cihazı alıp getiriyor musunuz?",
+        "a": "€ 70'den başlayan tamirler için Viyana ve Aağı Avusturya'da ücretsiz alım ve teslim. Aksi takdirde Maria-Tusch-Strasse 17/1, 1220 Viyana adresine getir veya posta ile gönder."
+      }
+    },
+    "meta": {
+      "title": "{brand} Tamiri Viyana | Ekspres 30 dk | EL Fix Mobile",
+      "description": "Viyana 1220 Aspern'da {brand} ekspres tamiri. {count}+ model, 12 ay garanti, orijinal veya premium yenilenmiş parça. 4,4/5 (294 yorum)."
+    }
+  }
 }
