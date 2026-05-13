@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "services": "Hizmetler",
+    "pricing": "Fiyat Hesapla",
+    "booking": "Randevu",
+    "contact": "İletişim",
+    "menu": "Menü",
+    "close": "Kapat"
+  },
+  "hero": {
+    "eyebrow": "EL FIX MOBILE - VİYANA 1220",
+    "headline_1": "iPhone'unuz.",
+    "headline_2": "Sıfır gibi.",
+    "headline_3": "30 dakikada.",
+    "subline": "Viyana'nın en hızlı tamir atölyesi. Orijinal parça. 12 ay garanti.",
+    "cta_primary": "Fiyat al",
+    "cta_secondary": "Randevu al",
+    "trust_rating": "5 üzerinden 4,4",
+    "trust_reviews": "294 Google yorumu",
+    "trust_express": "30 dk ekspres",
+    "trust_warranty": "12 ay garanti",
+    "trust_open": "7 gün açık"
+  },
+  "footer": {
+    "tagline": "2019'dan beri Viyana'nın en güvenilir tamir atölyesi.",
+    "address_label": "Adres",
+    "hours_label": "Çalışma saatleri",
+    "hours_mo_sa": "Pzt - Cmt 09:00 - 19:00",
+    "hours_so": "Pazar 09:00 - 18:00",
+    "services": "Hizmetler",
+    "brands": "Markalar",
+    "company": "Şirket",
+    "legal": "Yasal",
+    "copyright": "EL Fix Mobile e.U. Tüm hakları saklıdır."
+  },
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "ru": "Русский",
+    "tr": "Türkçe"
+  }
+}

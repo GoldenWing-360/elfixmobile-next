@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "services": "Services",
+    "pricing": "Price Quote",
+    "booking": "Book Now",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "hero": {
+    "eyebrow": "EL FIX MOBILE - VIENNA 1220",
+    "headline_1": "Your iPhone.",
+    "headline_2": "Like new.",
+    "headline_3": "In 30 minutes.",
+    "subline": "Vienna's fastest repair workshop. Original parts. 12 months warranty.",
+    "cta_primary": "Get a quote",
+    "cta_secondary": "Book a time",
+    "trust_rating": "4.4 out of 5",
+    "trust_reviews": "294 Google reviews",
+    "trust_express": "30-minute express",
+    "trust_warranty": "12 months warranty",
+    "trust_open": "Open 7 days"
+  },
+  "footer": {
+    "tagline": "Vienna's most trusted repair workshop since 2019.",
+    "address_label": "Address",
+    "hours_label": "Opening hours",
+    "hours_mo_sa": "Mon to Sat 09:00 to 19:00",
+    "hours_so": "Sunday 09:00 to 18:00",
+    "services": "Services",
+    "brands": "Brands",
+    "company": "Company",
+    "legal": "Legal",
+    "copyright": "EL Fix Mobile e.U. All rights reserved."
+  },
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "ru": "Русский",
+    "tr": "Türkçe"
+  }
+}

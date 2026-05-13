@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "services": "Услуги",
+    "pricing": "Расчёт цены",
+    "booking": "Запись",
+    "contact": "Контакт",
+    "menu": "Меню",
+    "close": "Закрыть"
+  },
+  "hero": {
+    "eyebrow": "EL FIX MOBILE - ВЕНА 1220",
+    "headline_1": "Ваш iPhone.",
+    "headline_2": "Как новый.",
+    "headline_3": "За 30 минут.",
+    "subline": "Самая быстрая мастерская в Вене. Оригинальные запчасти. Гарантия 12 месяцев.",
+    "cta_primary": "Рассчитать цену",
+    "cta_secondary": "Записаться",
+    "trust_rating": "4,4 из 5",
+    "trust_reviews": "294 отзыва в Google",
+    "trust_express": "Экспресс за 30 минут",
+    "trust_warranty": "Гарантия 12 месяцев",
+    "trust_open": "Открыты 7 дней"
+  },
+  "footer": {
+    "tagline": "Самая надёжная мастерская Вены с 2019 года.",
+    "address_label": "Адрес",
+    "hours_label": "Часы работы",
+    "hours_mo_sa": "Пн до Сб 09:00 до 19:00",
+    "hours_so": "Воскресенье 09:00 до 18:00",
+    "services": "Услуги",
+    "brands": "Бренды",
+    "company": "Компания",
+    "legal": "Документы",
+    "copyright": "EL Fix Mobile e.U. Все права защищены."
+  },
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "ru": "Русский",
+    "tr": "Türkçe"
+  }
+}

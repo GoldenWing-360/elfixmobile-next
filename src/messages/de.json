@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "services": "Services",
+    "pricing": "Preisrechner",
+    "booking": "Termin",
+    "contact": "Kontakt",
+    "menu": "Menü",
+    "close": "Schließen"
+  },
+  "hero": {
+    "eyebrow": "EL FIX MOBILE - WIEN 1220",
+    "headline_1": "Dein iPhone.",
+    "headline_2": "Wie neu.",
+    "headline_3": "In 30 Minuten.",
+    "subline": "Wiens schnellste Reparatur-Werkstatt. Originalteile. 12 Monate Garantie.",
+    "cta_primary": "Preis berechnen",
+    "cta_secondary": "Termin buchen",
+    "trust_rating": "4,4 von 5",
+    "trust_reviews": "294 Google-Bewertungen",
+    "trust_express": "Express in 30 Min",
+    "trust_warranty": "12 Monate Garantie",
+    "trust_open": "7 Tage offen"
+  },
+  "footer": {
+    "tagline": "Wiens vertrauenswürdigste Reparatur-Werkstatt seit 2019.",
+    "address_label": "Adresse",
+    "hours_label": "Öffnungszeiten",
+    "hours_mo_sa": "Mo bis Sa 09:00 bis 19:00",
+    "hours_so": "Sonntag 09:00 bis 18:00",
+    "services": "Services",
+    "brands": "Marken",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "copyright": "EL Fix Mobile e.U. Alle Rechte vorbehalten."
+  },
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "ru": "Русский",
+    "tr": "Türkçe"
+  }
+}
