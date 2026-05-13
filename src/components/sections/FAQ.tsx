@@ -80,7 +80,7 @@ export function FAQ() {
                       }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-6 pr-14 text-[16px] leading-[1.6] text-[#5f5f63] md:pb-8 md:pr-20 md:text-[17px]">
+                      <p className="pb-6 pr-14 text-[16px] leading-[1.6] text-[#525257] md:pb-8 md:pr-20 md:text-[17px]">
                         {it.a}
                       </p>
                     </motion.div>

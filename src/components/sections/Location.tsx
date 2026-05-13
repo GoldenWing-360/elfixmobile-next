@@ -60,7 +60,7 @@ export function Location() {
             </header>
 
             {/* right: facts */}
-            <dl className="space-y-7 text-[15px] md:col-span-5">
+            <div className="space-y-7 text-[15px] md:col-span-5">
               <Fact icon={<MapPin className="h-4 w-4" />} label={t("phone_label").replace("Telefon", "Adresse")}>
                 {t("address_line_1")}
                 <br />
@@ -81,7 +81,7 @@ export function Location() {
                 <br />
                 {t("hours_so")}
               </Fact>
-            </dl>
+            </div>
           </motion.div>
         </div>
         <div className="h-24 md:h-32" />
@@ -101,11 +101,11 @@ function Fact({
 }) {
   return (
     <div>
-      <dt className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-white/50">
+      <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-white/50">
         <span className="text-[var(--color-accent)]">{icon}</span>
         {label}
-      </dt>
-      <dd className="mt-2 text-[15.5px] leading-[1.6] text-white/85">{children}</dd>
+      </div>
+      <div className="mt-2 text-[15.5px] leading-[1.6] text-white/85">{children}</div>
     </div>
   );
 }

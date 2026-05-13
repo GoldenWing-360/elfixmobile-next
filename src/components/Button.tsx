@@ -98,10 +98,13 @@ export const Button = forwardRef<HTMLElement, Props>(function Button(
 
   const motionStyle = magnetic ? { x: tx, y: ty } : undefined;
 
+  // framer-motion v12 narrows drag handlers; cast spread to any to merge
+  // standard HTML props without fighting the generic.
   if (isLink) {
     const a = rest as AnchorHTMLAttributes<HTMLAnchorElement>;
+    const AMotion = motion.a as unknown as React.FC<Record<string, unknown>>;
     return (
-      <motion.a
+      <AMotion
         ref={ref as React.Ref<HTMLAnchorElement>}
         className={cls}
         style={motionStyle}
@@ -110,12 +113,13 @@ export const Button = forwardRef<HTMLElement, Props>(function Button(
         {...a}
       >
         {content}
-      </motion.a>
+      </AMotion>
     );
   }
   const b = rest as ButtonHTMLAttributes<HTMLButtonElement>;
+  const BMotion = motion.button as unknown as React.FC<Record<string, unknown>>;
   return (
-    <motion.button
+    <BMotion
       ref={ref as React.Ref<HTMLButtonElement>}
       className={cls}
       style={motionStyle}
@@ -124,6 +128,6 @@ export const Button = forwardRef<HTMLElement, Props>(function Button(
       {...b}
     >
       {content}
-    </motion.button>
+    </BMotion>
   );
 });

@@ -249,5 +249,12 @@
     "speaker": "Speaker",
     "microphone": "Microphone",
     "power_button": "Power button"
+  },
+  "form_error": {
+    "name": "Name required (min 2 chars)",
+    "email": "Invalid email format",
+    "phone": "Phone number required",
+    "message": "Message required (min 5 chars)",
+    "agb": "Please accept the terms"
   }
 }

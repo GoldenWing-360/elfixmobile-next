@@ -249,5 +249,12 @@
     "speaker": "Lautsprecher",
     "microphone": "Mikrofon",
     "power_button": "Power-Taste"
+  },
+  "form_error": {
+    "name": "Name fehlt (mindestens 2 Zeichen)",
+    "email": "E-Mail-Format ungültig",
+    "phone": "Telefonnummer fehlt",
+    "message": "Nachricht fehlt (mindestens 5 Zeichen)",
+    "agb": "AGB-Zustimmung erforderlich"
   }
 }

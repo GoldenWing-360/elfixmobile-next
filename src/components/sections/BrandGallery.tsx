@@ -7,14 +7,14 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 
 const BRANDS = [
-  { id: "apple",   label: "Apple",   count: 97, hue: 0,   bg: "from-zinc-900 to-zinc-800" },
-  { id: "samsung", label: "Samsung", count: 122, hue: 220, bg: "from-blue-950 to-blue-900" },
-  { id: "xiaomi",  label: "Xiaomi",  count: 60,  hue: 18,  bg: "from-orange-950 to-orange-900" },
-  { id: "google",  label: "Google",  count: 24,  hue: 200, bg: "from-sky-950 to-sky-900" },
-  { id: "huawei",  label: "Huawei",  count: 38,  hue: 0,   bg: "from-red-950 to-red-900" },
-  { id: "oneplus", label: "OnePlus", count: 28,  hue: 0,   bg: "from-red-900 to-zinc-900" },
-  { id: "sony",    label: "Sony",    count: 18,  hue: 0,   bg: "from-slate-900 to-zinc-900" },
-  { id: "nokia",   label: "Nokia",   count: 22,  hue: 220, bg: "from-blue-900 to-zinc-900" },
+  { id: "apple",   href: "/preisrechner?brand=apple-iphone",    label: "Apple",   count: 97,  bg: "from-zinc-900 to-zinc-800" },
+  { id: "samsung", href: "/preisrechner?brand=samsung-galaxy",  label: "Samsung", count: 122, bg: "from-blue-950 to-blue-900" },
+  { id: "xiaomi",  href: "/buchen",                              label: "Xiaomi",  count: 60,  bg: "from-orange-950 to-orange-900" },
+  { id: "google",  href: "/buchen",                              label: "Google",  count: 24,  bg: "from-sky-950 to-sky-900" },
+  { id: "huawei",  href: "/buchen",                              label: "Huawei",  count: 38,  bg: "from-red-950 to-red-900" },
+  { id: "oneplus", href: "/buchen",                              label: "OnePlus", count: 28,  bg: "from-red-900 to-zinc-900" },
+  { id: "sony",    href: "/buchen",                              label: "Sony",    count: 18,  bg: "from-slate-900 to-zinc-900" },
+  { id: "nokia",   href: "/buchen",                              label: "Nokia",   count: 22,  bg: "from-blue-900 to-zinc-900" },
 ] as const;
 
 export function BrandGallery() {
@@ -47,7 +47,7 @@ export function BrandGallery() {
           >
             {t("headline")}
           </motion.h2>
-          <p className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#5f5f63]">
+          <p className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">
             {t("sub")}
           </p>
         </header>
@@ -82,7 +82,7 @@ export function BrandGallery() {
               )}
             >
               <Link
-                href="/services"
+                href={b.href}
                 className={cn(
                   "block aspect-[4/5] overflow-hidden rounded-3xl",
                   "bg-gradient-to-br text-white",

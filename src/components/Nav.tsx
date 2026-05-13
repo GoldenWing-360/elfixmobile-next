@@ -29,7 +29,6 @@ export function Nav() {
   }, [mobileOpen]);
 
   const links = [
-    { href: "/services", label: t("services") },
     { href: "/preisrechner", label: t("pricing") },
     { href: "/buchen", label: t("booking") },
     { href: "/kontakt", label: t("contact") },

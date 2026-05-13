@@ -14,8 +14,12 @@ const FEATURED = [
   { brand: "apple-ipad", model: "Pro 11 (2025)", repair: "battery" as const, label_repair: "Akku" },
 ] as const;
 
+type PriceModel = { name: string; prices: Record<string, number> };
+type PriceBrand = { models: PriceModel[] };
+
 function findPrice(brandId: string, modelName: string, slug: string): number | null {
-  const brand = (pricing.brands as Record<string, { models: Array<{ name: string; prices: Record<string, number> }> }>)[brandId];
+  const brands = pricing.brands as unknown as Record<string, PriceBrand>;
+  const brand = brands[brandId];
   if (!brand) return null;
   const m = brand.models.find((x) => x.name === modelName);
   if (!m) return null;
@@ -43,7 +47,7 @@ export function PriceCalculatorPreview() {
             <h2 className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]">
               {t("headline")}
             </h2>
-            <p className="mt-5 max-w-md text-[17px] leading-[1.55] text-[#5f5f63]">
+            <p className="mt-5 max-w-md text-[17px] leading-[1.55] text-[#525257]">
               {t("sub")}
             </p>
             <div className="mt-8">
@@ -115,7 +119,7 @@ export function PriceCalculatorPreview() {
                       <span className="text-[clamp(3rem,7vw,5rem)] font-semibold leading-none tracking-[-0.04em] text-black">
                         {price ?? "—"}
                       </span>
-                      <span className="text-[28px] font-medium text-[#86868b]">€</span>
+                      <span className="text-[28px] font-medium text-[#6e6e73]">€</span>
                     </div>
                     <p className="mt-3 max-w-xs text-[13px] text-[#6e6e73]">
                       inkl. MwSt., Ersatzteil und Einbau. 12 Monate Garantie.

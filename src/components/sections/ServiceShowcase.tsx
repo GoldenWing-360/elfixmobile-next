@@ -24,6 +24,7 @@ export function ServiceShowcase() {
   const cards = [
     {
       key: "display",
+      href: "/preisrechner?repair=display",
       title: t("display_title"),
       desc: t("display_desc"),
       price: t("display_price"),
@@ -34,6 +35,7 @@ export function ServiceShowcase() {
     },
     {
       key: "battery",
+      href: "/preisrechner?repair=battery",
       title: t("battery_title"),
       desc: t("battery_desc"),
       price: t("battery_price"),
@@ -44,6 +46,7 @@ export function ServiceShowcase() {
     },
     {
       key: "water",
+      href: "/buchen",
       title: t("water_title"),
       desc: t("water_desc"),
       price: t("water_price"),
@@ -88,7 +91,7 @@ export function ServiceShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#5f5f63]"
+            className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]"
           >
             {t("sub")}
           </motion.p>
@@ -143,12 +146,12 @@ export function ServiceShowcase() {
                 <h3 className="text-[22px] font-semibold tracking-[-0.01em] text-black">
                   {c.title}
                 </h3>
-                <p className="mt-3 text-[15px] leading-[1.55] text-[#5f5f63]">
+                <p className="mt-3 text-[15px] leading-[1.55] text-[#525257]">
                   {c.desc}
                 </p>
                 <div className="mt-6">
                   <Button
-                    href="/preisrechner"
+                    href={c.href}
                     variant="tertiary"
                     className="px-0"
                   >

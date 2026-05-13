@@ -1,6 +1,7 @@
 "use client";
 
 import { useReducer, useMemo, useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Check, ChevronLeft, RotateCcw, Search, Phone, MessageCircle, Calendar, Truck } from "lucide-react";
@@ -12,8 +13,8 @@ type Brand = { id: string; label: string; parent_brand: string; device_type: str
 type Model = { slug: string; name: string; full_name: string; year: number | null; prices: Record<string, number> };
 type Repair = { slug: string; label_de: string; label_en: string };
 
-const BRANDS = pricing.brands as Record<string, Brand>;
-const REPAIRS = pricing.repair_types as Repair[];
+const BRANDS = pricing.brands as unknown as Record<string, Brand>;
+const REPAIRS = pricing.repair_types as unknown as Repair[];
 
 type State = {
   step: 0 | 1 | 2 | 3;
@@ -58,6 +59,23 @@ export function Calculator() {
   const t = useTranslations("calc_page");
   const tr = useTranslations("repair_label");
   const [state, dispatch] = useReducer(reducer, initialState);
+  const params = useSearchParams();
+
+  // Deeplink pre-fill: ?brand=apple-iphone&repair=display
+  useEffect(() => {
+    const b = params.get("brand");
+    if (b && BRANDS[b]) {
+      dispatch({ type: "pick_brand", brandId: b });
+      const r = params.get("repair");
+      if (r) {
+        // Auto-jump to repair step + preselect the repair (only if first model has it priced)
+        setTimeout(() => {
+          dispatch({ type: "toggle_repair", slug: r });
+        }, 0);
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const brand = state.brandId ? BRANDS[state.brandId] : null;
   const model = useMemo(
@@ -85,7 +103,7 @@ export function Calculator() {
           <h1 className="mt-3 text-[clamp(2.25rem,5.5vw,4.5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
             {t("headline")}
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#5f5f63]">
+          <p className="mx-auto mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">
             {t("sub")}
           </p>
         </header>
@@ -148,7 +166,7 @@ export function Calculator() {
 function Progress({ step }: { step: number }) {
   const labels = ["Marke", "Modell", "Reparatur", "Ergebnis"];
   return (
-    <ol className="mt-12 flex items-center justify-center gap-2 text-[12px] text-[#86868b]">
+    <ol className="mt-12 flex items-center justify-center gap-2 text-[12px] text-[#6e6e73]">
       {labels.map((l, i) => {
         const done = i < step;
         const active = i === step;
@@ -161,7 +179,7 @@ function Progress({ step }: { step: number }) {
                   ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-white"
                   : active
                     ? "border-[var(--color-accent)] text-[var(--color-accent)]"
-                    : "border-black/15 text-[#86868b]",
+                    : "border-black/15 text-[#6e6e73]",
               )}
             >
               {done ? <Check className="h-3.5 w-3.5" /> : i + 1}
@@ -191,7 +209,7 @@ function StepBrand({ brands, onPick }: { brands: Brand[]; onPick: (id: string) =
   return (
     <div className="p-6 md:p-12">
       <h2 className="text-[22px] font-semibold tracking-[-0.01em] md:text-[28px]">{t("step_brand_title")}</h2>
-      <p className="mt-2 text-[15px] text-[#5f5f63]">{t("step_brand_sub")}</p>
+      <p className="mt-2 text-[15px] text-[#525257]">{t("step_brand_sub")}</p>
 
       <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4">
         {brands.map((b) => (
@@ -202,13 +220,13 @@ function StepBrand({ brands, onPick }: { brands: Brand[]; onPick: (id: string) =
             className="group relative flex items-center justify-between gap-4 rounded-2xl border border-black/[0.08] bg-white p-5 text-left transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md"
           >
             <div>
-              <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#86868b]">
+              <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">
                 {b.parent_brand}
               </div>
               <div className="mt-1 text-[18px] font-semibold tracking-[-0.005em]">{b.label}</div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-[12px] text-[#86868b]">{b.models.length} Modelle</span>
+              <span className="text-[12px] text-[#6e6e73]">{b.models.length} Modelle</span>
               <span className="text-[var(--color-accent)] transition-transform duration-300 group-hover:translate-x-0.5">→</span>
             </div>
           </button>
@@ -244,7 +262,7 @@ function StepModel({
       <button
         type="button"
         onClick={onBack}
-        className="inline-flex items-center gap-1 text-[13px] text-[#86868b] hover:text-[var(--color-text-dark)]"
+        className="inline-flex items-center gap-1 text-[13px] text-[#6e6e73] hover:text-[var(--color-text-dark)]"
       >
         <ChevronLeft className="h-3.5 w-3.5" />
         {t("back")}
@@ -252,10 +270,10 @@ function StepModel({
       <h2 className="mt-2 text-[22px] font-semibold tracking-[-0.01em] md:text-[28px]">
         {t("step_model_title")}
       </h2>
-      <p className="mt-2 text-[15px] text-[#5f5f63]">{t("step_model_sub")}</p>
+      <p className="mt-2 text-[15px] text-[#525257]">{t("step_model_sub")}</p>
 
       <div className="relative mt-6">
-        <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#86868b]" />
+        <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#6e6e73]" />
         <input
           type="search"
           autoFocus
@@ -268,7 +286,7 @@ function StepModel({
 
       <div className="mt-6 max-h-[420px] overflow-y-auto pr-1">
         {filtered.length === 0 ? (
-          <p className="rounded-2xl bg-[#f7f7f8] p-6 text-center text-[14px] text-[#5f5f63]">
+          <p className="rounded-2xl bg-[#f7f7f8] p-6 text-center text-[14px] text-[#525257]">
             {t("step_model_empty")}
           </p>
         ) : (
@@ -319,7 +337,7 @@ function StepRepair({
       <button
         type="button"
         onClick={onBack}
-        className="inline-flex items-center gap-1 text-[13px] text-[#86868b] hover:text-[var(--color-text-dark)]"
+        className="inline-flex items-center gap-1 text-[13px] text-[#6e6e73] hover:text-[var(--color-text-dark)]"
       >
         <ChevronLeft className="h-3.5 w-3.5" />
         {t("back")}
@@ -327,12 +345,12 @@ function StepRepair({
       <h2 className="mt-2 text-[22px] font-semibold tracking-[-0.01em] md:text-[28px]">
         {t("step_repair_title")}
       </h2>
-      <p className="mt-2 text-[15px] text-[#5f5f63]">
+      <p className="mt-2 text-[15px] text-[#525257]">
         {model.full_name}{model.year ? ` · ${model.year}` : ""}
       </p>
 
       {repairs.length === 0 ? (
-        <p className="mt-8 rounded-2xl bg-[#f7f7f8] p-6 text-[14px] text-[#5f5f63]">
+        <p className="mt-8 rounded-2xl bg-[#f7f7f8] p-6 text-[14px] text-[#525257]">
           {t("step_repair_none_available")}
         </p>
       ) : (
@@ -377,7 +395,7 @@ function StepRepair({
 
       <div className="mt-10 flex items-center justify-between rounded-2xl bg-[#f7f7f8] p-5">
         <div>
-          <div className="text-[11px] uppercase tracking-[0.18em] text-[#86868b]">
+          <div className="text-[11px] uppercase tracking-[0.18em] text-[#6e6e73]">
             {t("result_title")}
           </div>
           <div className="mt-1 text-[36px] font-semibold leading-none tracking-[-0.03em]">
@@ -431,7 +449,7 @@ function StepResult({
       <button
         type="button"
         onClick={onBack}
-        className="inline-flex items-center gap-1 text-[13px] text-[#86868b] hover:text-[var(--color-text-dark)]"
+        className="inline-flex items-center gap-1 text-[13px] text-[#6e6e73] hover:text-[var(--color-text-dark)]"
       >
         <ChevronLeft className="h-3.5 w-3.5" />
         {t("back")}
@@ -439,18 +457,18 @@ function StepResult({
 
       <div className="mt-6 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
         <div>
-          <div className="text-[11px] uppercase tracking-[0.18em] text-[#86868b]">{t("result_for")}</div>
+          <div className="text-[11px] uppercase tracking-[0.18em] text-[#6e6e73]">{t("result_for")}</div>
           <div className="mt-1 text-[17px] font-medium">{model.full_name}</div>
-          <div className="mt-1 text-[13px] text-[#86868b]">{brand.parent_brand} - {brand.label}</div>
+          <div className="mt-1 text-[13px] text-[#6e6e73]">{brand.parent_brand} - {brand.label}</div>
 
-          <div className="mt-6 text-[11px] uppercase tracking-[0.18em] text-[#86868b]">
+          <div className="mt-6 text-[11px] uppercase tracking-[0.18em] text-[#6e6e73]">
             {t("result_title")}
           </div>
           <div className="mt-1 flex items-baseline gap-2">
             <span className="text-[clamp(3.5rem,9vw,6rem)] font-semibold leading-none tracking-[-0.04em] text-black">
               {total}
             </span>
-            <span className="text-[32px] font-medium text-[#86868b]">€</span>
+            <span className="text-[32px] font-medium text-[#6e6e73]">€</span>
           </div>
 
           <ul className="mt-6 space-y-2 text-[14px] text-[#3a3a3a]">
@@ -506,7 +524,7 @@ function StepResult({
             <button
               type="button"
               onClick={onRestart}
-              className="inline-flex items-center gap-1.5 text-[13px] text-[#86868b] hover:text-[var(--color-text-dark)]"
+              className="inline-flex items-center gap-1.5 text-[13px] text-[#6e6e73] hover:text-[var(--color-text-dark)]"
             >
               <RotateCcw className="h-3.5 w-3.5" />
               {t("restart")}

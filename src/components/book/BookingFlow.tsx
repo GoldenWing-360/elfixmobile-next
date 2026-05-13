@@ -114,7 +114,7 @@ export function BookingFlow() {
           <h1 className="mt-3 text-[clamp(2.25rem,5.5vw,4.25rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
             {t("headline")}
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-[17px] leading-[1.55] text-[#5f5f63]">
+          <p className="mx-auto mt-5 max-w-xl text-[17px] leading-[1.55] text-[#525257]">
             {t("sub")}
           </p>
         </header>
@@ -202,7 +202,7 @@ function Stepper({ current, hasPickup }: { current: number; hasPickup: boolean }
     : ["Service", "Gerät", "Termin", "Kontakt"];
   const idxMap = hasPickup ? [0, 1, 2, 4] : [0, 1, 2, 4];
   return (
-    <ol className="mt-12 flex items-center justify-center gap-2 text-[12px] text-[#86868b]">
+    <ol className="mt-12 flex items-center justify-center gap-2 text-[12px] text-[#6e6e73]">
       {labels.map((l, i) => {
         const step = idxMap[i];
         const done = current > step;
@@ -216,7 +216,7 @@ function Stepper({ current, hasPickup }: { current: number; hasPickup: boolean }
                   ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-white"
                   : active
                     ? "border-[var(--color-accent)] text-[var(--color-accent)]"
-                    : "border-black/15 text-[#86868b]",
+                    : "border-black/15 text-[#6e6e73]",
               )}
             >
               {done ? <Check className="h-3.5 w-3.5" /> : i + 1}
@@ -311,9 +311,9 @@ function StepService({
                     </span>
                   )}
                 </div>
-                <p className="mt-1 text-[14.5px] leading-[1.5] text-[#5f5f63]">{o.desc}</p>
+                <p className="mt-1 text-[14.5px] leading-[1.5] text-[#525257]">{o.desc}</p>
                 {!o.recommended && (
-                  <div className="mt-2 text-[12px] text-[#86868b]">{o.meta}</div>
+                  <div className="mt-2 text-[12px] text-[#6e6e73]">{o.meta}</div>
                 )}
               </div>
               <ArrowRight className="mt-2 h-4 w-4 shrink-0 text-[var(--color-accent)] opacity-0 transition-opacity group-hover:opacity-100" />
@@ -328,7 +328,7 @@ function StepService({
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="block text-[12px] font-medium uppercase tracking-[0.18em] text-[#86868b]">
+      <span className="block text-[12px] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">
         {label}
       </span>
       <span className="mt-2 block">{children}</span>
@@ -361,7 +361,7 @@ function StepDevice({
   const ok = device.trim().length > 1;
   return (
     <div className="p-6 md:p-12">
-      <button type="button" onClick={onBack} className="inline-flex items-center gap-1 text-[13px] text-[#86868b] hover:text-[var(--color-text-dark)]">
+      <button type="button" onClick={onBack} className="inline-flex items-center gap-1 text-[13px] text-[#6e6e73] hover:text-[var(--color-text-dark)]">
         <ChevronLeft className="h-3.5 w-3.5" />
         {t("back")}
       </button>
@@ -397,7 +397,7 @@ function StepDevice({
             "inline-flex h-12 items-center gap-2 rounded-full px-6 text-[15px] font-medium transition-all",
             ok
               ? "bg-black text-white hover:scale-[1.02]"
-              : "cursor-not-allowed bg-black/[0.06] text-[#86868b]",
+              : "cursor-not-allowed bg-black/[0.06] text-[#6e6e73]",
           )}
         >
           {t("continue")}
@@ -427,14 +427,14 @@ function StepPickup({
 
   return (
     <div className="p-6 md:p-12">
-      <button type="button" onClick={() => dispatch({ type: "back" })} className="inline-flex items-center gap-1 text-[13px] text-[#86868b] hover:text-[var(--color-text-dark)]">
+      <button type="button" onClick={() => dispatch({ type: "back" })} className="inline-flex items-center gap-1 text-[13px] text-[#6e6e73] hover:text-[var(--color-text-dark)]">
         <ChevronLeft className="h-3.5 w-3.5" />
         {t("back")}
       </button>
       <h2 className="mt-2 text-[22px] font-semibold tracking-[-0.01em] md:text-[28px]">
         {t("step_pickup_title")}
       </h2>
-      <p className="mt-2 text-[14.5px] text-[#5f5f63]">{t("pickup_fee_note")}</p>
+      <p className="mt-2 text-[14.5px] text-[#525257]">{t("pickup_fee_note")}</p>
 
       <div className="mt-8 grid grid-cols-1 gap-5">
         <Field label={t("field_pickup_address")}>
@@ -455,7 +455,7 @@ function StepPickup({
           />
         </Field>
         <fieldset>
-          <legend className="block text-[12px] font-medium uppercase tracking-[0.18em] text-[#86868b]">
+          <legend className="block text-[12px] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">
             {t("field_pickup_when")}
           </legend>
           <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
@@ -486,7 +486,7 @@ function StepPickup({
           disabled={!ok}
           className={cn(
             "inline-flex h-12 items-center gap-2 rounded-full px-6 text-[15px] font-medium transition-all",
-            ok ? "bg-black text-white hover:scale-[1.02]" : "cursor-not-allowed bg-black/[0.06] text-[#86868b]",
+            ok ? "bg-black text-white hover:scale-[1.02]" : "cursor-not-allowed bg-black/[0.06] text-[#6e6e73]",
           )}
         >
           {t("continue")} <ArrowRight className="h-4 w-4" />
@@ -507,6 +507,7 @@ function StepDate({
   onBack: () => void;
   onNext: () => void;
 }) {
+  const t = useTranslations("book");
   // generate next 14 weekdays, skip Sundays
   const dates: { iso: string; label: string; sub: string }[] = [];
   const now = new Date();
@@ -524,12 +525,12 @@ function StepDate({
 
   return (
     <div className="p-6 md:p-12">
-      <button type="button" onClick={onBack} className="inline-flex items-center gap-1 text-[13px] text-[#86868b] hover:text-[var(--color-text-dark)]">
+      <button type="button" onClick={onBack} className="inline-flex items-center gap-1 text-[13px] text-[#6e6e73] hover:text-[var(--color-text-dark)]">
         <ChevronLeft className="h-3.5 w-3.5" />
-        Zurück
+        {t("back")}
       </button>
       <h2 className="mt-2 text-[22px] font-semibold tracking-[-0.01em] md:text-[28px]">
-        Wann passt es?
+        {t("step_date_title")}
       </h2>
       <div className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
         {dates.slice(0, 12).map((d) => {
@@ -557,7 +558,7 @@ function StepDate({
           disabled={!value}
           className={cn(
             "inline-flex h-12 items-center gap-2 rounded-full px-6 text-[15px] font-medium transition-all",
-            value ? "bg-black text-white hover:scale-[1.02]" : "cursor-not-allowed bg-black/[0.06] text-[#86868b]",
+            value ? "bg-black text-white hover:scale-[1.02]" : "cursor-not-allowed bg-black/[0.06] text-[#6e6e73]",
           )}
         >
           {t("continue")} <ArrowRight className="h-4 w-4" />
@@ -579,19 +580,25 @@ function StepContact({
   onSubmit: (d: ContactFormData) => Promise<void>;
 }) {
   const t = useTranslations("book");
+  const te = useTranslations("form_error");
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting, isValid },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
-    defaultValues: state.contact,
+    defaultValues: {
+      name: state.contact.name,
+      email: state.contact.email,
+      phone: state.contact.phone,
+      message: state.contact.message,
+    },
     mode: "onChange",
   });
 
   return (
     <div className="p-6 md:p-12">
-      <button type="button" onClick={onBack} className="inline-flex items-center gap-1 text-[13px] text-[#86868b] hover:text-[var(--color-text-dark)]">
+      <button type="button" onClick={onBack} className="inline-flex items-center gap-1 text-[13px] text-[#6e6e73] hover:text-[var(--color-text-dark)]">
         <ChevronLeft className="h-3.5 w-3.5" />
         {t("back")}
       </button>
@@ -601,16 +608,16 @@ function StepContact({
       <form onSubmit={handleSubmit(onSubmit)} className="mt-8 grid grid-cols-1 gap-5">
         <Field label={t("field_name")}>
           <input {...register("name")} className={inputCls()} autoFocus />
-          {errors.name && <span className="mt-1 block text-[12px] text-red-600">required</span>}
+          {errors.name && <span className="mt-1 block text-[12px] text-red-600">{te("name")}</span>}
         </Field>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field label={t("field_email")}>
             <input type="email" {...register("email")} className={inputCls()} />
-            {errors.email && <span className="mt-1 block text-[12px] text-red-600">invalid</span>}
+            {errors.email && <span className="mt-1 block text-[12px] text-red-600">{te("email")}</span>}
           </Field>
           <Field label={t("field_phone")}>
             <input type="tel" {...register("phone")} className={inputCls()} />
-            {errors.phone && <span className="mt-1 block text-[12px] text-red-600">required</span>}
+            {errors.phone && <span className="mt-1 block text-[12px] text-red-600">{te("phone")}</span>}
           </Field>
         </div>
         <Field label={t("field_message")}>
@@ -627,7 +634,7 @@ function StepContact({
 
         <div className="mt-2 flex items-center justify-between">
           {state.total != null && (
-            <div className="text-[14px] text-[#5f5f63]">
+            <div className="text-[14px] text-[#525257]">
               Geschätzter Festpreis: <strong className="text-[var(--color-text-dark)]">{state.total} €</strong>
             </div>
           )}
@@ -638,9 +645,15 @@ function StepContact({
               "ml-auto inline-flex h-12 items-center gap-2 rounded-full px-6 text-[15px] font-medium transition-all",
               isValid && !isSubmitting
                 ? "bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)] hover:scale-[1.02]"
-                : "cursor-not-allowed bg-black/[0.06] text-[#86868b]",
+                : "cursor-not-allowed bg-black/[0.06] text-[#6e6e73]",
             )}
           >
+            {isSubmitting && (
+              <span
+                aria-hidden
+                className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-current border-r-transparent"
+              />
+            )}
             {isSubmitting ? t("submitting") : t("submit")}
             {!isSubmitting && <Calendar className="h-4 w-4" />}
           </button>
@@ -663,7 +676,7 @@ function Success({ onReset }: { onReset: () => void }) {
         <Check className="h-7 w-7" strokeWidth={2.5} />
       </motion.div>
       <h2 className="mt-6 text-[28px] font-semibold tracking-[-0.02em]">{t("success_title")}</h2>
-      <p className="mx-auto mt-3 max-w-md text-[15.5px] leading-[1.55] text-[#5f5f63]">{t("success_sub")}</p>
+      <p className="mx-auto mt-3 max-w-md text-[15.5px] leading-[1.55] text-[#525257]">{t("success_sub")}</p>
       <a
         href="/"
         className="mt-8 inline-flex items-center gap-1.5 text-[14px] text-[var(--color-accent)] hover:underline"
@@ -672,7 +685,7 @@ function Success({ onReset }: { onReset: () => void }) {
       </a>
       <button
         onClick={onReset}
-        className="ml-4 mt-8 inline-flex items-center gap-1 text-[14px] text-[#86868b] hover:text-[var(--color-text-dark)]"
+        className="ml-4 mt-8 inline-flex items-center gap-1 text-[14px] text-[#6e6e73] hover:text-[var(--color-text-dark)]"
       >
         nochmal buchen
       </button>

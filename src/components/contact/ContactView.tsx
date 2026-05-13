@@ -28,6 +28,7 @@ export function ContactView() {
   const t = useTranslations("contact");
   const tl = useTranslations("location");
   const tp = useTranslations("pickup");
+  const te = useTranslations("form_error");
   const [submitted, setSubmitted] = useState(false);
   const {
     register,
@@ -50,12 +51,12 @@ export function ContactView() {
           <h1 className="mt-3 text-[clamp(2.25rem,5.5vw,4.5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
             {t("headline")}
           </h1>
-          <p className="mt-5 max-w-xl text-[17px] leading-[1.55] text-[#5f5f63]">{t("sub")}</p>
+          <p className="mt-5 max-w-xl text-[17px] leading-[1.55] text-[#525257]">{t("sub")}</p>
         </header>
 
         <div className="mt-12 grid grid-cols-1 gap-10 md:mt-16 md:grid-cols-12 md:gap-12 lg:gap-16">
           {/* Left: info */}
-          <aside className="space-y-8 md:col-span-5">
+          <div className="space-y-8 md:col-span-5">
             <div className="overflow-hidden rounded-3xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_12px_30px_-16px_rgba(0,0,0,0.12)] ring-1 ring-black/[0.04]">
               <div className="grid grid-cols-2 gap-3 p-6">
                 <a
@@ -89,7 +90,7 @@ export function ContactView() {
               </div>
             </div>
 
-            <dl className="space-y-7 text-[15px]">
+            <div className="space-y-7 text-[15px]">
               <FactBlock
                 icon={<MapPin className="h-4 w-4" />}
                 label="Adresse"
@@ -117,8 +118,8 @@ export function ContactView() {
                   </Button>
                 </div>
               </FactBlock>
-            </dl>
-          </aside>
+            </div>
+          </div>
 
           {/* Right: form */}
           <div className="md:col-span-7">
@@ -139,15 +140,15 @@ export function ContactView() {
                   <h2 className="mt-5 text-[24px] font-semibold tracking-[-0.015em]">
                     {t("success_title")}
                   </h2>
-                  <p className="mt-2 text-[14.5px] text-[#5f5f63]">{t("success_sub")}</p>
+                  <p className="mt-2 text-[14.5px] text-[#525257]">{t("success_sub")}</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit(onSubmit)} className="mt-6 grid grid-cols-1 gap-5">
-                  <FormField label={t("field_name")} error={errors.name && "required"}>
+                  <FormField label={t("field_name")} error={errors.name && te("name")}>
                     <input {...register("name")} className={inputCls} autoComplete="name" />
                   </FormField>
                   <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                    <FormField label={t("field_email")} error={errors.email && "invalid"}>
+                    <FormField label={t("field_email")} error={errors.email && te("email")}>
                       <input
                         type="email"
                         {...register("email")}
@@ -164,7 +165,7 @@ export function ContactView() {
                       />
                     </FormField>
                   </div>
-                  <FormField label={t("field_message")} error={errors.message && "required"}>
+                  <FormField label={t("field_message")} error={errors.message && te("message")}>
                     <textarea
                       rows={5}
                       {...register("message")}
@@ -180,10 +181,16 @@ export function ContactView() {
                       "inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-[15px] font-medium transition-all",
                       isValid && !isSubmitting
                         ? "bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)] hover:scale-[1.02]"
-                        : "cursor-not-allowed bg-black/[0.06] text-[#86868b]",
+                        : "cursor-not-allowed bg-black/[0.06] text-[#6e6e73]",
                     )}
                   >
-                    {isSubmitting ? "..." : t("submit")}
+                    {isSubmitting && (
+                      <span
+                        aria-hidden
+                        className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-current border-r-transparent"
+                      />
+                    )}
+                    {t("submit")}
                   </button>
                 </form>
               )}
@@ -209,7 +216,7 @@ function FormField({
 }) {
   return (
     <label className="block">
-      <span className="block text-[12px] font-medium uppercase tracking-[0.18em] text-[#86868b]">
+      <span className="block text-[12px] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">
         {label}
       </span>
       <span className="mt-2 block">{children}</span>
@@ -231,11 +238,11 @@ function FactBlock({
 }) {
   return (
     <div>
-      <dt className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[#86868b]">
+      <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[#6e6e73]">
         <span className="text-[var(--color-accent)]">{icon}</span>
         {label}
-      </dt>
-      <dd className="mt-2 text-[15.5px] leading-[1.6] text-[#1d1d1f]">{children}</dd>
+      </div>
+      <div className="mt-2 text-[15.5px] leading-[1.6] text-[#1d1d1f]">{children}</div>
       {cta && (
         <a href={cta.href} className="mt-1 inline-flex items-center gap-1 text-[14px] text-[var(--color-accent)] hover:underline">
           {cta.label} →

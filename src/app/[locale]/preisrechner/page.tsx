@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import { Calculator } from "@/components/calc/Calculator";
 
@@ -15,5 +16,9 @@ export default async function PreisrechnerPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <Calculator />;
+  return (
+    <Suspense fallback={<div className="min-h-[60vh]" />}>
+      <Calculator />
+    </Suspense>
+  );
 }

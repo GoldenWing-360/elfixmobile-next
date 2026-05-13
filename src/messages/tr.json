@@ -249,5 +249,12 @@
     "speaker": "Hoparlör",
     "microphone": "Mikrofon",
     "power_button": "Güç tuşu"
+  },
+  "form_error": {
+    "name": "Ad gerekli (en az 2 karakter)",
+    "email": "Geçersiz e-posta formatı",
+    "phone": "Telefon numarası gerekli",
+    "message": "Mesaj gerekli (en az 5 karakter)",
+    "agb": "Şartları kabul etmelisiniz"
   }
 }

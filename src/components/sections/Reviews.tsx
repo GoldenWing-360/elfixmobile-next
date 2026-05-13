@@ -45,7 +45,7 @@ export function Reviews() {
           >
             {t("headline")}
           </motion.h2>
-          <p className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#5f5f63]">
+          <p className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">
             {t("sub")}
           </p>
         </header>
@@ -75,9 +75,9 @@ function Marquee({
 }) {
   const double = [...items, ...items, ...items, ...items];
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden group/marquee">
       <motion.div
-        className="flex gap-5 px-6 md:gap-6 md:px-8"
+        className="flex gap-5 px-6 md:gap-6 md:px-8 group-hover/marquee:[animation-play-state:paused]"
         initial={{ x: direction === "left" ? 0 : "-50%" }}
         animate={{ x: direction === "left" ? "-50%" : 0 }}
         transition={{
@@ -85,6 +85,7 @@ function Marquee({
           repeat: Infinity,
           ease: "linear",
         }}
+        whileHover={{ scale: 1 }}
       >
         {double.map((r, i) => (
           <ReviewCard key={`${r.name}-${i}`} review={r} />
@@ -98,7 +99,7 @@ function ReviewCard({ review }: { review: Review }) {
   return (
     <article className="w-[320px] shrink-0 rounded-3xl bg-white p-7 ring-1 ring-black/[0.04] shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.08)] md:w-[380px]">
       <div className="flex items-center gap-2">
-        <div className="flex" aria-label="5 von 5 Sternen">
+        <div className="flex" role="img" aria-label="5 von 5 Sternen">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
@@ -107,10 +108,10 @@ function ReviewCard({ review }: { review: Review }) {
             />
           ))}
         </div>
-        <span className="text-[12px] text-[#86868b]">Google</span>
+        <span className="text-[12px] text-[#6e6e73]">Google</span>
       </div>
       <p className="mt-4 text-[15.5px] leading-[1.55] text-[#1d1d1f]">{review.text}</p>
-      <footer className="mt-5 flex items-center justify-between text-[12.5px] text-[#86868b]">
+      <footer className="mt-5 flex items-center justify-between text-[12.5px] text-[#6e6e73]">
         <span className="font-medium text-[#1d1d1f]">{review.name}</span>
         <time dateTime={review.date}>
           {/* explicit en-US to avoid SSR/CSR locale mismatch */}

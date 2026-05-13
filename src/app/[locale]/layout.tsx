@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { LenisProvider } from "@/components/LenisProvider";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { SITE, alternateLanguagesFor, localBusinessJsonLd } from "@/lib/seo";
 
 const inter = Inter({
@@ -123,8 +124,11 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <LenisProvider>
             <Nav />
-            <main className="relative">{children}</main>
+            <main className="relative" id="main-content">
+              {children}
+            </main>
             <Footer />
+            <WhatsAppFloat />
           </LenisProvider>
         </NextIntlClientProvider>
       </body>

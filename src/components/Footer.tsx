@@ -9,19 +9,19 @@ export function Footer() {
     {
       heading: t("services"),
       links: [
-        { href: "/services", label: "Display Reparatur" },
-        { href: "/services", label: "Akku Tausch" },
-        { href: "/services", label: "Wasserschaden" },
-        { href: "/services", label: "Kamera Reparatur" },
+        { href: "/preisrechner?repair=display", label: "Display Reparatur" },
+        { href: "/preisrechner?repair=battery", label: "Akku Tausch" },
+        { href: "/buchen", label: "Wasserschaden" },
+        { href: "/preisrechner?repair=camera_back", label: "Kamera Reparatur" },
       ],
     },
     {
       heading: t("brands"),
       links: [
-        { href: "/services", label: "iPhone" },
-        { href: "/services", label: "Samsung" },
-        { href: "/services", label: "Xiaomi" },
-        { href: "/services", label: "Google Pixel" },
+        { href: "/preisrechner?brand=apple-iphone", label: "iPhone" },
+        { href: "/preisrechner?brand=samsung-galaxy", label: "Samsung" },
+        { href: "/buchen", label: "Xiaomi" },
+        { href: "/buchen", label: "Google Pixel" },
       ],
     },
     {
