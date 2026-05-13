@@ -215,8 +215,31 @@ export function BookingFlow() {
                       onBack={() => dispatch({ type: "set_step", value: 2 })}
                       onSubmit={async (data) => {
                         dispatch({ type: "set_contact", value: data });
-                        // pretend API submit
-                        await new Promise((r) => setTimeout(r, 800));
+                        const res = await fetch("/api/lead", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({
+                            type: "booking",
+                            service: state.service,
+                            device: state.device,
+                            damage: state.damage,
+                            pickup: state.pickup,
+                            date: state.date,
+                            total: state.total,
+                            contact: {
+                              name: data.name,
+                              email: data.email,
+                              phone: data.phone || "",
+                              message: data.message || "",
+                            },
+                          }),
+                        });
+                        if (!res.ok) {
+                          // Surface failure to the user instead of silently
+                          // showing the success card.
+                          alert("Sorry — Senden hat nicht geklappt. Bitte direkt anrufen: +43 660 6071414");
+                          return;
+                        }
                         setSubmitted(true);
                       }}
                     />

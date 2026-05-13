@@ -37,8 +37,22 @@ export function ContactView() {
     formState: { errors, isSubmitting, isValid },
   } = useForm<FormData>({ resolver: zodResolver(schema), mode: "onChange" });
 
-  const onSubmit = async () => {
-    await new Promise((r) => setTimeout(r, 800));
+  const onSubmit = async (data: FormData) => {
+    const res = await fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: "contact",
+        name: data.name,
+        email: data.email,
+        phone: data.phone || "",
+        message: data.message,
+      }),
+    });
+    if (!res.ok) {
+      alert("Sorry — Senden hat nicht geklappt. Bitte direkt anrufen: +43 660 6071414");
+      return;
+    }
     setSubmitted(true);
   };
 
