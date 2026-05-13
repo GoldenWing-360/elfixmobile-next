@@ -1,0 +1,3620 @@
+{
+  "brands": {
+    "apple-iphone": {
+      "id": "apple-iphone",
+      "label": "iPhone",
+      "parent_brand": "Apple",
+      "device_type": "smartphone",
+      "models": [
+        {
+          "slug": "iphone-17-pro-max",
+          "name": "17 Pro Max",
+          "full_name": "iPhone 17 Pro Max",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 280,
+            "display_orig": 250,
+            "back_cover": 200,
+            "charging_port": 130,
+            "earpiece": 100,
+            "microphone": 130,
+            "camera_back": 180,
+            "camera_front": 110,
+            "camera_glass": 80,
+            "power_button": 130,
+            "speaker": 120,
+            "light_sensor": 130,
+            "mute_switch": 130
+          }
+        },
+        {
+          "slug": "iphone-17-pro",
+          "name": "17 Pro",
+          "full_name": "iPhone 17 Pro",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 270,
+            "display_orig": 230,
+            "back_cover": 200,
+            "charging_port": 130,
+            "earpiece": 100,
+            "microphone": 120,
+            "camera_back": 180,
+            "camera_front": 110,
+            "camera_glass": 80,
+            "power_button": 130,
+            "speaker": 120,
+            "light_sensor": 130,
+            "mute_switch": 130
+          }
+        },
+        {
+          "slug": "iphone-17",
+          "name": "17",
+          "full_name": "iPhone 17",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 250,
+            "display_orig": 200,
+            "back_cover": 200,
+            "charging_port": 130,
+            "earpiece": 100,
+            "microphone": 100,
+            "camera_back": 160,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 130,
+            "speaker": 120,
+            "light_sensor": 130,
+            "mute_switch": 130
+          }
+        },
+        {
+          "slug": "iphone-17-air",
+          "name": "17 Air",
+          "full_name": "iPhone 17 Air",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 290,
+            "display_orig": 250,
+            "back_cover": 200,
+            "charging_port": 130,
+            "earpiece": 100,
+            "microphone": 100,
+            "camera_back": 160,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 130,
+            "speaker": 120,
+            "light_sensor": 130,
+            "mute_switch": 130
+          }
+        },
+        {
+          "slug": "iphone-16-pro-max",
+          "name": "16 Pro Max",
+          "full_name": "iPhone 16 Pro Max",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 260,
+            "display_orig": 230,
+            "back_cover": 100,
+            "charging_port": 120,
+            "earpiece": 100,
+            "microphone": 110,
+            "camera_back": 180,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 120,
+            "speaker": 110,
+            "light_sensor": 120,
+            "mute_switch": 120
+          }
+        },
+        {
+          "slug": "iphone-16-pro",
+          "name": "16 Pro",
+          "full_name": "iPhone 16 Pro",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 250,
+            "display_orig": 210,
+            "back_cover": 100,
+            "charging_port": 100,
+            "earpiece": 100,
+            "microphone": 100,
+            "camera_back": 180,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 120,
+            "speaker": 110,
+            "light_sensor": 120,
+            "mute_switch": 120
+          }
+        },
+        {
+          "slug": "iphone-16-plus",
+          "name": "16 Plus",
+          "full_name": "iPhone 16 Plus",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 230,
+            "display_orig": 200,
+            "back_cover": 100,
+            "charging_port": 110,
+            "earpiece": 90,
+            "microphone": 100,
+            "camera_back": 160,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 120,
+            "speaker": 110,
+            "light_sensor": 120,
+            "mute_switch": 120
+          }
+        },
+        {
+          "slug": "iphone-16",
+          "name": "16",
+          "full_name": "iPhone 16",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 200,
+            "display_orig": 180,
+            "back_cover": 100,
+            "charging_port": 100,
+            "earpiece": 90,
+            "microphone": 100,
+            "camera_back": 160,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 120,
+            "speaker": 110,
+            "light_sensor": 120,
+            "mute_switch": 120
+          }
+        },
+        {
+          "slug": "iphone-15-pro-max",
+          "name": "15 Pro Max",
+          "full_name": "iPhone 15 Pro Max",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 330,
+            "display_orig": 210,
+            "back_cover": 100,
+            "charging_port": 100,
+            "earpiece": 90,
+            "microphone": 100,
+            "camera_back": 150,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 110,
+            "speaker": 100,
+            "light_sensor": 110,
+            "mute_switch": 110
+          }
+        },
+        {
+          "slug": "iphone-15-pro",
+          "name": "15 Pro",
+          "full_name": "iPhone 15 Pro",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 280,
+            "display_orig": 190,
+            "back_cover": 100,
+            "charging_port": 100,
+            "earpiece": 80,
+            "microphone": 100,
+            "camera_back": 150,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 110,
+            "speaker": 100,
+            "light_sensor": 110,
+            "mute_switch": 110
+          }
+        },
+        {
+          "slug": "iphone-15-plus",
+          "name": "15 Plus",
+          "full_name": "iPhone 15 Plus",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 230,
+            "display_orig": 180,
+            "back_cover": 80,
+            "charging_port": 90,
+            "earpiece": 90,
+            "microphone": 90,
+            "camera_back": 140,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 110,
+            "speaker": 100,
+            "light_sensor": 110,
+            "mute_switch": 110
+          }
+        },
+        {
+          "slug": "iphone-15",
+          "name": "15",
+          "full_name": "iPhone 15",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 230,
+            "display_orig": 160,
+            "back_cover": 100,
+            "charging_port": 100,
+            "earpiece": 90,
+            "microphone": 90,
+            "camera_back": 140,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 110,
+            "speaker": 100,
+            "light_sensor": 110,
+            "mute_switch": 110
+          }
+        },
+        {
+          "slug": "iphone-14-pro-max",
+          "name": "14 Pro Max",
+          "full_name": "iPhone 14 Pro Max",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 280,
+            "display_orig": 200,
+            "back_cover": 70,
+            "charging_port": 120,
+            "earpiece": 90,
+            "microphone": 100,
+            "camera_back": 140,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 100,
+            "speaker": 90,
+            "light_sensor": 100,
+            "mute_switch": 100
+          }
+        },
+        {
+          "slug": "iphone-14-pro",
+          "name": "14 Pro",
+          "full_name": "iPhone 14 Pro",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 280,
+            "display_orig": 180,
+            "back_cover": 70,
+            "charging_port": 90,
+            "earpiece": 70,
+            "microphone": 100,
+            "camera_back": 140,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 100,
+            "speaker": 90,
+            "light_sensor": 100,
+            "mute_switch": 100
+          }
+        },
+        {
+          "slug": "iphone-14-plus",
+          "name": "14 Plus",
+          "full_name": "iPhone 14 Plus",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 200,
+            "display_orig": 170,
+            "back_cover": 100,
+            "charging_port": 100,
+            "earpiece": 90,
+            "microphone": 100,
+            "camera_back": 130,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 100,
+            "speaker": 90,
+            "light_sensor": 100,
+            "mute_switch": 100
+          }
+        },
+        {
+          "slug": "iphone-14",
+          "name": "14",
+          "full_name": "iPhone 14",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 230,
+            "display_orig": 160,
+            "back_cover": 70,
+            "charging_port": 90,
+            "earpiece": 80,
+            "microphone": 100,
+            "camera_back": 130,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 100,
+            "speaker": 90,
+            "light_sensor": 100,
+            "mute_switch": 100
+          }
+        },
+        {
+          "slug": "iphone-13-pro-max",
+          "name": "13 Pro Max",
+          "full_name": "iPhone 13 Pro Max",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 280,
+            "display_orig": 180,
+            "back_cover": 60,
+            "charging_port": 100,
+            "earpiece": 80,
+            "microphone": 100,
+            "camera_back": 130,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 100,
+            "speaker": 80,
+            "light_sensor": 90,
+            "mute_switch": 90
+          }
+        },
+        {
+          "slug": "iphone-13-pro",
+          "name": "13 Pro",
+          "full_name": "iPhone 13 Pro",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 280,
+            "display_orig": 160,
+            "back_cover": 60,
+            "charging_port": 110,
+            "earpiece": 80,
+            "microphone": 100,
+            "camera_back": 120,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 100,
+            "speaker": 80,
+            "light_sensor": 90,
+            "mute_switch": 90
+          }
+        },
+        {
+          "slug": "iphone-13",
+          "name": "13",
+          "full_name": "iPhone 13",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 180,
+            "display_orig": 150,
+            "back_cover": 70,
+            "charging_port": 90,
+            "earpiece": 80,
+            "microphone": 80,
+            "camera_back": 100,
+            "camera_front": 100,
+            "camera_glass": 80,
+            "power_button": 100,
+            "speaker": 80,
+            "light_sensor": 90,
+            "mute_switch": 90
+          }
+        },
+        {
+          "slug": "iphone-13-mini",
+          "name": "13 mini",
+          "full_name": "iPhone 13 mini",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 160,
+            "display_orig": 140,
+            "back_cover": 70,
+            "charging_port": 90,
+            "earpiece": 80,
+            "microphone": 80,
+            "camera_back": 100,
+            "camera_front": 90,
+            "camera_glass": 80,
+            "power_button": 100,
+            "speaker": 80,
+            "light_sensor": 90,
+            "mute_switch": 90
+          }
+        },
+        {
+          "slug": "iphone-12-pro-max",
+          "name": "12 Pro Max",
+          "full_name": "iPhone 12 Pro Max",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 210,
+            "display_orig": 160,
+            "back_cover": 70,
+            "charging_port": 80,
+            "earpiece": 70,
+            "microphone": 80,
+            "camera_back": 110,
+            "camera_front": 90,
+            "camera_glass": 80,
+            "power_button": 90,
+            "speaker": 70,
+            "light_sensor": 80,
+            "mute_switch": 80
+          }
+        },
+        {
+          "slug": "iphone-12-pro",
+          "name": "12 Pro",
+          "full_name": "iPhone 12 Pro",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 140,
+            "display_orig": 150,
+            "back_cover": 70,
+            "charging_port": 80,
+            "earpiece": 80,
+            "microphone": 80,
+            "camera_back": 110,
+            "camera_front": 90,
+            "camera_glass": 80,
+            "power_button": 90,
+            "speaker": 70,
+            "light_sensor": 80,
+            "mute_switch": 80
+          }
+        },
+        {
+          "slug": "iphone-12",
+          "name": "12",
+          "full_name": "iPhone 12",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 140,
+            "display_orig": 140,
+            "back_cover": 70,
+            "charging_port": 80,
+            "earpiece": 80,
+            "microphone": 80,
+            "camera_back": 100,
+            "camera_front": 80,
+            "camera_glass": 80,
+            "power_button": 90,
+            "speaker": 70,
+            "light_sensor": 80,
+            "mute_switch": 80
+          }
+        },
+        {
+          "slug": "iphone-12-mini",
+          "name": "12 mini",
+          "full_name": "iPhone 12 mini",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 140,
+            "display_orig": 130,
+            "back_cover": 70,
+            "charging_port": 80,
+            "earpiece": 80,
+            "microphone": 80,
+            "camera_back": 100,
+            "camera_front": 80,
+            "camera_glass": 80,
+            "power_button": 90,
+            "speaker": 70,
+            "light_sensor": 80,
+            "mute_switch": 80
+          }
+        },
+        {
+          "slug": "iphone-se-2022",
+          "name": "SE (2022)",
+          "full_name": "iPhone SE (2022)",
+          "year": 2022,
+          "prices": {
+            "battery": 60,
+            "display": 100,
+            "display_orig": 70,
+            "back_cover": 90,
+            "charging_port": 60,
+            "earpiece": 70,
+            "microphone": 60,
+            "camera_back": 100,
+            "camera_front": 40,
+            "camera_glass": 80,
+            "power_button": 50,
+            "speaker": 60,
+            "light_sensor": 70,
+            "mute_switch": 70
+          }
+        },
+        {
+          "slug": "iphone-se-2020",
+          "name": "SE (2020)",
+          "full_name": "iPhone SE (2020)",
+          "year": 2020,
+          "prices": {
+            "battery": 50,
+            "display": 90,
+            "display_orig": 70,
+            "back_cover": 90,
+            "charging_port": 50,
+            "earpiece": 70,
+            "microphone": 50,
+            "camera_back": 90,
+            "camera_front": 40,
+            "camera_glass": 80,
+            "power_button": 50,
+            "speaker": 60,
+            "light_sensor": 70,
+            "mute_switch": 70
+          }
+        },
+        {
+          "slug": "iphone-11-pro-max",
+          "name": "11 Pro Max",
+          "full_name": "iPhone 11 Pro Max",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 170,
+            "display_orig": 150,
+            "back_cover": 70,
+            "charging_port": 80,
+            "earpiece": 70,
+            "microphone": 70,
+            "camera_back": 90,
+            "camera_front": 80,
+            "camera_glass": 80,
+            "power_button": 70,
+            "speaker": 60,
+            "light_sensor": 70,
+            "mute_switch": 70
+          }
+        },
+        {
+          "slug": "iphone-11-pro",
+          "name": "11 Pro",
+          "full_name": "iPhone 11 Pro",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 160,
+            "display_orig": 130,
+            "back_cover": 70,
+            "charging_port": 80,
+            "earpiece": 70,
+            "microphone": 70,
+            "camera_back": 90,
+            "camera_front": 80,
+            "camera_glass": 80,
+            "power_button": 70,
+            "speaker": 60,
+            "light_sensor": 70,
+            "mute_switch": 70
+          }
+        },
+        {
+          "slug": "iphone-11",
+          "name": "11",
+          "full_name": "iPhone 11",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 110,
+            "display_orig": 100,
+            "back_cover": 60,
+            "charging_port": 70,
+            "earpiece": 50,
+            "microphone": 70,
+            "camera_back": 70,
+            "camera_front": 80,
+            "camera_glass": 80,
+            "power_button": 70,
+            "speaker": 60,
+            "light_sensor": 70,
+            "mute_switch": 70
+          }
+        },
+        {
+          "slug": "iphone-xs-max",
+          "name": "XS Max",
+          "full_name": "iPhone XS Max",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 130,
+            "display_orig": 100,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 50,
+            "microphone": 60,
+            "camera_back": 90,
+            "camera_front": 80,
+            "camera_glass": 80,
+            "power_button": 70,
+            "speaker": 50,
+            "light_sensor": 70,
+            "mute_switch": 70
+          }
+        },
+        {
+          "slug": "iphone-xs",
+          "name": "XS",
+          "full_name": "iPhone XS",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 100,
+            "display_orig": 80,
+            "back_cover": 80,
+            "charging_port": 70,
+            "earpiece": 50,
+            "microphone": 80,
+            "camera_back": 90,
+            "camera_front": 80,
+            "camera_glass": 80,
+            "power_button": 70,
+            "speaker": 50,
+            "light_sensor": 70,
+            "mute_switch": 70
+          }
+        },
+        {
+          "slug": "iphone-x",
+          "name": "X",
+          "full_name": "iPhone X",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 100,
+            "display_orig": 80,
+            "back_cover": 80,
+            "charging_port": 60,
+            "earpiece": 50,
+            "microphone": 60,
+            "camera_back": 90,
+            "camera_front": 80,
+            "camera_glass": 80,
+            "power_button": 70,
+            "speaker": 50,
+            "light_sensor": 70,
+            "mute_switch": 70
+          }
+        },
+        {
+          "slug": "iphone-xr",
+          "name": "XR",
+          "full_name": "iPhone XR",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 110,
+            "display_orig": 80,
+            "back_cover": 70,
+            "charging_port": 70,
+            "earpiece": 50,
+            "microphone": 70,
+            "camera_back": 70,
+            "camera_front": 80,
+            "camera_glass": 80,
+            "power_button": 70,
+            "speaker": 50,
+            "light_sensor": 70,
+            "mute_switch": 70
+          }
+        },
+        {
+          "slug": "iphone-8-plus",
+          "name": "8 Plus",
+          "full_name": "iPhone 8 Plus",
+          "year": null,
+          "prices": {
+            "battery": 30,
+            "display": 90,
+            "back_cover": 90,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 60,
+            "camera_back": 70,
+            "camera_front": 60,
+            "camera_glass": 40,
+            "power_button": 60,
+            "speaker": 40,
+            "light_sensor": 60,
+            "mute_switch": 60,
+            "home_button": 70
+          }
+        },
+        {
+          "slug": "iphone-8",
+          "name": "8",
+          "full_name": "iPhone 8",
+          "year": null,
+          "prices": {
+            "battery": 30,
+            "display": 90,
+            "back_cover": 70,
+            "charging_port": 60,
+            "earpiece": 40,
+            "microphone": 60,
+            "camera_back": 70,
+            "camera_front": 50,
+            "camera_glass": 40,
+            "power_button": 60,
+            "speaker": 40,
+            "light_sensor": 60,
+            "mute_switch": 60,
+            "home_button": 70
+          }
+        },
+        {
+          "slug": "iphone-7-plus",
+          "name": "7 Plus",
+          "full_name": "iPhone 7 Plus",
+          "year": null,
+          "prices": {
+            "battery": 40,
+            "display": 90,
+            "back_cover": 70,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 80,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 60,
+            "speaker": 40,
+            "light_sensor": 50,
+            "mute_switch": 50,
+            "home_button": 60
+          }
+        },
+        {
+          "slug": "iphone-7",
+          "name": "7",
+          "full_name": "iPhone 7",
+          "year": null,
+          "prices": {
+            "battery": 30,
+            "display": 80,
+            "back_cover": 70,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 50,
+            "speaker": 40,
+            "light_sensor": 50,
+            "mute_switch": 50,
+            "home_button": 60
+          }
+        },
+        {
+          "slug": "iphone-6s-plus",
+          "name": "6s Plus",
+          "full_name": "iPhone 6s Plus",
+          "year": null,
+          "prices": {
+            "battery": 30,
+            "display": 70,
+            "back_cover": 60,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 50,
+            "camera_front": 30,
+            "camera_glass": 20,
+            "power_button": 60,
+            "speaker": 40,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 50
+          }
+        },
+        {
+          "slug": "iphone-6s",
+          "name": "6s",
+          "full_name": "iPhone 6s",
+          "year": null,
+          "prices": {
+            "battery": 30,
+            "display": 70,
+            "back_cover": 60,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 50,
+            "camera_front": 30,
+            "camera_glass": 20,
+            "power_button": 40,
+            "speaker": 40,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 40
+          }
+        },
+        {
+          "slug": "iphone-6-plus",
+          "name": "6 Plus",
+          "full_name": "iPhone 6 Plus",
+          "year": null,
+          "prices": {
+            "battery": 30,
+            "display": 70,
+            "back_cover": 60,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 40,
+            "camera_front": 30,
+            "camera_glass": 20,
+            "power_button": 50,
+            "speaker": 40,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 30
+          }
+        },
+        {
+          "slug": "iphone-6",
+          "name": "6",
+          "full_name": "iPhone 6",
+          "year": null,
+          "prices": {
+            "battery": 30,
+            "display": 60,
+            "back_cover": 50,
+            "charging_port": 30,
+            "earpiece": 20,
+            "microphone": 30,
+            "camera_back": 30,
+            "camera_front": 30,
+            "camera_glass": 30,
+            "power_button": 50,
+            "speaker": 30,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 30
+          }
+        },
+        {
+          "slug": "iphone-se",
+          "name": "SE",
+          "full_name": "iPhone SE",
+          "year": null,
+          "prices": {
+            "battery": 30,
+            "display": 50,
+            "back_cover": 50,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 40,
+            "camera_front": 30,
+            "power_button": 40,
+            "speaker": 30,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 30
+          }
+        },
+        {
+          "slug": "iphone-5s",
+          "name": "5s",
+          "full_name": "iPhone 5s",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 40,
+            "back_cover": 40,
+            "charging_port": 30,
+            "earpiece": 20,
+            "microphone": 30,
+            "camera_back": 30,
+            "camera_front": 20,
+            "power_button": 50,
+            "speaker": 30,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 30
+          }
+        },
+        {
+          "slug": "iphone-5c",
+          "name": "5c",
+          "full_name": "iPhone 5c",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 30,
+            "back_cover": 40,
+            "charging_port": 40,
+            "earpiece": 20,
+            "microphone": 40,
+            "camera_back": 40,
+            "camera_front": 30,
+            "power_button": 40,
+            "speaker": 30,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 20
+          }
+        },
+        {
+          "slug": "iphone-5",
+          "name": "5",
+          "full_name": "iPhone 5",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 40,
+            "back_cover": 40,
+            "charging_port": 40,
+            "earpiece": 20,
+            "microphone": 40,
+            "camera_back": 40,
+            "camera_front": 20,
+            "power_button": 40,
+            "speaker": 30,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 30
+          }
+        },
+        {
+          "slug": "iphone-4s",
+          "name": "4s",
+          "full_name": "iPhone 4s",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 40,
+            "back_cover": 20,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 30,
+            "camera_back": 30,
+            "camera_front": 30,
+            "camera_glass": 30,
+            "power_button": 30,
+            "speaker": 30,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 30
+          }
+        },
+        {
+          "slug": "iphone-4",
+          "name": "4",
+          "full_name": "iPhone 4",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 40,
+            "back_cover": 10,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 30,
+            "camera_back": 30,
+            "camera_front": 30,
+            "camera_glass": 30,
+            "power_button": 30,
+            "speaker": 30,
+            "light_sensor": 30,
+            "mute_switch": 30,
+            "home_button": 30
+          }
+        }
+      ]
+    },
+    "apple-ipad": {
+      "id": "apple-ipad",
+      "label": "iPad",
+      "parent_brand": "Apple",
+      "device_type": "tablet",
+      "models": [
+        {
+          "slug": "ipad-air-6-2024-11-0",
+          "name": "Air 6 (2024) 11.0'",
+          "full_name": "iPad Air 6 (2024) 11.0'",
+          "year": 2024,
+          "prices": {
+            "battery": 140,
+            "display": 330,
+            "charging_port": 180
+          }
+        },
+        {
+          "slug": "ipad-air-6-2024-13-0",
+          "name": "Air 6 (2024) 13.0'",
+          "full_name": "iPad Air 6 (2024) 13.0'",
+          "year": 2024,
+          "prices": {
+            "battery": 140,
+            "display": 380,
+            "charging_port": 200
+          }
+        },
+        {
+          "slug": "ipad-10-2022-10-9",
+          "name": "10 (2022) 10.9'",
+          "full_name": "iPad 10 (2022) 10.9'",
+          "year": 2022,
+          "prices": {
+            "battery": 130,
+            "display": 230,
+            "display_orig": 180
+          }
+        },
+        {
+          "slug": "ipad-9-2021-10-9",
+          "name": "9 (2021) 10.9'",
+          "full_name": "iPad 9 (2021) 10.9'",
+          "year": 2021,
+          "prices": {
+            "battery": 130,
+            "display": 230,
+            "display_orig": 180
+          }
+        },
+        {
+          "slug": "ipad-8-2020-10-2",
+          "name": "8 (2020) 10.2'",
+          "full_name": "iPad 8 (2020) 10.2'",
+          "year": 2020,
+          "prices": {
+            "battery": 120,
+            "display": 220,
+            "display_orig": 160,
+            "charging_port": 110,
+            "home_button": 90
+          }
+        },
+        {
+          "slug": "ipad-7-2019-10-2",
+          "name": "7 (2019) 10.2'",
+          "full_name": "iPad 7 (2019) 10.2'",
+          "year": 2019,
+          "prices": {
+            "battery": 100,
+            "display": 180,
+            "display_orig": 160,
+            "charging_port": 110
+          }
+        },
+        {
+          "slug": "ipad-6-2018-9-7",
+          "name": "6 (2018) 9.7'",
+          "full_name": "iPad 6 (2018) 9.7'",
+          "year": 2018,
+          "prices": {
+            "battery": 90,
+            "display": 130,
+            "display_orig": 110,
+            "charging_port": 90,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-5-2018-9-7",
+          "name": "5 (2018) 9.7'",
+          "full_name": "iPad 5 (2018) 9.7'",
+          "year": 2018,
+          "prices": {
+            "battery": 90,
+            "display": 130,
+            "display_orig": 110,
+            "charging_port": 90,
+            "camera_back": 110,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-4-2012",
+          "name": "4 (2012)",
+          "full_name": "iPad 4 (2012)",
+          "year": 2012,
+          "prices": {
+            "battery": 80,
+            "display": 110,
+            "display_orig": 90,
+            "charging_port": 90,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-3-2012",
+          "name": "3 (2012)",
+          "full_name": "iPad 3 (2012)",
+          "year": 2012,
+          "prices": {
+            "battery": 80,
+            "display": 90,
+            "display_orig": 90,
+            "charging_port": 90,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-2-2011",
+          "name": "2 (2011)",
+          "full_name": "iPad 2 (2011)",
+          "year": 2011,
+          "prices": {
+            "battery": 70,
+            "display": 90,
+            "display_orig": 80,
+            "charging_port": 60,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-pro-11-2025",
+          "name": "Pro 11 (2025)",
+          "full_name": "iPad Pro 11 (2025)",
+          "year": 2025,
+          "prices": {
+            "battery": 150,
+            "display": 180,
+            "display_orig": 320
+          }
+        },
+        {
+          "slug": "ipad-pro-12-9-2021",
+          "name": "Pro 12.9' (2021)",
+          "full_name": "iPad Pro 12.9' (2021)",
+          "year": 2021,
+          "prices": {
+            "battery": 180,
+            "display": 420,
+            "charging_port": 180
+          }
+        },
+        {
+          "slug": "ipad-pro-11-0-2021",
+          "name": "Pro 11.0' (2021)",
+          "full_name": "iPad Pro 11.0' (2021)",
+          "year": 2021,
+          "prices": {
+            "battery": 130,
+            "display": 300,
+            "charging_port": 180
+          }
+        },
+        {
+          "slug": "ipad-pro-12-9-2020",
+          "name": "Pro 12.9' (2020)",
+          "full_name": "iPad Pro 12.9' (2020)",
+          "year": 2020,
+          "prices": {
+            "battery": 180,
+            "display": 300,
+            "charging_port": 180,
+            "camera_back": 180
+          }
+        },
+        {
+          "slug": "ipad-pro-11-0-2020",
+          "name": "Pro 11.0' (2020)",
+          "full_name": "iPad Pro 11.0' (2020)",
+          "year": 2020,
+          "prices": {
+            "battery": 130,
+            "display": 300,
+            "charging_port": 180
+          }
+        },
+        {
+          "slug": "ipad-pro-11-2018",
+          "name": "Pro 11 (2018)",
+          "full_name": "iPad Pro 11 (2018)",
+          "year": 2018,
+          "prices": {
+            "battery": 130,
+            "display": 300,
+            "charging_port": 180
+          }
+        },
+        {
+          "slug": "ipad-pro-12-9-2018",
+          "name": "Pro 12.9' (2018)",
+          "full_name": "iPad Pro 12.9' (2018)",
+          "year": 2018,
+          "prices": {
+            "battery": 150,
+            "display": 280,
+            "charging_port": 180,
+            "camera_back": 110
+          }
+        },
+        {
+          "slug": "ipad-pro-12-9-2017",
+          "name": "Pro 12.9' (2017)",
+          "full_name": "iPad Pro 12.9' (2017)",
+          "year": 2017,
+          "prices": {
+            "battery": 180,
+            "display": 380,
+            "charging_port": 180,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-pro-10-5-2017",
+          "name": "Pro 10.5' (2017)",
+          "full_name": "iPad Pro 10.5' (2017)",
+          "year": 2017,
+          "prices": {
+            "battery": 130,
+            "display": 250,
+            "charging_port": 110,
+            "power_button": 90,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-pro-9-7-2016",
+          "name": "Pro 9.7' (2016)",
+          "full_name": "iPad Pro 9.7' (2016)",
+          "year": 2016,
+          "prices": {
+            "battery": 130,
+            "display": 260,
+            "charging_port": 90,
+            "camera_back": 110,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-pro-12-9-2015",
+          "name": "Pro 12.9' (2015)",
+          "full_name": "iPad Pro 12.9' (2015)",
+          "year": 2015,
+          "prices": {
+            "battery": 130,
+            "display": 260,
+            "charging_port": 180,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-air-5-2022",
+          "name": "Air 5 (2022)",
+          "full_name": "iPad Air 5 (2022)",
+          "year": 2022,
+          "prices": {
+            "battery": 130,
+            "display": 280
+          }
+        },
+        {
+          "slug": "ipad-air-4-2020",
+          "name": "Air 4 (2020)",
+          "full_name": "iPad Air 4 (2020)",
+          "year": 2020,
+          "prices": {
+            "battery": 130,
+            "display": 280,
+            "charging_port": 180,
+            "power_button": 180
+          }
+        },
+        {
+          "slug": "ipad-air-3-2019",
+          "name": "Air 3 (2019)",
+          "full_name": "iPad Air 3 (2019)",
+          "year": 2019,
+          "prices": {
+            "battery": 120,
+            "display": 230,
+            "charging_port": 110
+          }
+        },
+        {
+          "slug": "ipad-air-2-2014",
+          "name": "Air 2 (2014)",
+          "full_name": "iPad Air 2 (2014)",
+          "year": 2014,
+          "prices": {
+            "battery": 120,
+            "display": 200,
+            "charging_port": 90,
+            "home_button": 90
+          }
+        },
+        {
+          "slug": "ipad-air-2013",
+          "name": "Air (2013)",
+          "full_name": "iPad Air (2013)",
+          "year": 2013,
+          "prices": {
+            "battery": 120,
+            "display": 110,
+            "charging_port": 90,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-mini-6-8-3-2021",
+          "name": "Mini 6 8.3' (2021)",
+          "full_name": "iPad Mini 6 8.3' (2021)",
+          "year": 2021,
+          "prices": {
+            "battery": 120,
+            "display": 300
+          }
+        },
+        {
+          "slug": "ipad-mini-5-2019",
+          "name": "Mini 5 (2019)",
+          "full_name": "iPad Mini 5 (2019)",
+          "year": 2019,
+          "prices": {
+            "battery": 120,
+            "display": 210,
+            "charging_port": 110
+          }
+        },
+        {
+          "slug": "ipad-mini-4-2015",
+          "name": "Mini 4 (2015)",
+          "full_name": "iPad Mini 4 (2015)",
+          "year": 2015,
+          "prices": {
+            "battery": 110,
+            "display": 110,
+            "charging_port": 90,
+            "home_button": 40
+          }
+        },
+        {
+          "slug": "ipad-mini-3-2014",
+          "name": "Mini 3 (2014)",
+          "full_name": "iPad Mini 3 (2014)",
+          "year": 2014,
+          "prices": {
+            "battery": 100,
+            "display": 90,
+            "charging_port": 60,
+            "home_button": 90
+          }
+        },
+        {
+          "slug": "ipad-mini-2-2013",
+          "name": "Mini 2 (2013)",
+          "full_name": "iPad Mini 2 (2013)",
+          "year": 2013,
+          "prices": {
+            "battery": 100,
+            "display": 90,
+            "charging_port": 60,
+            "home_button": 80
+          }
+        },
+        {
+          "slug": "ipad-mini-1-2012",
+          "name": "Mini 1 (2012)",
+          "full_name": "iPad Mini 1 (2012)",
+          "year": 2012,
+          "prices": {
+            "battery": 100,
+            "display": 90,
+            "charging_port": 60,
+            "home_button": 80
+          }
+        }
+      ]
+    },
+    "apple-watch": {
+      "id": "apple-watch",
+      "label": "Apple Watch",
+      "parent_brand": "Apple",
+      "device_type": "wearable",
+      "models": [
+        {
+          "slug": "applewatch-8-45mm",
+          "name": "8 45mm",
+          "full_name": "Apple Watch 8 45mm",
+          "year": null,
+          "prices": {
+            "battery": 120,
+            "display": 270
+          }
+        },
+        {
+          "slug": "applewatch-7-41mm",
+          "name": "7 41mm",
+          "full_name": "Apple Watch 7 41mm",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 250
+          }
+        },
+        {
+          "slug": "applewatch-7-45mm",
+          "name": "7 45mm",
+          "full_name": "Apple Watch 7 45mm",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 250
+          }
+        },
+        {
+          "slug": "applewatch-6-40mm",
+          "name": "6 40mm",
+          "full_name": "Apple Watch 6 40mm",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 230
+          }
+        },
+        {
+          "slug": "applewatch-6-44mm",
+          "name": "6 44mm",
+          "full_name": "Apple Watch 6 44mm",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 180
+          }
+        },
+        {
+          "slug": "applewatch-se-40mm",
+          "name": "SE 40mm",
+          "full_name": "Apple Watch SE 40mm",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 220
+          }
+        },
+        {
+          "slug": "applewatch-se-44mm",
+          "name": "SE 44mm",
+          "full_name": "Apple Watch SE 44mm",
+          "year": null,
+          "prices": {
+            "battery": 110,
+            "display": 230
+          }
+        },
+        {
+          "slug": "applewatch-5-40mm",
+          "name": "5 40mm",
+          "full_name": "Apple Watch 5 40mm",
+          "year": null,
+          "prices": {
+            "display": 220
+          }
+        },
+        {
+          "slug": "applewatch-5-44mm",
+          "name": "5 44mm",
+          "full_name": "Apple Watch 5 44mm",
+          "year": null,
+          "prices": {
+            "display": 240
+          }
+        },
+        {
+          "slug": "applewatch-4-40mm",
+          "name": "4 40mm",
+          "full_name": "Apple Watch 4 40mm",
+          "year": null,
+          "prices": {
+            "display": 240
+          }
+        },
+        {
+          "slug": "applewatch-4-44mm",
+          "name": "4 44mm",
+          "full_name": "Apple Watch 4 44mm",
+          "year": null,
+          "prices": {
+            "display": 250
+          }
+        },
+        {
+          "slug": "applewatch-3-38mm",
+          "name": "3 38mm",
+          "full_name": "Apple Watch 3 38mm",
+          "year": null,
+          "prices": {
+            "display": 140
+          }
+        },
+        {
+          "slug": "applewatch-3-42mm",
+          "name": "3 42mm",
+          "full_name": "Apple Watch 3 42mm",
+          "year": null,
+          "prices": {
+            "display": 180
+          }
+        },
+        {
+          "slug": "applewatch-2-38mm",
+          "name": "2 38mm",
+          "full_name": "Apple Watch 2 38mm",
+          "year": null,
+          "prices": {
+            "display": 130
+          }
+        },
+        {
+          "slug": "applewatch-2-42mm",
+          "name": "2 42mm",
+          "full_name": "Apple Watch 2 42mm",
+          "year": null,
+          "prices": {
+            "display": 140
+          }
+        },
+        {
+          "slug": "applewatch-1-38mm",
+          "name": "1 38mm",
+          "full_name": "Apple Watch 1 38mm",
+          "year": null,
+          "prices": {
+            "display": 110
+          }
+        },
+        {
+          "slug": "applewatch-1-42mm",
+          "name": "1 42mm",
+          "full_name": "Apple Watch 1 42mm",
+          "year": null,
+          "prices": {
+            "display": 110
+          }
+        }
+      ]
+    },
+    "samsung-galaxy": {
+      "id": "samsung-galaxy",
+      "label": "Samsung Galaxy S, Note, Z",
+      "parent_brand": "Samsung",
+      "device_type": "smartphone",
+      "models": [
+        {
+          "slug": "samsung-z-flip-7",
+          "name": "Z Flip 7",
+          "full_name": "Samsung Z Flip 7",
+          "year": null,
+          "prices": {
+            "battery": 130,
+            "display": 350,
+            "back_cover": 70,
+            "charging_port": 110,
+            "microphone": 100,
+            "camera_back": 130
+          }
+        },
+        {
+          "slug": "samsung-z-flip-6",
+          "name": "Z Flip 6",
+          "full_name": "Samsung Z Flip 6",
+          "year": null,
+          "prices": {
+            "battery": 130,
+            "display": 350,
+            "charging_port": 100,
+            "microphone": 100,
+            "camera_back": 130
+          }
+        },
+        {
+          "slug": "samsung-z-flip-5",
+          "name": "Z Flip 5",
+          "full_name": "Samsung Z Flip 5",
+          "year": null,
+          "prices": {
+            "battery": 130,
+            "display": 350,
+            "charging_port": 100,
+            "microphone": 100,
+            "camera_back": 130
+          }
+        },
+        {
+          "slug": "samsung-z-flip-4",
+          "name": "Z Flip 4",
+          "full_name": "Samsung Z Flip 4",
+          "year": null,
+          "prices": {
+            "battery": 130,
+            "display": 390,
+            "charging_port": 100,
+            "microphone": 100,
+            "camera_back": 130
+          }
+        },
+        {
+          "slug": "samsung-z-flip-3",
+          "name": "Z Flip 3",
+          "full_name": "Samsung Z Flip 3",
+          "year": null,
+          "prices": {
+            "battery": 130,
+            "display": 320,
+            "back_cover": 70,
+            "charging_port": 90,
+            "microphone": 90,
+            "camera_back": 90
+          }
+        },
+        {
+          "slug": "samsung-z-fold-5",
+          "name": "Z Fold 5",
+          "full_name": "Samsung Z Fold 5",
+          "year": null,
+          "prices": {
+            "battery": 150,
+            "display": 600,
+            "back_cover": 100,
+            "camera_back": 270
+          }
+        },
+        {
+          "slug": "samsung-z-fold-4",
+          "name": "Z Fold 4",
+          "full_name": "Samsung Z Fold 4",
+          "year": null,
+          "prices": {
+            "battery": 150,
+            "display": 500,
+            "back_cover": 110
+          }
+        },
+        {
+          "slug": "samsung-z-fold-3",
+          "name": "Z Fold 3",
+          "full_name": "Samsung Z Fold 3",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 430,
+            "back_cover": 90,
+            "charging_port": 90,
+            "camera_glass": 80
+          }
+        },
+        {
+          "slug": "samsung-s26-ultra",
+          "name": "S26 Ultra",
+          "full_name": "Samsung S26 Ultra",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 370,
+            "back_cover": 90,
+            "charging_port": 90,
+            "earpiece": 90,
+            "microphone": 90
+          }
+        },
+        {
+          "slug": "samsung-s26",
+          "name": "S26+",
+          "full_name": "Samsung S26+",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 270,
+            "back_cover": 90,
+            "charging_port": 90
+          }
+        },
+        {
+          "slug": "samsung-s26",
+          "name": "S26",
+          "full_name": "Samsung S26",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 250,
+            "back_cover": 90,
+            "charging_port": 90
+          }
+        },
+        {
+          "slug": "samsung-s25-ultra",
+          "name": "S25 Ultra",
+          "full_name": "Samsung S25 Ultra",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 230,
+            "back_cover": 90,
+            "charging_port": 80,
+            "earpiece": 70,
+            "camera_glass": 70,
+            "power_button": 70,
+            "speaker": 70
+          }
+        },
+        {
+          "slug": "samsung-s25-edge",
+          "name": "S25 Edge",
+          "full_name": "Samsung S25 Edge",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 340,
+            "back_cover": 90,
+            "charging_port": 90,
+            "camera_glass": 70
+          }
+        },
+        {
+          "slug": "samsung-s25",
+          "name": "S25+",
+          "full_name": "Samsung S25+",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 200,
+            "back_cover": 80,
+            "charging_port": 80,
+            "earpiece": 80,
+            "camera_glass": 70,
+            "speaker": 80
+          }
+        },
+        {
+          "slug": "samsung-s25",
+          "name": "S25",
+          "full_name": "Samsung S25",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 200,
+            "back_cover": 90,
+            "charging_port": 80,
+            "earpiece": 80,
+            "microphone": 80,
+            "camera_glass": 70,
+            "speaker": 80
+          }
+        },
+        {
+          "slug": "samsung-s25-fe",
+          "name": "S25 FE",
+          "full_name": "Samsung S25 FE",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 180,
+            "back_cover": 90
+          }
+        },
+        {
+          "slug": "samsung-s24-ultra",
+          "name": "S24 Ultra",
+          "full_name": "Samsung S24 Ultra",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 280,
+            "back_cover": 90,
+            "charging_port": 90,
+            "earpiece": 80,
+            "microphone": 80,
+            "camera_glass": 80,
+            "speaker": 80
+          }
+        },
+        {
+          "slug": "samsung-s24",
+          "name": "S24+",
+          "full_name": "Samsung S24+",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 200,
+            "back_cover": 80,
+            "charging_port": 70,
+            "earpiece": 70,
+            "microphone": 70,
+            "camera_glass": 80,
+            "power_button": 60,
+            "speaker": 70
+          }
+        },
+        {
+          "slug": "samsung-s24",
+          "name": "S24",
+          "full_name": "Samsung S24",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 200,
+            "back_cover": 80,
+            "charging_port": 70,
+            "earpiece": 80,
+            "microphone": 90,
+            "camera_glass": 80,
+            "power_button": 70,
+            "speaker": 80
+          }
+        },
+        {
+          "slug": "samsung-s24-fe",
+          "name": "S24 FE",
+          "full_name": "Samsung S24 FE",
+          "year": null,
+          "prices": {
+            "battery": 90,
+            "display": 140,
+            "back_cover": 80,
+            "charging_port": 80,
+            "microphone": 80,
+            "camera_glass": 50
+          }
+        },
+        {
+          "slug": "samsung-s23-ultra",
+          "name": "S23 Ultra",
+          "full_name": "Samsung S23 Ultra",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 270,
+            "back_cover": 90,
+            "charging_port": 80,
+            "earpiece": 80,
+            "microphone": 80,
+            "power_button": 80,
+            "speaker": 80
+          }
+        },
+        {
+          "slug": "samsung-s23",
+          "name": "S23+",
+          "full_name": "Samsung S23+",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 250,
+            "back_cover": 90,
+            "charging_port": 90
+          }
+        },
+        {
+          "slug": "samsung-s23",
+          "name": "S23",
+          "full_name": "Samsung S23",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 230,
+            "back_cover": 100,
+            "charging_port": 90,
+            "earpiece": 100,
+            "power_button": 70,
+            "speaker": 80
+          }
+        },
+        {
+          "slug": "samsung-s23-fe",
+          "name": "S23 FE",
+          "full_name": "Samsung S23 FE",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 170,
+            "back_cover": 100,
+            "charging_port": 70,
+            "earpiece": 70,
+            "microphone": 70
+          }
+        },
+        {
+          "slug": "samsung-s22-ultra",
+          "name": "S22 Ultra",
+          "full_name": "Samsung S22 Ultra",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 330,
+            "back_cover": 80,
+            "charging_port": 90,
+            "microphone": 80,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsung-s22",
+          "name": "S22+",
+          "full_name": "Samsung S22+",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 230,
+            "back_cover": 80,
+            "charging_port": 70,
+            "earpiece": 60,
+            "microphone": 60,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsung-s22",
+          "name": "S22",
+          "full_name": "Samsung S22",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 230,
+            "back_cover": 80,
+            "charging_port": 60,
+            "earpiece": 60,
+            "microphone": 60,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsung-s21-ultra",
+          "name": "S21 Ultra",
+          "full_name": "Samsung S21 Ultra",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 320,
+            "back_cover": 70,
+            "charging_port": 70,
+            "earpiece": 50,
+            "microphone": 70,
+            "camera_back": 210,
+            "camera_front": 70,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsung-s21",
+          "name": "S21+",
+          "full_name": "Samsung S21+",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 270,
+            "back_cover": 70,
+            "charging_port": 70,
+            "microphone": 70,
+            "camera_back": 210,
+            "camera_front": 70,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsung-s21",
+          "name": "S21",
+          "full_name": "Samsung S21",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 220,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 50,
+            "microphone": 60,
+            "camera_back": 180,
+            "camera_front": 70,
+            "camera_glass": 50,
+            "speaker": 50
+          }
+        },
+        {
+          "slug": "samsung-s21-fe",
+          "name": "S21 FE",
+          "full_name": "Samsung S21 FE",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 180,
+            "back_cover": 70,
+            "charging_port": 80
+          }
+        },
+        {
+          "slug": "samsung-s20-ultra",
+          "name": "S20 Ultra",
+          "full_name": "Samsung S20 Ultra",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 290,
+            "back_cover": 70,
+            "charging_port": 70,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 180,
+            "camera_front": 70,
+            "camera_glass": 50,
+            "speaker": 50
+          }
+        },
+        {
+          "slug": "samsung-s20",
+          "name": "S20+",
+          "full_name": "Samsung S20+",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 230,
+            "back_cover": 70,
+            "charging_port": 70,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 130,
+            "camera_front": 70
+          }
+        },
+        {
+          "slug": "samsung-s20",
+          "name": "S20",
+          "full_name": "Samsung S20",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 210,
+            "back_cover": 70,
+            "charging_port": 70,
+            "earpiece": 40,
+            "microphone": 60,
+            "camera_back": 130,
+            "camera_front": 70,
+            "camera_glass": 50,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsung-s20-fe",
+          "name": "S20 FE",
+          "full_name": "Samsung S20 FE",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 140,
+            "back_cover": 60,
+            "charging_port": 40,
+            "earpiece": 50,
+            "microphone": 40,
+            "camera_back": 110,
+            "camera_front": 70,
+            "camera_glass": 40
+          }
+        },
+        {
+          "slug": "samsung-s10",
+          "name": "S10",
+          "full_name": "Samsung S10",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 260,
+            "back_cover": 70,
+            "charging_port": 60,
+            "earpiece": 40,
+            "microphone": 70,
+            "camera_back": 120,
+            "camera_front": 70,
+            "camera_glass": 50,
+            "power_button": 60
+          }
+        },
+        {
+          "slug": "samsung-s10-5g",
+          "name": "S10 5G",
+          "full_name": "Samsung S10 5G",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 260,
+            "back_cover": 70,
+            "charging_port": 90,
+            "camera_glass": 50
+          }
+        },
+        {
+          "slug": "samsung-s10",
+          "name": "S10+",
+          "full_name": "Samsung S10+",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 240,
+            "back_cover": 60,
+            "charging_port": 70,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 120,
+            "camera_front": 70,
+            "camera_glass": 30,
+            "power_button": 60,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsung-s10e",
+          "name": "S10e",
+          "full_name": "Samsung S10e",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 200,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 60,
+            "camera_back": 110,
+            "camera_front": 70,
+            "camera_glass": 30,
+            "power_button": 30
+          }
+        },
+        {
+          "slug": "samsung-s10-lite",
+          "name": "S10 lite",
+          "full_name": "Samsung S10 lite",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 180,
+            "back_cover": 50,
+            "charging_port": 50,
+            "earpiece": 50,
+            "microphone": 50,
+            "camera_back": 100,
+            "camera_front": 40
+          }
+        },
+        {
+          "slug": "samsung-s9",
+          "name": "S9",
+          "full_name": "Samsung S9",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 150,
+            "back_cover": 50,
+            "charging_port": 60,
+            "earpiece": 50,
+            "microphone": 50,
+            "camera_back": 70,
+            "camera_front": 50,
+            "camera_glass": 40,
+            "power_button": 40,
+            "speaker": 50
+          }
+        },
+        {
+          "slug": "samsung-s9",
+          "name": "S9+",
+          "full_name": "Samsung S9+",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 230,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 110,
+            "camera_front": 50,
+            "camera_glass": 40,
+            "power_button": 40,
+            "speaker": 50
+          }
+        },
+        {
+          "slug": "samsung-s8",
+          "name": "S8",
+          "full_name": "Samsung S8",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 210,
+            "back_cover": 50,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 70,
+            "camera_front": 50,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsung-s8",
+          "name": "S8+",
+          "full_name": "Samsung S8+",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 230,
+            "back_cover": 50,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 60,
+            "camera_back": 90,
+            "camera_front": 50,
+            "camera_glass": 40,
+            "speaker": 50
+          }
+        },
+        {
+          "slug": "samsung-s7",
+          "name": "S7",
+          "full_name": "Samsung S7",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 130,
+            "back_cover": 40,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 60,
+            "camera_back": 60,
+            "camera_front": 50,
+            "camera_glass": 30,
+            "power_button": 40,
+            "home_button": 60
+          }
+        },
+        {
+          "slug": "samsung-s7-edge",
+          "name": "S7 Edge",
+          "full_name": "Samsung S7 Edge",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 160,
+            "back_cover": 40,
+            "charging_port": 70,
+            "earpiece": 30,
+            "microphone": 70,
+            "camera_back": 60,
+            "camera_front": 50,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 40,
+            "home_button": 70
+          }
+        },
+        {
+          "slug": "samsung-s6",
+          "name": "S6",
+          "full_name": "Samsung S6",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 110,
+            "back_cover": 40,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 50,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 40,
+            "home_button": 70
+          }
+        },
+        {
+          "slug": "samsung-s6-edge",
+          "name": "S6 Edge",
+          "full_name": "Samsung S6 Edge",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 160,
+            "back_cover": 40,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 40,
+            "home_button": 60
+          }
+        },
+        {
+          "slug": "samsung-s6-edge",
+          "name": "S6 Edge+",
+          "full_name": "Samsung S6 Edge+",
+          "year": null,
+          "prices": {
+            "battery": 40,
+            "display": 160,
+            "back_cover": 40,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 40,
+            "home_button": 60
+          }
+        },
+        {
+          "slug": "samsung-s5",
+          "name": "S5",
+          "full_name": "Samsung S5",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 100,
+            "back_cover": 20,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 60,
+            "camera_back": 70,
+            "camera_front": 40,
+            "power_button": 40,
+            "speaker": 40,
+            "home_button": 60
+          }
+        },
+        {
+          "slug": "samsung-s5-neo",
+          "name": "S5 Neo",
+          "full_name": "Samsung S5 Neo",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 60,
+            "camera_back": 70,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "home_button": 60
+          }
+        },
+        {
+          "slug": "samsung-s5-mini",
+          "name": "S5 mini",
+          "full_name": "Samsung S5 mini",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 90,
+            "back_cover": 20,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 60,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsung-note-20",
+          "name": "Note 20",
+          "full_name": "Samsung Note 20",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 230,
+            "back_cover": 60,
+            "charging_port": 40,
+            "microphone": 40,
+            "camera_back": 200,
+            "camera_front": 70,
+            "camera_glass": 40,
+            "power_button": 70,
+            "mute_switch": 40
+          }
+        },
+        {
+          "slug": "samsung-note-20-ultra",
+          "name": "Note 20 Ultra",
+          "full_name": "Samsung Note 20 Ultra",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 370,
+            "back_cover": 90,
+            "charging_port": 90,
+            "camera_front": 70,
+            "camera_glass": 40
+          }
+        },
+        {
+          "slug": "samsung-note-10",
+          "name": "Note 10",
+          "full_name": "Samsung Note 10",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 260,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 120,
+            "camera_front": 100,
+            "camera_glass": 50,
+            "mute_switch": 50
+          }
+        },
+        {
+          "slug": "samsung-note-10",
+          "name": "Note 10+",
+          "full_name": "Samsung Note 10+",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 220,
+            "back_cover": 50,
+            "charging_port": 60,
+            "earpiece": 50,
+            "microphone": 50,
+            "camera_back": 130,
+            "camera_glass": 60,
+            "mute_switch": 50
+          }
+        },
+        {
+          "slug": "samsung-note-10-lite",
+          "name": "Note 10 lite",
+          "full_name": "Samsung Note 10 lite",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 200,
+            "back_cover": 70,
+            "charging_port": 80,
+            "earpiece": 40,
+            "camera_front": 70
+          }
+        },
+        {
+          "slug": "samsung-note-9",
+          "name": "Note 9",
+          "full_name": "Samsung Note 9",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 250,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 80,
+            "camera_front": 40,
+            "power_button": 40
+          }
+        },
+        {
+          "slug": "samsung-note-8",
+          "name": "Note 8",
+          "full_name": "Samsung Note 8",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 240,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 80,
+            "camera_front": 60,
+            "camera_glass": 40,
+            "power_button": 40,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsung-note-4",
+          "name": "Note 4",
+          "full_name": "Samsung Note 4",
+          "year": null,
+          "prices": {
+            "battery": 30,
+            "display": 130,
+            "back_cover": 20,
+            "charging_port": 30,
+            "earpiece": 30,
+            "microphone": 30,
+            "camera_back": 70,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsung-note-3",
+          "name": "Note 3",
+          "full_name": "Samsung Note 3",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 150,
+            "back_cover": 20,
+            "charging_port": 30,
+            "earpiece": 20,
+            "microphone": 20,
+            "camera_back": 30,
+            "camera_front": 30,
+            "camera_glass": 30,
+            "power_button": 30
+          }
+        },
+        {
+          "slug": "samsung-note-3-neo",
+          "name": "Note 3 neo",
+          "full_name": "Samsung Note 3 neo",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 90,
+            "back_cover": 20,
+            "charging_port": 20,
+            "earpiece": 30,
+            "microphone": 30,
+            "camera_back": 60,
+            "camera_front": 30,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsung-note-2",
+          "name": "Note 2",
+          "full_name": "Samsung Note 2",
+          "year": null,
+          "prices": {
+            "battery": 20,
+            "display": 130,
+            "back_cover": 20,
+            "charging_port": 30,
+            "earpiece": 30,
+            "microphone": 30,
+            "camera_back": 60,
+            "camera_front": 30,
+            "camera_glass": 30
+          }
+        }
+      ]
+    },
+    "samsung-a": {
+      "id": "samsung-a",
+      "label": "Samsung Galaxy A-Serie",
+      "parent_brand": "Samsung",
+      "device_type": "smartphone",
+      "models": [
+        {
+          "slug": "samsunga-a01",
+          "name": "A01",
+          "full_name": "Samsung A01",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 90
+          }
+        },
+        {
+          "slug": "samsunga-a02s",
+          "name": "A02s",
+          "full_name": "Samsung A02s",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 110
+          }
+        },
+        {
+          "slug": "samsunga-a03s",
+          "name": "A03s",
+          "full_name": "Samsung A03s",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 100
+          }
+        },
+        {
+          "slug": "samsunga-a05s",
+          "name": "A05s",
+          "full_name": "Samsung A05s",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 100,
+            "back_cover": 60,
+            "charging_port": 70,
+            "microphone": 70
+          }
+        },
+        {
+          "slug": "samsunga-a10",
+          "name": "A10",
+          "full_name": "Samsung A10",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 80,
+            "back_cover": 60,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 40,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a12",
+          "name": "A12",
+          "full_name": "Samsung A12",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 100,
+            "back_cover": 70,
+            "charging_port": 50,
+            "earpiece": 40,
+            "camera_front": 40
+          }
+        },
+        {
+          "slug": "samsunga-a13",
+          "name": "A13",
+          "full_name": "Samsung A13",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 90,
+            "charging_port": 60,
+            "earpiece": 50,
+            "microphone": 50,
+            "camera_back": 60,
+            "power_button": 60
+          }
+        },
+        {
+          "slug": "samsunga-a14",
+          "name": "A14",
+          "full_name": "Samsung A14",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 110,
+            "back_cover": 50,
+            "charging_port": 70,
+            "earpiece": 60,
+            "microphone": 60,
+            "camera_glass": 40,
+            "power_button": 50
+          }
+        },
+        {
+          "slug": "samsunga-a15",
+          "name": "A15",
+          "full_name": "Samsung A15",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 110,
+            "back_cover": 50,
+            "charging_port": 50,
+            "earpiece": 70,
+            "microphone": 50,
+            "camera_glass": 40
+          }
+        },
+        {
+          "slug": "samsunga-a16",
+          "name": "A16",
+          "full_name": "Samsung A16",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 100,
+            "back_cover": 50,
+            "charging_port": 50,
+            "earpiece": 60,
+            "power_button": 60,
+            "speaker": 60,
+            "mute_switch": 60
+          }
+        },
+        {
+          "slug": "samsunga-a17",
+          "name": "A17",
+          "full_name": "Samsung A17",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 100,
+            "back_cover": 50,
+            "charging_port": 60,
+            "earpiece": 60,
+            "microphone": 50,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsunga-a20",
+          "name": "A20",
+          "full_name": "Samsung A20",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 80,
+            "back_cover": 60,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 40,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a20e",
+          "name": "A20e",
+          "full_name": "Samsung A20e",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 100,
+            "back_cover": 60,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 40,
+            "camera_front": 40,
+            "camera_glass": 20,
+            "power_button": 30,
+            "speaker": 40,
+            "home_button": 40
+          }
+        },
+        {
+          "slug": "samsunga-a20s",
+          "name": "A20s",
+          "full_name": "Samsung A20s",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 80,
+            "back_cover": 60,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a21s",
+          "name": "A21s",
+          "full_name": "Samsung A21s",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 90,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 60,
+            "power_button": 40
+          }
+        },
+        {
+          "slug": "samsunga-a22",
+          "name": "A22",
+          "full_name": "Samsung A22",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 110,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 50
+          }
+        },
+        {
+          "slug": "samsunga-a23",
+          "name": "A23",
+          "full_name": "Samsung A23",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 110,
+            "charging_port": 60,
+            "earpiece": 60,
+            "microphone": 60
+          }
+        },
+        {
+          "slug": "samsunga-a25",
+          "name": "A25",
+          "full_name": "Samsung A25",
+          "year": null,
+          "prices": {
+            "battery": 80,
+            "display": 110,
+            "back_cover": 70,
+            "charging_port": 70,
+            "microphone": 70
+          }
+        },
+        {
+          "slug": "samsunga-a26",
+          "name": "A26",
+          "full_name": "Samsung A26",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 120,
+            "back_cover": 50,
+            "charging_port": 60,
+            "earpiece": 60,
+            "microphone": 50,
+            "power_button": 60,
+            "speaker": 70
+          }
+        },
+        {
+          "slug": "samsunga-a3-2015",
+          "name": "A3 (2015)",
+          "full_name": "Samsung A3 (2015)",
+          "year": 2015,
+          "prices": {
+            "battery": 30,
+            "display": 90,
+            "charging_port": 60,
+            "earpiece": 40,
+            "microphone": 60,
+            "camera_back": 40,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a3-2016",
+          "name": "A3 (2016)",
+          "full_name": "Samsung A3 (2016)",
+          "year": 2016,
+          "prices": {
+            "battery": 40,
+            "display": 90,
+            "back_cover": 30,
+            "charging_port": 30,
+            "earpiece": 30,
+            "microphone": 70,
+            "camera_back": 40,
+            "camera_front": 30
+          }
+        },
+        {
+          "slug": "samsunga-a30",
+          "name": "A30",
+          "full_name": "Samsung A30",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 120,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a30s",
+          "name": "A30s",
+          "full_name": "Samsung A30s",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 100,
+            "back_cover": 50,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a31",
+          "name": "A31",
+          "full_name": "Samsung A31",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 120,
+            "back_cover": 40,
+            "camera_front": 40
+          }
+        },
+        {
+          "slug": "samsunga-a32",
+          "name": "A32",
+          "full_name": "Samsung A32",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 110,
+            "back_cover": 40,
+            "charging_port": 40,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 60,
+            "camera_front": 30
+          }
+        },
+        {
+          "slug": "samsunga-a33",
+          "name": "A33",
+          "full_name": "Samsung A33",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 130,
+            "back_cover": 60,
+            "charging_port": 70,
+            "earpiece": 60,
+            "microphone": 60,
+            "camera_back": 70,
+            "camera_front": 50,
+            "camera_glass": 50
+          }
+        },
+        {
+          "slug": "samsunga-a34",
+          "name": "A34",
+          "full_name": "Samsung A34",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 150,
+            "back_cover": 50,
+            "charging_port": 70,
+            "earpiece": 70,
+            "microphone": 70,
+            "camera_back": 110,
+            "camera_front": 70,
+            "camera_glass": 40
+          }
+        },
+        {
+          "slug": "samsunga-a35",
+          "name": "A35",
+          "full_name": "Samsung A35",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 110,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 60,
+            "microphone": 60,
+            "camera_back": 100,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsunga-a36",
+          "name": "A36",
+          "full_name": "Samsung A36",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 130,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 70,
+            "microphone": 60,
+            "power_button": 50
+          }
+        },
+        {
+          "slug": "samsunga-a40",
+          "name": "A40",
+          "full_name": "Samsung A40",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 130,
+            "back_cover": 50,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 60,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 50
+          }
+        },
+        {
+          "slug": "samsunga-a41",
+          "name": "A41",
+          "full_name": "Samsung A41",
+          "year": null,
+          "prices": {
+            "battery": 40,
+            "display": 120,
+            "back_cover": 40,
+            "charging_port": 40,
+            "earpiece": 40,
+            "microphone": 40,
+            "camera_back": 60,
+            "camera_front": 40,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsunga-a42",
+          "name": "A42",
+          "full_name": "Samsung A42",
+          "year": null,
+          "prices": {
+            "battery": 40,
+            "display": 140,
+            "back_cover": 50,
+            "charging_port": 40,
+            "earpiece": 40,
+            "microphone": 40,
+            "camera_back": 80,
+            "camera_front": 40,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsunga-a5-2017",
+          "name": "A5 (2017)",
+          "full_name": "Samsung A5 (2017)",
+          "year": 2017,
+          "prices": {
+            "battery": 50,
+            "display": 110,
+            "back_cover": 40,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 70,
+            "camera_back": 50,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a50",
+          "name": "A50",
+          "full_name": "Samsung A50",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 130,
+            "back_cover": 50,
+            "charging_port": 60,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsunga-a50s",
+          "name": "A50s",
+          "full_name": "Samsung A50s",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 130,
+            "back_cover": 50,
+            "charging_port": 70,
+            "earpiece": 30,
+            "microphone": 70,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a51",
+          "name": "A51",
+          "full_name": "Samsung A51",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 130,
+            "back_cover": 50,
+            "charging_port": 50,
+            "earpiece": 50,
+            "microphone": 50,
+            "camera_back": 80,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsunga-a52s",
+          "name": "A52s",
+          "full_name": "Samsung A52s",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 150,
+            "back_cover": 70,
+            "charging_port": 50,
+            "camera_front": 40
+          }
+        },
+        {
+          "slug": "samsunga-a52s",
+          "name": "A52s",
+          "full_name": "Samsung A52s",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 140,
+            "back_cover": 40,
+            "charging_port": 40,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 60,
+            "camera_front": 40
+          }
+        },
+        {
+          "slug": "samsunga-a53",
+          "name": "A53",
+          "full_name": "Samsung A53",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 140,
+            "back_cover": 70,
+            "charging_port": 70,
+            "earpiece": 60,
+            "microphone": 70,
+            "camera_glass": 40
+          }
+        },
+        {
+          "slug": "samsunga-a54",
+          "name": "A54",
+          "full_name": "Samsung A54",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 120,
+            "back_cover": 70,
+            "charging_port": 70,
+            "earpiece": 60,
+            "microphone": 70,
+            "camera_back": 110,
+            "camera_front": 40,
+            "camera_glass": 40
+          }
+        },
+        {
+          "slug": "samsunga-a55",
+          "name": "A55",
+          "full_name": "Samsung A55",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 130,
+            "back_cover": 70,
+            "charging_port": 70,
+            "microphone": 60,
+            "camera_back": 130,
+            "camera_front": 70,
+            "camera_glass": 40,
+            "power_button": 70,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsunga-a56",
+          "name": "A56",
+          "full_name": "Samsung A56",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 180,
+            "back_cover": 70,
+            "charging_port": 80,
+            "microphone": 70,
+            "camera_glass": 50
+          }
+        },
+        {
+          "slug": "samsunga-a56",
+          "name": "A56",
+          "full_name": "Samsung A56",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 110,
+            "back_cover": 70,
+            "charging_port": 60,
+            "earpiece": 60,
+            "microphone": 60,
+            "power_button": 60,
+            "speaker": 60
+          }
+        },
+        {
+          "slug": "samsunga-a6-2018",
+          "name": "A6 (2018)",
+          "full_name": "Samsung A6 (2018)",
+          "year": 2018,
+          "prices": {
+            "display": 110,
+            "back_cover": 50,
+            "charging_port": 40,
+            "earpiece": 40,
+            "microphone": 40,
+            "camera_back": 40,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsunga-a6-2018",
+          "name": "A6+ (2018)",
+          "full_name": "Samsung A6+ (2018)",
+          "year": 2018,
+          "prices": {
+            "display": 130,
+            "back_cover": 50,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 40,
+            "camera_front": 30,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a60",
+          "name": "A60",
+          "full_name": "Samsung A60",
+          "year": null,
+          "prices": {
+            "battery": 50,
+            "display": 130,
+            "back_cover": 50,
+            "charging_port": 60,
+            "earpiece": 40,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a7-2016",
+          "name": "A7 (2016)",
+          "full_name": "Samsung A7 (2016)",
+          "year": 2016,
+          "prices": {
+            "battery": 40,
+            "display": 120,
+            "back_cover": 30,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a7-2017",
+          "name": "A7 (2017)",
+          "full_name": "Samsung A7 (2017)",
+          "year": 2017,
+          "prices": {
+            "battery": 50,
+            "display": 120,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 50,
+            "camera_back": 80,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a7-2018",
+          "name": "A7 (2018)",
+          "full_name": "Samsung A7 (2018)",
+          "year": 2018,
+          "prices": {
+            "battery": 60,
+            "display": 110,
+            "back_cover": 40,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 80,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 40
+          }
+        },
+        {
+          "slug": "samsunga-a70",
+          "name": "A70",
+          "full_name": "Samsung A70",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 150,
+            "back_cover": 40,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 60,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 40,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsunga-a70s",
+          "name": "A70s",
+          "full_name": "Samsung A70s",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 150,
+            "back_cover": 40,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 60,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a71",
+          "name": "A71",
+          "full_name": "Samsung A71",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 150,
+            "back_cover": 40,
+            "charging_port": 40,
+            "earpiece": 40,
+            "microphone": 40,
+            "camera_back": 80,
+            "camera_front": 40,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsunga-a72",
+          "name": "A72",
+          "full_name": "Samsung A72",
+          "year": null,
+          "prices": {
+            "battery": 70,
+            "display": 140,
+            "back_cover": 50,
+            "charging_port": 50,
+            "earpiece": 30,
+            "microphone": 40,
+            "camera_back": 60,
+            "camera_front": 30,
+            "camera_glass": 40
+          }
+        },
+        {
+          "slug": "samsunga-a8-2018",
+          "name": "A8 (2018)",
+          "full_name": "Samsung A8 (2018)",
+          "year": 2018,
+          "prices": {
+            "battery": 60,
+            "display": 120,
+            "back_cover": 50,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 40,
+            "camera_back": 60,
+            "camera_front": 40,
+            "camera_glass": 30,
+            "power_button": 50,
+            "speaker": 40
+          }
+        },
+        {
+          "slug": "samsunga-a8-2018",
+          "name": "A8+ (2018)",
+          "full_name": "Samsung A8+ (2018)",
+          "year": 2018,
+          "prices": {
+            "battery": 60,
+            "display": 150,
+            "back_cover": 60,
+            "charging_port": 60,
+            "earpiece": 40,
+            "microphone": 60,
+            "camera_back": 70,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a80",
+          "name": "A80",
+          "full_name": "Samsung A80",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 140,
+            "back_cover": 70,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 120,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a9-2018",
+          "name": "A9 (2018)",
+          "full_name": "Samsung A9 (2018)",
+          "year": 2018,
+          "prices": {
+            "display": 180,
+            "back_cover": 60,
+            "charging_port": 50,
+            "earpiece": 40,
+            "microphone": 50,
+            "camera_back": 110,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a90",
+          "name": "A90",
+          "full_name": "Samsung A90",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "display": 170,
+            "back_cover": 60,
+            "earpiece": 40,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        },
+        {
+          "slug": "samsunga-a91",
+          "name": "A91",
+          "full_name": "Samsung A91",
+          "year": null,
+          "prices": {
+            "battery": 60,
+            "back_cover": 60,
+            "earpiece": 40,
+            "camera_front": 40,
+            "camera_glass": 30
+          }
+        }
+      ]
+    }
+  },
+  "repair_types": [
+    {
+      "slug": "display",
+      "label_de": "Display",
+      "label_en": "Display"
+    },
+    {
+      "slug": "display_orig",
+      "label_de": "Display Original",
+      "label_en": "OEM Display"
+    },
+    {
+      "slug": "battery",
+      "label_de": "Akku",
+      "label_en": "Battery"
+    },
+    {
+      "slug": "charging_port",
+      "label_de": "Ladebuchse",
+      "label_en": "Charging Port"
+    },
+    {
+      "slug": "camera_back",
+      "label_de": "Kamera (hinten)",
+      "label_en": "Rear Camera"
+    },
+    {
+      "slug": "camera_front",
+      "label_de": "Frontkamera",
+      "label_en": "Front Camera"
+    },
+    {
+      "slug": "back_cover",
+      "label_de": "Backcover",
+      "label_en": "Back Cover"
+    },
+    {
+      "slug": "speaker",
+      "label_de": "Lautsprecher",
+      "label_en": "Speaker"
+    },
+    {
+      "slug": "microphone",
+      "label_de": "Mikrofon",
+      "label_en": "Microphone"
+    },
+    {
+      "slug": "power_button",
+      "label_de": "Power-Taste",
+      "label_en": "Power Button"
+    }
+  ],
+  "meta": {
+    "currency": "EUR",
+    "warranty_months": 12,
+    "express_minutes": 30,
+    "note_de": "Alle Preise inkl. MwSt., Ersatzteil und Einbau. Diagnose immer kostenlos.",
+    "updated": "2026-05-13"
+  }
+}

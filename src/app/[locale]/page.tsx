@@ -1,5 +1,13 @@
 import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/hero/Hero";
+import { ServiceShowcase } from "@/components/sections/ServiceShowcase";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
+import { BrandGallery } from "@/components/sections/BrandGallery";
+import { PriceCalculatorPreview } from "@/components/sections/PriceCalculatorPreview";
+import { Location } from "@/components/sections/Location";
+import { Reviews } from "@/components/sections/Reviews";
+import { FAQ } from "@/components/sections/FAQ";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default async function HomePage({
   params,
@@ -12,14 +20,14 @@ export default async function HomePage({
   return (
     <>
       <Hero />
-      {/* Sektionen 2-9 kommen nach Hero-Approval */}
-      <section className="h-[60vh] bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-        <div className="mx-auto flex h-full max-w-7xl items-center px-8">
-          <p className="text-sm text-[var(--color-text-muted)]">
-            Sektion 2 - 9 kommen nach deinem OK auf den Hero.
-          </p>
-        </div>
-      </section>
+      <ServiceShowcase />
+      <ProcessSteps />
+      <BrandGallery />
+      <PriceCalculatorPreview />
+      <Location />
+      <Reviews />
+      <FAQ />
+      <FinalCTA />
     </>
   );
 }

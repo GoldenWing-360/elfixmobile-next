@@ -92,3 +92,22 @@ html.lenis body {
   will-change: transform;
   transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Respect reduced-motion preference (a11y + macOS users) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible: clear Apple-style ring */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
