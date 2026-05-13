@@ -12,7 +12,7 @@
     "headline_1": "iPhone'un.",
     "headline_2": "Sıfır gibi.",
     "headline_3": "30 dakikada.",
-    "subline": "Viyana'nın en hızlı tamir atölyesi. Orijinal parça. 12 ay garanti.",
+    "subline": "Aspern Seestadt'ta ekspres tamir. Orijinal parça. 12 ay garanti.",
     "cta_primary": "Fiyat al",
     "cta_secondary": "Randevu al",
     "trust_rating": "5 üzerinden 4,4",
@@ -130,7 +130,7 @@
     "cta_secondary": "Randevu al"
   },
   "footer": {
-    "tagline": "2019'dan beri Viyana'nın en güvenilir tamir atölyesi.",
+    "tagline": "Viyana Aspern'da tamir atölyesi. 2019'dan beri.",
     "address_label": "Adres",
     "hours_label": "Çalışma saatleri",
     "hours_mo_sa": "Pzt - Cmt 09:00 - 19:00",
@@ -256,5 +256,26 @@
     "phone": "Telefon numarası gerekli",
     "message": "Mesaj gerekli (en az 5 karakter)",
     "agb": "Şartları kabul etmelisiniz"
-  }
+  },
+  "common": {
+    "address_label": "Adres"
+  },
+  "footer_links": {
+    "display": "Ekran tamiri",
+    "battery": "Batarya değişimi",
+    "water": "Su hasarı",
+    "camera": "Kamera tamiri",
+    "iphone": "iPhone",
+    "samsung": "Samsung",
+    "xiaomi": "Xiaomi",
+    "google_pixel": "Google Pixel",
+    "contact": "İletişim",
+    "booking": "Randevu",
+    "pricing": "Fiyat hesapla",
+    "impressum": "Künye",
+    "privacy": "Gizlilik",
+    "terms": "Şartlar"
+  },
+  "calc_preview_disclaimer": "KDV, parça ve işçilik dahil. 12 ay garanti.",
+  "brand_card_cta": "Tamir"
 }

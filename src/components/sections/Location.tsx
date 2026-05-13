@@ -11,6 +11,7 @@ const MAPS_URL =
 
 export function Location() {
   const t = useTranslations("location");
+  const tc = useTranslations("common");
 
   return (
     <section id="location" className="relative bg-black text-white">
@@ -61,7 +62,7 @@ export function Location() {
 
             {/* right: facts */}
             <div className="space-y-7 text-[15px] md:col-span-5">
-              <Fact icon={<MapPin className="h-4 w-4" />} label={t("phone_label").replace("Telefon", "Adresse")}>
+              <Fact icon={<MapPin className="h-4 w-4" />} label={tc("address_label")}>
                 {t("address_line_1")}
                 <br />
                 {t("address_line_2")}

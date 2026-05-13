@@ -4,41 +4,42 @@ import { Link } from "@/i18n/navigation";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const fl = useTranslations("footer_links");
   const year = new Date().getFullYear();
 
   const cols = [
     {
       heading: t("services"),
       links: [
-        { href: "/preisrechner?repair=display", label: "Display Reparatur" },
-        { href: "/preisrechner?repair=battery", label: "Akku Tausch" },
-        { href: "/buchen", label: "Wasserschaden" },
-        { href: "/preisrechner?repair=camera_back", label: "Kamera Reparatur" },
+        { href: "/preisrechner?repair=display", label: fl("display") },
+        { href: "/preisrechner?repair=battery", label: fl("battery") },
+        { href: "/buchen", label: fl("water") },
+        { href: "/preisrechner?repair=camera_back", label: fl("camera") },
       ],
     },
     {
       heading: t("brands"),
       links: [
-        { href: "/preisrechner?brand=apple-iphone", label: "iPhone" },
-        { href: "/preisrechner?brand=samsung-galaxy", label: "Samsung" },
-        { href: "/buchen", label: "Xiaomi" },
-        { href: "/buchen", label: "Google Pixel" },
+        { href: "/preisrechner?brand=apple-iphone", label: fl("iphone") },
+        { href: "/preisrechner?brand=samsung-galaxy", label: fl("samsung") },
+        { href: "/preisrechner?brand=xiaomi", label: fl("xiaomi") },
+        { href: "/buchen", label: fl("google_pixel") },
       ],
     },
     {
       heading: t("company"),
       links: [
-        { href: "/kontakt", label: "Kontakt" },
-        { href: "/buchen", label: "Termin buchen" },
-        { href: "/preisrechner", label: "Preisrechner" },
+        { href: "/kontakt", label: fl("contact") },
+        { href: "/buchen", label: fl("booking") },
+        { href: "/preisrechner", label: fl("pricing") },
       ],
     },
     {
       heading: t("legal"),
       links: [
-        { href: "/impressum", label: "Impressum" },
-        { href: "/datenschutz", label: "Datenschutz" },
-        { href: "/agb", label: "AGB" },
+        { href: "/impressum", label: fl("impressum") },
+        { href: "/datenschutz", label: fl("privacy") },
+        { href: "/agb", label: fl("terms") },
       ],
     },
   ];

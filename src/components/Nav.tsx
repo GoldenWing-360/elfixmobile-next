@@ -35,6 +35,14 @@ export function Nav() {
     { href: "/kontakt", label: t("contact") },
   ] as const;
 
+  // Mobile-only secondary links (anchor jumps on home, scroll-to-top from other pages)
+  const mobileExtras = [
+    { href: "/#services", label: t("services") },
+    { href: "/#reviews", label: "Bewertungen" },
+    { href: "/#location", label: "Standort" },
+    { href: "/#faq", label: "FAQ" },
+  ] as const;
+
   return (
     <>
       <header
@@ -98,24 +106,44 @@ export function Nav() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl md:hidden"
           >
-            <ul className="mx-auto flex h-full max-w-7xl flex-col items-start justify-center gap-6 px-8 pt-16">
-              {links.map((l, i) => (
-                <motion.li
-                  key={l.href}
-                  initial={{ opacity: 0.999, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.05 * i, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <Link
-                    href={l.href}
-                    className="text-[40px] leading-none font-semibold tracking-tight"
-                    onClick={() => setMobileOpen(false)}
+            <div className="mx-auto flex h-full max-w-7xl flex-col justify-center gap-10 px-8 pt-16">
+              <ul className="flex flex-col items-start gap-5">
+                {links.map((l, i) => (
+                  <motion.li
+                    key={l.href}
+                    initial={{ opacity: 0.999, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.05 * i, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    {l.label}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
+                    <Link
+                      href={l.href}
+                      className="text-[40px] leading-none font-semibold tracking-tight"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {l.label}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+              <ul className="flex flex-col items-start gap-3 border-t border-white/10 pt-8">
+                {mobileExtras.map((l, i) => (
+                  <motion.li
+                    key={l.href}
+                    initial={{ opacity: 0.999, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.05 * (i + links.length), duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    <a
+                      href={l.href}
+                      className="text-[18px] font-medium tracking-tight text-white/70 hover:text-white"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {l.label}
+                    </a>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

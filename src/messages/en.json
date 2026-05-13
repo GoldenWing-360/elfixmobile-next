@@ -12,7 +12,7 @@
     "headline_1": "Your iPhone.",
     "headline_2": "Like new.",
     "headline_3": "In 30 minutes.",
-    "subline": "Vienna's fastest repair workshop. Original parts. 12-month warranty.",
+    "subline": "Express repair in Aspern Seestadt. Original parts. 12-month warranty.",
     "cta_primary": "Get a quote",
     "cta_secondary": "Book a time",
     "trust_rating": "4.4 out of 5",
@@ -130,7 +130,7 @@
     "cta_secondary": "Book a time"
   },
   "footer": {
-    "tagline": "Vienna's most trusted repair workshop since 2019.",
+    "tagline": "Repair workshop in Vienna Aspern. Since 2019.",
     "address_label": "Address",
     "hours_label": "Opening hours",
     "hours_mo_sa": "Mon to Sat 09:00 to 19:00",
@@ -256,5 +256,26 @@
     "phone": "Phone number required",
     "message": "Message required (min 5 chars)",
     "agb": "Please accept the terms"
-  }
+  },
+  "common": {
+    "address_label": "Address"
+  },
+  "footer_links": {
+    "display": "Display repair",
+    "battery": "Battery swap",
+    "water": "Water damage",
+    "camera": "Camera repair",
+    "iphone": "iPhone",
+    "samsung": "Samsung",
+    "xiaomi": "Xiaomi",
+    "google_pixel": "Google Pixel",
+    "contact": "Contact",
+    "booking": "Book a time",
+    "pricing": "Price quote",
+    "impressum": "Imprint",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "calc_preview_disclaimer": "incl. VAT, parts and labour. 12 months warranty.",
+  "brand_card_cta": "Repair"
 }

@@ -7,18 +7,20 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 
 const BRANDS = [
-  { id: "apple",   href: "/preisrechner?brand=apple-iphone",    label: "Apple",   count: 97,  bg: "from-zinc-900 to-zinc-800" },
-  { id: "samsung", href: "/preisrechner?brand=samsung-galaxy",  label: "Samsung", count: 122, bg: "from-blue-950 to-blue-900" },
-  { id: "xiaomi",  href: "/buchen",                              label: "Xiaomi",  count: 60,  bg: "from-orange-950 to-orange-900" },
-  { id: "google",  href: "/buchen",                              label: "Google",  count: 24,  bg: "from-sky-950 to-sky-900" },
-  { id: "huawei",  href: "/buchen",                              label: "Huawei",  count: 38,  bg: "from-red-950 to-red-900" },
-  { id: "oneplus", href: "/buchen",                              label: "OnePlus", count: 28,  bg: "from-red-900 to-zinc-900" },
-  { id: "sony",    href: "/buchen",                              label: "Sony",    count: 18,  bg: "from-slate-900 to-zinc-900" },
-  { id: "nokia",   href: "/buchen",                              label: "Nokia",   count: 22,  bg: "from-blue-900 to-zinc-900" },
+  { id: "apple",   href: "/preisrechner?brand=apple-iphone",    label: "Apple",   count: 97,  hasOnlinePrices: true,  bg: "from-zinc-900 to-zinc-800" },
+  { id: "samsung", href: "/preisrechner?brand=samsung-galaxy",  label: "Samsung", count: 122, hasOnlinePrices: true,  bg: "from-blue-950 to-blue-900" },
+  // Brands without online pricing still routed to /buchen for individual quote
+  { id: "xiaomi",  href: "/buchen?device=Xiaomi",                label: "Xiaomi",  count: 60,  hasOnlinePrices: false, bg: "from-orange-950 to-orange-900" },
+  { id: "google",  href: "/buchen?device=Google+Pixel",          label: "Google",  count: 24,  hasOnlinePrices: false, bg: "from-sky-950 to-sky-900" },
+  { id: "huawei",  href: "/buchen?device=Huawei",                label: "Huawei",  count: 38,  hasOnlinePrices: false, bg: "from-red-950 to-red-900" },
+  { id: "oneplus", href: "/buchen?device=OnePlus",               label: "OnePlus", count: 28,  hasOnlinePrices: false, bg: "from-red-900 to-zinc-900" },
+  { id: "sony",    href: "/buchen?device=Sony+Xperia",           label: "Sony",    count: 18,  hasOnlinePrices: false, bg: "from-slate-900 to-zinc-900" },
+  { id: "nokia",   href: "/buchen?device=Nokia",                 label: "Nokia",   count: 22,  hasOnlinePrices: false, bg: "from-blue-900 to-zinc-900" },
 ] as const;
 
 export function BrandGallery() {
   const t = useTranslations("brands");
+  const tCta = useTranslations()("brand_card_cta");
   const trackRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState<string | null>(null);
 
@@ -102,7 +104,7 @@ export function BrandGallery() {
                       {b.label}
                     </div>
                     <div className="mt-3 inline-flex items-center gap-2 text-[13px] text-white/70">
-                      <span>Reparatur</span>
+                      <span>{b.hasOnlinePrices ? tCta : "Anfrage"}</span>
                       <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                         →
                       </span>

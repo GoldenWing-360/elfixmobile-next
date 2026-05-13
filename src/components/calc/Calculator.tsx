@@ -402,9 +402,19 @@ function StepRepair({
             {total} €
           </div>
         </div>
-        <Button onClick={onNext} variant="primary" size="lg" magnetic className="cursor-pointer" {...(selected.length === 0 ? { "aria-disabled": true } : {})}>
+        <button
+          type="button"
+          onClick={onNext}
+          disabled={selected.length === 0}
+          className={cn(
+            "inline-flex h-12 items-center gap-2 rounded-full px-6 text-[15px] font-medium transition-all",
+            selected.length > 0
+              ? "bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)] hover:scale-[1.02]"
+              : "cursor-not-allowed bg-black/[0.06] text-[#86868b]",
+          )}
+        >
           {t("next")} →
-        </Button>
+        </button>
       </div>
     </div>
   );
@@ -433,7 +443,8 @@ function StepResult({
   useEffect(() => {
     const p = new URLSearchParams({
       brand: brand.id,
-      model: model.slug,
+      // Pass the human-readable name so the booking device field is usable
+      model: model.full_name,
       repairs: selected.join(","),
       total: String(total),
     });

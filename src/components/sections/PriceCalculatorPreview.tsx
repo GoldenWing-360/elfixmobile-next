@@ -28,6 +28,7 @@ function findPrice(brandId: string, modelName: string, slug: string): number | n
 
 export function PriceCalculatorPreview() {
   const t = useTranslations("calc");
+  const tDisclaimer = useTranslations()("calc_preview_disclaimer");
   const [activeIdx, setActiveIdx] = useState(0);
   const active = FEATURED[activeIdx];
   const price = findPrice(active.brand, active.model, active.repair);
@@ -122,7 +123,7 @@ export function PriceCalculatorPreview() {
                       <span className="text-[28px] font-medium text-[#6e6e73]">€</span>
                     </div>
                     <p className="mt-3 max-w-xs text-[13px] text-[#6e6e73]">
-                      inkl. MwSt., Ersatzteil und Einbau. 12 Monate Garantie.
+                      {tDisclaimer}
                     </p>
                   </div>
 

@@ -29,6 +29,7 @@ export function ContactView() {
   const tl = useTranslations("location");
   const tp = useTranslations("pickup");
   const te = useTranslations("form_error");
+  const tc = useTranslations("common");
   const [submitted, setSubmitted] = useState(false);
   const {
     register,
@@ -93,7 +94,7 @@ export function ContactView() {
             <div className="space-y-7 text-[15px]">
               <FactBlock
                 icon={<MapPin className="h-4 w-4" />}
-                label="Adresse"
+                label={tc("address_label")}
                 cta={{ href: MAPS_URL, label: tl("directions_cta") }}
               >
                 {tl("address_line_1")}

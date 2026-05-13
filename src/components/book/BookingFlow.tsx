@@ -87,22 +87,57 @@ const contactSchema = z.object({
 
 export function BookingFlow() {
   const t = useTranslations("book");
+  const tr = useTranslations("repair_label");
   const [state, dispatch] = useReducer(reducer, initial);
   const params = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
 
-  // Preload from URL (?service=pickup&device=iPhone+15&total=189)
+  // Preload from URL: ?service=pickup&model=iPhone+15&brand=apple-iphone&repairs=display,battery&total=189
   useEffect(() => {
     const svc = params.get("service");
     if (svc === "pickup" || svc === "walkin" || svc === "send")
       dispatch({ type: "set_service", value: svc });
-    const device = params.get("model");
-    if (device) dispatch({ type: "set_device", value: device.replace(/-/g, " ") });
+
+    // Accept both ?model= (from calculator) and ?device= (from brand-gallery)
+    const device = params.get("model") || params.get("device");
+    if (device) {
+      // Use the human-readable name; could be prefixed with brand
+      dispatch({ type: "set_device", value: device.replace(/-/g, " ").replace(/\+/g, " ") });
+    }
+
+    // Pre-fill the damage textarea from the repairs list (from calc handoff)
+    const repairs = params.get("repairs");
+    if (repairs) {
+      const labels = repairs.split(",").filter(Boolean).map((slug) => {
+        try {
+          return tr(slug as "display");
+        } catch {
+          return slug;
+        }
+      });
+      if (labels.length > 0) {
+        dispatch({ type: "set_damage", value: labels.join(", ") });
+      }
+    }
+
     const total = params.get("total");
     if (total) dispatch({ type: "set_total", value: Number(total) });
-    // jump to device step if service preset
-    if (svc) dispatch({ type: "set_step", value: 1 });
-  }, [params]);
+
+    // Jump strategy:
+    // - service preset → skip service-tile picker → start at device step
+    // - service + device + repairs all preset → skip device step too → go to pickup/date
+    if (svc) {
+      if (device && repairs) {
+        dispatch({ type: "set_step", value: 2 });
+      } else {
+        dispatch({ type: "set_step", value: 1 });
+      }
+    } else if (device || repairs) {
+      // Calc → Book without explicit service: start at service-pick but pre-fill device/damage
+      dispatch({ type: "set_step", value: 0 });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
@@ -169,7 +204,7 @@ export function BookingFlow() {
                       value={state.date}
                       onBack={() => dispatch({ type: "back" })}
                       onChange={(v) => dispatch({ type: "set_date", value: v })}
-                      onNext={() => dispatch({ type: "next" })}
+                      onNext={() => dispatch({ type: "set_step", value: 4 })}
                     />
                   </motion.div>
                 )}
@@ -177,7 +212,7 @@ export function BookingFlow() {
                   <motion.div key="contact" {...slide()}>
                     <StepContact
                       state={state}
-                      onBack={() => dispatch({ type: "back" })}
+                      onBack={() => dispatch({ type: "set_step", value: 2 })}
                       onSubmit={async (data) => {
                         dispatch({ type: "set_contact", value: data });
                         // pretend API submit
@@ -508,7 +543,10 @@ function StepDate({
   onNext: () => void;
 }) {
   const t = useTranslations("book");
-  // generate next 14 weekdays, skip Sundays
+  // Value format: "YYYY-MM-DD|HH:MM" so we can store both date + time slot in one string
+  const [datePart, slotPart] = value.split("|");
+
+  // generate next 14 days, skip Sundays
   const dates: { iso: string; label: string; sub: string }[] = [];
   const now = new Date();
   for (let i = 0; i < 14; i++) {
@@ -523,6 +561,17 @@ function StepDate({
     });
   }
 
+  const slots: { id: string; label: string }[] = [
+    { id: "10:00", label: "Vormittag · 10-12" },
+    { id: "13:00", label: "Mittag · 13-15" },
+    { id: "15:30", label: "Nachmittag · 15-17" },
+    { id: "17:30", label: "Abend · 17-19" },
+  ];
+
+  const setDate = (d: string) => onChange(`${d}|${slotPart ?? ""}`);
+  const setSlot = (s: string) => onChange(`${datePart ?? ""}|${s}`);
+  const complete = !!datePart && !!slotPart;
+
   return (
     <div className="p-6 md:p-12">
       <button type="button" onClick={onBack} className="inline-flex items-center gap-1 text-[13px] text-[#6e6e73] hover:text-[var(--color-text-dark)]">
@@ -534,12 +583,12 @@ function StepDate({
       </h2>
       <div className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
         {dates.slice(0, 12).map((d) => {
-          const active = value === d.iso;
+          const active = datePart === d.iso;
           return (
             <button
               key={d.iso}
               type="button"
-              onClick={() => onChange(d.iso)}
+              onClick={() => setDate(d.iso)}
               className={cn(
                 "rounded-2xl border-2 px-4 py-3 text-left transition-colors",
                 active ? "border-[var(--color-accent)] bg-[var(--color-accent)]/[0.04]" : "border-black/[0.08] bg-white hover:border-black/20",
@@ -551,14 +600,44 @@ function StepDate({
           );
         })}
       </div>
+
+      {datePart && (
+        <div className="mt-8">
+          <div className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">
+            Uhrzeit
+          </div>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+            {slots.map((s) => {
+              const active = slotPart === s.id;
+              return (
+                <button
+                  key={s.id}
+                  type="button"
+                  onClick={() => setSlot(s.id)}
+                  className={cn(
+                    "rounded-2xl border-2 px-4 py-3 text-center text-[13.5px] font-medium transition-colors",
+                    active ? "border-[var(--color-accent)] bg-[var(--color-accent)]/[0.04] text-[var(--color-accent)]" : "border-black/[0.08] bg-white text-[#1d1d1f] hover:border-black/20",
+                  )}
+                >
+                  {s.label}
+                </button>
+              );
+            })}
+          </div>
+          <p className="mt-3 text-[12.5px] text-[#6e6e73]">
+            Mo-Sa 9:00-19:00 · Sonntag 9:00-18:00. Walk-in jederzeit möglich.
+          </p>
+        </div>
+      )}
+
       <div className="mt-8 flex justify-end">
         <button
           type="button"
           onClick={onNext}
-          disabled={!value}
+          disabled={!complete}
           className={cn(
             "inline-flex h-12 items-center gap-2 rounded-full px-6 text-[15px] font-medium transition-all",
-            value ? "bg-black text-white hover:scale-[1.02]" : "cursor-not-allowed bg-black/[0.06] text-[#6e6e73]",
+            complete ? "bg-black text-white hover:scale-[1.02]" : "cursor-not-allowed bg-black/[0.06] text-[#6e6e73]",
           )}
         >
           {t("continue")} <ArrowRight className="h-4 w-4" />
