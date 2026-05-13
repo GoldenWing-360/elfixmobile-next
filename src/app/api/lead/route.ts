@@ -253,12 +253,16 @@ export async function POST(req: NextRequest) {
   }
 
   // Persist before sending so a Resend outage doesn't lose the lead.
+  // Lead lifecycle (status field): received -> confirmed -> in_progress -> done.
+  // Initial value is "received"; the shop owner moves it manually via KV
+  // or a future admin UI. The /status/<id> public page renders this.
   const leadId = crypto.randomUUID();
   if (kv) {
     await kv.put(
       `lead:${leadId}`,
       JSON.stringify({
         id: leadId,
+        status: "received",
         ts: new Date().toISOString(),
         ip: await sha256Hex(ip), // hash, not raw — DSGVO-friendlier
         payload,

@@ -91,6 +91,9 @@ export function BookingFlow() {
   const [state, dispatch] = useReducer(reducer, initial);
   const params = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
+  // Server-returned lead id is shown in the success card so the customer
+  // can bookmark the /status/<id> page and check progress later.
+  const [leadId, setLeadId] = useState<string | null>(null);
 
   // Preload from URL: ?service=pickup&model=iPhone+15&brand=apple-iphone&repairs=display,battery&total=189
   useEffect(() => {
@@ -160,7 +163,7 @@ export function BookingFlow() {
           <AnimatePresence mode="wait" initial={false}>
             {submitted ? (
               <motion.div key="ok" {...slide()}>
-                <Success onReset={() => setSubmitted(false)} />
+                <Success onReset={() => setSubmitted(false)} leadId={leadId} />
               </motion.div>
             ) : (
               <>
@@ -241,6 +244,8 @@ export function BookingFlow() {
                           alert("Sorry — Senden hat nicht geklappt. Bitte direkt anrufen: +43 660 6071414");
                           return;
                         }
+                        const body = await res.json().catch(() => ({}));
+                        if (body?.id) setLeadId(body.id);
                         setSubmitted(true);
                       }}
                     />
@@ -785,7 +790,13 @@ function StepContact({
   );
 }
 
-function Success({ onReset }: { onReset: () => void }) {
+function Success({
+  onReset,
+  leadId,
+}: {
+  onReset: () => void;
+  leadId: string | null;
+}) {
   const t = useTranslations("book");
   return (
     <div className="p-10 text-center md:p-16">
@@ -799,6 +810,24 @@ function Success({ onReset }: { onReset: () => void }) {
       </motion.div>
       <h2 className="mt-6 text-[28px] font-semibold tracking-[-0.02em]">{t("success_title")}</h2>
       <p className="mx-auto mt-3 max-w-md text-[15.5px] leading-[1.55] text-[#525257]">{t("success_sub")}</p>
+
+      {leadId && (
+        <div className="mx-auto mt-8 max-w-md rounded-2xl border border-black/[0.06] bg-black/[0.02] p-5 text-left">
+          <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#86868B]">
+            Auftrags-ID
+          </div>
+          <div className="mt-1 font-mono text-[13px] text-[#1d1d1f]">
+            {leadId.slice(0, 8)}…
+          </div>
+          <a
+            href={`/status/${leadId}`}
+            className="mt-3 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[var(--color-accent)] hover:underline"
+          >
+            Status live verfolgen →
+          </a>
+        </div>
+      )}
+
       <a
         href="/"
         className="mt-8 inline-flex items-center gap-1.5 text-[14px] text-[var(--color-accent)] hover:underline"
