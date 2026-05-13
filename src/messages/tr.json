@@ -326,5 +326,274 @@
       "title": "{brand} Tamiri Viyana | Ekspres 30 dk | EL Fix Mobile",
       "description": "Viyana 1220 Aspern'da {brand} ekspres tamiri. {count}+ model, 12 ay garanti, orijinal veya premium yenilenmiş parça. 4,4/5 (294 yorum)."
     }
+  },
+  "services_page": {
+    "common": {
+      "eyebrow": "TAMİR SERVİSİ VİYANA",
+      "trust_express": "{minutes} dakikada ekspres",
+      "trust_warranty": "12 ay garanti",
+      "trust_rating": "4,4 / 5 • 294 yorum",
+      "trust_price": "Sabit fiyat {from} €'dan",
+      "included_eyebrow": "Neler dahil",
+      "process_eyebrow": "Süreç",
+      "process_headline": "Üç adım – tamam.",
+      "cta_primary_quote": "Sabit fiyat al",
+      "cta_primary_book": "Tamir teklif al",
+      "cta_secondary": "Bizi ara",
+      "faq_eyebrow": "Sık Sorulanlar",
+      "faq_headline": "Sık sorulan sorular"
+    },
+    "display": {
+      "h1": "Ekran tamiri Viyana.",
+      "intro": "iPhone, Samsung, Xiaomi, Google ve tüm büyük markalar için Viyana Aspern'da ekran değişimi. Orijinal yenilenmiş veya sertifikalı premium muadil parça, peşin sabit fiyat, 30 dakikada hazır.",
+      "included_headline": "A'dan Z'ye ekran değişimi.",
+      "included_sub": "Tüm ekran modülünü değiştiriyoruz: dokunmatik, OLED/LCD, ön cam, yapışkan – her şey dahil.",
+      "bullet_1": "Orijinal yenilenmiş veya premium muadil parça (sen seç)",
+      "bullet_2": "Dokunmatik + parlaklık + True-Tone mümkün olduğunda korunur",
+      "bullet_3": "Yapışkan ve conta dahil tam ön ünite",
+      "bullet_4": "Teslim öncesi fonksiyon testi (dokunmatik, ekran, Face-ID)",
+      "bullet_5": "Parça ve işçiliğe 12 ay garanti",
+      "bullet_6": "Peşin sabit fiyat, sürpriz yok",
+      "step_1": {
+        "title": "Modelini seç",
+        "body": "Sabit fiyat hesaplayıcısı: marka ve model seç, fiyatı anında gör. Telefon yok, bekleme yok."
+      },
+      "step_2": {
+        "title": "Rezervasyon veya walk-in",
+        "body": "Walk-in Pzt–Cmt 9–19, Paz 9–18. Veya Viyana'da € 70'den itibaren ücretsiz alım."
+      },
+      "step_3": {
+        "title": "30 dakikada al",
+        "body": "30 dakika ekspres değişim. Seninle birlikte fonksiyon testi, dijital garanti belgesi."
+      },
+      "q_duration": {
+        "q": "Ekran değişimi ne kadar sürer?",
+        "a": "iPhone ve Samsung'un çoğu için yaklaşık 30 dakika ekspres. Nadir modeller için 1–2 saate kadar – kesin süre önceden verilir."
+      },
+      "q_warranty": {
+        "q": "Yeni ekranda hangi garanti var?",
+        "a": "Parça ve işçiliğe 12 ay. Orijinal yenilenmiş ekranlar için üretici garantisi de geçerli."
+      },
+      "q_data": {
+        "q": "Verilerim kaybolur mu?",
+        "a": "Hayır – ekran değişimi sadece ön modülü etkiler. Veriler, uygulamalar, hesaplar dokunulmaz. Yine de her tamir öncesi yedek almanı öneririz."
+      },
+      "q_pickup": {
+        "q": "Cihazı alıyor musunuz?",
+        "a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım ve teslim. Aksi takdirde Maria-Tusch-Strasse 17/1, 1220 Viyana veya posta ile."
+      },
+      "meta_title": "Ekran Tamiri Viyana | 30 dk Ekspres | EL Fix Mobile",
+      "meta_description": "Viyana 1220'da ekran değişimi: iPhone, Samsung, Xiaomi ve daha fazlası. 30 €'dan başlayan sabit fiyat, 30 dakikada hazır, 12 ay garanti."
+    },
+    "battery": {
+      "h1": "Pil değişimi Viyana.",
+      "intro": "Pil öğleden önce bitiyor mu? Akıllı telefon ve tablet pillerini 30 dakikada değiştiriyoruz – orijinal yenilenmiş veya premium muadil. Sabit fiyat, 12 ay garanti.",
+      "included_headline": "Tam pil değişimi.",
+      "included_sub": "Eski pili düzgünce çıkarıyor, yenisini yapıştırıyor, pil yönetim sistemini kalibre ediyoruz.",
+      "bullet_1": "Premium muadil veya orijinal yenilenmiş parça",
+      "bullet_2": "Atölye aletiyle güvenli çıkarma (zorlama yok)",
+      "bullet_3": "Yeni yapışkan pedler, oynama yok, gevşek pil yok",
+      "bullet_4": "Destekleniyorsa: pil servis uyarısı sıfırlanır",
+      "bullet_5": "Teslim öncesi pil sağlığı testi",
+      "bullet_6": "Yeni pile 12 ay garanti",
+      "step_1": {
+        "title": "Modelini seç",
+        "body": "Sabit fiyat hesaplayıcı: marka + model = anında fiyat. Eski iPhone ve Samsung'lar da dahil."
+      },
+      "step_2": {
+        "title": "Rezervasyon veya walk-in",
+        "body": "Walk-in Pzt–Cmt 9–19, Paz 9–18. Viyana'da € 70'den itibaren ücretsiz alım."
+      },
+      "step_3": {
+        "title": "Tam şarj, tam gün",
+        "body": "30 dakika ekspres. Yeni pil, dürüst sağlık değeri, garanti belgesi."
+      },
+      "q_duration": {
+        "q": "Pil değişimi ne kadar sürer?",
+        "a": "Çoğu model için 30 dakika ekspres. Su geçirmez iPhone ve Samsung amiral gemileri: yaklaşık 60 dakika (yeni conta dahil)."
+      },
+      "q_warranty": {
+        "q": "Yeni pile hangi garanti?",
+        "a": "Pilin kendisine 12 ay garanti. Garanti süresi içinde kapasite çok düşerse ücretsiz değiştiriyoruz."
+      },
+      "q_data": {
+        "q": "Verilerim kaybolur mu?",
+        "a": "Hayır – pil değişimi belleğe dokunmaz. Veriler, uygulamalar, hesaplar yerinde kalır. Yine de tamir öncesi yedek almanı öneririz."
+      },
+      "q_pickup": {
+        "q": "Su geçirmezliği yeniliyor musunuz?",
+        "a": "Evet – su geçirmez modellerde yeni conta fiyata dahildir. Değişimden sonra su geçirmezlik testi yapıyoruz."
+      },
+      "meta_title": "Pil Değişimi Viyana | 30 dk | EL Fix Mobile",
+      "meta_description": "Viyana 1220 Aspern pil değişimi: iPhone, Samsung, Xiaomi, tüm modeller. 20 €'dan sabit fiyat, 30 dk ekspres, 12 ay garanti. Walk-in veya ücretsiz alım."
+    },
+    "data_recovery": {
+      "h1": "Telefon veri kurtarma Viyana.",
+      "intro": "Fotoğraflar, sohbetler, kişiler kayboldu mu – su, düşme, yazılım çöküşü veya kilitli cihaz? Atölye yöntemleriyle kurtarmayı deniyoruz: yazılım okumadan ana kart tamirine. Teşhis ücretsiz.",
+      "included_headline": "Ne deniyoruz.",
+      "included_sub": "Veri kurtarma asla %100 değildir. En ucuzdan (yazılım) en karmaşığa (chip-off) gidiyoruz ve her aşamada başarı oranını söylüyoruz.",
+      "bullet_1": "Atölye araçlarıyla yazılım okuma",
+      "bullet_2": "Ana kart tamiri (reflow, pil pini)",
+      "bullet_3": "Su hasarından sonra veri kurtarma (kurutma + ultrason + tamir)",
+      "bullet_4": "Hayat belirtisi olmayan cihazlarda mantık tamiri",
+      "bullet_5": "Ağır hasarlı ekranda yedek oluşturma",
+      "bullet_6": "iCloud/Google bypass YOK (yasadışı – yapmıyoruz)",
+      "step_1": {
+        "title": "Cihazı bırak",
+        "body": "Walk-in veya posta. Detaylı sohbet: ne vardı, ne oldu, en önemli ne?"
+      },
+      "step_2": {
+        "title": "Teşhis (ücretsiz)",
+        "body": "24–72 saatte analiz. % olarak başarı oranı ve sabit fiyat veriyoruz. Devam edip etmemeye sen karar veriyorsun."
+      },
+      "step_3": {
+        "title": "Veriler depolama ortamında",
+        "body": "Kurtarılan veri USB veya HDD'ye (biz sağlıyoruz) gider. Kişisel teslim, izinin olmadan bulut yükleme yok."
+      },
+      "q_duration": {
+        "q": "Veri kurtarma ne kadar sürer?",
+        "a": "Teşhis: 24–72 saat. Yazılım: 1–3 gün. Ana kart tamiri veya chip-off: 5–14 gün. Net süre teşhisten sonra."
+      },
+      "q_warranty": {
+        "q": "Veri kurtarmayı garanti ediyor musunuz?",
+        "a": "Hayır – dürüst olalım, kimse %100 söz veremez. Teşhis sonrası başarı olasılığı söylüyoruz. Veri çıkmazsa sadece teşhis ücreti."
+      },
+      "q_data": {
+        "q": "Verilerim güvende mi?",
+        "a": "Evet – depolama ortamları sana teslimden hemen sonra silinir. Kopya yok, bulut yok, satış yok. Avusturya e.U., GDPR uyumlu."
+      },
+      "q_pickup": {
+        "q": "Cihazı alıyor musunuz?",
+        "a": "Evet, ama veri kurtarma için walk-in veya sigortalı posta öneriyoruz. Su hasarından sonra her saat önemli."
+      },
+      "meta_title": "Veri Kurtarma Viyana | iPhone Samsung | EL Fix Mobile",
+      "meta_description": "Telefon veri kurtarma Viyana 1220: su, düşme, yazılım çöküşü sonrası. Ücretsiz teşhis, önceden başarı oranı, bulut yok. GDPR, walk-in veya posta."
+    },
+    "water_damage": {
+      "h1": "Su hasarı telefon tamiri Viyana.",
+      "intro": "Telefon suya, tuvalete, kahveye ya da biraya mı düştü? Hızlı hareket et – her saat önemli. Açıyor, ultrason ile temizliyor, vakum altında kurutuyor ve hasarlı parçaları değiştiriyoruz. Başarı oranı %60–80.",
+      "included_headline": "Su hasarı tedavisi.",
+      "included_sub": "Cihazı hemen açıp korozyonu nötrleyip hasarlı parçaları değiştiriyoruz. Pirinç efsanedir – durumu kötüleştirir.",
+      "bullet_1": "Anında açma + pil bağlantısını kesme (kısa devre durdur)",
+      "bullet_2": "İzopropil alkollü ultrason banyosu",
+      "bullet_3": "Vakum altında ısıyla kurutma",
+      "bullet_4": "Bileşen başı test: ekran, hoparlör, mikrofon, anten",
+      "bullet_5": "Hedefli parça değişimi (ekran, pil, şarj soketi)",
+      "bullet_6": "Veriler kritikse: paralel veri kurtarma",
+      "step_1": {
+        "title": "Hemen getir",
+        "body": "1 saat içinde walk-in veya ara. ŞARJ ETME, PİRİNCE KOYMA, AÇMA."
+      },
+      "step_2": {
+        "title": "Teşhis (ücretsiz)",
+        "body": "Açıyor, korozyonu ve bileşen durumunu değerlendiriyoruz. 24 saat içinde başarı oranı + sabit fiyat."
+      },
+      "step_3": {
+        "title": "Tamir ve teslim",
+        "body": "Temizlik + parça değişimi 2–5 gün. Fonksiyon testi, değiştirilen parçalara garanti."
+      },
+      "q_duration": {
+        "q": "Su hasarı tamiri ne kadar sürer?",
+        "a": "Teşhis: 24 saat. Sadece temizlik: 1–2 gün. Bileşen değişimi ile: stoğa bağlı 2–5 gün."
+      },
+      "q_warranty": {
+        "q": "Su hasarı sonrası fonksiyonu garanti ediyor musunuz?",
+        "a": "Yeni değişen parçalara (ekran, pil vb.) 12 ay. Temizliğin kendisine 1 ay – geç korozyon hasarı mümkün."
+      },
+      "q_data": {
+        "q": "Verilerim su hasarından sonra kalır mı?",
+        "a": "Bellek çipinin kendisi hasar görmediyse (çoğu zaman): evet. Mümkünse temizlik öncesi yedek alırız."
+      },
+      "q_pickup": {
+        "q": "Telefonum ıslak – test için açayım mı?",
+        "a": "Lütfen hayır. Açmak ana kartı bitirebilir. Mümkünse pil bağlantısını kes ve hemen bize getir."
+      },
+      "meta_title": "Su Hasarı Telefon Viyana | Aynı Gün | EL Fix Mobile",
+      "meta_description": "Su hasarlı telefon Viyana 1220: iPhone, Samsung, tüm markalar. Ultrason temizlik, parça değişimi, %60–80 başarı. Aspern Seestadt, acil walk-in."
+    },
+    "unlock": {
+      "h1": "Telefon kilit açma Viyana.",
+      "intro": "SIM kilit kaldırma, IMEI kilit açma, yasal sahibi olunan cihazlar için operatör kilidi kaldırma. Üretici veritabanları üzerinden yasal yoldan açıyoruz (IMEI servisi) – yasadışı yöntem yok, çalıntı cihazlar için bypass yok.",
+      "included_headline": "Yasal olarak ne açıyoruz.",
+      "included_sub": "Sadece yasal sahibi olunan cihazlar, sahiplik belgesiyle. Operatör kilidi IMEI veritabanı servisi üzerinden.",
+      "bullet_1": "iPhone operatör kilidi (T-Mobile, A1, Vodafone, Drei vb.)",
+      "bullet_2": "Samsung network-unlock-kodu",
+      "bullet_3": "Huawei ve Honor bootloader açma (mümkün olduğunda)",
+      "bullet_4": "Xiaomi / Redmi Mi hesabı kaldırma – sahiplik kanıtı ile",
+      "bullet_5": "Sahiplik kanıtı: fatura + kimlik zorunlu",
+      "bullet_6": "Çalıntı cihazlara ve iCloud bypass'a HAYIR",
+      "step_1": {
+        "title": "Sahipliği doğrula",
+        "body": "Fatura, kimlik ve IMEI ile gel. Bunlar olmadan servis yok – sadece temiz iş yapıyoruz."
+      },
+      "step_2": {
+        "title": "IMEI servisini başlat",
+        "body": "Resmi serviste kilit açmayı rezerve ediyoruz. Operatöre göre 1–14 gün."
+      },
+      "step_3": {
+        "title": "Onay + test",
+        "body": "Veritabanında açıldığı anda yabancı SIM ile test ediyoruz. Yazılı onay alırsın."
+      },
+      "q_duration": {
+        "q": "Kilit açma ne kadar sürer?",
+        "a": "iPhone: 1–7 gün. Samsung: 1–14 gün. Huawei: kod varsa anında. Operatöre bağlı – aralık önceden veriyoruz."
+      },
+      "q_warranty": {
+        "q": "Kilit açmayı garanti ediyor musunuz?",
+        "a": "Evet – başarısız olursa (operatör IMEI'yi reddederse) tam geri ödeme. Başarılı kilit açma kalıcıdır."
+      },
+      "q_data": {
+        "q": "Verilerim kalır mı?",
+        "a": "Evet – operatör kilidi açma belleğe dokunmaz. Veriler, uygulamalar, hesaplar dokunulmaz."
+      },
+      "q_pickup": {
+        "q": "Çalıntı cihazları açıyor musunuz?",
+        "a": "Hayır – sahiplik belgesi olmadan çalıntı veya iCloud kilidi açmıyoruz. Hırsızlık malı, yapmıyoruz."
+      },
+      "meta_title": "Telefon Kilit Açma Viyana | SIM-Lock IMEI | EL Fix Mobile",
+      "meta_description": "Telefon kilit açma Viyana 1220: SIM-lock, operatör kilidi, Mi hesabı. IMEI servisi üzerinden yasal, sahiplik kanıtı zorunlu. Aspern Seestadt, 1–14 gün."
+    },
+    "wrap": {
+      "h1": "Telefon kaplama Viyana.",
+      "intro": "iPhone, Samsung, iPad için premium skin kaplamalar. Çiziklere ve küçük düşmelere karşı koruma, kasayı değiştirmeden görünümü değiştir. dbrand kalitesinde, profesyonel uygulama, 30 dakikada hava kabarcığı yok.",
+      "included_headline": "Kaplama neye yarar.",
+      "included_sub": "Koruma ve tarz birlikte. 3M yapıştırıcı, yüksek kaliteli vinil, iz bırakmadan çıkarılabilir.",
+      "bullet_1": "Premium 3M vinil – çizik koruması ve kendi kendini iyileştirme",
+      "bullet_2": "Tasarımlar: karbon, ahşap, deri, glitter, custom baskı",
+      "bullet_3": "30 dakikada hava kabarcığı yok",
+      "bullet_4": "İz bırakmadan çıkarılır (ikinci el değeri etkilenmez)",
+      "bullet_5": "Su itici, sıcak hava sorunu yok",
+      "bullet_6": "Opsiyon: ekran filmi set olarak",
+      "step_1": {
+        "title": "Tasarım seç",
+        "body": "Walk-in: 40+ tasarımı hisset, dene. Veya custom baskı (foto, logo) – 2 gün."
+      },
+      "step_2": {
+        "title": "Uygulama",
+        "body": "Cihazı temizliyor, hassas kesiyor (yaygın modeller için pre-cut var) ve hava kabarcığı bırakmadan yapıştırıyoruz."
+      },
+      "step_3": {
+        "title": "Yanına al",
+        "body": "30 dakikada hazır. İstersen kendin nasıl yapacağını gösteririz (video)."
+      },
+      "q_duration": {
+        "q": "Kaplama ne kadar sürer?",
+        "a": "Standart: 30 dakika. Custom baskı: 2 gün + 30 dk uygulama."
+      },
+      "q_warranty": {
+        "q": "Kaplamaya garanti var mı?",
+        "a": "Yapışkanlık ve kabarcıksızlığa 3 ay. Kendi hatanla zarar (çizme, ısı, yanlış temizlik) garanti dışı."
+      },
+      "q_data": {
+        "q": "Düşmelere karşı koruyor mu?",
+        "a": "Mikro çizik ve küçük çarpmalara karşı evet. Sert düşmeler için ek kılıf gerekir – kaplama görünüm + çizik koruması, crash koruması değil."
+      },
+      "q_pickup": {
+        "q": "Kendi tasarımımı getirebilir miyim?",
+        "a": "Evet – en az 300 DPI logo/foto gönder. Baskı ve kesim için 2 gün. Fiyat karmaşıklığa bağlı."
+      },
+      "meta_title": "Telefon Kaplama Viyana | Skin Vinil | EL Fix Mobile",
+      "meta_description": "Premium telefon kaplama Viyana 1220: iPhone, Samsung, iPad. 3M vinil, 40+ tasarım, custom baskı. 30 dk'da kabarcıksız, iz bırakmadan çıkar."
+    }
   }
 }

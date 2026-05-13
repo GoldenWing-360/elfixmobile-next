@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { setRequestLocale } from "next-intl/server";
 import { LegalLayout } from "@/components/legal/LegalLayout";
+import { html as agbHtml } from "@/data/legal/agb";
 
 export const metadata: Metadata = {
   title: "Allgemeine Geschäftsbedingungen (AGB)",
@@ -18,16 +17,12 @@ export default async function AGBPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const html = await readFile(
-    path.join(process.cwd(), "src/data/legal/agb.html"),
-    "utf8",
-  );
   return (
     <LegalLayout
       eyebrow="RECHTLICHES"
       title="Allgemeine Geschäftsbedingungen"
     >
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div dangerouslySetInnerHTML={{ __html: agbHtml }} />
     </LegalLayout>
   );
 }

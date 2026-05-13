@@ -1,4 +1,7 @@
-<p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Reparaturaufträge, Dienstleistungen und Warenverkäufe der Firma <strong>ElFixMobile e.U.</strong>, Inhaberin Natalja Rahimova, Maria-Tusch-Straße 17/1, 1220 Wien, Österreich (nachfolgend "Auftragnehmer" genannt) mit dem Kunden (nachfolgend "Auftraggeber" genannt).</p>
+/** Inlined from agb.html so the Cloudflare Worker doesn't need
+ *  node:fs at runtime. Edit the constant directly.
+ */
+export const html = `<p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Reparaturaufträge, Dienstleistungen und Warenverkäufe der Firma <strong>ElFixMobile e.U.</strong>, Inhaberin Natalja Rahimova, Maria-Tusch-Straße 17/1, 1220 Wien, Österreich (nachfolgend "Auftragnehmer" genannt) mit dem Kunden (nachfolgend "Auftraggeber" genannt).</p>
 <p>Mit der Auftragserteilung akzeptiert der Auftraggeber diese AGB.</p>
 
 <h2>2. Vertragsschluss</h2>
@@ -52,4 +55,4 @@ UID: ATU74938026<br>
 Telefon: +43 660 6071414<br>
 E-Mail: elfixmobile@gmx.at</p>
 
-<p><em>Stand: März 2026</em></p>
+<p><em>Stand: März 2026</em></p>`;

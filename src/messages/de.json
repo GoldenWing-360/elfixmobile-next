@@ -326,5 +326,274 @@
       "title": "{brand} Reparatur Wien | Express 30 Min | EL Fix Mobile",
       "description": "Express {brand}-Reparatur in Wien 1220 Aspern. {count}+ Modelle, 12 Monate Garantie, Original- oder Premium-Refurbished-Teile. 4,4/5 (294 Bewertungen)."
     }
+  },
+  "services_page": {
+    "common": {
+      "eyebrow": "REPARATUR-SERVICE WIEN",
+      "trust_express": "Express in {minutes} Minuten",
+      "trust_warranty": "12 Monate Garantie",
+      "trust_rating": "4,4 / 5 • 294 Bewertungen",
+      "trust_price": "Festpreise ab {from} €",
+      "included_eyebrow": "Was du bekommst",
+      "process_eyebrow": "Ablauf",
+      "process_headline": "Drei Schritte – fertig.",
+      "cta_primary_quote": "Festpreis berechnen",
+      "cta_primary_book": "Reparatur anfragen",
+      "cta_secondary": "Direkt anrufen",
+      "faq_eyebrow": "FAQ",
+      "faq_headline": "Häufige Fragen"
+    },
+    "display": {
+      "h1": "Display Reparatur Wien.",
+      "intro": "Display-Tausch für iPhone, Samsung, Xiaomi, Google und alle gängigen Marken in Wien Aspern. Original-Refurbished oder geprüfte Premium-Nachbauteile, fixer Preis vorab, fertig in 30 Minuten.",
+      "included_headline": "Display-Tausch von A bis Z.",
+      "included_sub": "Wir wechseln das komplette Display-Modul. Touchscreen, OLED/LCD, Frontglas, Klebepad – alles inklusive.",
+      "bullet_1": "Original-Refurbished oder Premium-Nachbau (du wählst)",
+      "bullet_2": "Touch-Funktion + Helligkeit + True-Tone wo möglich erhalten",
+      "bullet_3": "Komplette Front-Einheit inkl. Klebung und Dichtung",
+      "bullet_4": "Funktionstest vor Übergabe (Touch, Display, 3D-Touch, Face-ID)",
+      "bullet_5": "12 Monate Garantie auf Ersatzteil und Einbau",
+      "bullet_6": "Festpreis vorab, keine Kostenfalle",
+      "step_1": {
+        "title": "Modell wählen",
+        "body": "Festpreis-Rechner: Marke und Modell auswählen, Preis sofort sehen. Kein Anruf, keine Warteschleife."
+      },
+      "step_2": {
+        "title": "Termin oder vorbeibringen",
+        "body": "Walk-in Mo–Sa 9–19 Uhr, So 9–18 Uhr. Oder gratis Abholung in Wien ab € 70 Reparaturwert."
+      },
+      "step_3": {
+        "title": "30 Minuten später abholen",
+        "body": "Express-Tausch in 30 Minuten. Funktionstest mit dir gemeinsam, Garantieschein digital."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert der Display-Tausch?",
+        "a": "Bei den meisten iPhone- und Samsung-Modellen ca. 30 Minuten Express. Bei selteneren Geräten max. 1–2 Stunden – wir geben dir vorab eine verbindliche Zeit."
+      },
+      "q_warranty": {
+        "q": "Wie viel Garantie gibt es auf das neue Display?",
+        "a": "12 Monate auf Ersatzteil und Einbau. Bei Original-Refurbished-Displays gilt zusätzlich die Herstellergarantie."
+      },
+      "q_data": {
+        "q": "Bleiben meine Daten erhalten?",
+        "a": "Ja – der Display-Tausch betrifft nur das Front-Modul. Daten, Apps, Konten bleiben unverändert. Wir empfehlen aber immer ein Backup vor jeder Reparatur."
+      },
+      "q_pickup": {
+        "q": "Holt ihr das Handy ab?",
+        "a": "Ab € 70 Reparaturwert kostenlos in Wien und NÖ-Umland. Sonst Maria-Tusch-Straße 17/1, 1220 Wien, oder per Post."
+      },
+      "meta_title": "Display Reparatur Wien | Express 30 Min | EL Fix Mobile",
+      "meta_description": "Display-Tausch Wien 1220: iPhone, Samsung, Xiaomi und mehr. Festpreis ab 30 €, fertig in 30 Min, 12 Monate Garantie. Aspern Seestadt, walk-in oder Abholung."
+    },
+    "battery": {
+      "h1": "Akku Tausch Wien.",
+      "intro": "Schwacher Akku, der nicht mal mehr durch den Vormittag kommt? Wir tauschen Smartphone- und Tablet-Akkus in 30 Minuten, mit Original-Refurbished oder Premium-Nachbauteil. Festpreis, 12 Monate Garantie.",
+      "included_headline": "Akku-Tausch komplett.",
+      "included_sub": "Wir entfernen den alten Akku fachgerecht, kleben den neuen ein, kalibrieren das Batteriemanagement.",
+      "bullet_1": "Premium-Nachbau oder Original-Refurbished",
+      "bullet_2": "Sicheres Entfernen mit Werkstattgerät (kein Hebeln)",
+      "bullet_3": "Neue Klebepads, kein Klappern, kein loser Akku",
+      "bullet_4": "Wenn vorhanden: Reset des Batterie-Status (Service-Meldung weg)",
+      "bullet_5": "Akku-Health-Test vor Übergabe",
+      "bullet_6": "12 Monate Garantie auf den neuen Akku",
+      "step_1": {
+        "title": "Modell wählen",
+        "body": "Festpreis-Rechner: Marke und Modell wählen, Preis sofort. Auch für ältere iPhones und Samsung."
+      },
+      "step_2": {
+        "title": "Termin oder vorbeibringen",
+        "body": "Walk-in Mo–Sa 9–19, So 9–18. Gratis Abholung in Wien ab € 70."
+      },
+      "step_3": {
+        "title": "Voller Akku, voller Tag",
+        "body": "30 Minuten Express. Frischer Akku, ehrlicher Akku-Health-Wert, Garantieschein."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert der Akku-Tausch?",
+        "a": "30 Minuten Express bei den meisten Modellen. Bei wasserdichten iPhones und Samsung-Flaggschiffen rechnen wir 60 Minuten ein (neuer Dichtungsring inklusive)."
+      },
+      "q_warranty": {
+        "q": "Wie viel Garantie auf den neuen Akku?",
+        "a": "12 Monate Garantie auf den Akku selbst. Bei reduzierter Kapazität innerhalb der ersten 12 Monate tauschen wir kostenlos."
+      },
+      "q_data": {
+        "q": "Bleiben meine Daten erhalten?",
+        "a": "Ja – der Akku-Tausch berührt keinen Speicher. Daten, Apps, Konten bleiben unverändert. Backup empfehlen wir trotzdem immer."
+      },
+      "q_pickup": {
+        "q": "Macht ihr Wasserdicht-Versiegelung neu?",
+        "a": "Ja – bei wasserdichten Modellen ist ein neuer Dichtungsring im Preis inkludiert. Wir testen die Dichtigkeit nach dem Tausch."
+      },
+      "meta_title": "Akku Tausch Wien | iPhone Samsung in 30 Min | EL Fix Mobile",
+      "meta_description": "Akku-Tausch Wien 1220 Aspern: iPhone, Samsung, Xiaomi, alle Modelle. Festpreis ab 20 €, 30 Minuten Express, 12 Monate Garantie. Walk-in oder gratis Abholung."
+    },
+    "data_recovery": {
+      "h1": "Datenrettung Handy Wien.",
+      "intro": "Fotos, Chats, Kontakte verloren – durch Wasser, Sturz, Software-Crash oder gesperrtes Gerät? Wir versuchen die Rettung mit Werkstattmethoden: vom Software-Auslesen bis zur Mainboard-Reparatur. Diagnose kostenlos.",
+      "included_headline": "Was wir versuchen.",
+      "included_sub": "Datenrettung ist nie 100 %. Wir gehen vom günstigsten Weg (Software) bis zum aufwendigsten (Chip-Off) – und sagen dir bei jedem Schritt, wie hoch die Erfolgsquote ist.",
+      "bullet_1": "Software-Auslesen über Werkstatt-Tools (Cellebrite-Equivalent)",
+      "bullet_2": "Hardware-Reparatur am Mainboard (Kalt-Lötung, Akku-Pin)",
+      "bullet_3": "Datenrettung nach Wasserschaden (Trocknen + Ultraschall + Reparatur)",
+      "bullet_4": "Logik-Reparatur bei No-Power-Geräten",
+      "bullet_5": "Backup-Erstellung bei stark beschädigtem Display",
+      "bullet_6": "iCloud-/Google-Bypass NICHT (illegal – wir machen das nicht)",
+      "step_1": {
+        "title": "Gerät einreichen",
+        "body": "Vorbeibringen oder per Post. Detail-Gespräch: was ist drauf, was ist passiert, was ist dir wichtig?"
+      },
+      "step_2": {
+        "title": "Diagnose (kostenlos)",
+        "body": "24–72 Stunden Analyse. Wir sagen dir Erfolgsquote in % und genauen Preis vorab. Du entscheidest, ob wir weitermachen."
+      },
+      "step_3": {
+        "title": "Daten auf Speichermedium",
+        "body": "Erfolgreiche Daten kommen auf USB-Stick oder Festplatte (wir bringen mit). Übergabe persönlich, kein Cloud-Upload ohne deine Zustimmung."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert die Datenrettung?",
+        "a": "Diagnose: 24–72 Stunden. Software-Rettung: 1–3 Tage. Mainboard-Reparatur oder Chip-Off: 5–14 Tage. Wir geben dir nach der Diagnose eine verbindliche Zeit."
+      },
+      "q_warranty": {
+        "q": "Garantiert ihr die Datenrettung?",
+        "a": "Nein – seriös können wir keine 100 %-Garantie geben. Wir nennen dir nach der Diagnose eine Erfolgswahrscheinlichkeit. Bei No-Recovery (keine Daten gerettet) berechnen wir nur die Diagnose-Pauschale."
+      },
+      "q_data": {
+        "q": "Sind meine Daten bei euch sicher?",
+        "a": "Ja – Datenträger werden direkt nach Übergabe an dich gelöscht. Keine Kopien, keine Cloud, kein Weiterverkauf. Wir sind eine österreichische e.U., DSGVO-konform."
+      },
+      "q_pickup": {
+        "q": "Holt ihr das Gerät ab?",
+        "a": "Ja – für Datenrettung empfehlen wir aber den persönlichen Walk-in oder versicherten Postversand. Gerade bei Wasserschaden zählt jede Stunde."
+      },
+      "meta_title": "Datenrettung Handy Wien | iPhone Samsung | EL Fix Mobile",
+      "meta_description": "Datenrettung Handy Wien 1220: nach Wasser, Sturz, Software-Crash. Diagnose kostenlos, Erfolgsquote vorab, kein Cloud-Upload. DSGVO-konform, walk-in oder Post."
+    },
+    "water_damage": {
+      "h1": "Wasserschaden Handy Wien.",
+      "intro": "Handy ist in Wasser, Klo, Kaffee oder Bier gelandet? Schnell handeln – jede Stunde zählt. Wir öffnen, reinigen mit Ultraschall, trocknen unter Vakuum und reparieren beschädigte Komponenten. Erfolgsquote 60–80 %.",
+      "included_headline": "Wasserschaden-Behandlung.",
+      "included_sub": "Wir öffnen das Gerät direkt, neutralisieren Korrosion, tauschen beschädigte Bauteile. Reis ist Schwachsinn, der das Problem verschlimmert.",
+      "bullet_1": "Sofortöffnung und Akku abklemmen (Kurzschlussgefahr stoppen)",
+      "bullet_2": "Ultraschall-Bad in Iso-Alkohol gegen Korrosion",
+      "bullet_3": "Vakuum-Trocknung unter Wärme",
+      "bullet_4": "Funktionsprüfung pro Komponente: Display, Speaker, Mikrofon, Antenne",
+      "bullet_5": "Reparatur einzelner Defekte (Display, Akku, Ladebuchse)",
+      "bullet_6": "Wenn Daten kritisch: Datenrettung-Aufgabe parallel",
+      "step_1": {
+        "title": "Sofort bringen",
+        "body": "Walk-in oder Anruf binnen 1 Stunde. Akku NICHT laden, NICHT in Reis, NICHT einschalten."
+      },
+      "step_2": {
+        "title": "Diagnose (kostenlos)",
+        "body": "Wir öffnen, beurteilen Korrosionsbild und Komponentenstatus. Erfolgsquote + Festpreis innerhalb 24 Stunden."
+      },
+      "step_3": {
+        "title": "Reparatur und Übergabe",
+        "body": "Reinigung + Komponententausch in 2–5 Tagen. Funktionstest, Garantie auf ersetzte Teile."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert die Wasserschaden-Reparatur?",
+        "a": "Diagnose: 24 Stunden. Reinigung allein: 1–2 Tage. Wenn Komponenten getauscht werden: 2–5 Tage je nach Lagerverfügbarkeit."
+      },
+      "q_warranty": {
+        "q": "Garantiert ihr die Funktion nach Wasserschaden?",
+        "a": "Auf neu getauschte Komponenten (Display, Akku, etc.): 12 Monate. Auf Wasserschaden-Reinigung selbst: 1 Monat – Spätschäden durch Korrosion sind möglich."
+      },
+      "q_data": {
+        "q": "Bleiben meine Daten bei Wasserschaden erhalten?",
+        "a": "Wenn der Speicherchip selbst nicht beschädigt ist (häufig der Fall): ja. Wir sichern Daten vor der Reinigung, falls möglich."
+      },
+      "q_pickup": {
+        "q": "Mein Handy ist nass – soll ich es einschalten zum Testen?",
+        "a": "Bitte NEIN. Einschalten kann das Mainboard zerstören. Akku raus oder Akku-Kabel abklemmen falls möglich, und sofort zu uns."
+      },
+      "meta_title": "Wasserschaden Handy Wien | Sofort-Reparatur | EL Fix Mobile",
+      "meta_description": "Wasserschaden Handy Wien 1220: iPhone, Samsung, alle Marken. Ultraschall-Reinigung, Komponententausch, 60–80% Erfolg. Aspern Seestadt, walk-in sofort."
+    },
+    "unlock": {
+      "h1": "Handy Entsperren Wien.",
+      "intro": "SIM-Lock entfernen, IMEI-Entsperrung, Netzentsperrung für legal erworbene Geräte. Wir entsperren legal über Hersteller-Datenbanken (IMEI-Service), keine illegalen Methoden, keine Bypass-Tricks für gestohlene Geräte.",
+      "included_headline": "Was wir legal entsperren.",
+      "included_sub": "Nur legal erworbene Geräte mit Eigentumsnachweis. Netzentsperrung läuft über IMEI-Datenbank-Service.",
+      "bullet_1": "iPhone Netzentsperrung (T-Mobile DE, A1 AT, Vodafone, Drei, etc.)",
+      "bullet_2": "Samsung Network-Unlock-Code für gesperrte Geräte",
+      "bullet_3": "Huawei und Honor Bootloader-Unlock (wo möglich)",
+      "bullet_4": "Xiaomi / Redmi Mi-Account-Removal mit Eigentumsnachweis",
+      "bullet_5": "Eigentumsnachweis: Rechnung + Personalausweis Pflicht",
+      "bullet_6": "KEINE Entsperrung gestohlener Geräte oder iCloud-Bypass",
+      "step_1": {
+        "title": "Eigentum prüfen",
+        "body": "Du bringst Rechnung, Personalausweis und IMEI. Ohne kein Service – wir machen nur saubere Sachen."
+      },
+      "step_2": {
+        "title": "IMEI-Service starten",
+        "body": "Wir buchen die Entsperrung im offiziellen Service. Dauer je nach Netzbetreiber 1–14 Tage."
+      },
+      "step_3": {
+        "title": "Bestätigung + Test",
+        "body": "Sobald die IMEI in der Datenbank entsperrt ist, testen wir mit Fremd-SIM. Du bekommst eine schriftliche Bestätigung."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert die Entsperrung?",
+        "a": "iPhone: 1–7 Tage. Samsung: 1–14 Tage. Huawei: sofort wenn Code verfügbar. Hängt vom Netzbetreiber ab – wir geben dir vorab eine Spanne."
+      },
+      "q_warranty": {
+        "q": "Garantiert ihr die Entsperrung?",
+        "a": "Ja – wenn die Entsperrung nicht klappt (Netzbetreiber verweigert IMEI), bekommst du das Geld zurück. Bei erfolgreicher Entsperrung gilt sie dauerhaft."
+      },
+      "q_data": {
+        "q": "Bleiben meine Daten erhalten?",
+        "a": "Ja – Netzentsperrung berührt keinen Speicher. Daten, Apps, Konten bleiben unverändert."
+      },
+      "q_pickup": {
+        "q": "Kann ich gestohlene Geräte entsperren lassen?",
+        "a": "Nein – wir entsperren keine gestohlenen Geräte und keine iCloud-Sperren ohne Eigentumsnachweis. Das ist Hehlerei, machen wir nicht."
+      },
+      "meta_title": "Handy Entsperren Wien | SIM-Lock IMEI | EL Fix Mobile",
+      "meta_description": "Handy entsperren Wien 1220: SIM-Lock, Netzentsperrung, Mi-Account. Legal über IMEI-Service, Eigentumsnachweis Pflicht. Aspern Seestadt, 1–14 Tage."
+    },
+    "wrap": {
+      "h1": "Handy Folierung Wien.",
+      "intro": "Premium-Skin-Folien für iPhone, Samsung, iPad. Schutz vor Kratzern und Mikro-Stürzen, Optik wechseln ohne neues Gehäuse. dbrand-Niveau, professionelle Anbringung, blasenfrei in 30 Minuten.",
+      "included_headline": "Was die Folierung kann.",
+      "included_sub": "Schutz und Style in einem. 3M-Klebstoff, hochwertige Vinylfolien, rückstandsfrei entfernbar.",
+      "bullet_1": "Premium 3M-Vinyl mit Kratzschutz und Selbstheilung",
+      "bullet_2": "Verfügbare Designs: Carbon, Holz, Leder, Glitzer, Custom-Druck",
+      "bullet_3": "Blasenfreie Anbringung in 30 Minuten",
+      "bullet_4": "Rückstandsfrei entfernbar (ändert Wiederverkaufswert nicht)",
+      "bullet_5": "Wasserabweisend, kein Hitzeproblem (auch im Sommer)",
+      "bullet_6": "Optional: passende Display-Folie als Set",
+      "step_1": {
+        "title": "Design wählen",
+        "body": "Walk-in: 40+ Designs ansehen, anfassen, Probe-Streifen. Oder Custom-Druck (Foto, Logo) – 2 Tage Vorlauf."
+      },
+      "step_2": {
+        "title": "Anbringung",
+        "body": "Wir reinigen das Gerät, schneiden die Folie passgenau (Pre-Cut für gängige Modelle vorhanden) und bringen blasenfrei an."
+      },
+      "step_3": {
+        "title": "Mitnehmen",
+        "body": "30 Minuten – fertig. Bei Bedarf zeigen wir dir, wie man die Folie selbst tauscht (Tutorial-Video)."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert die Folierung?",
+        "a": "Standard-Folie: 30 Minuten. Custom-Druck: 2 Tage Vorlauf + 30 Minuten Anbringung."
+      },
+      "q_warranty": {
+        "q": "Garantie auf die Folie?",
+        "a": "3 Monate auf Klebkraft und Blasenfreiheit. Bei Selbstverschulden (Aufkratzen, Wärmequelle, falsche Reinigung) keine Garantie."
+      },
+      "q_data": {
+        "q": "Schützt die Folie vor Stürzen?",
+        "a": "Vor Mikro-Kratzern und kleinen Stürzen ja. Bei harten Stürzen brauchst du zusätzlich eine Hülle – Folie ist Optik + Kratzschutz, kein Crash-Schutz."
+      },
+      "q_pickup": {
+        "q": "Kann ich Custom-Folie mit eigenem Design?",
+        "a": "Ja – schicke uns Logo/Foto in mind. 300 DPI. 2 Tage Vorlauf für Druck und Schnitt. Preis je nach Komplexität."
+      },
+      "meta_title": "Handy Folierung Wien | Skin Vinyl iPhone Samsung | EL Fix Mobile",
+      "meta_description": "Premium-Folierung Wien 1220: iPhone, Samsung, iPad. 3M-Vinyl, 40+ Designs, Custom-Druck. Blasenfrei in 30 Min, rückstandsfrei entfernbar. Aspern Seestadt."
+    }
   }
 }

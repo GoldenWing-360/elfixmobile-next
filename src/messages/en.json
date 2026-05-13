@@ -326,5 +326,274 @@
       "title": "{brand} Repair Vienna | Express 30 min | EL Fix Mobile",
       "description": "Express {brand} repair in Vienna 1220 Aspern. {count}+ models, 12-month warranty, original or premium refurbished parts. 4.4/5 (294 reviews)."
     }
+  },
+  "services_page": {
+    "common": {
+      "eyebrow": "REPAIR SERVICE VIENNA",
+      "trust_express": "Express in {minutes} minutes",
+      "trust_warranty": "12-month warranty",
+      "trust_rating": "4.4 / 5 • 294 reviews",
+      "trust_price": "Fixed prices from {from} €",
+      "included_eyebrow": "What's included",
+      "process_eyebrow": "How it works",
+      "process_headline": "Three steps – done.",
+      "cta_primary_quote": "Get a fixed quote",
+      "cta_primary_book": "Request a repair",
+      "cta_secondary": "Call us",
+      "faq_eyebrow": "FAQ",
+      "faq_headline": "Common questions"
+    },
+    "display": {
+      "h1": "Phone display repair Vienna.",
+      "intro": "Screen replacement for iPhone, Samsung, Xiaomi, Google and all major brands in Vienna Aspern. Original refurbished or certified premium aftermarket parts, fixed price upfront, ready in 30 minutes.",
+      "included_headline": "Display swap from A to Z.",
+      "included_sub": "We replace the full display module. Touchscreen, OLED/LCD, front glass, adhesive – everything included.",
+      "bullet_1": "Original refurbished or premium aftermarket part (your choice)",
+      "bullet_2": "Touch + brightness + True-Tone preserved where possible",
+      "bullet_3": "Complete front unit incl. adhesive and gasket",
+      "bullet_4": "Functional test before handover (touch, display, 3D-Touch, Face-ID)",
+      "bullet_5": "12-month warranty on part and labour",
+      "bullet_6": "Fixed price upfront, no surprises",
+      "step_1": {
+        "title": "Pick your model",
+        "body": "Fixed-price calculator: choose brand and model, see the price instantly. No phone call, no hold music."
+      },
+      "step_2": {
+        "title": "Book or walk in",
+        "body": "Walk-in Mon–Sat 9–19, Sun 9–18. Or free pickup in Vienna for repairs from € 70."
+      },
+      "step_3": {
+        "title": "Collect in 30 minutes",
+        "body": "Express swap in 30 minutes. Functional test together with you, digital warranty receipt."
+      },
+      "q_duration": {
+        "q": "How long does the display swap take?",
+        "a": "Most iPhone and Samsung models: about 30 minutes (express). Rarer devices: up to 1–2 hours – we give you a firm time in advance."
+      },
+      "q_warranty": {
+        "q": "What warranty do I get on the new display?",
+        "a": "12 months on part and labour. Original refurbished displays additionally carry the manufacturer warranty."
+      },
+      "q_data": {
+        "q": "Will I lose my data?",
+        "a": "No – the display swap only touches the front module. Data, apps, accounts remain untouched. We still always recommend a backup before any repair."
+      },
+      "q_pickup": {
+        "q": "Do you collect the device?",
+        "a": "Free pickup and return in Vienna and Lower Austria for repairs from € 70. Otherwise Maria-Tusch-Strasse 17/1, 1220 Vienna, or by post."
+      },
+      "meta_title": "Phone Display Repair Vienna | 30 min Express | EL Fix Mobile",
+      "meta_description": "Screen replacement Vienna 1220: iPhone, Samsung, Xiaomi and more. Fixed prices from € 30, done in 30 min, 12-month warranty. Aspern Seestadt, walk-in or pickup."
+    },
+    "battery": {
+      "h1": "Phone battery replacement Vienna.",
+      "intro": "Battery dying before lunch? We swap smartphone and tablet batteries in 30 minutes, with original refurbished or premium aftermarket part. Fixed price, 12-month warranty.",
+      "included_headline": "Full battery swap.",
+      "included_sub": "We remove the old battery properly, glue the new one in, recalibrate the battery management system.",
+      "bullet_1": "Premium aftermarket or original refurbished part",
+      "bullet_2": "Safe removal with workshop tool (no prying)",
+      "bullet_3": "Fresh adhesive pads, no rattle, no loose cell",
+      "bullet_4": "Where supported: reset battery service flag (no more warning)",
+      "bullet_5": "Battery health check before handover",
+      "bullet_6": "12-month warranty on the new battery",
+      "step_1": {
+        "title": "Pick your model",
+        "body": "Fixed-price calculator: brand + model, price instantly. Also works for older iPhones and Samsungs."
+      },
+      "step_2": {
+        "title": "Book or walk in",
+        "body": "Walk-in Mon–Sat 9–19, Sun 9–18. Free pickup in Vienna from € 70."
+      },
+      "step_3": {
+        "title": "Full charge, full day",
+        "body": "30 minutes express. Fresh cell, honest health number, warranty receipt."
+      },
+      "q_duration": {
+        "q": "How long does the battery swap take?",
+        "a": "30 minutes express for most models. Water-resistant iPhones and Samsung flagships: about 60 minutes (new gasket included)."
+      },
+      "q_warranty": {
+        "q": "Warranty on the new battery?",
+        "a": "12 months on the battery itself. If capacity drops too soon within the warranty period, we swap it for free."
+      },
+      "q_data": {
+        "q": "Will my data survive?",
+        "a": "Yes – the battery swap doesn't touch storage. Data, apps, accounts remain. We still recommend a backup before any repair."
+      },
+      "q_pickup": {
+        "q": "Do you reseal water-resistance?",
+        "a": "Yes – on water-resistant models a fresh gasket is included in the price. We test for water resistance after the swap."
+      },
+      "meta_title": "Phone Battery Replacement Vienna | 30 min | EL Fix Mobile",
+      "meta_description": "Battery swap Vienna 1220 Aspern: iPhone, Samsung, Xiaomi, all models. Fixed price from € 20, 30 min express, 12-month warranty. Walk-in or free pickup."
+    },
+    "data_recovery": {
+      "h1": "Phone data recovery Vienna.",
+      "intro": "Photos, chats, contacts lost – water damage, drop, software crash or locked device? We attempt recovery with workshop methods: from software extraction to mainboard repair. Diagnosis free of charge.",
+      "included_headline": "What we attempt.",
+      "included_sub": "Data recovery is never 100 %. We go from cheapest (software) to most involved (chip-off) – and tell you the success rate at every step.",
+      "bullet_1": "Software extraction via workshop tools (Cellebrite-grade)",
+      "bullet_2": "Hardware repair on the mainboard (reflow, battery-pin)",
+      "bullet_3": "Post-water-damage recovery (drying + ultrasonic + repair)",
+      "bullet_4": "Logic repair on no-power devices",
+      "bullet_5": "Backup creation on a heavily damaged display",
+      "bullet_6": "iCloud/Google bypass NOT (illegal – we don't do this)",
+      "step_1": {
+        "title": "Drop off the device",
+        "body": "Walk in or ship. Detail conversation: what's on it, what happened, what matters most?"
+      },
+      "step_2": {
+        "title": "Diagnosis (free)",
+        "body": "24–72 hours analysis. We give you a success rate in % and a fixed price. You decide whether to proceed."
+      },
+      "step_3": {
+        "title": "Data on storage media",
+        "body": "Recovered data goes onto a USB stick or HDD (we provide). Personal handover, no cloud upload without your consent."
+      },
+      "q_duration": {
+        "q": "How long does data recovery take?",
+        "a": "Diagnosis: 24–72 hours. Software recovery: 1–3 days. Mainboard repair or chip-off: 5–14 days. We give you a firm timeline after diagnosis."
+      },
+      "q_warranty": {
+        "q": "Do you guarantee recovery?",
+        "a": "No – seriously, no one can promise 100 %. After diagnosis we name a probability. On no-recovery (zero data retrieved) we only charge the diagnosis fee."
+      },
+      "q_data": {
+        "q": "Is my data safe with you?",
+        "a": "Yes – storage media is wiped right after handover to you. No copies, no cloud, no resale. We are an Austrian e.U., GDPR-compliant."
+      },
+      "q_pickup": {
+        "q": "Do you collect the device?",
+        "a": "Yes – but for data recovery we recommend walk-in or insured mail. Every hour counts after water damage."
+      },
+      "meta_title": "Phone Data Recovery Vienna | iPhone Samsung | EL Fix Mobile",
+      "meta_description": "Phone data recovery Vienna 1220: after water, drop, software crash. Free diagnosis, success rate stated upfront, no cloud upload. GDPR-compliant, walk-in or mail."
+    },
+    "water_damage": {
+      "h1": "Water-damage phone repair Vienna.",
+      "intro": "Phone in water, toilet, coffee or beer? Act fast – every hour counts. We open, ultrasonic-clean, vacuum-dry under heat, and replace damaged components. Success rate 60–80 %.",
+      "included_headline": "Water-damage treatment.",
+      "included_sub": "We open the device immediately, neutralise corrosion, replace damaged parts. Rice is a myth that makes things worse.",
+      "bullet_1": "Immediate opening + battery disconnect (stop short-circuits)",
+      "bullet_2": "Ultrasonic bath in isopropyl alcohol against corrosion",
+      "bullet_3": "Vacuum drying under heat",
+      "bullet_4": "Per-component test: display, speaker, mic, antenna",
+      "bullet_5": "Targeted part replacement (display, battery, charging port)",
+      "bullet_6": "If data is critical: data recovery task in parallel",
+      "step_1": {
+        "title": "Bring it in fast",
+        "body": "Walk in or call within 1 hour. Do NOT charge, do NOT use rice, do NOT power on."
+      },
+      "step_2": {
+        "title": "Diagnosis (free)",
+        "body": "We open, assess corrosion and component state. Success rate + fixed price within 24 hours."
+      },
+      "step_3": {
+        "title": "Repair and handover",
+        "body": "Cleaning + part replacement in 2–5 days. Functional test, warranty on replaced parts."
+      },
+      "q_duration": {
+        "q": "How long does water-damage repair take?",
+        "a": "Diagnosis: 24 hours. Cleaning only: 1–2 days. With component swap: 2–5 days depending on stock."
+      },
+      "q_warranty": {
+        "q": "Do you guarantee function after water damage?",
+        "a": "On newly replaced parts (display, battery, etc.): 12 months. On the cleaning itself: 1 month – late corrosion damage is possible."
+      },
+      "q_data": {
+        "q": "Will my data survive water damage?",
+        "a": "If the storage chip itself isn't damaged (often the case): yes. We back up data before cleaning whenever possible."
+      },
+      "q_pickup": {
+        "q": "My phone is wet – should I power it on to test?",
+        "a": "Please don't. Powering on can destroy the mainboard. Disconnect the battery if you can, and bring it to us immediately."
+      },
+      "meta_title": "Water-Damage Phone Repair Vienna | Same-Day | EL Fix Mobile",
+      "meta_description": "Water-damage phone Vienna 1220: iPhone, Samsung, all brands. Ultrasonic clean, part swap, 60–80 % success. Aspern Seestadt, immediate walk-in."
+    },
+    "unlock": {
+      "h1": "Phone unlocking Vienna.",
+      "intro": "SIM-lock removal, IMEI unlock, network unlock for legally owned devices. We unlock legally via manufacturer databases (IMEI service) – no illegal methods, no bypass tricks for stolen devices.",
+      "included_headline": "What we legally unlock.",
+      "included_sub": "Only legally owned devices with proof of ownership. Network unlock runs via IMEI database service.",
+      "bullet_1": "iPhone network unlock (T-Mobile, A1, Vodafone, Drei, etc.)",
+      "bullet_2": "Samsung network-unlock code for carrier-locked devices",
+      "bullet_3": "Huawei and Honor bootloader unlock (where possible)",
+      "bullet_4": "Xiaomi / Redmi Mi account removal with proof of ownership",
+      "bullet_5": "Proof of ownership: receipt + ID required",
+      "bullet_6": "NO unlocking of stolen devices or iCloud bypass",
+      "step_1": {
+        "title": "Verify ownership",
+        "body": "Bring receipt, ID and IMEI. Without these, no service – we only do clean work."
+      },
+      "step_2": {
+        "title": "Start IMEI service",
+        "body": "We book the unlock in the official service. Duration depends on carrier: 1–14 days."
+      },
+      "step_3": {
+        "title": "Confirmation + test",
+        "body": "Once the IMEI is unlocked in the database, we test with a foreign SIM. You get a written confirmation."
+      },
+      "q_duration": {
+        "q": "How long does unlocking take?",
+        "a": "iPhone: 1–7 days. Samsung: 1–14 days. Huawei: instant if code is available. Depends on the carrier – we give you a range upfront."
+      },
+      "q_warranty": {
+        "q": "Do you guarantee the unlock?",
+        "a": "Yes – if it fails (carrier denies IMEI), full refund. A successful unlock is permanent."
+      },
+      "q_data": {
+        "q": "Will my data survive?",
+        "a": "Yes – network unlock doesn't touch storage. Data, apps, accounts remain unchanged."
+      },
+      "q_pickup": {
+        "q": "Can I unlock stolen devices?",
+        "a": "No – we don't unlock stolen devices or iCloud locks without proof of ownership. That's handling stolen goods, we don't do it."
+      },
+      "meta_title": "Phone Unlocking Vienna | SIM-Lock IMEI | EL Fix Mobile",
+      "meta_description": "Phone unlocking Vienna 1220: SIM-lock, network unlock, Mi account. Legal via IMEI service, ownership proof required. Aspern Seestadt, 1–14 days."
+    },
+    "wrap": {
+      "h1": "Phone wrapping Vienna.",
+      "intro": "Premium skin wraps for iPhone, Samsung, iPad. Scratch protection, change the look without a new housing. dbrand-grade material, professional install, bubble-free in 30 minutes.",
+      "included_headline": "What a wrap does.",
+      "included_sub": "Protection and style in one. 3M adhesive, high-grade vinyl, residue-free removal.",
+      "bullet_1": "Premium 3M vinyl with scratch protection and self-healing",
+      "bullet_2": "Designs: carbon, wood, leather, glitter, custom print",
+      "bullet_3": "Bubble-free install in 30 minutes",
+      "bullet_4": "Residue-free removal (resale value preserved)",
+      "bullet_5": "Water-repellent, no heat issues (even in summer)",
+      "bullet_6": "Optional: matching screen film as a set",
+      "step_1": {
+        "title": "Pick a design",
+        "body": "Walk in: 40+ designs to feel and sample. Or custom print (photo, logo) with 2-day lead time."
+      },
+      "step_2": {
+        "title": "Application",
+        "body": "We clean the device, cut precisely (pre-cuts on stock for common models) and apply bubble-free."
+      },
+      "step_3": {
+        "title": "Take it home",
+        "body": "30 minutes done. If you want, we show you how to re-wrap yourself (video tutorial)."
+      },
+      "q_duration": {
+        "q": "How long does wrapping take?",
+        "a": "Standard wrap: 30 minutes. Custom print: 2 days lead time + 30 minutes install."
+      },
+      "q_warranty": {
+        "q": "Warranty on the wrap?",
+        "a": "3 months on adhesion and bubbles. No warranty on self-inflicted damage (scratching, heat, wrong cleaning)."
+      },
+      "q_data": {
+        "q": "Does a wrap protect against drops?",
+        "a": "Against micro-scratches and small bumps yes. For hard drops you need a case too – the wrap is for looks + scratches, not crash protection."
+      },
+      "q_pickup": {
+        "q": "Can I bring my own design?",
+        "a": "Yes – send us a logo/photo at 300 DPI minimum. 2 days for print and cut. Price depends on complexity."
+      },
+      "meta_title": "Phone Wrap Vienna | Skin Vinyl iPhone Samsung | EL Fix Mobile",
+      "meta_description": "Premium phone wrap Vienna 1220: iPhone, Samsung, iPad. 3M vinyl, 40+ designs, custom print. Bubble-free in 30 min, residue-free removal."
+    }
   }
 }

@@ -3,10 +3,18 @@ import { routing } from "@/i18n/routing";
 export const SITE = {
   name: "EL Fix Mobile",
   legalName: "EL Fix Mobile e.U.",
+  // Inhaberin and registration ids ported from the live WP impressum
+  // (https://www.elfixmobile.at/impressum/) so the JSON-LD + the rendered
+  // impressum page agree. Source of truth lives here, not in MDX.
+  owner: "Natalja Rahimova",
+  vatId: "ATU74938026",
+  commercialRegister: "Handelsgericht Wien",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://elfixmobile.at",
   phone: "+436606071414",
   phoneDisplay: "+43 660 6071414",
   email: "elfixmobile@gmx.at",
+  // Separate Datenschutz contact per the WP /datenschutzerklaerung/ page.
+  privacyEmail: "info@elfixmobile.at",
   address: {
     street: "Maria-Tusch-Strasse 17/1",
     locality: "Wien",
@@ -51,6 +59,11 @@ export function localBusinessJsonLd(locale: string) {
     logo: `${SITE.url}/logo.svg`,
     inLanguage: locale,
     priceRange: SITE.priceRange,
+    vatID: SITE.vatId,
+    founder: {
+      "@type": "Person",
+      name: SITE.owner,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,

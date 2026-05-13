@@ -45,12 +45,14 @@ export function Nav() {
 
   return (
     <>
+      {/* Nav uses glass-nav unconditionally. The previous transparent state
+       * relied on a dark hero behind it and went invisible on light pages
+       * (white logo + white text on the near-white --color-bg-secondary).
+       * The dark backdrop blur reads on both dark and light backgrounds. */}
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-          scrolled || mobileOpen
-            ? "glass-nav"
-            : "bg-transparent border-b border-transparent"
+          "fixed inset-x-0 top-0 z-50 transition-all duration-300 glass-nav",
+          scrolled && "shadow-[0_4px_30px_rgba(0,0,0,0.15)]"
         )}
       >
         <nav className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6 md:h-16 md:px-8">

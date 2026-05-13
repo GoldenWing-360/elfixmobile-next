@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { setRequestLocale } from "next-intl/server";
 import { LegalLayout } from "@/components/legal/LegalLayout";
+import { html as datenschutzHtml } from "@/data/legal/datenschutz";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
@@ -18,17 +17,13 @@ export default async function DatenschutzPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const html = await readFile(
-    path.join(process.cwd(), "src/data/legal/datenschutz.html"),
-    "utf8",
-  );
   return (
     <LegalLayout
       eyebrow="RECHTLICHES"
       title="Datenschutzerklärung"
       updated="13. Mai 2026"
     >
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div dangerouslySetInnerHTML={{ __html: datenschutzHtml }} />
     </LegalLayout>
   );
 }

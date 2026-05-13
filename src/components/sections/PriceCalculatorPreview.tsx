@@ -107,32 +107,36 @@ export function PriceCalculatorPreview() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0.999, y: -12 }}
                   transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                  className="grid grid-cols-1 gap-6 px-7 py-10 sm:grid-cols-2 sm:items-end"
+                  className="px-7 py-8 sm:px-8 sm:py-10"
                 >
-                  <div>
-                    <div className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6e6e73]">
-                      {active.label_repair} - {active.model}
-                    </div>
-                    <div className="mt-3 text-[11px] uppercase tracking-[0.22em] text-[#6e6e73]">
-                      {t("result_from")}
-                    </div>
-                    <div className="mt-2 flex items-baseline gap-2">
-                      <span className="text-[clamp(3rem,7vw,5rem)] font-semibold leading-none tracking-[-0.04em] text-black">
-                        {price ?? "—"}
-                      </span>
-                      <span className="text-[28px] font-medium text-[#6e6e73]">€</span>
-                    </div>
-                    <p className="mt-3 max-w-xs text-[13px] text-[#6e6e73]">
-                      {tDisclaimer}
-                    </p>
+                  <div className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6e6e73]">
+                    {active.label_repair} · {active.model}
                   </div>
-
-                  <div className="space-y-3 sm:text-right">
-                    <Feature label="Originalteil oder Premium-Refurbished" />
-                    <Feature label="Kostenlose Diagnose" />
-                    <Feature label="Express in 30 Min möglich" />
-                    <Feature label="12 Monate Garantie" />
+                  {/* Price + features row: aligned to a shared baseline instead
+                   * of forcing items-end on the grid (which created the gap
+                   * where the disclaimer pushed the price down). */}
+                  <div className="mt-5 grid grid-cols-1 gap-y-6 gap-x-10 sm:grid-cols-[auto_1fr] sm:items-start">
+                    <div>
+                      <div className="text-[11px] uppercase tracking-[0.22em] text-[#6e6e73]">
+                        {t("result_from")}
+                      </div>
+                      <div className="mt-2 flex items-baseline gap-2">
+                        <span className="text-[clamp(2.75rem,6vw,4.5rem)] font-semibold leading-none tracking-[-0.04em] text-black tabular-nums">
+                          {price ?? "—"}
+                        </span>
+                        <span className="text-[24px] font-medium text-[#6e6e73]">€</span>
+                      </div>
+                    </div>
+                    <ul className="space-y-2.5 sm:pt-1">
+                      <Feature label="Originalteil oder Premium-Refurbished" />
+                      <Feature label="Kostenlose Diagnose" />
+                      <Feature label="Express in 30 Min möglich" />
+                      <Feature label="12 Monate Garantie" />
+                    </ul>
                   </div>
+                  <p className="mt-6 text-[12.5px] text-[#86868B]">
+                    {tDisclaimer}
+                  </p>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -145,9 +149,9 @@ export function PriceCalculatorPreview() {
 
 function Feature({ label }: { label: string }) {
   return (
-    <div className="flex items-center justify-end gap-2 text-[14px] text-[#3a3a3a]">
-      <Check className="h-4 w-4 text-[var(--color-success)]" />
+    <li className="flex items-start gap-2.5 text-[14px] leading-[1.45] text-[#3a3a3a]">
+      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-success)]" />
       <span>{label}</span>
-    </div>
+    </li>
   );
 }

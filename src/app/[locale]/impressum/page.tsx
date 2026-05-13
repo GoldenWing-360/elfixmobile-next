@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { setRequestLocale } from "next-intl/server";
 import { LegalLayout } from "@/components/legal/LegalLayout";
+import { html as impressumHtml } from "@/data/legal/impressum";
 
 export const metadata: Metadata = {
   title: "Impressum",
@@ -18,13 +17,9 @@ export default async function ImpressumPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const html = await readFile(
-    path.join(process.cwd(), "src/data/legal/impressum.html"),
-    "utf8",
-  );
   return (
     <LegalLayout eyebrow="RECHTLICHES" title="Impressum">
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div dangerouslySetInnerHTML={{ __html: impressumHtml }} />
     </LegalLayout>
   );
 }
