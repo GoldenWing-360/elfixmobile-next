@@ -79,10 +79,13 @@ export function BrandGallery() {
               className={cn(
                 "relative shrink-0 snap-start",
                 "w-[260px] sm:w-[300px] md:w-[340px]",
-                "transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
-                isDimmed
-                  ? "scale-[0.96] opacity-50 blur-[1px]"
-                  : "scale-100 opacity-100 blur-0"
+                // Dim-siblings hover effect: previously combined opacity +
+                // scale-[0.96] + blur-[1px]. The blur softened the card
+                // edges into a fuzzy halo, the sub-1.0 scale put them on a
+                // sub-pixel grid which compounded with the blur. Now: pure
+                // opacity only — no transform, no filter, edges stay sharp.
+                "transition-opacity duration-300 ease-out",
+                isDimmed ? "opacity-60" : "opacity-100",
               )}
             >
               <Link

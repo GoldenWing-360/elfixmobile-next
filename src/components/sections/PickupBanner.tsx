@@ -6,9 +6,13 @@ export function PickupBanner() {
   return (
     <section className="relative bg-black text-white">
       <div className="mx-auto max-w-7xl px-6 pb-14 md:px-8 md:pb-20">
+        {/* The card no longer translates on hover; previously it lifted -0.5
+         * while the CTA inside translated +1 in the orthogonal direction,
+         * which produced a visible compound jerk. Hover state is now a
+         * single subtle border lighten. */}
         <a
           href="/buchen?service=pickup"
-          className="group relative flex flex-col items-start gap-5 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0f1117] via-[#0b1424] to-[#001a3a] p-7 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 md:flex-row md:items-center md:justify-between md:gap-10 md:p-10"
+          className="group relative flex flex-col items-start gap-5 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0f1117] via-[#0b1424] to-[#001a3a] p-7 transition-colors duration-300 hover:border-white/20 md:flex-row md:items-center md:justify-between md:gap-10 md:p-10"
         >
           {/* glow */}
           <div
@@ -36,12 +40,13 @@ export function PickupBanner() {
               </p>
             </div>
           </div>
-          <div className="relative inline-flex items-center gap-2 rounded-full bg-white text-[14.5px] font-medium text-black transition-transform duration-300 group-hover:translate-x-1">
-            <span className="px-5 py-3">Abholung anfragen</span>
-            <span className="grid h-12 w-12 place-items-center rounded-full bg-black text-white">
-              <ArrowRight className="h-4 w-4" />
-            </span>
-          </div>
+          {/* Single pill, no white-pill-with-bolted-on-black-circle chimera.
+           * Arrow lives inside the same rounded button so it reads as one
+           * CTA, not two stuck-together shapes. */}
+          <span className="relative inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-6 py-3.5 text-[14.5px] font-medium text-black transition-colors duration-200 group-hover:bg-white/90">
+            Abholung anfragen
+            <ArrowRight className="h-4 w-4" />
+          </span>
         </a>
       </div>
     </section>
