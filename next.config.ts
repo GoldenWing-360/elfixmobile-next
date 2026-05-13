@@ -16,6 +16,14 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.elfixmobile.at" },
     ],
   },
+  async redirects() {
+    return [
+      // Root → default locale. We use localePrefix: "always" and dropped the
+      // next-intl proxy (Next 16 Node-middleware is incompatible with OpenNext
+      // for Cloudflare), so "/" has no page; redirect it here.
+      { source: "/", destination: "/de", permanent: false },
+    ];
+  },
   experimental: {
     optimizePackageImports: [
       "lucide-react",

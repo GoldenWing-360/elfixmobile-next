@@ -86,14 +86,11 @@ export function localBusinessJsonLd(locale: string) {
 
 export function alternateLanguagesFor(path: string): Record<string, string> {
   const trimmed = path.startsWith("/") ? path : `/${path}`;
+  const cleanPath = trimmed === "/" ? "" : trimmed;
   const entries: Record<string, string> = {};
   for (const locale of routing.locales) {
-    const prefix =
-      locale === routing.defaultLocale && routing.localePrefix === "as-needed"
-        ? ""
-        : `/${locale}`;
-    entries[locale] = `${SITE.url}${prefix}${trimmed === "/" ? "" : trimmed}` || `${SITE.url}/`;
+    entries[locale] = `${SITE.url}/${locale}${cleanPath}`;
   }
-  entries["x-default"] = `${SITE.url}${trimmed === "/" ? "" : trimmed}`;
+  entries["x-default"] = `${SITE.url}/${routing.defaultLocale}${cleanPath}`;
   return entries;
 }

@@ -17,11 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const out: MetadataRoute.Sitemap = [];
   for (const path of PATHS) {
     for (const locale of routing.locales) {
-      const prefix =
-        locale === routing.defaultLocale && routing.localePrefix === "as-needed"
-          ? ""
-          : `/${locale}`;
-      const url = `${SITE.url}${prefix}${path}` || `${SITE.url}/`;
+      const url = `${SITE.url}/${locale}${path}`;
       out.push({
         url,
         lastModified: now,
@@ -29,13 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: path === "" ? 1 : 0.7,
         alternates: {
           languages: Object.fromEntries(
-            routing.locales.map((l) => {
-              const lp =
-                l === routing.defaultLocale && routing.localePrefix === "as-needed"
-                  ? ""
-                  : `/${l}`;
-              return [l, `${SITE.url}${lp}${path}` || `${SITE.url}/`];
-            }),
+            routing.locales.map((l) => [l, `${SITE.url}/${l}${path}`]),
           ),
         },
       });

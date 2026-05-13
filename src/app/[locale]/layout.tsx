@@ -59,7 +59,7 @@ export async function generateMetadata({
     },
     description: t.desc,
     alternates: {
-      canonical: safeLocale === routing.defaultLocale ? "/" : `/${safeLocale}`,
+      canonical: `/${safeLocale}`,
       languages: alts,
     },
     openGraph: {
