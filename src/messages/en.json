@@ -595,5 +595,48 @@
       "meta_title": "Phone Wrap Vienna | Skin Vinyl iPhone Samsung | EL Fix Mobile",
       "meta_description": "Premium phone wrap Vienna 1220: iPhone, Samsung, iPad. 3M vinyl, 40+ designs, custom print. Bubble-free in 30 min, residue-free removal."
     }
+  },
+  "model_page": {
+    "eyebrow": "{brand} {model} REPAIR",
+    "title_prefix": "Express repair:",
+    "title_suffix": "in Vienna Aspern.",
+    "intro": "{model} repair in 30 minutes. Fixed price upfront, 12-month warranty on part and labour, original refurbished or premium aftermarket parts.",
+    "trust_warranty": "12-month warranty",
+    "trust_express": "Express from 30 minutes",
+    "trust_walkin": "Walk-in or pickup",
+    "trust_rating": "4.4 / 5 • 294 reviews",
+    "prices_eyebrow": "{model} fixed prices",
+    "prices_headline": "All {model} repairs.",
+    "prices_sub": "{repair_count} different repairs on the shelf – part, labour and 12-month warranty included.",
+    "col_repair": "Repair",
+    "col_price": "Fixed price",
+    "col_duration": "Express",
+    "duration_express": "from 30 min",
+    "duration_standard": "1-2 hrs",
+    "duration_complex": "24-72 hrs",
+    "no_price": "quote on request",
+    "cta_primary": "Book this repair",
+    "cta_secondary": "See full brand overview",
+    "back_to_brand": "Back to all {brand} repairs",
+    "faq_eyebrow": "FAQ",
+    "faq_headline": "{model}: common questions",
+    "q_what_if_not_listed": {
+      "q": "My damage isn't in the table – what does it cost?",
+      "a": "Write us or drop the device off – diagnosis is always free. You get a binding fixed price within 24 hours. Atypical damage (water, mainboard) is quoted manually."
+    },
+    "q_genuine_parts": {
+      "q": "Which spare parts do you use for the {model}?",
+      "a": "Original refurbished (factory-restored by the manufacturer, with manufacturer warranty) or certified premium aftermarket — your choice at intake. Both carry our 12-month warranty."
+    },
+    "q_data_safe": {
+      "q": "Will my {model}'s data survive?",
+      "a": "Yes – display, battery, camera and back-cover swaps don't touch storage. We still recommend an iCloud/Google backup before any repair."
+    },
+    "q_pickup": {
+      "q": "Do you collect the {model}?",
+      "a": "Free pickup and return for repairs from € 70 within Vienna and Lower Austria. Otherwise walk-in (Maria-Tusch-Strasse 17/1, 1220 Vienna) or insured mail."
+    },
+    "meta_title": "{model} Repair Vienna | Fixed price 30 min | EL Fix Mobile",
+    "meta_description": "{model} repair in Vienna 1220 Aspern: display, battery, charging port and more. Fixed prices upfront, 12-month warranty, 30-min express. 4.4/5 (294 reviews)."
   }
 }

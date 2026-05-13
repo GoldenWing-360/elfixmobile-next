@@ -56,42 +56,34 @@ export function ContactView() {
         </header>
 
         <div className="mt-12 grid grid-cols-1 gap-10 md:mt-16 md:grid-cols-12 md:gap-12 lg:gap-16">
-          {/* Left: info */}
-          <div className="space-y-8 md:col-span-5">
-            <div className="overflow-hidden rounded-3xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_12px_30px_-16px_rgba(0,0,0,0.12)] ring-1 ring-black/[0.04]">
-              <div className="grid grid-cols-2 gap-3 p-6">
-                <a
-                  href={`tel:${PHONE}`}
-                  className="group flex flex-col items-start gap-3 rounded-2xl bg-black p-5 text-white transition-transform hover:-translate-y-0.5"
-                >
-                  <Phone className="h-5 w-5" />
-                  <div>
-                    <div className="text-[11px] uppercase tracking-[0.18em] opacity-60">
-                      {tl("phone_label")}
-                    </div>
-                    <div className="mt-1 text-[16px] font-semibold tracking-[-0.005em]">
-                      {tl("phone")}
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href={WA_URL}
-                  className="group flex flex-col items-start gap-3 rounded-2xl bg-[#25D366] p-5 text-white transition-transform hover:-translate-y-0.5"
-                >
-                  <MessageCircle className="h-5 w-5" />
-                  <div>
-                    <div className="text-[11px] uppercase tracking-[0.18em] opacity-80">
-                      WhatsApp
-                    </div>
-                    <div className="mt-1 text-[16px] font-semibold tracking-[-0.005em]">
-                      Schreiben
-                    </div>
-                  </div>
-                </a>
-              </div>
+          {/* Left: info — single quiet column, no card-in-card. Apple-style
+           * minimal typography; the form on the right is the only elevated
+           * card so the visual hierarchy reads "form is primary action,
+           * everything else is reference info". */}
+          <div className="md:col-span-5">
+            {/* Quick-actions: inline buttons, not stacked colored cards. The
+             * previous green WhatsApp tile fought the page palette; here we
+             * use the WA brand colour as accent on a neutral surface
+             * (text + icon tinted), which keeps the brand recognisable
+             * without screaming. */}
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={`tel:${PHONE}`}
+                className="inline-flex items-center gap-2.5 rounded-full bg-[var(--color-text-dark)] px-5 py-3 text-[14.5px] font-medium text-white transition-colors hover:bg-black"
+              >
+                <Phone className="h-4 w-4" />
+                <span>{tl("phone")}</span>
+              </a>
+              <a
+                href={WA_URL}
+                className="inline-flex items-center gap-2.5 rounded-full border border-[#25D366]/30 bg-[#25D366]/[0.08] px-5 py-3 text-[14.5px] font-medium text-[#0f6b2e] transition-colors hover:bg-[#25D366]/[0.14]"
+              >
+                <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                <span>WhatsApp</span>
+              </a>
             </div>
 
-            <div className="space-y-7 text-[15px]">
+            <div className="mt-12 space-y-9 text-[15px]">
               <FactBlock
                 icon={<MapPin className="h-4 w-4" />}
                 label={tc("address_label")}

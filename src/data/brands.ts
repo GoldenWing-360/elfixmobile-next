@@ -140,3 +140,27 @@ export function getModelsForBrand(brand: BrandDef): BrandModel[] {
   }
   return models;
 }
+
+export function getModel(
+  brandSlug: string,
+  modelSlug: string,
+): { brand: BrandDef; model: BrandModel } | undefined {
+  const brand = getBrand(brandSlug);
+  if (!brand) return undefined;
+  const model = getModelsForBrand(brand).find((m) => m.slug === modelSlug);
+  if (!model) return undefined;
+  return { brand, model };
+}
+
+/** Enumerate every (brand, model) pair across the price-tabled brands. Used
+ * by the model-page generateStaticParams; cardinality is 219 today. */
+export function allBrandModelPairs(): { brandSlug: BrandSlug; modelSlug: string }[] {
+  const pairs: { brandSlug: BrandSlug; modelSlug: string }[] = [];
+  for (const brand of BRANDS) {
+    if (!brand.hasOnlinePrices) continue;
+    for (const m of getModelsForBrand(brand)) {
+      pairs.push({ brandSlug: brand.slug, modelSlug: m.slug });
+    }
+  }
+  return pairs;
+}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { SITE } from "@/lib/seo";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -106,7 +107,21 @@ export function Footer() {
           <p>
             © {year} {t("copyright")}
           </p>
-          <p>EL Fix Mobile e.U. · FN unter Magistrat Wien</p>
+          {/* Legal line: the previous "FN unter Magistrat Wien" was incorrect —
+           * an e.U. is registered at the Firmenbuch (Handelsgericht), not the
+           * Magistrat. Magistrat-Donaustadt is only the Gewerbeaufsicht. */}
+          <p className="text-center md:text-right">
+            {SITE.legalName} · UID {SITE.vatId} · {SITE.commercialRegister}
+            <span className="mx-2 text-white/20">·</span>
+            <a
+              href="https://goldenwing.at"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white/80 transition-colors"
+            >
+              Webdesign von GoldenWing
+            </a>
+          </p>
         </div>
       </div>
     </footer>

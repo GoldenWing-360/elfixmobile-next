@@ -595,5 +595,48 @@
       "meta_title": "Handy Folierung Wien | Skin Vinyl iPhone Samsung | EL Fix Mobile",
       "meta_description": "Premium-Folierung Wien 1220: iPhone, Samsung, iPad. 3M-Vinyl, 40+ Designs, Custom-Druck. Blasenfrei in 30 Min, rückstandsfrei entfernbar. Aspern Seestadt."
     }
+  },
+  "model_page": {
+    "eyebrow": "{brand} {model} REPARATUR",
+    "title_prefix": "Express-Reparatur:",
+    "title_suffix": "in Wien Aspern.",
+    "intro": "{model}-Reparatur in 30 Minuten. Festpreis vorab, 12 Monate Garantie auf Ersatzteil und Einbau, Original-Refurbished oder Premium-Aftermarket.",
+    "trust_warranty": "12 Monate Garantie",
+    "trust_express": "Express ab 30 Minuten",
+    "trust_walkin": "Walk-in oder Abholung",
+    "trust_rating": "4,4 / 5 • 294 Bewertungen",
+    "prices_eyebrow": "Festpreise {model}",
+    "prices_headline": "Alle {model}-Reparaturen.",
+    "prices_sub": "{repair_count} verschiedene Reparaturen auf Lager, inklusive Ersatzteil, Einbau und 12 Monate Garantie.",
+    "col_repair": "Reparatur",
+    "col_price": "Festpreis",
+    "col_duration": "Express",
+    "duration_express": "ab 30 Min",
+    "duration_standard": "1-2 Std",
+    "duration_complex": "24-72 Std",
+    "no_price": "auf Anfrage",
+    "cta_primary": "Reparatur jetzt buchen",
+    "cta_secondary": "Brand-Übersicht ansehen",
+    "back_to_brand": "Zurück zu allen {brand}-Reparaturen",
+    "faq_eyebrow": "FAQ",
+    "faq_headline": "{model}: häufige Fragen",
+    "q_what_if_not_listed": {
+      "q": "Mein Schaden steht nicht in der Tabelle – was kostet das?",
+      "a": "Schreib uns oder bring das Gerät vorbei – Diagnose ist immer gratis. Innerhalb 24 Stunden bekommst du einen verbindlichen Festpreis. Bei untypischen Schäden (Wasserschaden, Mainboard-Defekt) erstellen wir das Angebot manuell."
+    },
+    "q_genuine_parts": {
+      "q": "Welche Ersatzteile verwendet ihr für das {model}?",
+      "a": "Auf Wunsch Original-Refurbished (vom Hersteller wiederaufbereitet, mit Hersteller-Garantie) oder geprüfte Premium-Aftermarket-Teile. Du wählst beim Annehmen – beide Varianten haben 12 Monate Garantie bei uns."
+    },
+    "q_data_safe": {
+      "q": "Bleiben meine Daten auf dem {model} erhalten?",
+      "a": "Ja – bei Display-, Akku-, Kamera- und Backcover-Tausch wird der Speicher nicht angetastet. Wir empfehlen trotzdem ein iCloud-/Google-Backup vor jeder Reparatur."
+    },
+    "q_pickup": {
+      "q": "Holt ihr das {model} ab?",
+      "a": "Ab € 70 Reparaturwert gratis in Wien und Niederösterreich-Umland. Sonst Walk-in (Maria-Tusch-Strasse 17/1, 1220 Wien) oder versicherter Postversand."
+    },
+    "meta_title": "{model} Reparatur Wien | Festpreis ab 30 Min | EL Fix Mobile",
+    "meta_description": "{model}-Reparatur in Wien 1220 Aspern: Display, Akku, Ladebuchse und mehr. Festpreise vorab, 12 Monate Garantie, Express in 30 Minuten. 4,4/5 (294 Bewertungen)."
   }
 }

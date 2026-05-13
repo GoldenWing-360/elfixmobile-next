@@ -595,5 +595,48 @@
       "meta_title": "Telefon Kaplama Viyana | Skin Vinil | EL Fix Mobile",
       "meta_description": "Premium telefon kaplama Viyana 1220: iPhone, Samsung, iPad. 3M vinil, 40+ tasarım, custom baskı. 30 dk'da kabarcıksız, iz bırakmadan çıkar."
     }
+  },
+  "model_page": {
+    "eyebrow": "{brand} {model} TAMİRİ",
+    "title_prefix": "Ekspres tamir:",
+    "title_suffix": "Viyana Aspern.",
+    "intro": "30 dakikada {model} tamiri. Peşin sabit fiyat, parça ve işçiliğe 12 ay garanti, orijinal yenilenmiş veya premium muadil parça.",
+    "trust_warranty": "12 ay garanti",
+    "trust_express": "30 dakikadan ekspres",
+    "trust_walkin": "Walk-in veya alım",
+    "trust_rating": "4,4 / 5 • 294 yorum",
+    "prices_eyebrow": "{model} sabit fiyatları",
+    "prices_headline": "Tüm {model} tamirleri.",
+    "prices_sub": "{repair_count} farklı tamir hazır – parça, işçilik ve 12 ay garanti dahil.",
+    "col_repair": "Tamir",
+    "col_price": "Sabit fiyat",
+    "col_duration": "Ekspres",
+    "duration_express": "30 dk'dan",
+    "duration_standard": "1-2 saat",
+    "duration_complex": "24-72 saat",
+    "no_price": "talep üzerine teklif",
+    "cta_primary": "Bu tamiri rezerve et",
+    "cta_secondary": "Tüm marka modelleri",
+    "back_to_brand": "Tüm {brand} tamirlerine dön",
+    "faq_eyebrow": "Sıkça Sorulanlar",
+    "faq_headline": "{model}: sık sorulan sorular",
+    "q_what_if_not_listed": {
+      "q": "Hasarım tabloda yok – ne kadar?",
+      "a": "Bize yaz ya da cihazı getir – teşhis her zaman ücretsiz. 24 saat içinde sabit fiyat alırsın. Atipik hasarlar (su, ana kart) manuel fiyatlandırılır."
+    },
+    "q_genuine_parts": {
+      "q": "{model} için hangi yedek parçaları kullanıyorsunuz?",
+      "a": "Orijinal yenilenmiş (üretici tarafından restore edilmiş, üretici garantili) veya sertifikalı premium muadil – sen seç. İkisinin de 12 ay garantisi var."
+    },
+    "q_data_safe": {
+      "q": "{model} verilerim kaybolur mu?",
+      "a": "Hayır – ekran, pil, kamera ve arka kapak değişimi belleğe dokunmaz. Yine de tamir öncesi iCloud/Google yedeği öneririz."
+    },
+    "q_pickup": {
+      "q": "{model}'i alıyor musunuz?",
+      "a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım ve teslim. Aksi takdirde walk-in (Maria-Tusch-Strasse 17/1, 1220 Viyana) veya sigortalı posta."
+    },
+    "meta_title": "{model} Tamiri Viyana | Sabit fiyat 30 dk | EL Fix Mobile",
+    "meta_description": "Viyana 1220 Aspern'da {model} tamiri: ekran, pil, şarj soketi ve daha fazlası. Peşin sabit fiyat, 12 ay garanti, 30 dk ekspres."
   }
 }

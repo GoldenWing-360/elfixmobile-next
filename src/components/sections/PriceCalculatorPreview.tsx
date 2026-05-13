@@ -62,81 +62,81 @@ export function PriceCalculatorPreview() {
           {/* Right: interactive preview */}
           <div className="md:col-span-7">
             <div className="overflow-hidden rounded-3xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_20px_50px_-20px_rgba(0,0,0,0.15)] ring-1 ring-black/[0.04]">
-              {/* steps progress */}
-              <div className="flex items-center gap-1 border-b border-black/[0.05] bg-[#f7f7f8] px-7 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">
-                <span className="text-[var(--color-accent)]">
-                  <Check className="inline h-3 w-3" /> {t("step_brand")}
-                </span>
-                <span className="opacity-30">·</span>
-                <span className="text-[var(--color-accent)]">
-                  <Check className="inline h-3 w-3" /> {t("step_model")}
-                </span>
-                <span className="opacity-30">·</span>
-                <span className="text-[var(--color-accent)]">
-                  <Check className="inline h-3 w-3" /> {t("step_repair")}
-                </span>
+              {/* Steps progress strip */}
+              <div className="flex items-center gap-1.5 bg-[#f5f5f7] px-6 py-2.5 text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--color-accent)]">
+                <Check className="h-3 w-3" /> {t("step_brand")}
+                <span className="text-black/20">·</span>
+                <Check className="h-3 w-3" /> {t("step_model")}
+                <span className="text-black/20">·</span>
+                <Check className="h-3 w-3" /> {t("step_repair")}
               </div>
 
-              {/* tabs */}
-              <div className="flex gap-1 border-b border-black/[0.05] p-1.5">
-                {FEATURED.map((f, i) => (
-                  <button
-                    key={f.model}
-                    onClick={() => setActiveIdx(i)}
-                    aria-pressed={i === activeIdx}
-                    className={cn(
-                      "flex-1 rounded-2xl px-4 py-3 text-left text-[13px] font-medium transition-colors duration-300",
-                      i === activeIdx
-                        ? "bg-black text-white"
-                        : "bg-transparent text-[#1d1d1f] hover:bg-black/[0.04]"
-                    )}
-                  >
-                    <div className="text-[10.5px] uppercase tracking-[0.18em] opacity-60">
-                      {f.brand.split("-")[0]}
-                    </div>
-                    <div className="truncate">{f.model}</div>
-                  </button>
-                ))}
+              {/* Segmented control: container-tinted rail with elevated active
+               * pill (Apple HIG idiom). Replaces the previous "lone black pill
+               * floating in white" layout where inactive tabs had no visual
+               * weight and the active one looked stuck-on. */}
+              <div className="p-3 sm:p-4">
+                <div className="flex gap-1 rounded-2xl bg-[#f0f0f3] p-1">
+                  {FEATURED.map((f, i) => (
+                    <button
+                      key={f.model}
+                      onClick={() => setActiveIdx(i)}
+                      aria-pressed={i === activeIdx}
+                      className={cn(
+                        "flex-1 rounded-xl px-3 py-2.5 text-left transition-all duration-200",
+                        i === activeIdx
+                          ? "bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_12px_-4px_rgba(0,0,0,0.12)]"
+                          : "hover:bg-white/40"
+                      )}
+                    >
+                      <div className="text-[10px] font-medium uppercase tracking-[0.16em] text-[#6e6e73]">
+                        {f.brand.split("-")[0]}
+                      </div>
+                      <div className="mt-0.5 truncate text-[13px] font-semibold tracking-[-0.005em] text-[#1d1d1f]">
+                        {f.model}
+                      </div>
+                    </button>
+                  ))}
+                </div>
               </div>
 
-              {/* result */}
+              {/* Result body: price is the hero, features as a chip row below. */}
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIdx}
-                  initial={{ opacity: 0.999, y: 12 }}
+                  initial={{ opacity: 0.999, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0.999, y: -12 }}
-                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                  className="px-7 py-8 sm:px-8 sm:py-10"
+                  exit={{ opacity: 0.999, y: -8 }}
+                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  className="px-6 pb-7 pt-4 sm:px-7 sm:pb-8"
                 >
-                  <div className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6e6e73]">
+                  <div className="text-[10.5px] font-medium uppercase tracking-[0.18em] text-[#86868B]">
                     {active.label_repair} · {active.model}
                   </div>
-                  {/* Price + features row: aligned to a shared baseline instead
-                   * of forcing items-end on the grid (which created the gap
-                   * where the disclaimer pushed the price down). */}
-                  <div className="mt-5 grid grid-cols-1 gap-y-6 gap-x-10 sm:grid-cols-[auto_1fr] sm:items-start">
-                    <div>
-                      <div className="text-[11px] uppercase tracking-[0.22em] text-[#6e6e73]">
-                        {t("result_from")}
-                      </div>
-                      <div className="mt-2 flex items-baseline gap-2">
-                        <span className="text-[clamp(2.75rem,6vw,4.5rem)] font-semibold leading-none tracking-[-0.04em] text-black tabular-nums">
-                          {price ?? "—"}
-                        </span>
-                        <span className="text-[24px] font-medium text-[#6e6e73]">€</span>
-                      </div>
-                    </div>
-                    <ul className="space-y-2.5 sm:pt-1">
-                      <Feature label="Originalteil oder Premium-Refurbished" />
-                      <Feature label="Kostenlose Diagnose" />
-                      <Feature label="Express in 30 Min möglich" />
-                      <Feature label="12 Monate Garantie" />
-                    </ul>
+                  <div className="mt-1 flex items-baseline gap-2">
+                    <span className="text-[12px] font-medium uppercase tracking-[0.16em] text-[#6e6e73]">
+                      {t("result_from")}
+                    </span>
                   </div>
-                  <p className="mt-6 text-[12.5px] text-[#86868B]">
+                  <div className="mt-1 flex items-baseline gap-1.5">
+                    <span className="text-[clamp(3.25rem,8vw,5.5rem)] font-semibold leading-none tracking-[-0.045em] text-black tabular-nums">
+                      {price ?? "—"}
+                    </span>
+                    <span className="text-[28px] font-medium leading-none text-[#86868B]">€</span>
+                  </div>
+                  <p className="mt-2.5 text-[12.5px] leading-snug text-[#86868B]">
                     {tDisclaimer}
                   </p>
+
+                  {/* Feature chip row — horizontal, evenly weighted, separated
+                   * by hairline dividers so it reads as one trust block, not a
+                   * shopping list. */}
+                  <ul className="mt-6 grid grid-cols-2 gap-2 border-t border-black/[0.06] pt-5 sm:grid-cols-4 sm:gap-0">
+                    <Feature label="Originalteil" />
+                    <Feature label="Gratis Diagnose" />
+                    <Feature label="Express 30 Min" />
+                    <Feature label="12 Mon. Garantie" />
+                  </ul>
                 </motion.div>
               </AnimatePresence>
             </div>

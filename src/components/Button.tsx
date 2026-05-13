@@ -1,7 +1,6 @@
 "use client";
 
 import { forwardRef, type ButtonHTMLAttributes, type AnchorHTMLAttributes } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { cn } from "@/lib/cn";
 
 type Variant = "primary" | "secondary" | "tertiary";
@@ -12,6 +11,14 @@ interface Common {
   size?: Size;
   className?: string;
   children: React.ReactNode;
+  /**
+   * @deprecated The magnetic cursor-follow effect was removed because it
+   * combined badly with `hover:scale-[*]` (both write to `transform`) and
+   * caused the button to jitter under the cursor — the bounding-rect
+   * recomputed every frame fed a small displacement back into the spring,
+   * creating a visible oscillation. Prop is kept for source compatibility
+   * but is now a no-op.
+   */
   magnetic?: boolean;
 }
 
@@ -30,16 +37,19 @@ type Props = ButtonProps | AnchorProps;
 
 const base = cn(
   "inline-flex items-center justify-center gap-2 font-medium",
-  "transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
-  "select-none cursor-pointer will-change-transform",
+  "transition-colors duration-200 ease-[cubic-bezier(0.16,1,0.3,1)]",
+  "select-none cursor-pointer",
   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white/40"
 );
 
+// Hover effects are background-only — no transform scale, no translate. That
+// keeps the button anchored on hover (no jitter) and matches Apple's HIG
+// where buttons indicate hover via brightness change, not size.
 const variants: Record<Variant, string> = {
   primary:
-    "bg-[var(--color-accent)] text-white rounded-full hover:bg-[var(--color-accent-hover)] hover:scale-[1.02] active:scale-[0.98]",
+    "bg-[var(--color-accent)] text-white rounded-full hover:bg-[var(--color-accent-hover)] active:bg-[var(--color-accent-hover)]",
   secondary:
-    "bg-white/10 text-white border border-white/20 backdrop-blur-md rounded-full hover:bg-white/15 hover:scale-[1.02] active:scale-[0.98]",
+    "bg-white/10 text-white border border-white/20 backdrop-blur-md rounded-full hover:bg-white/[0.18] active:bg-white/[0.22]",
   tertiary:
     "text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] group",
 };
@@ -51,40 +61,31 @@ const sizes: Record<Size, string> = {
 
 export const Button = forwardRef<HTMLElement, Props>(function Button(
   props,
-  ref
+  ref,
 ) {
-  const { variant = "primary", size = "md", className, children, magnetic = false, ...rest } = props;
+  // magnetic is intentionally pulled out and ignored — see prop JSDoc above.
+  const {
+    variant = "primary",
+    size = "md",
+    className,
+    children,
+    magnetic: _magnetic = false,
+    ...rest
+  } = props;
+  void _magnetic;
   const isLink = "href" in rest && rest.href !== undefined;
-
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const sx = useSpring(x, { stiffness: 200, damping: 20 });
-  const sy = useSpring(y, { stiffness: 200, damping: 20 });
-  const tx = useTransform(sx, (v) => v * 0.18);
-  const ty = useTransform(sy, (v) => v * 0.18);
-
-  const onMove = (e: React.MouseEvent<HTMLElement>) => {
-    if (!magnetic) return;
-    const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    x.set(e.clientX - (r.left + r.width / 2));
-    y.set(e.clientY - (r.top + r.height / 2));
-  };
-  const onLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
 
   const cls = cn(
     base,
     variants[variant],
     variant !== "tertiary" && sizes[size],
     variant === "tertiary" && "text-[15px]",
-    className
+    className,
   );
 
   const arrow =
     variant === "tertiary" ? (
-      <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+      <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
         →
       </span>
     ) : null;
@@ -96,38 +97,18 @@ export const Button = forwardRef<HTMLElement, Props>(function Button(
     </>
   );
 
-  const motionStyle = magnetic ? { x: tx, y: ty } : undefined;
-
-  // framer-motion v12 narrows drag handlers; cast spread to any to merge
-  // standard HTML props without fighting the generic.
   if (isLink) {
     const a = rest as AnchorHTMLAttributes<HTMLAnchorElement>;
-    const AMotion = motion.a as unknown as React.FC<Record<string, unknown>>;
     return (
-      <AMotion
-        ref={ref as React.Ref<HTMLAnchorElement>}
-        className={cls}
-        style={motionStyle}
-        onMouseMove={onMove}
-        onMouseLeave={onLeave}
-        {...a}
-      >
+      <a ref={ref as React.Ref<HTMLAnchorElement>} className={cls} {...a}>
         {content}
-      </AMotion>
+      </a>
     );
   }
   const b = rest as ButtonHTMLAttributes<HTMLButtonElement>;
-  const BMotion = motion.button as unknown as React.FC<Record<string, unknown>>;
   return (
-    <BMotion
-      ref={ref as React.Ref<HTMLButtonElement>}
-      className={cls}
-      style={motionStyle}
-      onMouseMove={onMove}
-      onMouseLeave={onLeave}
-      {...b}
-    >
+    <button ref={ref as React.Ref<HTMLButtonElement>} className={cls} {...b}>
       {content}
-    </BMotion>
+    </button>
   );
 });
