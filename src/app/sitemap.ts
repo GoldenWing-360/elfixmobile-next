@@ -4,7 +4,6 @@ import { SITE } from "@/lib/seo";
 
 const PATHS = [
   "",
-  "/services",
   "/preisrechner",
   "/buchen",
   "/kontakt",
