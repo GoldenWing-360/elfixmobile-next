@@ -4,7 +4,7 @@ import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/cn";
 
 const variants: Variants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0.999, y: 40 },
   visible: {
     opacity: 1,
     y: 0,

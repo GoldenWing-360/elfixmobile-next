@@ -31,9 +31,9 @@ export function Location() {
         {/* Floating contact card */}
         <div className="mx-auto -mt-[200px] max-w-7xl px-6 md:-mt-[280px] md:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0.999, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: "0px 0px -10% 0px" }}
+            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="grid grid-cols-1 gap-10 rounded-3xl bg-[var(--color-bg-tertiary)] p-8 ring-1 ring-white/[0.06] md:grid-cols-12 md:gap-8 md:p-12 lg:p-16"
           >

@@ -30,18 +30,18 @@ export function BrandGallery() {
       <div className="mx-auto max-w-7xl px-6 pt-24 md:px-8 md:pt-36">
         <header className="max-w-3xl">
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0.999, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: "0px 0px -10% 0px" }}
+            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]"
           >
             {t("eyebrow")}
           </motion.p>
           <motion.h2
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0.999, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: "0px 0px -10% 0px" }}
+            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]"
           >
@@ -63,9 +63,9 @@ export function BrandGallery() {
           return (
             <motion.div
               key={b.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0.999, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: "0px 0px -10% 0px" }}
+              viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
               transition={{
                 delay: i * 0.04,
                 duration: 0.6,

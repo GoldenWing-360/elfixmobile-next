@@ -98,9 +98,9 @@ export function PriceCalculatorPreview() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIdx}
-                  initial={{ opacity: 0, y: 12 }}
+                  initial={{ opacity: 0.999, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -12 }}
+                  exit={{ opacity: 0.999, y: -12 }}
                   transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                   className="grid grid-cols-1 gap-6 px-7 py-10 sm:grid-cols-2 sm:items-end"
                 >

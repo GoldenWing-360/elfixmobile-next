@@ -6,7 +6,7 @@ import { Button } from "@/components/Button";
 import { Smartphone, Battery, Droplets } from "lucide-react";
 
 const cardEnter = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0.999, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
@@ -62,18 +62,18 @@ export function ServiceShowcase() {
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36 lg:py-44">
         <header className="max-w-3xl">
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0.999, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: "0px 0px -10% 0px" }}
+            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]"
           >
             {t("eyebrow")}
           </motion.p>
           <motion.h2
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0.999, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: "0px 0px -10% 0px" }}
+            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
             transition={{
               duration: 0.8,
               ease: [0.16, 1, 0.3, 1],
@@ -84,9 +84,9 @@ export function ServiceShowcase() {
             {t("headline")}
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0.999, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: "0px 0px -10% 0px" }}
+            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#5f5f63]"
           >
@@ -101,7 +101,7 @@ export function ServiceShowcase() {
               custom={i}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.05, margin: "0px 0px -10% 0px" }}
+              viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
               variants={cardEnter}
               className="group relative overflow-hidden rounded-3xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)] ring-1 ring-black/[0.04] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_2px_4px_rgba(0,0,0,0.05),0_24px_40px_-20px_rgba(0,0,0,0.2)]"
             >
