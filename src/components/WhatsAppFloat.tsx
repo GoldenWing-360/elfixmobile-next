@@ -27,8 +27,11 @@ export function WhatsAppFloat() {
         rel="noopener noreferrer"
         aria-label="WhatsApp Chat mit EL Fix Mobile"
         className={cn(
-          "fixed bottom-5 right-5 z-50",
-          "inline-flex h-14 w-14 items-center justify-center",
+          // Mobile uses the StickyMobileCTA bar at the bottom for WA + call;
+          // the floating bubble is desktop-only to avoid stacking two
+          // bottom-pinned elements on top of each other on small screens.
+          "fixed bottom-5 right-5 z-50 hidden md:inline-flex",
+          "h-14 w-14 items-center justify-center",
           "rounded-full bg-[#25D366] text-white shadow-[0_8px_24px_-6px_rgba(37,211,102,0.5)]",
           "ring-1 ring-black/[0.08]",
           "transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",

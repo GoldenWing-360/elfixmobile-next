@@ -9,6 +9,7 @@ import { LenisProvider } from "@/components/LenisProvider";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { StickyMobileCTAGate } from "@/components/StickyMobileCTAGate";
 import { SITE, alternateLanguagesFor, localBusinessJsonLd } from "@/lib/seo";
 
 const inter = Inter({
@@ -129,6 +130,7 @@ export default async function LocaleLayout({
             </main>
             <Footer />
             <WhatsAppFloat />
+            <StickyMobileCTAGate />
           </LenisProvider>
         </NextIntlClientProvider>
       </body>

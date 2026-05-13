@@ -37,12 +37,18 @@ export function ContactView() {
     formState: { errors, isSubmitting, isValid },
   } = useForm<FormData>({ resolver: zodResolver(schema), mode: "onChange" });
 
+  // Honeypot: a real DOM input we hide off-screen. Naive form-filling bots
+  // populate every visible input including this one; if it has a value, the
+  // server treats the submission as a bot trip.
+  const [honeypot, setHoneypot] = useState("");
+
   const onSubmit = async (data: FormData) => {
     const res = await fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         type: "contact",
+        _hp: honeypot,
         name: data.name,
         email: data.email,
         phone: data.phone || "",
@@ -151,6 +157,22 @@ export function ContactView() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit(onSubmit)} className="mt-6 grid grid-cols-1 gap-5">
+                  {/* Honeypot — hidden from humans + screen readers. Tab
+                   * order skips it. Naive bots that autofill every input
+                   * by selector will populate this and trip the server. */}
+                  <div className="hidden" aria-hidden="true">
+                    <label>
+                      Leave this empty
+                      <input
+                        type="text"
+                        name="_hp"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={honeypot}
+                        onChange={(e) => setHoneypot(e.target.value)}
+                      />
+                    </label>
+                  </div>
                   <FormField label={t("field_name")} error={errors.name && te("name")}>
                     <input {...register("name")} className={inputCls} autoComplete="name" />
                   </FormField>

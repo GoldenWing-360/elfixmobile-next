@@ -4,6 +4,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { allBrandModelPairs, getModel } from "@/data/brands";
 import { repairLabel, repairDurationBucket } from "@/data/repair-labels";
+import { cn } from "@/lib/cn";
 import { routing } from "@/i18n/routing";
 import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { PickupBanner } from "@/components/sections/PickupBanner";
@@ -242,6 +243,10 @@ export default async function ModelPage({
                 </tr>
               </thead>
               <tbody>
+                {/* Each row is a deep-link into /buchen with the repair
+                 * pre-selected — taps short-circuit the "pick service +
+                 * pick device + pick damage" steps so the user goes
+                 * straight to date / contact. */}
                 {repairs.map((r, i) => {
                   const bucket = repairDurationBucket(r.slug);
                   const durationKey =
@@ -253,10 +258,28 @@ export default async function ModelPage({
                   return (
                     <tr
                       key={r.slug}
-                      className={i % 2 === 0 ? "bg-white" : "bg-black/[0.015]"}
+                      className={cn(
+                        "transition-colors hover:bg-[var(--color-accent)]/[0.05]",
+                        i % 2 === 0 ? "bg-white" : "bg-black/[0.015]",
+                      )}
                     >
-                      <td className="px-5 py-3.5 font-medium text-[var(--color-text-dark)]">
-                        {repairLabel(r.slug, safeLocale)}
+                      <td className="p-0">
+                        <Link
+                          href={{
+                            pathname: "/buchen",
+                            query: {
+                              model: pair.model.full_name,
+                              repairs: r.slug,
+                              ...(r.price != null
+                                ? { total: String(r.price) }
+                                : {}),
+                            },
+                          }}
+                          className="block w-full px-5 py-3.5 font-medium text-[var(--color-text-dark)]"
+                          aria-label={`${repairLabel(r.slug, safeLocale)} buchen für ${pair.model.full_name}`}
+                        >
+                          {repairLabel(r.slug, safeLocale)}
+                        </Link>
                       </td>
                       <td className="px-5 py-3.5 text-[#525257]">{t(durationKey)}</td>
                       <td className="px-5 py-3.5 text-right tabular-nums font-medium">

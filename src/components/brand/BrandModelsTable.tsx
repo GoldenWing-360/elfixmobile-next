@@ -74,13 +74,26 @@ export function BrandModelsTable({ brand, limit = 20 }: Props) {
               </tr>
             </thead>
             <tbody>
+              {/* Model names are deep-links into the per-model landing
+               * (/reparatur/<brand>/<model>). Without these, the brand
+               * table was a dead-end for SEO — Google indexed 219 model
+               * pages but the brand page didn't actually link to them. */}
               {visible.map((m: BrandModel, i) => (
                 <tr
                   key={m.slug}
-                  className={i % 2 === 0 ? "bg-white" : "bg-black/[0.015]"}
+                  className={
+                    i % 2 === 0
+                      ? "bg-white hover:bg-[var(--color-accent)]/[0.04]"
+                      : "bg-black/[0.015] hover:bg-[var(--color-accent)]/[0.04]"
+                  }
                 >
-                  <td className="px-5 py-3.5 font-medium text-[var(--color-text-dark)]">
-                    {m.full_name}
+                  <td className="p-0">
+                    <Link
+                      href={`/reparatur/${brand.slug}/${m.slug}`}
+                      className="block w-full px-5 py-3.5 font-medium text-[var(--color-text-dark)]"
+                    >
+                      {m.full_name}
+                    </Link>
                   </td>
                   {activeCols.map((rk) => {
                     const price = m.prices[rk];

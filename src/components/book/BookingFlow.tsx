@@ -220,6 +220,7 @@ export function BookingFlow() {
                           headers: { "Content-Type": "application/json" },
                           body: JSON.stringify({
                             type: "booking",
+                            _hp: data._hp,
                             service: state.service,
                             device: state.device,
                             damage: state.damage,
@@ -679,10 +680,11 @@ function StepContact({
 }: {
   state: State;
   onBack: () => void;
-  onSubmit: (d: ContactFormData) => Promise<void>;
+  onSubmit: (d: ContactFormData & { _hp: string }) => Promise<void>;
 }) {
   const t = useTranslations("book");
   const te = useTranslations("form_error");
+  const [honeypot, setHoneypot] = useState("");
   const {
     register,
     handleSubmit,
@@ -707,7 +709,25 @@ function StepContact({
       <h2 className="mt-2 text-[22px] font-semibold tracking-[-0.01em] md:text-[28px]">
         {t("step_contact_title")}
       </h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="mt-8 grid grid-cols-1 gap-5">
+      <form
+        onSubmit={handleSubmit((data) => onSubmit({ ...data, _hp: honeypot }))}
+        className="mt-8 grid grid-cols-1 gap-5"
+      >
+        {/* Honeypot — hidden from humans, fills only when a bot mass-fills
+         * inputs by selector. Server rejects (silently) on non-empty. */}
+        <div className="hidden" aria-hidden="true">
+          <label>
+            Leave this empty
+            <input
+              type="text"
+              name="_hp"
+              tabIndex={-1}
+              autoComplete="off"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+            />
+          </label>
+        </div>
         <Field label={t("field_name")}>
           <input {...register("name")} className={inputCls()} autoFocus />
           {errors.name && <span className="mt-1 block text-[12px] text-red-600">{te("name")}</span>}
