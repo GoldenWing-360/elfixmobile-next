@@ -8,23 +8,26 @@ export function Footer() {
   const fl = useTranslations("footer_links");
   const year = new Date().getFullYear();
 
+  // Link to the dedicated SEO service & brand pages instead of pre-filtered
+  // /preisrechner queries. The hub pages own the content, the calculator
+  // is one step deeper in the funnel.
   const cols = [
     {
       heading: t("services"),
       links: [
-        { href: "/preisrechner?repair=display", label: fl("display") },
-        { href: "/preisrechner?repair=battery", label: fl("battery") },
-        { href: "/buchen", label: fl("water") },
-        { href: "/preisrechner?repair=camera_back", label: fl("camera") },
+        { href: "/display-reparatur-wien", label: fl("display") },
+        { href: "/akku-tausch-wien", label: fl("battery") },
+        { href: "/wasserschaden-handy-reparatur-wien", label: fl("water") },
+        { href: "/datenrettung-handy-wien", label: fl("camera") },
       ],
     },
     {
       heading: t("brands"),
       links: [
-        { href: "/preisrechner?brand=apple-iphone", label: fl("iphone") },
-        { href: "/preisrechner?brand=samsung-galaxy", label: fl("samsung") },
-        { href: "/preisrechner?brand=xiaomi", label: fl("xiaomi") },
-        { href: "/buchen", label: fl("google_pixel") },
+        { href: "/reparatur/apple", label: fl("iphone") },
+        { href: "/reparatur/samsung", label: fl("samsung") },
+        { href: "/reparatur/xiaomi", label: fl("xiaomi") },
+        { href: "/reparatur/google", label: fl("google_pixel") },
       ],
     },
     {

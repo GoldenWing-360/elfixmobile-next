@@ -21,10 +21,13 @@ const cardEnter = {
 export function ServiceShowcase() {
   const t = useTranslations("services");
 
+  // Cards link to the dedicated SEO service-pages — not /preisrechner
+  // pre-filtered queries — so users (and Google) land on a full landing
+  // with explainers, FAQ and JSON-LD before deciding to book.
   const cards = [
     {
       key: "display",
-      href: "/preisrechner?repair=display",
+      href: "/display-reparatur-wien",
       title: t("display_title"),
       desc: t("display_desc"),
       price: t("display_price"),
@@ -35,7 +38,7 @@ export function ServiceShowcase() {
     },
     {
       key: "battery",
-      href: "/preisrechner?repair=battery",
+      href: "/akku-tausch-wien",
       title: t("battery_title"),
       desc: t("battery_desc"),
       price: t("battery_price"),
@@ -46,7 +49,7 @@ export function ServiceShowcase() {
     },
     {
       key: "water",
-      href: "/buchen",
+      href: "/wasserschaden-handy-reparatur-wien",
       title: t("water_title"),
       desc: t("water_desc"),
       price: t("water_price"),
