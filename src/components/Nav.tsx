@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Menu, X } from "lucide-react";
 
 export function Nav() {
   const t = useTranslations("nav");
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -21,13 +22,31 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll while menu is open + close on ESC. The previous version
+  // only handled the scroll lock; tapping the OS back button or hitting Esc
+  // on an external keyboard left the menu open.
   useEffect(() => {
-    if (mobileOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "";
+    if (!mobileOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
+      document.removeEventListener("keydown", onKey);
     };
   }, [mobileOpen]);
+
+  // Auto-close on route change. Without this, tapping a primary link
+  // navigates to the new page but the next-intl Link doesn't unmount the
+  // overlay, leaving it sitting on top of the destination page.
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
 
   const links = [
     { href: "/preisrechner", label: t("pricing") },
@@ -35,13 +54,17 @@ export function Nav() {
     { href: "/kontakt", label: t("contact") },
   ] as const;
 
-  // Mobile-only secondary links (anchor jumps on home, scroll-to-top from other pages)
-  const mobileExtras = [
-    { href: "/#services", label: t("services") },
-    { href: "/#reviews", label: "Bewertungen" },
-    { href: "/#location", label: "Standort" },
-    { href: "/#faq", label: "FAQ" },
-  ] as const;
+  // On home: anchor-jump targets. On any other page: navigate to home with
+  // the hash, so the next-intl router handles cross-page navigation
+  // correctly (a bare <a href="/#x"> from /de/reparatur/apple would lose
+  // the locale prefix).
+  const isHome = pathname === "/";
+  const mobileExtras: ReadonlyArray<{ href: string; label: string }> = [
+    { href: isHome ? "#services" : "/#services", label: t("services") },
+    { href: isHome ? "#reviews" : "/#reviews", label: "Bewertungen" },
+    { href: isHome ? "#location" : "/#location", label: "Standort" },
+    { href: isHome ? "#faq" : "/#faq", label: "FAQ" },
+  ];
 
   return (
     <>
@@ -52,18 +75,26 @@ export function Nav() {
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-300 glass-nav",
-          scrolled && "shadow-[0_4px_30px_rgba(0,0,0,0.15)]"
+          scrolled && "shadow-[0_4px_30px_rgba(0,0,0,0.15)]",
         )}
       >
-        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:h-20 md:px-8">
-          <Link href="/" className="flex items-center" aria-label="EL Fix Mobile - Startseite">
+        <nav className="mx-auto flex h-14 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
+          <Link
+            href="/"
+            className="flex items-center"
+            aria-label="EL Fix Mobile - Startseite"
+            onClick={() => setMobileOpen(false)}
+          >
             <Image
               src="/logo-light.svg"
               alt="EL Fix Mobile"
               width={200}
               height={60}
               priority
-              className="h-11 w-auto md:h-14"
+              // Mobile logo dropped from h-11 to h-9 — at h-11 it ate ~70%
+              // of a 64px header and pushed the language switcher + burger
+              // tight against the screen edge on 360-375px viewports.
+              className="h-9 w-auto md:h-14"
             />
           </Link>
 
@@ -80,19 +111,23 @@ export function Nav() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 md:gap-2">
             <LanguageSwitcher />
+            {/* Mobile menu button — bumped to 44x44 (Apple HIG touch
+             * target). The previous 36x36 was below the recommended
+             * minimum and missed taps on the corners. */}
             <button
               type="button"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label={mobileOpen ? t("close") : t("menu")}
               aria-expanded={mobileOpen}
-              className="grid h-9 w-9 place-items-center rounded-full md:hidden bg-white/5 border border-white/10"
+              aria-controls="mobile-menu"
+              className="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/5 transition-colors hover:bg-white/10 md:hidden"
             >
               {mobileOpen ? (
-                <X className="h-4 w-4" />
+                <X className="h-5 w-5" />
               ) : (
-                <Menu className="h-4 w-4" />
+                <Menu className="h-5 w-5" />
               )}
             </button>
           </div>
@@ -102,24 +137,35 @@ export function Nav() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t("menu")}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl md:hidden"
+            transition={{ duration: 0.25 }}
+            // z-40 keeps the overlay UNDER the fixed header (z-50) so the
+            // close-X button stays reachable. pt aligns content under the
+            // mobile header height (h-14 = 56px).
+            className="fixed inset-0 z-40 overflow-y-auto bg-black/95 backdrop-blur-xl md:hidden"
           >
-            <div className="mx-auto flex h-full max-w-7xl flex-col justify-center gap-10 px-8 pt-16">
-              <ul className="flex flex-col items-start gap-5">
+            <div className="mx-auto flex min-h-full max-w-7xl flex-col gap-8 px-6 pb-12 pt-20">
+              <ul className="flex flex-col items-start gap-4">
                 {links.map((l, i) => (
                   <motion.li
                     key={l.href}
                     initial={{ opacity: 0.999, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.05 * i, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{
+                      delay: 0.05 * i,
+                      duration: 0.4,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
                   >
                     <Link
                       href={l.href}
-                      className="text-[40px] leading-none font-semibold tracking-tight"
+                      className="text-[clamp(2rem,9vw,2.75rem)] leading-tight font-semibold tracking-tight"
                       onClick={() => setMobileOpen(false)}
                     >
                       {l.label}
@@ -127,17 +173,21 @@ export function Nav() {
                   </motion.li>
                 ))}
               </ul>
-              <ul className="flex flex-col items-start gap-3 border-t border-white/10 pt-8">
+              <ul className="flex flex-col items-start gap-3 border-t border-white/10 pt-7">
                 {mobileExtras.map((l, i) => (
                   <motion.li
                     key={l.href}
                     initial={{ opacity: 0.999, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.05 * (i + links.length), duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{
+                      delay: 0.05 * (i + links.length),
+                      duration: 0.4,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
                   >
                     <a
                       href={l.href}
-                      className="text-[18px] font-medium tracking-tight text-white/70 hover:text-white"
+                      className="block py-1.5 text-[18px] font-medium tracking-tight text-white/70 hover:text-white"
                       onClick={() => setMobileOpen(false)}
                     >
                       {l.label}
@@ -145,6 +195,25 @@ export function Nav() {
                   </motion.li>
                 ))}
               </ul>
+              {/* Contact shortcut row: tap-to-call + WhatsApp at the
+               * bottom of the menu so the primary action is always one
+               * tap away even on long brand-list pages. */}
+              <div className="mt-auto flex flex-wrap gap-3 pt-6 text-[14px]">
+                <a
+                  href="tel:+436606071414"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-medium text-black"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  +43 660 6071414
+                </a>
+                <a
+                  href="https://wa.me/436606071414"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 font-medium text-white"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  WhatsApp
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

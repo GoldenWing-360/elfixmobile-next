@@ -5,7 +5,7 @@ export function PickupBanner() {
   const t = useTranslations("pickup");
   return (
     <section className="relative bg-black text-white">
-      <div className="mx-auto max-w-7xl px-6 pb-14 md:px-8 md:pb-20">
+      <div className="mx-auto max-w-7xl px-6 py-8 md:px-8 md:py-12">
         {/* The card no longer translates on hover; previously it lifted -0.5
          * while the CTA inside translated +1 in the orthogonal direction,
          * which produced a visible compound jerk. Hover state is now a
