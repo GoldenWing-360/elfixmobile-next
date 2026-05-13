@@ -111,3 +111,57 @@ html.lenis body {
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* Legal pages typography (Impressum, Datenschutz, AGB) */
+.legal-prose h1 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text-dark);
+  margin: 48px 0 16px;
+}
+.legal-prose h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-text-dark);
+  margin: 40px 0 14px;
+}
+.legal-prose h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin: 28px 0 10px;
+}
+.legal-prose h4, .legal-prose h5, .legal-prose h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin: 24px 0 8px;
+}
+.legal-prose p {
+  margin: 0 0 16px;
+}
+.legal-prose ul, .legal-prose ol {
+  margin: 0 0 16px 1.25rem;
+  padding-left: 0;
+}
+.legal-prose ul { list-style: disc; }
+.legal-prose ol { list-style: decimal; }
+.legal-prose li {
+  margin-bottom: 6px;
+}
+.legal-prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.legal-prose a:hover { color: var(--color-accent-hover); }
+.legal-prose strong { font-weight: 600; color: var(--color-text-dark); }
+.legal-prose hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 32px 0;
+}
+.legal-prose > *:first-child { margin-top: 0; }
