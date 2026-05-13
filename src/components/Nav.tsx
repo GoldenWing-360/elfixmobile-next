@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -45,17 +46,15 @@ export function Nav() {
         )}
       >
         <nav className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6 md:h-16 md:px-8">
-          <Link
-            href="/"
-            className="flex items-center gap-2 font-semibold tracking-tight"
-          >
-            <span
-              aria-hidden
-              className="grid h-7 w-7 place-items-center rounded-[8px] bg-white text-[12px] font-bold text-black"
-            >
-              EL
-            </span>
-            <span className="text-[15px]">FIX MOBILE</span>
+          <Link href="/" className="flex items-center" aria-label="EL Fix Mobile - Startseite">
+            <Image
+              src="/logo-light.svg"
+              alt="EL Fix Mobile"
+              width={140}
+              height={42}
+              priority
+              className="h-8 w-auto md:h-9"
+            />
           </Link>
 
           <ul className="hidden items-center gap-7 md:flex">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -47,16 +48,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-20 md:px-8">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4 lg:grid-cols-5 lg:gap-12">
           <div className="col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 font-semibold tracking-tight text-white">
-              <span
-                aria-hidden
-                className="grid h-7 w-7 place-items-center rounded-[8px] bg-white text-[12px] font-bold text-black"
-              >
-                EL
-              </span>
-              <span className="text-[15px]">FIX MOBILE</span>
-            </div>
-            <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-white/55">
+            <Image
+              src="/logo-light.svg"
+              alt="EL Fix Mobile"
+              width={160}
+              height={48}
+              className="h-10 w-auto"
+            />
+            <p className="mt-5 max-w-xs text-[14px] leading-relaxed text-white/55">
               {t("tagline")}
             </p>
             <address className="mt-6 not-italic text-[14px] leading-relaxed text-white/65">
