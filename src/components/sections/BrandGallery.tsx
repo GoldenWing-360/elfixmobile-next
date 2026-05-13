@@ -59,7 +59,7 @@ export function BrandGallery() {
 
       <div
         ref={trackRef}
-        className="scrollbar-none mt-10 flex w-full snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-24 md:mt-14 md:gap-6 md:px-8 md:pb-32"
+        className="scrollbar-none mt-10 flex w-full snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-24 pt-3 md:mt-14 md:gap-6 md:px-8 md:pb-32 md:pt-4"
         onMouseLeave={() => setHovered(null)}
       >
         {BRANDS.map((b, i) => {

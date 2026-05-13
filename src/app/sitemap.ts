@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { SITE } from "@/lib/seo";
-import { BRANDS } from "@/data/brands";
+import { BRANDS, allBrandModelPairs } from "@/data/brands";
 import { SERVICES } from "@/data/services";
 
 const STATIC_PATHS = [
@@ -16,6 +16,9 @@ const STATIC_PATHS = [
 
 const BRAND_PATHS = BRANDS.map((b) => `/reparatur/${b.slug}` as const);
 const SERVICE_PATHS = SERVICES.map((s) => `/${s.slug}` as const);
+const MODEL_PATHS = allBrandModelPairs().map(
+  (p) => `/reparatur/${p.brandSlug}/${p.modelSlug}` as const,
+);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -43,6 +46,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Both sit one tier below the homepage.
   for (const p of BRAND_PATHS) emit(p, 0.9);
   for (const p of SERVICE_PATHS) emit(p, 0.9);
+  // Model pages are long-tail ("iPhone 17 Pro Max Reparatur Wien") so they
+  // get a notch lower priority than the brand/service hubs that feed them.
+  for (const p of MODEL_PATHS) emit(p, 0.6);
 
   return out;
 }
