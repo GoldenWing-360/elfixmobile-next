@@ -16,7 +16,10 @@ export type ServiceSlug =
   | "datenrettung-handy-wien"
   | "wasserschaden-handy-reparatur-wien"
   | "handy-entsperren-wien"
-  | "handy-folierung-wien";
+  | "handy-folierung-wien"
+  | "kamera-reparatur-handy-wien"
+  | "tablet-reparatur-wien"
+  | "notebook-reparatur-wien";
 
 export interface PriceRange {
   from: number;
@@ -80,6 +83,29 @@ export const SERVICES: ReadonlyArray<ServiceDef> = [
     slug: "handy-folierung-wien",
     key: "wrap",
     gradient: "from-fuchsia-950 to-fuchsia-900",
+    hasOnlineQuote: false,
+  },
+  {
+    slug: "kamera-reparatur-handy-wien",
+    key: "camera",
+    gradient: "from-purple-950 to-purple-900",
+    priceRange: { from: 30, to: 270 },
+    durationMinutes: 60,
+    hasOnlineQuote: true,
+  },
+  {
+    slug: "tablet-reparatur-wien",
+    key: "tablet",
+    gradient: "from-slate-900 to-slate-800",
+    priceRange: { from: 70, to: 330 },
+    hasOnlineQuote: true,
+  },
+  {
+    slug: "notebook-reparatur-wien",
+    key: "notebook",
+    gradient: "from-zinc-900 to-stone-900",
+    // No online quote — notebook prices vary too widely between MacBook
+    // logic-board repairs and a basic Windows-laptop keyboard swap.
     hasOnlineQuote: false,
   },
 ] as const;

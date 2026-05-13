@@ -104,24 +104,27 @@
     "review_8_name": "Bianca S."
   },
   "faq": {
-    "eyebrow": "SSS",
-    "headline": "30 saniyede cevaplar.",
-    "q1": "Ekran onarımı ne kadar sürer?",
-    "a1": "iPhone X'ten 17'ye ve çoğu Galaxy S modelinde ekran değişimi yaklaşık 30 dakika sürer. Beklemek veya sonra almak mümkündür. Daha eski veya nadir modellerde 1 - 2 iş günü olabilir.",
-    "q2": "Orijinal mi muadil mi parça alıyorum?",
-    "a2": "Her ikisini de sunuyoruz. Tam True-Tone ve Service Pack kalitesinde Orijinal Refurbished ekran veya daha uygun fiyatlı premium muadil. Onarımdan önce seçimi konuşuyoruz.",
-    "q3": "Onarımda garanti var mı?",
-    "a3": "Evet, değişen her parça ve işçiliğimiz için 12 ay. Batarya kapasitesini, ekran fonksiyonunu ve renk doğruluğunu garanti ediyoruz.",
-    "q4": "Randevusuz gelebilir miyim?",
-    "a4": "Evet, randevu gerekmez. Modeline uygun parça stokta olsun diye önce aramanızı (0660 6071414) öneririz.",
-    "q5": "Teşhis ne kadar?",
-    "a5": "Teşhis her zaman ücretsiz ve bağlayıcı değildir. Onarımdan vazgeçerseniz hiçbir ücret ödemezsiniz.",
-    "q6": "Apple Care veya sigortayı kabul ediyor musunuz?",
-    "a6": "Evet, çoğu telefon sigortasıyla doğrudan mahsuplaşıyoruz ve Apple Care uyumlu fatura veriyoruz. Kurumsal müşteriler için çerçeve sözleşmeler mevcut.",
-    "q7": "Eski modelleri onarıyor musunuz?",
-    "a7": "Evet, iPhone 4'ten 17'ye, Samsung Galaxy S5'ten itibaren, Xiaomi Mi 5'ten itibaren. Nadir modeller için parça temin süresi 1 - 3 iş günü olabilir.",
-    "q8": "Cihazımı posta ile gönderebilir miyim?",
-    "a8": "Evet, Avusturya'nın her yerinden. Online formu doldur, sana ücretsiz kargo etiketi gönderelim ve onarımdan sonra cihazını geri yollayalım."
+    "eyebrow": "Sıkça Sorulanlar",
+    "h1": "Sık sorulan sorular.",
+    "intro": "Burada bize en çok sorulanları topluyoruz — telefon, atölye ve online. Sorun yoksa ara: +43 660 6071414.",
+    "q_express_q": "Ekspres tamir ne kadar sürer?",
+    "q_express_a": "Ekran ve pil değişimi yaklaşık 30 dakika; su geçirmez modeller 60 dakika (yeni conta dahil). Ana kart ve su hasarı 24–72 saat.",
+    "q_warranty_q": "Hangi garantiyi alıyorum?",
+    "q_warranty_a": "Tüm tamirlerde parça ve işçiliğe 12 ay. Ana kart lehim işlerine 6 ay (endüstri standardı).",
+    "q_data_q": "Verilerim güvende mi?",
+    "q_data_a": "Ekran, pil, şarj soketi, kamera, arka kapak için: evet, belleğe dokunulmaz. Ana kart veya veri kurtarma için mümkünse önce yedek alıyoruz. GDPR uyumlu.",
+    "q_price_q": "Sabit fiyatlar ne kadar dürüst?",
+    "q_price_a": "Tamir öncesi parça ve işçilik dahil sabit fiyat. Açıldığında ek hasar bulunursa (nadir), devam etmeden önce ararız.",
+    "q_parts_q": "Hangi parçaları kullanıyorsunuz?",
+    "q_parts_a": "Orijinal yenilenmiş (üretici tarafından fabrikada yenilenen, üretici garantili) veya sertifikalı premium muadil. Sen seçiyorsun — ikisinin de 12 ay garantisi bizde.",
+    "q_pickup_q": "Cihaz alıyor musunuz?",
+    "q_pickup_a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım. Daha uzakta küçük bir ek ücret. Tüm Avusturya için sigortalı posta servisi.",
+    "q_pay_q": "Hangi ödeme yöntemleri?",
+    "q_pay_a": "Nakit, banka kartı, kredi kartı, EPS ve havale. KDV dökümlü fatura her zaman dahil.",
+    "q_hours_q": "Açılış saatleri?",
+    "q_hours_a": "Pzt–Cmt 9–19, Paz 9–18. Haftanın 7 günü açık.",
+    "meta_title": "SSS | EL Fix Mobile Viyana Aspern",
+    "meta_description": "En sık sorulanlara cevaplar: süre, garanti, fiyatlar, parçalar, alım. EL Fix Mobile Viyana 1220 Aspern."
   },
   "final": {
     "headline": "Onarıma hazır mısın?",
@@ -594,6 +597,132 @@
       },
       "meta_title": "Telefon Kaplama Viyana | Skin Vinil | EL Fix Mobile",
       "meta_description": "Premium telefon kaplama Viyana 1220: iPhone, Samsung, iPad. 3M vinil, 40+ tasarım, custom baskı. 30 dk'da kabarcıksız, iz bırakmadan çıkar."
+    },
+    "camera": {
+      "h1": "Telefon kamera tamiri Viyana.",
+      "intro": "Ön veya arka kamera bulanık, ışık lekeleri, lens camının altında toz? Akıllı telefon kameralarını ve lens camlarını Viyana 1220 Aspern'da değiştiriyoruz — sabit fiyat, 12 ay garanti, çoğu zaman 60 dakikada.",
+      "included_headline": "Ne tamir ediyoruz.",
+      "included_sub": "Tam kamera ünitesi veya sadece koruyucu cam — değişimden önce gerçekte neyin arızalı olduğunu test ediyoruz.",
+      "bullet_1": "Arka (ana) kamera tam modülü",
+      "bullet_2": "Ön kamera tam modülü",
+      "bullet_3": "Modül değişimi olmadan sadece lens camı",
+      "bullet_4": "Orijinal yenilenmiş veya premium muadil (sen seç)",
+      "bullet_5": "Fonksiyon testi: otomatik odak, stabilizatör, flaş",
+      "bullet_6": "Parça ve işçiliğe 12 ay garanti",
+      "step_1": {
+        "title": "Modelini seç",
+        "body": "Sabit fiyat hesaplayıcı: iPhone, Samsung, Xiaomi vb. — fiyat anında görünür."
+      },
+      "step_2": {
+        "title": "Getir veya gönder",
+        "body": "Walk-in Pzt–Cmt 9–19, Paz 9–18. Veya Aşağı Avusturya'dan posta ile."
+      },
+      "step_3": {
+        "title": "Teslim öncesi test",
+        "body": "Gündüz ve düşük ışıkta örnek fotoğraflar çekiyoruz — ödemeden önce sonuçları görüyorsun."
+      },
+      "q_duration": {
+        "q": "Kamera değişimi ne kadar sürer?",
+        "a": "Ön kamera: çoğu zaman 30 dakika. Arka kamera: 60–90 dakika. Lens camı: 60 dakika (yapışkanın kuruması gerekir)."
+      },
+      "q_warranty": {
+        "q": "Yeni kameraya hangi garanti var?",
+        "a": "Parça ve işçiliğe 12 ay. Orijinal yenilenmiş modüllere ayrıca üretici garantisi geçerli."
+      },
+      "q_data": {
+        "q": "Fotoğraflarım kalır mı?",
+        "a": "Evet — kamera değişimi belleğe dokunmaz. Veriler, fotoğraflar, uygulamalar dokunulmaz."
+      },
+      "q_pickup": {
+        "q": "Cihazı alıyor musunuz?",
+        "a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım ve teslim. Aksi takdirde walk-in veya sigortalı posta."
+      },
+      "meta_title": "Telefon Kamera Tamiri Viyana | 60 dk | EL Fix Mobile",
+      "meta_description": "Telefon kamera değişimi Viyana 1220 Aspern: iPhone, Samsung, Xiaomi ve daha fazlası. Ön + arka + lens camı. 30 €'dan sabit fiyat, 12 ay garanti."
+    },
+    "tablet": {
+      "h1": "Tablet tamiri Viyana.",
+      "intro": "iPad, Samsung Galaxy Tab, Huawei MatePad — Viyana 1220 Aspern'da ekran, pil, şarj soketi vb. tamir ediyoruz. Peşin sabit fiyat, 12 ay garanti, modele göre 60 dakikadan ekspres.",
+      "included_headline": "Yaptığımız tablet tamirleri.",
+      "included_sub": "iPad mini'den 12.9 inç Pro'ya — her yaygın model için alet ve parça stoğumuz var.",
+      "bullet_1": "Ekran + dokunmatik değişimi (orijinal yenilenmiş veya muadil)",
+      "bullet_2": "Yapışkan ve kalibrasyon dahil pil değişimi",
+      "bullet_3": "Şarj soketi / USB-C / Lightning",
+      "bullet_4": "Kamera + hoparlör + mikrofon",
+      "bullet_5": "Su hasarı tedavisi",
+      "bullet_6": "Yazılım sorunları + iPadOS / Android kurulumu",
+      "step_1": {
+        "title": "Modelini seç",
+        "body": "iPad serisi için sabit fiyat hesaplayıcı. Diğer markalar talep üzerine — teşhis her zaman ücretsiz."
+      },
+      "step_2": {
+        "title": "Getir veya aldır",
+        "body": "Walk-in veya Viyana'da € 70'den itibaren ücretsiz alım."
+      },
+      "step_3": {
+        "title": "Test + teslim",
+        "body": "Seninle birlikte fonksiyon testi, dijital garanti belgesi, Apple ID girişin korunur."
+      },
+      "q_duration": {
+        "q": "Tablet tamiri ne kadar sürer?",
+        "a": "iPad ekran: 60–90 dakika. Pil: 60 dakika. Su hasarı: bulgulara göre 2–5 gün."
+      },
+      "q_warranty": {
+        "q": "Tablet tamirine hangi garanti?",
+        "a": "Tüm marka ve tamir türleri için parça ve işçiliğe 12 ay garanti."
+      },
+      "q_data": {
+        "q": "Verilerim kaybolur mu?",
+        "a": "Ekran, pil, şarj soketi ve kamera değişimi için: hayır, belleğe dokunulmaz. Yine de tamir öncesi yedek öneririz."
+      },
+      "q_pickup": {
+        "q": "Tableti alıyor musunuz?",
+        "a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım. Tabletler büyük — uygun paketleme yanımızda."
+      },
+      "meta_title": "Tablet Tamiri Viyana | iPad Galaxy Tab | EL Fix Mobile",
+      "meta_description": "Tablet tamiri Viyana 1220: iPad, Samsung Galaxy Tab, Huawei. Ekran, pil, şarj soketi. 70 €'dan sabit fiyat, 12 ay garanti."
+    },
+    "notebook": {
+      "h1": "Dizüstü tamiri Viyana.",
+      "intro": "Dizüstü ısınıyor, pil zayıf, ekran kırık, klavye takılıyor mu? MacBook ve Windows dizüstülerini Viyana 1220 Aspern'da tamir ediyoruz. Teşhis her zaman ücretsiz, tespit sonrası sabit fiyat.",
+      "included_headline": "Dizüstü tamirleri.",
+      "included_sub": "Donanım arızaları, yazılım sorunları, veri kurtarma. MacBook, Lenovo ThinkPad, Dell XPS, HP, Acer, ASUS üzerinde çalışıyoruz.",
+      "bullet_1": "Ekran + menteşeler",
+      "bullet_2": "Pil değişimi + şarj IC",
+      "bullet_3": "Klavye + touchpad + USB portları",
+      "bullet_4": "RAM + SSD yükseltmeleri",
+      "bullet_5": "Fan + temizlik (throttling biter)",
+      "bullet_6": "Su hasarı + ana kart tamiri",
+      "step_1": {
+        "title": "Teşhis randevusu",
+        "body": "Walk-in veya posta. 24–48 saat içinde teşhis, sonra sabit fiyat ve net süre."
+      },
+      "step_2": {
+        "title": "Tamiri onayla",
+        "body": "Teşhis sonrası sen karar veriyorsun. Ana kart hasarında mikroskop altında bulguları gösteriyoruz."
+      },
+      "step_3": {
+        "title": "1–7 günde hazır",
+        "body": "Parça bulunabilirliğine göre. Teslim öncesi stres testi + veri testi."
+      },
+      "q_duration": {
+        "q": "Dizüstü tamiri ne kadar sürer?",
+        "a": "Pil/klavye: 1–2 gün. Ekran: 2–3 gün. Ana kart: karmaşıklığa göre 5–14 gün."
+      },
+      "q_warranty": {
+        "q": "Dizüstü tamirine hangi garanti?",
+        "a": "Değiştirilen donanıma 12 ay. Ana kart lehim işlerine 6 ay (endüstri standardı)."
+      },
+      "q_data": {
+        "q": "Verilerim güvende mi?",
+        "a": "Evet — ekran, pil, klavye, fan tamirlerinde SSD'ye dokunulmaz. Ana kart işlerinde mümkünse önce yedek alıyoruz."
+      },
+      "q_pickup": {
+        "q": "Dizüstüyü alıyor musunuz?",
+        "a": "€ 100'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım. Antistatik paketleme yanımızda."
+      },
+      "meta_title": "Dizüstü Tamiri Viyana | MacBook + Windows | EL Fix Mobile",
+      "meta_description": "Dizüstü + laptop tamiri Viyana 1220 Aspern: MacBook, Lenovo, Dell, HP. Ekran, pil, klavye, ana kart, veri kurtarma. Ücretsiz teşhis, 12 ay garanti."
     }
   },
   "model_page": {
@@ -638,5 +767,115 @@
     },
     "meta_title": "{model} Tamiri Viyana | Sabit fiyat 30 dk | EL Fix Mobile",
     "meta_description": "Viyana 1220 Aspern'da {model} tamiri: ekran, pil, şarj soketi ve daha fazlası. Peşin sabit fiyat, 12 ay garanti, 30 dk ekspres."
+  },
+  "geo_page": {
+    "aspern_seestadt": {
+      "h1": "Telefon tamiri Aspern Seestadt Viyana.",
+      "intro": "Seestadt veya Alt-Aspern'da mı yaşıyorsun? Hemen köşedeyiz — Maria-Tusch-Strasse 17/1, U2 Aspern Nord'dan 3 dakika yürüyüşle. Ekran, pil, su hasarı — hepsi yerinde.",
+      "trust_walk": "U2 Aspern Nord'dan 3 dk yürüyüş",
+      "trust_pickup": "Aspern ve Seestadt'ta ücretsiz alım (alt limit yok)",
+      "trust_express": "30 dakikalık ekspres tamir",
+      "trust_warranty": "12 ay garanti",
+      "section_title": "Aspern Seestadt neden farklı.",
+      "section_body": "Seestadt, Viyana'nın en modern bölgelerinden biri ve burası bizim sahamız. Her okulu, hub'ı, kuleyi tanıyoruz. Çocuğun okul yolunda telefon düştüyse ya da HOERBIGER etkinliğinden yeni çıktıysan, Viyana'da bizden yakını yok.",
+      "card_call_title": "Ara",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Uğra",
+      "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Viyana",
+      "card_pickup_title": "Alırız",
+      "card_pickup_sub": "Her siparişte Seestadt'ta ücretsiz alım",
+      "meta_title": "Telefon Tamiri Aspern Seestadt Viyana | EL Fix Mobile",
+      "meta_description": "Aspern Seestadt 1220'da telefon tamiri: U2 Aspern Nord'dan 3 dk. Ekran, pil, su hasarı. Sabit fiyat, 12 ay garanti, ücretsiz alım."
+    },
+    "donaustadt": {
+      "h1": "Telefon tamiri Donaustadt Viyana.",
+      "intro": "Donaustadt, Viyana'nın en büyük bölgesi ve bizim evimiz. Stadlau, Kagran, Hirschstetten veya Essling'da yaşıyorsan — arabayla gelir, 20 dakika içinde yanındayız. Alt limit olmadan ücretsiz alım.",
+      "trust_walk": "Bölge merkezinden 5 km",
+      "trust_pickup": "Tüm Donaustadt'ta ücretsiz alım",
+      "trust_express": "30 dakikalık ekspres tamir",
+      "trust_warranty": "12 ay garanti",
+      "section_title": "Donaustadt EL Fix Mobile'i tanıyor.",
+      "section_body": "2019'dan beri 22. bölgenin aileleri, öğrencileri ve yolcuları için telefon, tablet ve dizüstü tamir ediyoruz. U2 ile merkeze gitmen gerekmiyor — sana geliriz ya da kapının önüne park edersin (ilk saat ücretsiz).",
+      "card_call_title": "Ara",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Uğra",
+      "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Viyana Donaustadt",
+      "card_pickup_title": "Alırız",
+      "card_pickup_sub": "Tüm Donaustadt'ta ücretsiz — Stadlau, Kagran, Hirschstetten, Essling",
+      "meta_title": "Telefon Tamiri Donaustadt | 22. Bölge Viyana | EL Fix Mobile",
+      "meta_description": "Donaustadt 1220 Viyana telefon tamiri: Stadlau, Kagran, Hirschstetten, Essling. Ücretsiz alım, sabit fiyat, 12 ay garanti."
+    },
+    "floridsdorf": {
+      "h1": "Telefon tamiri Floridsdorf Viyana.",
+      "intro": "Floridsdorf'ta (21. bölge) yaşıyorsan ve hızlı telefon tamiri lazımsa: U6 Floridsdorf veya arabayla bize 15 dakikalık yoldasın. Veya biz gelelim — tüm Floridsdorf'ta ücretsiz alım.",
+      "trust_walk": "Arabayla 15 dk / U6 + U2",
+      "trust_pickup": "Tüm Floridsdorf'ta ücretsiz alım",
+      "trust_express": "30 dakikalık ekspres tamir",
+      "trust_warranty": "12 ay garanti",
+      "section_title": "Floridsdorf'a Floridsdorf dükkanı gerekmiyor.",
+      "section_body": "Floridsdorf'ta telefon dükkanları var, ama bizim gibi sabit fiyat ve gerçek garanti? Nadir. Strebersdorf, Stammersdorf, Großjedlersdorf veya Leopoldau'dan cihazını ücretsiz alıyoruz. Viyana-Aspern'da tamir, aynı veya bir sonraki iş günü teslim.",
+      "card_call_title": "Ara",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Uğra",
+      "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Viyana Aspern",
+      "card_pickup_title": "Alırız",
+      "card_pickup_sub": "Floridsdorf'ta ücretsiz — Strebersdorf, Stammersdorf, Leopoldau",
+      "meta_title": "Telefon Tamiri Floridsdorf | 21. Bölge | EL Fix Mobile",
+      "meta_description": "Floridsdorf 1210 Viyana telefon tamiri: ücretsiz alım, sabit fiyat, 12 ay garanti. Strebersdorf, Stammersdorf, Großjedlersdorf, Leopoldau."
+    },
+    "gaenserndorf": {
+      "h1": "Telefon tamiri Gänserndorf ve Aşağı Avusturya.",
+      "intro": "Gänserndorf, Marchegg veya Aşağı Avusturya'nın herhangi bir yerinde mi yaşıyorsun? Telefonu posta ile gönder ya da bizzat getir — peşin sabit fiyat, 24–72 saatte tamir, sigortalı paket ile iade.",
+      "trust_walk": "Posta veya S1 ile Aspern'a",
+      "trust_pickup": "İki yönlü sigortalı kargo",
+      "trust_express": "24–72 saatte tamir",
+      "trust_warranty": "12 ay garanti",
+      "section_title": "Gänserndorf'tan Viyana'ya gelmek şart değil.",
+      "section_body": "Tüm Avusturya'ya kargo yapıyoruz. Cihazını sigortalı posta ile gönder (veya gel — S1 doğrudan Viyana-Aspern'a gidiyor), 24–72 saatte tamir edip geri gönderiyoruz. Sigortalı iade kargo sabit fiyata dahildir.",
+      "card_call_title": "Ara",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Uğra",
+      "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Viyana (Marchfeld'den S1)",
+      "card_pickup_title": "Posta servisi",
+      "card_pickup_sub": "İki yönlü sigortalı kargo dahil",
+      "meta_title": "Telefon Tamiri Gänserndorf ve A. Avusturya | EL Fix Mobile",
+      "meta_description": "Gänserndorf, Marchegg, A. Avusturya telefon tamiri: iki yönlü sigortalı kargo, 24–72 saatte tamir, sabit fiyat, 12 ay garanti."
+    }
+  },
+  "ueber_uns": {
+    "eyebrow": "HAKKIMIZDA",
+    "h1": "Biz EL Fix Mobile ekibiyiz.",
+    "intro": "Viyana Aspern'da aile şirketi. 2019'dan beri telefon, tablet ve dizüstü tamir ediyoruz — orijinal yenilenmiş veya premium muadil parça, 12 ay garanti, dürüst sabit fiyat.",
+    "section_story_title": "Nasıl başladı.",
+    "section_story_body": "EL Fix Mobile'i 2019'da Maria-Tusch-Strasse'de açtık, çünkü Viyana'da telefon tamirinin ya pahalı ve yavaş, ya da ucuz ama gerçek garantisiz olmasından bıkmıştık. Bugün 294 gerçek Google yorumu ve 4,4 yıldız ile tüm Aşağı Avusturya'dan müşterilerin güvenini kazandık.",
+    "section_team_title": "Ekip.",
+    "section_team_body": "Akıllı telefon ve dizüstü tamirinde uzun deneyimli üç teknisyen. Ana kart üzerinde mikroskopla çalışıyor, veri kurtarma için Cellebrite seviyesinde aletler kullanıyor ve düzenli olarak ekibimizi eğitime gönderiyoruz.",
+    "section_values_title": "Bizim için önemli olan.",
+    "values_1_title": "Dürüst fiyatlar",
+    "values_1_body": "Tamir öncesi sabit fiyat. Cihaz beklenenden daha hasarlıysa, devam etmeden önce ararız.",
+    "values_2_title": "Gerçek garanti",
+    "values_2_body": "Parça ve işçiliğe 12 ay. Tekrar arızalanırsa ücretsiz tamir ederiz.",
+    "values_3_title": "Verilerin senin",
+    "values_3_body": "Gerek olmadıkça belleğe dokunmayız. GDPR uyumlu, ortamlar teslimden sonra silinir.",
+    "values_4_title": "Gizli ücret yok",
+    "values_4_body": "Parça, işçilik, vergi — hepsi sabit fiyata dahil. € 70'den itibaren ücretsiz alım.",
+    "meta_title": "Hakkımızda | EL Fix Mobile Viyana Aspern",
+    "meta_description": "EL Fix Mobile kim? 2019'dan beri Viyana 1220 Aspern'da aile şirketi, 294 Google yorumu, 12 ay garanti, dürüst sabit fiyat."
+  },
+  "bewertungen": {
+    "eyebrow": "YORUMLAR",
+    "h1": "4,4 yıldız, 294 yorum.",
+    "intro": "Müşterilerimizin kendi sözleriyle. Google Maps ve web platformumuzdan yorumlar — filtrelemiyoruz.",
+    "rating_value": "4,4",
+    "rating_count": "294 yorum",
+    "review_1": "iPhone 14 ekran değişimi 25 dakikada, fiyat online hesaplayıcıyla eşleşiyor, sorunsuz, güler yüzlü ekip.",
+    "review_2": "Galaxy S22 pil değişimi — 6 ay sonra hâlâ mükemmel kapasite, net tavsiye.",
+    "review_3": "MacBook Pro su hasarı — başkaları pes ederdi. Burada ana kartı kurtardılar, tüm veriler yerinde.",
+    "review_4": "Hızlı, dürüst, adil. Sonunda güvenilecek bir telefon dükkanı.",
+    "review_5": "Kırık iPad ekranı, karşıdaki kafede beklerken 90 dakikada tamir ettiler.",
+    "review_6": "Bozuk Samsung'tan veri kurtarma — tüm fotoğraflar ve WhatsApp kurtarıldı. Başka bir dükkan bittiğini söylemişti.",
+    "google_cta": "Google'da 294 yorumun tamamı",
+    "meta_title": "Yorumlar | EL Fix Mobile Viyana Aspern",
+    "meta_description": "Müşteriler EL Fix Mobile hakkında ne diyor: 294 Google yorumundan 4,4 yıldız. Viyana 1220 Aspern Seestadt'tan gerçek yorumlar."
   }
 }

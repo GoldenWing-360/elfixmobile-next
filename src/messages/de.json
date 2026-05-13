@@ -104,24 +104,27 @@
     "review_8_name": "Bianca S."
   },
   "faq": {
-    "eyebrow": "HÄUFIGE FRAGEN",
-    "headline": "Antworten in 30 Sekunden.",
-    "q1": "Wie lange dauert eine Display-Reparatur?",
-    "a1": "Für iPhone X bis 17 und die meisten Galaxy S Modelle dauert der Display-Tausch ca. 30 Minuten. Sie können auf das Gerät warten oder es später abholen. Bei sehr alten oder seltenen Modellen kann es 1 bis 2 Werktage dauern.",
-    "q2": "Bekomme ich Originalteile oder Nachbauteile?",
-    "a2": "Wir bieten beides an. Original Refurbished Displays für volle True-Tone- und Service-Pack-Qualität, oder Premium-Nachbauteile als günstige Alternative. Wir besprechen die Wahl vor der Reparatur.",
-    "q3": "Gibt es Garantie auf die Reparatur?",
-    "a3": "Ja, 12 Monate Garantie auf jedes ausgetauschte Ersatzteil und unsere Arbeit. Bei Akkus garantieren wir Kapazität, bei Displays Funktion und Farbtreue.",
-    "q4": "Kann ich vorbeikommen ohne Termin?",
-    "a4": "Ja, kein Termin nötig. Wir empfehlen kurz vorher anzurufen (0660 6071414), damit wir prüfen ob das passende Ersatzteil für Ihr Modell auf Lager ist.",
-    "q5": "Was kostet die Diagnose?",
-    "a5": "Die Diagnose ist immer kostenlos und unverbindlich. Wenn Sie sich gegen die Reparatur entscheiden, fallen keine Kosten an.",
-    "q6": "Akzeptieren Sie Apple Care oder Versicherungen?",
-    "a6": "Ja, wir rechnen mit den meisten Handy-Versicherungen direkt ab und stellen Apple-Care-konforme Rechnungen aus. Für Firmenkunden gibt es Rahmenverträge.",
-    "q7": "Reparieren Sie auch ältere Modelle?",
-    "a7": "Ja, vom iPhone 4 bis zum iPhone 17, Samsung Galaxy S5 aufwärts, Xiaomi Mi 5 aufwärts. Bei seltenen Modellen kann die Ersatzteil-Lieferzeit 1 bis 3 Werktage betragen.",
-    "q8": "Kann ich mein Gerät einsenden?",
-    "a8": "Ja, österreichweit. Nutzen Sie das Online-Formular für die Anfrage, wir schicken Ihnen einen vorbereiteten Versandetiketten-Link und das Gerät zurück nach der Reparatur."
+    "eyebrow": "FAQ",
+    "h1": "Häufige Fragen.",
+    "intro": "Wir sammeln hier, was uns am häufigsten gefragt wird – per Telefon, in der Werkstatt und online. Wenn deine Frage fehlt, ruf uns an: +43 660 6071414.",
+    "q_express_q": "Wie lange dauert eine Express-Reparatur?",
+    "q_express_a": "Display- und Akku-Tausch ca. 30 Minuten, bei wasserdichten Modellen rechnen wir 60 Min ein (neue Dichtung inklusive). Mainboard und Wasserschaden brauchen 24–72 Stunden.",
+    "q_warranty_q": "Wie viel Garantie bekomme ich?",
+    "q_warranty_a": "12 Monate auf Ersatzteil und Einbau, bei allen Reparaturen. Auf Mainboard-Reparaturen 6 Monate (Industriestandard für Lötarbeit).",
+    "q_data_q": "Sind meine Daten sicher?",
+    "q_data_a": "Bei Display, Akku, Ladebuchse, Kamera, Backcover: ja, der Speicher wird nicht angetastet. Bei Mainboard-Reparatur oder Datenrettung sichern wir Daten vorab, wenn möglich. DSGVO-konform.",
+    "q_price_q": "Wie ehrlich sind eure Festpreise?",
+    "q_price_a": "Festpreis vor der Reparatur, inklusive Ersatzteil und Einbau. Wenn beim Öffnen ein zusätzlicher Schaden auftaucht (selten), rufen wir an, bevor wir weitermachen.",
+    "q_parts_q": "Welche Ersatzteile verwendet ihr?",
+    "q_parts_a": "Original-Refurbished (vom Hersteller wiederaufbereitet, mit Hersteller-Garantie) oder geprüfte Premium-Aftermarket-Teile. Du wählst beim Annehmen, beide haben 12 Monate Garantie bei uns.",
+    "q_pickup_q": "Holt ihr das Gerät ab?",
+    "q_pickup_a": "Ab € 70 Reparaturwert gratis in Wien und Niederösterreich. Außerhalb gegen kleinen Aufpreis. Versicherter Postversand für ganz Österreich.",
+    "q_pay_q": "Welche Zahlungsmethoden?",
+    "q_pay_a": "Bar, Bankomat, Kreditkarte, EPS und Überweisung. Rechnung mit MwSt-Ausweis bekommst du immer.",
+    "q_hours_q": "Wann seid ihr offen?",
+    "q_hours_a": "Mo bis Sa 9–19 Uhr, So 9–18 Uhr. 7 Tage offen.",
+    "meta_title": "FAQ | EL Fix Mobile Wien Aspern",
+    "meta_description": "Antworten auf die häufigsten Fragen: Dauer, Garantie, Preise, Ersatzteile, Abholung. EL Fix Mobile Wien 1220 Aspern."
   },
   "final": {
     "headline": "Bereit für die Reparatur?",
@@ -594,6 +597,132 @@
       },
       "meta_title": "Handy Folierung Wien | Skin Vinyl iPhone Samsung | EL Fix Mobile",
       "meta_description": "Premium-Folierung Wien 1220: iPhone, Samsung, iPad. 3M-Vinyl, 40+ Designs, Custom-Druck. Blasenfrei in 30 Min, rückstandsfrei entfernbar. Aspern Seestadt."
+    },
+    "camera": {
+      "h1": "Kamera-Reparatur Handy Wien.",
+      "intro": "Front- oder Hauptkamera unscharf, Lichtflecken, Staub unter dem Linsenglas? Wir tauschen Smartphone-Kameras und Kameragläser in Wien 1220 Aspern — Festpreis, 12 Monate Garantie, oft in 60 Minuten.",
+      "included_headline": "Was wir reparieren.",
+      "included_sub": "Komplette Kamera-Einheit oder nur das Schutzglas — wir prüfen vor dem Tausch, was tatsächlich defekt ist.",
+      "bullet_1": "Hauptkamera (rear) Komplettmodul",
+      "bullet_2": "Frontkamera Komplettmodul",
+      "bullet_3": "Kameraglas (Linsenabdeckung) ohne Modul-Tausch",
+      "bullet_4": "Original-Refurbished oder Premium-Nachbau (du wählst)",
+      "bullet_5": "Funktionstest: Autofokus, Stabilisator, Blitz",
+      "bullet_6": "12 Monate Garantie auf Ersatzteil und Einbau",
+      "step_1": {
+        "title": "Modell wählen",
+        "body": "Festpreis-Rechner: iPhone, Samsung, Xiaomi etc. — Preis sofort sichtbar."
+      },
+      "step_2": {
+        "title": "Vorbeibringen oder schicken",
+        "body": "Walk-in Mo–Sa 9–19, So 9–18. Oder Postversand wenn du in NÖ wohnst."
+      },
+      "step_3": {
+        "title": "Tests vor Übergabe",
+        "body": "Wir machen Beispielfotos im Tageslicht und Low-Light, du siehst die Resultate vor der Auszahlung."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert der Kamera-Tausch?",
+        "a": "Frontkamera: oft 30 Minuten. Hauptkamera: 60–90 Minuten. Kameraglas: 60 Minuten (Klebung muss aushärten)."
+      },
+      "q_warranty": {
+        "q": "Garantie auf die neue Kamera?",
+        "a": "12 Monate auf Ersatzteil und Einbau. Auf Original-Refurbished-Module gilt zusätzlich die Herstellergarantie."
+      },
+      "q_data": {
+        "q": "Bleiben meine Fotos erhalten?",
+        "a": "Ja — Kamera-Tausch berührt keinen Speicher. Daten, Fotos, Apps bleiben unverändert."
+      },
+      "q_pickup": {
+        "q": "Holt ihr das Gerät ab?",
+        "a": "Ab € 70 Reparaturwert kostenlos in Wien und NÖ-Umland. Sonst Walk-in (Maria-Tusch-Straße 17/1) oder Postversand."
+      },
+      "meta_title": "Kamera Reparatur Handy Wien | Festpreis 60 Min | EL Fix Mobile",
+      "meta_description": "Handy-Kamera-Tausch Wien 1220 Aspern: iPhone, Samsung, Xiaomi und mehr. Front + Hauptkamera + Kameraglas. Festpreis ab 30 €, 12 Monate Garantie."
+    },
+    "tablet": {
+      "h1": "Tablet Reparatur Wien.",
+      "intro": "iPad, Samsung Galaxy Tab, Huawei MatePad — wir reparieren Display, Akku, Ladebuchse und mehr in Wien 1220 Aspern. Festpreis vorab, 12 Monate Garantie, Express je nach Modell ab 60 Minuten.",
+      "included_headline": "Tablet-Reparaturen.",
+      "included_sub": "Vom iPad-Mini bis zum 12.9-Zoll Pro — wir haben Werkzeug und Ersatzteile für alle gängigen Modelle.",
+      "bullet_1": "Display + Touchscreen Tausch (Original-Refurbished oder Nachbau)",
+      "bullet_2": "Akku-Tausch inkl. Klebung und Kalibrierung",
+      "bullet_3": "Ladebuchse / USB-C / Lightning",
+      "bullet_4": "Kamera + Lautsprecher + Mikrofon",
+      "bullet_5": "Wasserschaden-Behandlung",
+      "bullet_6": "Software-Probleme + iPadOS / Android-Setup",
+      "step_1": {
+        "title": "Modell wählen",
+        "body": "Festpreis-Rechner für iPad-Serie. Andere Marken auf Anfrage — Diagnose immer gratis."
+      },
+      "step_2": {
+        "title": "Bringen oder abholen lassen",
+        "body": "Walk-in oder Gratis-Abholung in Wien ab € 70 Reparaturwert."
+      },
+      "step_3": {
+        "title": "Test + Übergabe",
+        "body": "Funktionstest mit dir gemeinsam, Garantieschein digital, Apple-Konto bleibt eingeloggt."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert die Tablet-Reparatur?",
+        "a": "iPad Display: 60–90 Minuten. Akku: 60 Minuten. Wasserschaden: 2–5 Tage je nach Befund."
+      },
+      "q_warranty": {
+        "q": "Garantie auf Tablet-Reparaturen?",
+        "a": "12 Monate auf Ersatzteil und Einbau, gilt für alle Marken und Reparatur-Typen."
+      },
+      "q_data": {
+        "q": "Bleiben meine Daten erhalten?",
+        "a": "Bei Display-, Akku-, Ladebuchse- und Kamera-Tausch: ja, der Speicher wird nicht angetastet. Backup empfehlen wir trotzdem immer."
+      },
+      "q_pickup": {
+        "q": "Holt ihr das Tablet ab?",
+        "a": "Ab € 70 Reparaturwert gratis in Wien und NÖ. Tablets sind sperriger — wir packen die Verpackung mit."
+      },
+      "meta_title": "Tablet Reparatur Wien | iPad Galaxy Tab | EL Fix Mobile",
+      "meta_description": "Tablet-Reparatur Wien 1220: iPad, Samsung Galaxy Tab, Huawei. Display, Akku, Ladebuchse. Festpreis ab 70 €, 12 Monate Garantie, gratis Abholung."
+    },
+    "notebook": {
+      "h1": "Notebook Reparatur Wien.",
+      "intro": "Laptop wird heiß, Akku schwach, Display defekt, Tastatur klemmt? Wir reparieren MacBooks und Windows-Notebooks in Wien 1220 Aspern. Diagnose immer kostenlos, Festpreis nach Befund.",
+      "included_headline": "Notebook-Reparaturen.",
+      "included_sub": "Hardware-Defekte, Software-Probleme, Datenrettung. Wir arbeiten an MacBooks, Lenovo ThinkPads, Dell XPS, HP, Acer, ASUS und mehr.",
+      "bullet_1": "Display + Scharniere",
+      "bullet_2": "Akku-Tausch + Lade-IC",
+      "bullet_3": "Tastatur + Touchpad + USB-Ports",
+      "bullet_4": "RAM + SSD-Upgrade",
+      "bullet_5": "Lüfter + Reinigung (Throttling weg)",
+      "bullet_6": "Wasserschaden + Mainboard-Reparatur",
+      "step_1": {
+        "title": "Diagnose buchen",
+        "body": "Walk-in oder Postversand. Diagnose innerhalb 24–48 Stunden, dann Festpreis und genaue Dauer."
+      },
+      "step_2": {
+        "title": "Reparatur freigeben",
+        "body": "Du entscheidest nach der Diagnose. Bei Mainboard-Schäden zeigen wir dir die Befunde am Mikroskop."
+      },
+      "step_3": {
+        "title": "Fertig in 1–7 Tagen",
+        "body": "Je nach Ersatzteil-Verfügbarkeit. Stresstest + Datentest vor Übergabe."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert Notebook-Reparatur?",
+        "a": "Akku/Tastatur: 1–2 Tage. Display: 2–3 Tage. Mainboard: 5–14 Tage je nach Komplexität. Wir geben dir nach der Diagnose eine verbindliche Zeit."
+      },
+      "q_warranty": {
+        "q": "Garantie auf Notebook-Reparaturen?",
+        "a": "12 Monate auf ersetzte Hardware. Auf Mainboard-Reparaturen 6 Monate (Industriestandard für Lötarbeit)."
+      },
+      "q_data": {
+        "q": "Sind meine Daten sicher?",
+        "a": "Ja — bei Display, Akku, Tastatur, Lüfter wird die SSD nicht angetastet. Bei Mainboard-Reparatur sichern wir Daten vorab, wenn möglich."
+      },
+      "q_pickup": {
+        "q": "Holt ihr das Notebook ab?",
+        "a": "Ab € 100 Reparaturwert gratis in Wien und NÖ. Wir bringen Anti-Statik-Verpackung."
+      },
+      "meta_title": "Notebook Reparatur Wien | MacBook + Windows | EL Fix Mobile",
+      "meta_description": "Notebook + Laptop Reparatur Wien 1220 Aspern: MacBook, Lenovo, Dell, HP. Display, Akku, Tastatur, Mainboard, Datenrettung. Diagnose gratis, 12 Mon. Garantie."
     }
   },
   "model_page": {
@@ -638,5 +767,115 @@
     },
     "meta_title": "{model} Reparatur Wien | Festpreis ab 30 Min | EL Fix Mobile",
     "meta_description": "{model}-Reparatur in Wien 1220 Aspern: Display, Akku, Ladebuchse und mehr. Festpreise vorab, 12 Monate Garantie, Express in 30 Minuten. 4,4/5 (294 Bewertungen)."
+  },
+  "geo_page": {
+    "aspern_seestadt": {
+      "h1": "Handy Reparatur Aspern Seestadt.",
+      "intro": "Du wohnst in der Seestadt oder Alt-Aspern? Wir sind direkt bei dir um die Ecke — Maria-Tusch-Straße 17/1, drei Minuten Fußweg von der U2 Station Aspern Nord. Display, Akku, Wasserschaden — alles direkt vor Ort.",
+      "trust_walk": "Walk-in in 3 Minuten von U2 Aspern Nord",
+      "trust_pickup": "Gratis Abholung in Aspern und Seestadt (auch unter € 70)",
+      "trust_express": "Express-Reparatur in 30 Minuten",
+      "trust_warranty": "12 Monate Garantie",
+      "section_title": "Was Aspern Seestadt anders macht.",
+      "section_body": "Die Seestadt ist nicht nur einer der modernsten Stadtteile Wiens — sie ist auch unser direktes Einzugsgebiet. Wir kennen jede Schule, jeden Hub, jedes Hochhaus. Wenn dein Handy beim Schulweg deines Kindes runtergefallen ist oder du gerade aus der HOERBIGER-Eventlocation kommst, sind wir näher als jeder andere Reparatur-Shop in Wien.",
+      "card_call_title": "Direkt anrufen",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Vorbeikommen",
+      "card_visit_sub": "Maria-Tusch-Straße 17/1, 1220 Wien",
+      "card_pickup_title": "Wir holen ab",
+      "card_pickup_sub": "Gratis-Abholung in der Seestadt bei jedem Auftrag",
+      "meta_title": "Handy Reparatur Aspern Seestadt | Express 30 Min | EL Fix Mobile",
+      "meta_description": "Handy-Reparatur direkt in Aspern Seestadt 1220: 3 Min von U2 Aspern Nord. Display, Akku, Wasserschaden. Festpreis, 12 Mon. Garantie, gratis Abholung."
+    },
+    "donaustadt": {
+      "h1": "Handy Reparatur Donaustadt.",
+      "intro": "Donaustadt ist Wiens größter Bezirk und unsere Heimat. Egal ob du in Stadlau, Kagran, Hirschstetten oder Essling wohnst — wir kommen mit dem Auto vorbei und sind binnen 20 Minuten bei dir. Gratis Abholung ab € 0.",
+      "trust_walk": "5 km vom Bezirkszentrum",
+      "trust_pickup": "Gratis Abholung in ganz Donaustadt",
+      "trust_express": "Express-Reparatur in 30 Minuten",
+      "trust_warranty": "12 Monate Garantie",
+      "section_title": "Donaustadt kennt EL Fix Mobile.",
+      "section_body": "Seit 2019 reparieren wir Handys, Tablets und Notebooks für Familien, Studenten und Pendler aus dem 22. Bezirk. Du musst nicht mit der U2 ins Zentrum — wir kommen zu dir oder du parkst direkt vor der Tür (kostenlos für die erste Stunde).",
+      "card_call_title": "Direkt anrufen",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Vorbeikommen",
+      "card_visit_sub": "Maria-Tusch-Straße 17/1, 1220 Wien Donaustadt",
+      "card_pickup_title": "Wir holen ab",
+      "card_pickup_sub": "Gratis in ganz Donaustadt — Stadlau, Kagran, Hirschstetten, Essling",
+      "meta_title": "Handy Reparatur Donaustadt | 22. Bezirk | EL Fix Mobile",
+      "meta_description": "Handy-Reparatur Donaustadt 1220 Wien: Stadlau, Kagran, Hirschstetten, Essling. Gratis Abholung, Festpreis, 12 Mon. Garantie. Express 30 Min."
+    },
+    "floridsdorf": {
+      "h1": "Handy Reparatur Floridsdorf.",
+      "intro": "Du wohnst in Floridsdorf (21. Bezirk) und brauchst eine schnelle Handy-Reparatur? Mit U6 Floridsdorf oder Auto bist du in 15 Minuten bei uns in Aspern. Oder: wir kommen zu dir — Gratis-Abholung in ganz Floridsdorf.",
+      "trust_walk": "15 Min Auto / U6 + U2",
+      "trust_pickup": "Gratis Abholung in Floridsdorf",
+      "trust_express": "Express-Reparatur in 30 Minuten",
+      "trust_warranty": "12 Monate Garantie",
+      "section_title": "Floridsdorf braucht keinen Floridsdorf-Shop.",
+      "section_body": "Es gibt zwar Reparatur-Shops in Floridsdorf, aber Festpreise und Garantie wie bei uns? Selten. Wir holen dein Gerät gratis ab — egal ob du in Strebersdorf, Stammersdorf, Großjedlersdorf oder Leopoldau wohnst. Reparatur in Wien-Aspern, Rücklieferung am gleichen oder nächsten Werktag.",
+      "card_call_title": "Direkt anrufen",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Vorbeikommen",
+      "card_visit_sub": "Maria-Tusch-Straße 17/1, 1220 Wien Aspern",
+      "card_pickup_title": "Wir holen ab",
+      "card_pickup_sub": "Gratis in Floridsdorf — Strebersdorf, Stammersdorf, Leopoldau",
+      "meta_title": "Handy Reparatur Floridsdorf | 21. Bezirk | EL Fix Mobile",
+      "meta_description": "Handy-Reparatur Floridsdorf 1210 Wien: Gratis Abholung, Festpreis, 12 Mon. Garantie. Strebersdorf, Stammersdorf, Großjedlersdorf, Leopoldau."
+    },
+    "gaenserndorf": {
+      "h1": "Handy Reparatur Gänserndorf & Niederösterreich.",
+      "intro": "Du wohnst in Gänserndorf, Marchegg oder Umgebung in Niederösterreich? Schick uns dein Handy per Post oder bring es persönlich vorbei — Festpreis vorab, Reparatur in 24–72 Stunden, Rücklieferung mit versichertem Paket.",
+      "trust_walk": "Per Post oder S1 nach Aspern",
+      "trust_pickup": "Postversand mit Tracking, beidseitig",
+      "trust_express": "Reparatur in 24–72 Stunden",
+      "trust_warranty": "12 Monate Garantie",
+      "section_title": "Gänserndorf braucht keinen Wiener Shop besuchen.",
+      "section_body": "Wir verschicken österreichweit. Du schickst dein Gerät versichert per Post (oder bringst es persönlich, S1 fährt direkt nach Wien-Aspern), wir reparieren in 24–72 Stunden und schicken zurück. Versicherter Rückversand ist im Festpreis enthalten.",
+      "card_call_title": "Direkt anrufen",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Vorbeikommen",
+      "card_visit_sub": "Maria-Tusch-Straße 17/1, 1220 Wien (S1 vom Marchfeld)",
+      "card_pickup_title": "Versand-Service",
+      "card_pickup_sub": "Versicherter Hin- und Rückversand inklusive",
+      "meta_title": "Handy Reparatur Gänserndorf & Niederösterreich | EL Fix Mobile",
+      "meta_description": "Handy-Reparatur Gänserndorf, Marchegg, Niederösterreich: Postversand mit Tracking, Reparatur 24–72h, Festpreis, 12 Mon. Garantie."
+    }
+  },
+  "ueber_uns": {
+    "eyebrow": "ÜBER UNS",
+    "h1": "Wir sind das EL Fix Mobile Team.",
+    "intro": "Familienbetrieb in Wien Aspern. Seit 2019 reparieren wir Handys, Tablets und Notebooks – mit Original-Refurbished-Teilen oder Premium-Nachbau, 12 Monaten Garantie und ehrlichen Festpreisen.",
+    "section_story_title": "Wie alles begann.",
+    "section_story_body": "Wir haben EL Fix Mobile 2019 in der Maria-Tusch-Straße aufgemacht, weil wir genervt davon waren, dass Handy-Reparatur in Wien entweder teuer und langsam ist, oder zwar billig, aber ohne echte Garantie. Heute haben wir 294 echte Google-Bewertungen mit 4,4 Sternen und das Vertrauen von Kunden aus ganz Niederösterreich.",
+    "section_team_title": "Das Team.",
+    "section_team_body": "Drei Techniker mit langjähriger Erfahrung in Smartphone- und Notebook-Reparatur. Wir arbeiten an Mainboards mit Mikroskop, nutzen Cellebrite-äquivalentes Werkzeug für Datenrettung und schicken regelmäßig Mitarbeiter auf Weiterbildungen.",
+    "section_values_title": "Was uns wichtig ist.",
+    "values_1_title": "Ehrliche Preise",
+    "values_1_body": "Festpreis vor der Reparatur. Wenn das Gerät kaputter ist als angenommen, rufen wir an, bevor wir weitermachen.",
+    "values_2_title": "Echte Garantie",
+    "values_2_body": "12 Monate auf Ersatzteil und Einbau. Wenn etwas zurückkommt, reparieren wir kostenlos nach.",
+    "values_3_title": "Daten bleiben deine",
+    "values_3_body": "Wir tasten Speicher nicht an, wenn es nicht nötig ist. DSGVO-konform, Datenträger werden nach Übergabe gelöscht.",
+    "values_4_title": "Keine versteckten Aufpreise",
+    "values_4_body": "Ersatzteil, Einbau, Steuer – alles im Festpreis. Gratis-Abholung ab € 70 Reparaturwert.",
+    "meta_title": "Über uns | EL Fix Mobile Wien Aspern",
+    "meta_description": "Wer ist EL Fix Mobile? Familienbetrieb in Wien 1220 Aspern, seit 2019, 294 Google-Bewertungen, 12 Monate Garantie, ehrliche Festpreise."
+  },
+  "bewertungen": {
+    "eyebrow": "BEWERTUNGEN",
+    "h1": "4,4 Sterne, 294 Bewertungen.",
+    "intro": "Was unsere Kunden über uns sagen, in ihren eigenen Worten. Bewertungen aus Google Maps und unserer Web-Plattform – wir filtern nichts.",
+    "rating_value": "4,4",
+    "rating_count": "294 Bewertungen",
+    "review_1": "iPhone 14 Display in 25 Minuten getauscht, Preis stimmt mit dem Online-Rechner überein, kein Stress, freundliches Team.",
+    "review_2": "Akku-Tausch beim Galaxy S22 – auch nach 6 Monaten noch perfekte Kapazität, klare Empfehlung.",
+    "review_3": "MacBook Pro Wasserschaden – andere hätten den Schrott aufgegeben. Hier haben sie das Logic-Board gerettet, Daten sind alle da.",
+    "review_4": "Schnell, ehrlich, fair. Endlich ein Handy-Shop, dem man vertrauen kann.",
+    "review_5": "iPad-Display gebrochen, in 90 Min repariert während ich im Café gegenüber gewartet habe.",
+    "review_6": "Datenrettung von kaputtem Samsung – alle Fotos und WhatsApp gerettet, nach Jahren bei einem anderen Shop dachte ich, sie sind weg.",
+    "google_cta": "Alle 294 Bewertungen auf Google ansehen",
+    "meta_title": "Bewertungen | EL Fix Mobile Wien Aspern",
+    "meta_description": "Was unsere Kunden über EL Fix Mobile sagen: 4,4 Sterne aus 294 Google-Bewertungen. Echte Reviews aus Wien 1220 Aspern Seestadt."
   }
 }

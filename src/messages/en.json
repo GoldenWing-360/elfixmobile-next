@@ -105,23 +105,26 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "headline": "Answers in 30 seconds.",
-    "q1": "How long does a display repair take?",
-    "a1": "For iPhone X through 17 and most Galaxy S models, display replacement takes about 30 minutes. You can wait or pick up later. Older or rarer models may take 1 to 2 business days.",
-    "q2": "Do I get original parts or aftermarket parts?",
-    "a2": "We offer both. Original Refurbished displays for full True-Tone and Service-Pack quality, or premium aftermarket parts as a cheaper alternative. We discuss the choice before repair.",
-    "q3": "Is there a warranty on the repair?",
-    "a3": "Yes, 12 months on every replaced part and our workmanship. We guarantee battery capacity, display function and color accuracy.",
-    "q4": "Can I walk in without an appointment?",
-    "a4": "Yes, no appointment needed. We recommend calling first (0660 6071414) so we can confirm we have the right part in stock for your model.",
-    "q5": "What does the diagnosis cost?",
-    "a5": "Diagnosis is always free and non-committal. If you decide against the repair, you pay nothing.",
-    "q6": "Do you accept Apple Care or insurance?",
-    "a6": "Yes, we settle directly with most phone insurance providers and issue Apple-Care-compliant invoices. We also offer framework contracts for business customers.",
-    "q7": "Do you repair older models?",
-    "a7": "Yes, from iPhone 4 up to iPhone 17, Samsung Galaxy S5 upwards, Xiaomi Mi 5 upwards. For rare models the part lead time can be 1 to 3 business days.",
-    "q8": "Can I send in my device?",
-    "a8": "Yes, anywhere in Austria. Use the online form, we send you a prepaid shipping label and ship the device back after the repair."
+    "h1": "Common questions.",
+    "intro": "We collect here what we get asked most — by phone, in the shop and online. If your question isn't here, call us: +43 660 6071414.",
+    "q_express_q": "How long does an express repair take?",
+    "q_express_a": "Display and battery swaps about 30 minutes; water-resistant models take 60 minutes (new gasket included). Mainboard and water damage need 24–72 hours.",
+    "q_warranty_q": "What warranty do I get?",
+    "q_warranty_a": "12 months on part and labour for every repair. 6 months on mainboard solder work (industry standard).",
+    "q_data_q": "Is my data safe?",
+    "q_data_a": "For display, battery, charging port, camera, back cover: yes, storage is untouched. For mainboard or data recovery we back up first when possible. GDPR-compliant.",
+    "q_price_q": "How honest are the fixed prices?",
+    "q_price_a": "Fixed price before the repair, including part and labour. If an additional issue is found when opening (rare), we call before continuing.",
+    "q_parts_q": "What parts do you use?",
+    "q_parts_a": "Original refurbished (factory-restored by the manufacturer, with manufacturer warranty) or certified premium aftermarket. Your choice at intake — both carry our 12-month warranty.",
+    "q_pickup_q": "Do you collect devices?",
+    "q_pickup_a": "Free pickup from € 70 repair value in Vienna and Lower Austria. Beyond that a small surcharge. Insured mail-in service for all of Austria.",
+    "q_pay_q": "What payment methods?",
+    "q_pay_a": "Cash, debit card, credit card, EPS and bank transfer. VAT-itemised invoice always included.",
+    "q_hours_q": "When are you open?",
+    "q_hours_a": "Mon–Sat 9–19, Sun 9–18. Open 7 days a week.",
+    "meta_title": "FAQ | EL Fix Mobile Vienna Aspern",
+    "meta_description": "Answers to the most common questions: duration, warranty, prices, parts, pickup. EL Fix Mobile Vienna 1220 Aspern."
   },
   "final": {
     "headline": "Ready to repair?",
@@ -594,6 +597,132 @@
       },
       "meta_title": "Phone Wrap Vienna | Skin Vinyl iPhone Samsung | EL Fix Mobile",
       "meta_description": "Premium phone wrap Vienna 1220: iPhone, Samsung, iPad. 3M vinyl, 40+ designs, custom print. Bubble-free in 30 min, residue-free removal."
+    },
+    "camera": {
+      "h1": "Phone camera repair Vienna.",
+      "intro": "Front or rear camera blurry, light spots, dust under the lens glass? We swap smartphone cameras and lens covers in Vienna 1220 Aspern — fixed price, 12-month warranty, often in 60 minutes.",
+      "included_headline": "What we repair.",
+      "included_sub": "Full camera unit or just the cover glass — we test before the swap what's actually defective.",
+      "bullet_1": "Rear (main) camera full module",
+      "bullet_2": "Front camera full module",
+      "bullet_3": "Lens cover glass without full module swap",
+      "bullet_4": "Original refurbished or premium aftermarket (your choice)",
+      "bullet_5": "Function test: autofocus, OIS, flash",
+      "bullet_6": "12-month warranty on part and labour",
+      "step_1": {
+        "title": "Pick your model",
+        "body": "Fixed-price calculator: iPhone, Samsung, Xiaomi etc. — price instantly visible."
+      },
+      "step_2": {
+        "title": "Drop off or ship",
+        "body": "Walk-in Mon–Sat 9–19, Sun 9–18. Or mail in if you live in Lower Austria."
+      },
+      "step_3": {
+        "title": "Test before handover",
+        "body": "We shoot sample photos in daylight and low light — you see the results before paying."
+      },
+      "q_duration": {
+        "q": "How long does the camera swap take?",
+        "a": "Front camera: often 30 minutes. Rear camera: 60–90 minutes. Lens cover: 60 minutes (adhesive needs to cure)."
+      },
+      "q_warranty": {
+        "q": "Warranty on the new camera?",
+        "a": "12 months on part and labour. Original refurbished modules additionally carry the manufacturer warranty."
+      },
+      "q_data": {
+        "q": "Will my photos survive?",
+        "a": "Yes — a camera swap doesn't touch storage. Data, photos, apps stay untouched."
+      },
+      "q_pickup": {
+        "q": "Do you collect the device?",
+        "a": "Free pickup and return for repairs from € 70 in Vienna and Lower Austria. Otherwise walk-in or insured mail."
+      },
+      "meta_title": "Phone Camera Repair Vienna | 60 min Express | EL Fix Mobile",
+      "meta_description": "Phone camera swap Vienna 1220 Aspern: iPhone, Samsung, Xiaomi and more. Front + rear + lens glass. Fixed price from € 30, 12-month warranty."
+    },
+    "tablet": {
+      "h1": "Tablet repair Vienna.",
+      "intro": "iPad, Samsung Galaxy Tab, Huawei MatePad — we repair display, battery, charging port and more in Vienna 1220 Aspern. Fixed price upfront, 12-month warranty, express from 60 minutes depending on the model.",
+      "included_headline": "Tablet repairs we do.",
+      "included_sub": "From iPad mini to 12.9-inch Pro — we have the tools and parts for every common model.",
+      "bullet_1": "Display + touchscreen swap (original refurbished or aftermarket)",
+      "bullet_2": "Battery swap incl. adhesive and calibration",
+      "bullet_3": "Charging port / USB-C / Lightning",
+      "bullet_4": "Camera + speaker + microphone",
+      "bullet_5": "Water-damage treatment",
+      "bullet_6": "Software issues + iPadOS / Android setup",
+      "step_1": {
+        "title": "Pick your model",
+        "body": "Fixed-price calculator for the iPad lineup. Other brands quoted on request — diagnosis always free."
+      },
+      "step_2": {
+        "title": "Drop off or have us pick up",
+        "body": "Walk-in or free pickup in Vienna from € 70 repair value."
+      },
+      "step_3": {
+        "title": "Test + handover",
+        "body": "Functional test with you, digital warranty receipt, your Apple ID stays signed in."
+      },
+      "q_duration": {
+        "q": "How long does a tablet repair take?",
+        "a": "iPad display: 60–90 minutes. Battery: 60 minutes. Water damage: 2–5 days depending on findings."
+      },
+      "q_warranty": {
+        "q": "Warranty on tablet repairs?",
+        "a": "12 months on part and labour for every brand and repair type."
+      },
+      "q_data": {
+        "q": "Will my data survive?",
+        "a": "For display, battery, charging-port and camera swaps: yes, storage is untouched. We still always recommend a backup."
+      },
+      "q_pickup": {
+        "q": "Do you collect the tablet?",
+        "a": "Free pickup in Vienna and Lower Austria from € 70 repair value. Tablets are bulky — we bring proper packaging."
+      },
+      "meta_title": "Tablet Repair Vienna | iPad Galaxy Tab | EL Fix Mobile",
+      "meta_description": "Tablet repair Vienna 1220: iPad, Samsung Galaxy Tab, Huawei. Display, battery, charging port. Fixed price from € 70, 12-month warranty, free pickup."
+    },
+    "notebook": {
+      "h1": "Laptop repair Vienna.",
+      "intro": "Laptop overheating, weak battery, broken display, stuck keyboard? We repair MacBooks and Windows notebooks in Vienna 1220 Aspern. Diagnosis always free, fixed price after assessment.",
+      "included_headline": "Laptop repairs we do.",
+      "included_sub": "Hardware defects, software issues, data recovery. We work on MacBooks, Lenovo ThinkPads, Dell XPS, HP, Acer, ASUS and more.",
+      "bullet_1": "Display + hinges",
+      "bullet_2": "Battery swap + charging IC",
+      "bullet_3": "Keyboard + trackpad + USB ports",
+      "bullet_4": "RAM + SSD upgrades",
+      "bullet_5": "Fan + cleaning (no more throttling)",
+      "bullet_6": "Water damage + mainboard repair",
+      "step_1": {
+        "title": "Book a diagnosis",
+        "body": "Walk-in or mail-in. Diagnosis within 24–48 hours, then fixed price and accurate timeline."
+      },
+      "step_2": {
+        "title": "Approve the repair",
+        "body": "You decide after diagnosis. For mainboard damage we show you findings under the microscope."
+      },
+      "step_3": {
+        "title": "Done in 1–7 days",
+        "body": "Depending on parts availability. Stress test + data test before handover."
+      },
+      "q_duration": {
+        "q": "How long does laptop repair take?",
+        "a": "Battery/keyboard: 1–2 days. Display: 2–3 days. Mainboard: 5–14 days depending on complexity. We give you a firm time after diagnosis."
+      },
+      "q_warranty": {
+        "q": "Warranty on laptop repairs?",
+        "a": "12 months on replaced hardware. 6 months on mainboard solder work (industry standard)."
+      },
+      "q_data": {
+        "q": "Is my data safe?",
+        "a": "Yes — for display, battery, keyboard, fan repairs the SSD isn't touched. For mainboard work we back up data first when possible."
+      },
+      "q_pickup": {
+        "q": "Do you collect the laptop?",
+        "a": "Free pickup in Vienna and Lower Austria from € 100 repair value. We bring anti-static packaging."
+      },
+      "meta_title": "Laptop Repair Vienna | MacBook + Windows | EL Fix Mobile",
+      "meta_description": "Notebook + laptop repair Vienna 1220 Aspern: MacBook, Lenovo, Dell, HP. Display, battery, keyboard, mainboard, data recovery. Free diagnosis, 12-month warranty."
     }
   },
   "model_page": {
@@ -638,5 +767,115 @@
     },
     "meta_title": "{model} Repair Vienna | Fixed price 30 min | EL Fix Mobile",
     "meta_description": "{model} repair in Vienna 1220 Aspern: display, battery, charging port and more. Fixed prices upfront, 12-month warranty, 30-min express. 4.4/5 (294 reviews)."
+  },
+  "geo_page": {
+    "aspern_seestadt": {
+      "h1": "Phone repair Aspern Seestadt Vienna.",
+      "intro": "Live in Seestadt or Alt-Aspern? We're right around the corner — Maria-Tusch-Strasse 17/1, three minutes walk from U2 Aspern Nord. Display, battery, water damage — all on-site.",
+      "trust_walk": "3-min walk-in from U2 Aspern Nord",
+      "trust_pickup": "Free pickup in Aspern and Seestadt (no minimum)",
+      "trust_express": "30-minute express repairs",
+      "trust_warranty": "12-month warranty",
+      "section_title": "Why Aspern Seestadt is different.",
+      "section_body": "Seestadt is one of Vienna's most modern districts — and it's our home turf. We know every school, hub and tower. If your phone hit the pavement on the school run or you've just come out of the HOERBIGER event location, we're closer than any other repair shop in Vienna.",
+      "card_call_title": "Call us",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Drop by",
+      "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Vienna",
+      "card_pickup_title": "We collect",
+      "card_pickup_sub": "Free pickup in Seestadt on every order",
+      "meta_title": "Phone Repair Aspern Seestadt Vienna | EL Fix Mobile",
+      "meta_description": "Phone repair right in Aspern Seestadt 1220: 3 min from U2 Aspern Nord. Display, battery, water damage. Fixed price, 12-month warranty, free pickup."
+    },
+    "donaustadt": {
+      "h1": "Phone repair Donaustadt Vienna.",
+      "intro": "Donaustadt is Vienna's largest district and our home. Whether you live in Stadlau, Kagran, Hirschstetten or Essling — we come by car and we're with you within 20 minutes. Free pickup, no minimum.",
+      "trust_walk": "5 km from district centre",
+      "trust_pickup": "Free pickup throughout Donaustadt",
+      "trust_express": "30-minute express repairs",
+      "trust_warranty": "12-month warranty",
+      "section_title": "Donaustadt knows EL Fix Mobile.",
+      "section_body": "Since 2019 we've been fixing phones, tablets and laptops for families, students and commuters from the 22nd district. You don't have to take the U2 downtown — we come to you, or park right at the door (free first hour).",
+      "card_call_title": "Call us",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Drop by",
+      "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Vienna Donaustadt",
+      "card_pickup_title": "We collect",
+      "card_pickup_sub": "Free across Donaustadt — Stadlau, Kagran, Hirschstetten, Essling",
+      "meta_title": "Phone Repair Donaustadt | 22nd District Vienna | EL Fix Mobile",
+      "meta_description": "Phone repair Donaustadt 1220 Vienna: Stadlau, Kagran, Hirschstetten, Essling. Free pickup, fixed price, 12-month warranty. 30-min express."
+    },
+    "floridsdorf": {
+      "h1": "Phone repair Floridsdorf Vienna.",
+      "intro": "You live in Floridsdorf (21st district) and need a quick phone repair? You're 15 min away by U6 Floridsdorf or car — or we come to you. Free pickup throughout Floridsdorf.",
+      "trust_walk": "15 min by car / U6 + U2",
+      "trust_pickup": "Free pickup throughout Floridsdorf",
+      "trust_express": "30-minute express repairs",
+      "trust_warranty": "12-month warranty",
+      "section_title": "Floridsdorf doesn't need a Floridsdorf shop.",
+      "section_body": "Sure, there are phone shops in Floridsdorf — but fixed prices and a real warranty like ours? Rare. We pick up your device for free in Strebersdorf, Stammersdorf, Großjedlersdorf or Leopoldau. Repair in Vienna-Aspern, return same or next business day.",
+      "card_call_title": "Call us",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Drop by",
+      "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Vienna Aspern",
+      "card_pickup_title": "We collect",
+      "card_pickup_sub": "Free across Floridsdorf — Strebersdorf, Stammersdorf, Leopoldau",
+      "meta_title": "Phone Repair Floridsdorf | 21st District Vienna | EL Fix Mobile",
+      "meta_description": "Phone repair Floridsdorf 1210 Vienna: free pickup, fixed price, 12-month warranty. Strebersdorf, Stammersdorf, Großjedlersdorf, Leopoldau."
+    },
+    "gaenserndorf": {
+      "h1": "Phone repair Gänserndorf & Lower Austria.",
+      "intro": "You live in Gänserndorf, Marchegg or anywhere in Lower Austria? Ship us your phone or drop it off in person — fixed price upfront, repair in 24–72 hours, return via insured parcel.",
+      "trust_walk": "By mail or S1 to Aspern",
+      "trust_pickup": "Insured shipping both ways",
+      "trust_express": "Repair in 24–72 hours",
+      "trust_warranty": "12-month warranty",
+      "section_title": "Gänserndorf doesn't have to visit Vienna.",
+      "section_body": "We ship Austria-wide. You send your device insured by mail (or drop it off — the S1 runs straight to Vienna-Aspern), we repair in 24–72 hours and ship back. Insured return is included in the fixed price.",
+      "card_call_title": "Call us",
+      "card_call_sub": "+43 660 6071414",
+      "card_visit_title": "Drop by",
+      "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Vienna (S1 from Marchfeld)",
+      "card_pickup_title": "Mail-in service",
+      "card_pickup_sub": "Insured shipping both ways included",
+      "meta_title": "Phone Repair Gänserndorf & Lower Austria | EL Fix Mobile",
+      "meta_description": "Phone repair Gänserndorf, Marchegg, Lower Austria: insured shipping both ways, repair 24–72h, fixed price, 12-month warranty."
+    }
+  },
+  "ueber_uns": {
+    "eyebrow": "ABOUT US",
+    "h1": "We're the EL Fix Mobile team.",
+    "intro": "Family-run shop in Vienna Aspern. Since 2019 we've been repairing phones, tablets and laptops — with original refurbished parts or premium aftermarket, 12-month warranty, honest fixed prices.",
+    "section_story_title": "How it started.",
+    "section_story_body": "We opened EL Fix Mobile in Maria-Tusch-Strasse in 2019 because we were frustrated that phone repair in Vienna was either expensive and slow, or cheap but without real warranty. Today we have 294 genuine Google reviews at 4.4 stars and earn the trust of customers across Lower Austria.",
+    "section_team_title": "The team.",
+    "section_team_body": "Three technicians with deep experience in smartphone and laptop repair. We work on mainboards under microscope, use Cellebrite-grade tools for data recovery, and put our team through regular training.",
+    "section_values_title": "What matters to us.",
+    "values_1_title": "Honest prices",
+    "values_1_body": "Fixed price before the repair. If the device is more damaged than expected, we call you before continuing.",
+    "values_2_title": "Real warranty",
+    "values_2_body": "12 months on part and labour. If something fails again, we repair it for free.",
+    "values_3_title": "Your data stays yours",
+    "values_3_body": "We don't touch storage unless we have to. GDPR-compliant, media wiped after handover.",
+    "values_4_title": "No hidden fees",
+    "values_4_body": "Part, labour, tax — all in the fixed price. Free pickup from € 70 repair value.",
+    "meta_title": "About | EL Fix Mobile Vienna Aspern",
+    "meta_description": "Who is EL Fix Mobile? Family-run shop in Vienna 1220 Aspern since 2019, 294 Google reviews, 12-month warranty, honest fixed prices."
+  },
+  "bewertungen": {
+    "eyebrow": "REVIEWS",
+    "h1": "4.4 stars, 294 reviews.",
+    "intro": "What our customers say in their own words. Reviews from Google Maps and our web platform — we don't filter.",
+    "rating_value": "4.4",
+    "rating_count": "294 reviews",
+    "review_1": "iPhone 14 display swap in 25 minutes, price matches the online calculator, no hassle, friendly team.",
+    "review_2": "Galaxy S22 battery swap — still perfect capacity after 6 months, clear recommendation.",
+    "review_3": "MacBook Pro water damage — others would have given up. They saved the logic board, all data intact.",
+    "review_4": "Fast, honest, fair. Finally a phone shop you can trust.",
+    "review_5": "iPad display broken, repaired in 90 min while I waited in the café across the street.",
+    "review_6": "Data recovery from a dead Samsung — all photos and WhatsApp saved. Another shop had told me it was gone.",
+    "google_cta": "See all 294 reviews on Google",
+    "meta_title": "Reviews | EL Fix Mobile Vienna Aspern",
+    "meta_description": "What customers say about EL Fix Mobile: 4.4 stars from 294 Google reviews. Real reviews from Vienna 1220 Aspern Seestadt."
   }
 }
