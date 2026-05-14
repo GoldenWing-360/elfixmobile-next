@@ -108,7 +108,16 @@ function ReviewCard({ review }: { review: Review }) {
             />
           ))}
         </div>
-        <span className="text-[12px] text-[#6e6e73]">Google</span>
+        <span className="flex items-center gap-1 text-[12px] text-[#6e6e73]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/partners/google-g.svg"
+            alt=""
+            aria-hidden
+            className="h-3 w-3"
+          />
+          Google
+        </span>
       </div>
       <p className="mt-4 text-[15.5px] leading-[1.55] text-[#1d1d1f]">{review.text}</p>
       <footer className="mt-5 flex items-center justify-between text-[12.5px] text-[#6e6e73]">

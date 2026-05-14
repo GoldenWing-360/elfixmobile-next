@@ -6,6 +6,7 @@ import {
   motion,
   useScroll,
   useTransform,
+  useReducedMotion,
   type Variants,
 } from "framer-motion";
 import { Star, Shield, Clock, Calendar } from "lucide-react";
@@ -47,15 +48,25 @@ function MaskedLine({ text, baseIndex = 0 }: { text: string; baseIndex?: number 
 export function Hero() {
   const t = useTranslations("hero");
   const ref = useRef<HTMLDivElement>(null);
+  // Respect the OS-level prefers-reduced-motion setting and disable
+  // scroll-driven parallax for users who opted out (accessibility) or
+  // are on low-power mobile devices.
+  const prefersReduced = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
-  const deviceY = useTransform(scrollYProgress, [0, 1], [0, -120]);
-  const deviceRotate = useTransform(scrollYProgress, [0, 1], [-4, -10]);
-  const deviceScale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
-  const headlineY = useTransform(scrollYProgress, [0, 1], [0, -60]);
-  const trustOpacity = useTransform(scrollYProgress, [0, 0.6, 1], [1, 0.4, 0]);
+  // Tone-down magnitudes: parallax was -120 / -60 / -10°. Cut to ~half
+  // so it reads as gentle depth instead of jarring scroll-jack on phones.
+  const deviceY = useTransform(scrollYProgress, [0, 1], prefersReduced ? [0, 0] : [0, -60]);
+  const deviceRotate = useTransform(scrollYProgress, [0, 1], prefersReduced ? [0, 0] : [-3, -7]);
+  const deviceScale = useTransform(scrollYProgress, [0, 1], prefersReduced ? [1, 1] : [1, 0.95]);
+  const headlineY = useTransform(scrollYProgress, [0, 1], prefersReduced ? [0, 0] : [0, -30]);
+  const trustOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.6, 1],
+    prefersReduced ? [1, 1, 1] : [1, 0.6, 0.2],
+  );
 
   return (
     <section

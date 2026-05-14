@@ -2,6 +2,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { BrandDef, BrandModel } from "@/data/brands";
 import { getModelsForBrand } from "@/data/brands";
+import { RepairDisclaimer } from "@/components/RepairDisclaimer";
 import pricing from "@/data/pricing.json";
 
 interface Props {
@@ -61,7 +62,11 @@ export function BrandModelsTable({ brand, limit = 20 }: Props) {
           </p>
         </header>
 
-        <div className="mt-10 overflow-x-auto rounded-2xl border border-black/[0.08] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+        <div className="mt-8">
+          <RepairDisclaimer />
+        </div>
+
+        <div className="mt-8 overflow-x-auto rounded-2xl border border-black/[0.08] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
           <table className="min-w-full text-left text-[14px]">
             <thead className="bg-black/[0.02] text-[12px] uppercase tracking-[0.12em] text-[#525257]">
               <tr>

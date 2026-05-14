@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { PickupBanner } from "@/components/sections/PickupBanner";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { RepairDisclaimer } from "@/components/RepairDisclaimer";
 
 type Params = { locale: string; brand: string; model: string };
 type Locale = "de" | "en" | "ru" | "tr";
@@ -259,7 +260,11 @@ export default async function ModelPage({
             </p>
           </header>
 
-          <div className="mt-10 overflow-x-auto rounded-2xl border border-black/[0.08] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+          <div className="mt-8">
+            <RepairDisclaimer />
+          </div>
+
+          <div className="mt-8 overflow-x-auto rounded-2xl border border-black/[0.08] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
             <table className="min-w-full text-left text-[14px]">
               <thead className="bg-black/[0.02] text-[12px] uppercase tracking-[0.12em] text-[#525257]">
                 <tr>
