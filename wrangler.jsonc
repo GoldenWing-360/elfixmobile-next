@@ -4,6 +4,10 @@
 	"name": "elfixmobile-next",
 	"compatibility_date": "2026-05-13",
 	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	// Keep the workers.dev fallback URL active alongside the custom domain
+	// so we can A/B against bersaev.com from
+	// elfixmobile-next.deni-4b0.workers.dev during the test phase.
+	"workers_dev": true,
 	"assets": {
 		"directory": ".open-next/assets",
 		"binding": "ASSETS"
