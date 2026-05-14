@@ -1,6 +1,7 @@
 "use client";
 
 import { forwardRef, type ButtonHTMLAttributes, type AnchorHTMLAttributes } from "react";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 
 type Variant = "primary" | "secondary" | "tertiary";
@@ -99,6 +100,26 @@ export const Button = forwardRef<HTMLElement, Props>(function Button(
 
   if (isLink) {
     const a = rest as AnchorHTMLAttributes<HTMLAnchorElement>;
+    const href = a.href ?? "";
+    // Internal hrefs (start with "/") go through next-intl's Link so the
+    // active locale prefix (/de, /en, ...) is injected automatically.
+    // Externals (http://, tel:, mailto:, wa.me, etc.) stay as raw <a>.
+    const isInternal = href.startsWith("/");
+    if (isInternal) {
+      return (
+        <Link
+          href={href}
+          ref={ref as React.Ref<HTMLAnchorElement>}
+          className={cls}
+          target={a.target}
+          rel={a.rel}
+          onClick={a.onClick}
+          aria-label={a["aria-label"]}
+        >
+          {content}
+        </Link>
+      );
+    }
     return (
       <a ref={ref as React.Ref<HTMLAnchorElement>} className={cls} {...a}>
         {content}

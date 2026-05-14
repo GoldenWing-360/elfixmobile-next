@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Truck, ArrowRight } from "lucide-react";
 
 export function PickupBanner() {
@@ -6,12 +7,10 @@ export function PickupBanner() {
   return (
     <section className="relative bg-black text-white">
       <div className="mx-auto max-w-7xl px-6 py-8 md:px-8 md:py-12">
-        {/* The card no longer translates on hover; previously it lifted -0.5
-         * while the CTA inside translated +1 in the orthogonal direction,
-         * which produced a visible compound jerk. Hover state is now a
-         * single subtle border lighten. */}
-        <a
-          href="/buchen?service=pickup"
+        {/* next-intl Link injects the locale prefix automatically; a raw
+         * <a href="/buchen"> would 404 on localePrefix:"always". */}
+        <Link
+          href={{ pathname: "/buchen", query: { service: "pickup" } }}
           className="group relative flex flex-col items-start gap-5 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0f1117] via-[#0b1424] to-[#001a3a] p-7 transition-colors duration-300 hover:border-white/20 md:flex-row md:items-center md:justify-between md:gap-10 md:p-10"
         >
           {/* glow */}
@@ -47,7 +46,7 @@ export function PickupBanner() {
             Abholung anfragen
             <ArrowRight className="h-4 w-4" />
           </span>
-        </a>
+        </Link>
       </div>
     </section>
   );
