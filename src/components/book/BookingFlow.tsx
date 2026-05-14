@@ -94,6 +94,7 @@ export function BookingFlow() {
   // Server-returned lead id is shown in the success card so the customer
   // can bookmark the /status/<id> page and check progress later.
   const [leadId, setLeadId] = useState<string | null>(null);
+  const [leadToken, setLeadToken] = useState<string | null>(null);
 
   // Preload from URL: ?service=pickup&model=iPhone+15&brand=apple-iphone&repairs=display,battery&total=189
   useEffect(() => {
@@ -142,28 +143,22 @@ export function BookingFlow() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Header (eyebrow / H1 / sub) is rendered server-side by the parent page
+  // for SSR-SEO reasons; this client tree starts at the Stepper.
   return (
     <section className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-4xl px-6 py-24 md:px-8 md:py-32">
-        <header className="text-center">
-          <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
-            {t("eyebrow")}
-          </p>
-          <h1 className="mt-3 text-[clamp(2.25rem,5.5vw,4.25rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
-            {t("headline")}
-          </h1>
-          <p className="mx-auto mt-5 max-w-xl text-[17px] leading-[1.55] text-[#525257]">
-            {t("sub")}
-          </p>
-        </header>
-
+      <div className="mx-auto max-w-4xl px-6 pb-24 md:px-8 md:pb-32">
         <Stepper current={state.step} hasPickup={state.service === "pickup"} />
 
         <div className="relative mt-10 overflow-hidden rounded-3xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_60px_-30px_rgba(0,0,0,0.2)] ring-1 ring-black/[0.04]">
           <AnimatePresence mode="wait" initial={false}>
             {submitted ? (
               <motion.div key="ok" {...slide()}>
-                <Success onReset={() => setSubmitted(false)} leadId={leadId} />
+                <Success
+                  onReset={() => setSubmitted(false)}
+                  leadId={leadId}
+                  leadToken={leadToken}
+                />
               </motion.div>
             ) : (
               <>
@@ -246,6 +241,7 @@ export function BookingFlow() {
                         }
                         const body = await res.json().catch(() => ({}));
                         if (body?.id) setLeadId(body.id);
+                        if (body?.token) setLeadToken(body.token);
                         setSubmitted(true);
                       }}
                     />
@@ -793,9 +789,11 @@ function StepContact({
 function Success({
   onReset,
   leadId,
+  leadToken,
 }: {
   onReset: () => void;
   leadId: string | null;
+  leadToken: string | null;
 }) {
   const t = useTranslations("book");
   return (
@@ -820,7 +818,7 @@ function Success({
             {leadId.slice(0, 8)}…
           </div>
           <a
-            href={`/status/${leadId}`}
+            href={`/status/${leadId}${leadToken ? `?t=${leadToken}` : ""}`}
             className="mt-3 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[var(--color-accent)] hover:underline"
           >
             Status live verfolgen →

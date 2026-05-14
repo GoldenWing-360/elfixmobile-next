@@ -93,21 +93,11 @@ export function Calculator() {
     return state.repairs.reduce((sum, slug) => sum + (model.prices[slug] ?? 0), 0);
   }, [model, state.repairs]);
 
+  // Header (eyebrow / H1 / sub) is rendered server-side by the parent
+  // page for SSR-SEO; this client tree starts at the Progress stepper.
   return (
     <section className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-32">
-        <header className="text-center">
-          <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
-            {t("eyebrow")}
-          </p>
-          <h1 className="mt-3 text-[clamp(2.25rem,5.5vw,4.5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
-            {t("headline")}
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">
-            {t("sub")}
-          </p>
-        </header>
-
+      <div className="mx-auto max-w-5xl px-6 pb-24 md:px-8 md:pb-32">
         <Progress step={state.step} />
 
         <div className="relative mt-10 overflow-hidden rounded-3xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_60px_-30px_rgba(0,0,0,0.2)] ring-1 ring-black/[0.04] md:mt-14">

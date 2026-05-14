@@ -52,9 +52,10 @@ export function CookieBanner() {
       role="dialog"
       aria-modal="false"
       aria-label="Cookie-Einstellungen"
-      // z-60 keeps the banner above the mobile sticky CTA (z-40) and the
-      // floating WhatsApp button (z-50).
-      className="fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-3xl rounded-3xl border border-white/10 bg-black/95 p-5 text-white shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl md:bottom-4 md:inset-x-auto md:left-1/2 md:-translate-x-1/2"
+      // Mobile: pin to the TOP so it doesn't cover the StickyMobileCTA
+      // bar (which is the primary action surface). Desktop: bottom-pinned
+      // as before — there's no competing element down there.
+      className="fixed inset-x-3 top-[calc(env(safe-area-inset-top)+4rem)] z-[60] mx-auto max-w-3xl rounded-3xl border border-white/10 bg-black/95 p-5 text-white shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl md:inset-x-auto md:bottom-4 md:left-1/2 md:top-auto md:-translate-x-1/2"
     >
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-6">
         <div className="flex-1 text-[13.5px] leading-[1.5] text-white/80">

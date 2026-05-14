@@ -1,6 +1,7 @@
 import "../globals.css";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { headers } from "next/headers";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -11,7 +12,39 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { StickyMobileCTAGate } from "@/components/StickyMobileCTAGate";
 import { CookieBanner } from "@/components/CookieBanner";
+import { ChromeGate } from "@/components/ChromeGate";
 import { SITE, alternateLanguagesFor, localBusinessJsonLd } from "@/lib/seo";
+
+// Routes that render WITHOUT the customer-facing chrome (admin panel +
+// per-customer status page). Server-side detection via Next 16's request
+// URL — falls back to client-side gate in <ChromeGate> if the URL isn't
+// readable.
+const NO_CHROME_PATTERNS = ["/admin", "/status/"];
+
+async function isChromelessRoute(): Promise<boolean> {
+  try {
+    const h = await headers();
+    // Look at every header that conventionally carries the request URL.
+    // CF Workers + Next + OpenNext all populate different ones depending
+    // on the runtime path, so we scan all of them.
+    const candidates = [
+      h.get("x-pathname"),
+      h.get("x-matched-path"),
+      h.get("x-invoke-path"),
+      h.get("next-url"),
+      h.get("x-forwarded-uri"),
+      h.get("x-original-uri"),
+      h.get("cf-worker-path"),
+      // Last-resort: the next-router-state-tree header includes the
+      // segment names for the current render in a JSON-ish blob.
+      h.get("next-router-state-tree"),
+    ];
+    const joined = candidates.filter(Boolean).join(" ");
+    return NO_CHROME_PATTERNS.some((p) => joined.includes(p));
+  } catch {
+    return false;
+  }
+}
 
 const inter = Inter({
   subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext"],
@@ -108,6 +141,7 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) notFound();
 
   setRequestLocale(locale);
+  const chromeless = await isChromelessRoute();
 
   return (
     <html
@@ -125,14 +159,27 @@ export default async function LocaleLayout({
         />
         <NextIntlClientProvider>
           <LenisProvider>
-            <Nav />
+            {/* Two-layer chrome gate: server-side (via request headers)
+             * keeps the SSR HTML clean, client-side ChromeGate is the
+             * fallback for runtimes where the headers don't expose the
+             * inbound pathname. Both gates target the same admin/status
+             * route patterns. */}
+            {!chromeless && (
+              <ChromeGate>
+                <Nav />
+              </ChromeGate>
+            )}
             <main className="relative" id="main-content">
               {children}
             </main>
-            <Footer />
-            <WhatsAppFloat />
-            <StickyMobileCTAGate />
-            <CookieBanner />
+            {!chromeless && (
+              <ChromeGate>
+                <Footer />
+                <WhatsAppFloat />
+                <StickyMobileCTAGate />
+                <CookieBanner />
+              </ChromeGate>
+            )}
           </LenisProvider>
         </NextIntlClientProvider>
       </body>

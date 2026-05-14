@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server";
 import { z } from "zod";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { signLeadId } from "@/lib/lead-token";
+import { SITE } from "@/lib/seo";
 
 /**
  * /api/lead — unified lead intake for the booking flow and the contact form.
@@ -142,6 +144,7 @@ function renderContactEmail(payload: z.infer<typeof ContactSchema>): {
 }
 
 async function sendViaResend(args: {
+  to: string;
   subject: string;
   html: string;
   text: string;
@@ -157,7 +160,7 @@ async function sendViaResend(args: {
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       from: SENDER,
-      to: [RECIPIENT],
+      to: [args.to],
       reply_to: args.replyTo,
       subject: args.subject,
       html: args.html,
@@ -169,6 +172,72 @@ async function sendViaResend(args: {
     return { ok: false, status: res.status, body };
   }
   return { ok: true };
+}
+
+/**
+ * Customer-facing confirmation email. Always sent (also on dedup, so the
+ * customer always gets feedback the request reached us). Subject is in
+ * German because that's the primary audience; English/Russian/Turkish
+ * locales fall back to the German body — translating transactional mail
+ * is an explicit follow-up.
+ */
+function renderCustomerConfirmation(
+  payload: z.infer<typeof Schema>,
+  statusUrl: string,
+  isContactForm: boolean,
+): { to: string; subject: string; html: string; text: string } {
+  const to = isContactForm
+    ? (payload as z.infer<typeof ContactSchema>).email
+    : (payload as z.infer<typeof BookingSchema>).contact.email;
+  const name = isContactForm
+    ? (payload as z.infer<typeof ContactSchema>).name
+    : (payload as z.infer<typeof BookingSchema>).contact.name;
+
+  const subject = isContactForm
+    ? "Wir haben deine Nachricht — EL Fix Mobile"
+    : "Buchung eingegangen — EL Fix Mobile";
+
+  const headline = isContactForm
+    ? "Wir melden uns innerhalb 30 Minuten."
+    : "Buchung eingegangen.";
+
+  const body = isContactForm
+    ? "Vielen Dank für deine Nachricht. Wir antworten meist innerhalb von 30 Minuten während der Geschäftszeiten (Mo–Sa 9–19, So 9–18). Bei dringenden Anliegen ruf gerne direkt an: +43 660 6071414."
+    : "Vielen Dank für deine Reparatur-Buchung. Wir prüfen die Angaben und melden uns innerhalb von 30 Minuten zur Bestätigung. Bei Fragen ruf direkt an: +43 660 6071414.";
+
+  const text = [
+    `Hallo ${name},`,
+    "",
+    headline,
+    "",
+    body,
+    "",
+    `Status verfolgen: ${statusUrl}`,
+    "",
+    "EL Fix Mobile e.U.",
+    "Maria-Tusch-Straße 17/1, 1220 Wien",
+    "+43 660 6071414 · elfixmobile@gmx.at",
+  ].join("\n");
+
+  const html = `
+<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1d1d1f;max-width:560px;margin:0 auto;padding:24px">
+  <p style="margin:0 0 24px;font-size:15px;color:#525257">Hallo ${escapeHtml(name)},</p>
+  <h1 style="margin:0 0 16px;font-size:24px;font-weight:600;letter-spacing:-0.01em">${escapeHtml(headline)}</h1>
+  <p style="margin:0 0 24px;font-size:15.5px;line-height:1.55;color:#525257">${escapeHtml(body)}</p>
+  ${
+    !isContactForm
+      ? `<p style="margin:0 0 24px"><a href="${statusUrl}" style="display:inline-block;background:#0071e3;color:#fff;text-decoration:none;padding:12px 22px;border-radius:999px;font-size:14.5px;font-weight:500">Status verfolgen →</a></p>`
+      : ""
+  }
+  <div style="border-top:1px solid #e5e5e7;margin-top:32px;padding-top:20px;font-size:13px;color:#86868B;line-height:1.55">
+    EL Fix Mobile e.U.<br>
+    Maria-Tusch-Straße 17/1, 1220 Wien<br>
+    <a href="tel:+436606071414" style="color:#0071e3;text-decoration:none">+43 660 6071414</a> ·
+    <a href="mailto:elfixmobile@gmx.at" style="color:#0071e3;text-decoration:none">elfixmobile@gmx.at</a>
+  </div>
+</div>`.trim();
+
+  return { to, subject, html, text };
 }
 
 interface KvLike {
@@ -271,10 +340,42 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // HMAC token for the public /status/<id>?t=<token> URL.
+  const token = await signLeadId(leadId);
+  const statusUrl = token
+    ? `${SITE.url}/de/status/${leadId}?t=${token}`
+    : `${SITE.url}/de/status/${leadId}`;
+
+  // The customer confirmation always goes out — also when dedup matched.
+  // The shop-owner email is suppressed on dedup so the inbox doesn't get
+  // five copies of the same lead.
+  const customerEmail = renderCustomerConfirmation(
+    payload,
+    statusUrl,
+    payload.type === "contact",
+  );
+  const customerSend = await sendViaResend({
+    ...customerEmail,
+    replyTo: RECIPIENT,
+  });
+  if (!customerSend.ok) {
+    // Log but don't fail — the owner-side mail and KV persist are what
+    // matter for ops; customer can still see the success card + status
+    // URL on screen.
+    console.error(
+      "[api/lead] customer email failed",
+      customerSend.status,
+      customerSend.body,
+    );
+  }
+
   if (alreadySeen) {
-    // Suppress the duplicate email but still return ok so the form's
-    // success card renders for the user.
-    return Response.json({ ok: true, id: leadId, deduped: true });
+    return Response.json({
+      ok: true,
+      id: leadId,
+      token,
+      deduped: true,
+    });
   }
 
   const rendered =
@@ -283,16 +384,18 @@ export async function POST(req: NextRequest) {
       : renderContactEmail(payload);
   const replyTo =
     payload.type === "booking" ? payload.contact.email : payload.email;
-  const result = await sendViaResend({ ...rendered, replyTo });
-  if (!result.ok) {
-    console.error("[api/lead] resend failed", result.status, result.body);
-    // We still persisted the lead in KV above, so the data isn't lost —
-    // surface 502 to the client so it can retry / show a fallback.
+  const ownerSend = await sendViaResend({
+    ...rendered,
+    to: RECIPIENT,
+    replyTo,
+  });
+  if (!ownerSend.ok) {
+    console.error("[api/lead] owner email failed", ownerSend.status, ownerSend.body);
     return Response.json(
       { ok: false, error: "send_failed", id: leadId },
       { status: 502 },
     );
   }
 
-  return Response.json({ ok: true, id: leadId });
+  return Response.json({ ok: true, id: leadId, token });
 }

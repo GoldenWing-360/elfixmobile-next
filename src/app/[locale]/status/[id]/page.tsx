@@ -5,6 +5,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { Link } from "@/i18n/navigation";
 import { Check, Clock, Wrench, PackageCheck } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { verifyLeadToken } from "@/lib/lead-token";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -59,11 +60,20 @@ function statusIndex(s: Status): number {
 
 export default async function StatusPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string; id: string }>;
+  searchParams: Promise<{ t?: string }>;
 }) {
   const { locale, id } = await params;
+  const { t: token } = await searchParams;
   setRequestLocale(locale);
+
+  // HMAC gate: in production STATUS_TOKEN_SECRET is set, so a valid token
+  // is required. Locally (no secret), we fall back to the previous
+  // unsigned-UUID behaviour so dev keeps working.
+  const tokenOk = await verifyLeadToken(id, token, { allowUnsigned: true });
+  if (!tokenOk) notFound();
 
   const lead = await fetchLead(id);
   if (!lead) notFound();

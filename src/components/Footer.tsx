@@ -33,9 +33,10 @@ export function Footer() {
     {
       heading: t("company"),
       links: [
+        { href: "/ueber-uns", label: "Über uns" },
+        { href: "/bewertungen", label: "Bewertungen" },
+        { href: "/faq", label: "FAQ" },
         { href: "/kontakt", label: fl("contact") },
-        { href: "/buchen", label: fl("booking") },
-        { href: "/preisrechner", label: fl("pricing") },
       ],
     },
     {
@@ -50,7 +51,10 @@ export function Footer() {
 
   return (
     <footer className="border-t border-white/10 bg-black text-white/75">
-      <div className="mx-auto max-w-7xl px-6 py-20 md:px-8">
+      {/* pb-32 on mobile leaves room for the fixed StickyMobileCTA (~64px +
+       * iOS safe-area). On desktop the sticky bar is hidden, so we revert
+       * to a normal py-20. */}
+      <div className="mx-auto max-w-7xl px-6 pb-32 pt-20 md:px-8 md:py-20">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4 lg:grid-cols-5 lg:gap-12">
           <div className="col-span-2 lg:col-span-1">
             <Image

@@ -28,8 +28,16 @@ export function BrandQuoteCta({ brand }: Props) {
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          {/* service=walkin is a sensible default for brands without
+           * online prices — it skips the service-picker step so the user
+           * lands directly on the device/damage form with the brand
+           * pre-filled. They can still switch to pickup/send inside the
+           * flow. */}
           <Link
-            href={{ pathname: "/buchen", query: { device: brand.label } }}
+            href={{
+              pathname: "/buchen",
+              query: { device: brand.label, service: "walkin" },
+            }}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-text-dark)] px-7 py-4 text-[15px] font-medium text-white transition-transform hover:scale-[1.02]"
           >
             {t("quote_primary_cta")} <span aria-hidden>→</span>

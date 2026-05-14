@@ -54,16 +54,16 @@ export function Nav() {
     { href: "/kontakt", label: t("contact") },
   ] as const;
 
-  // On home: anchor-jump targets. On any other page: navigate to home with
-  // the hash, so the next-intl router handles cross-page navigation
-  // correctly (a bare <a href="/#x"> from /de/reparatur/apple would lose
-  // the locale prefix).
+  // Mobile-only secondary links. Real routes for /bewertungen, /faq and
+  // /ueber-uns (they exist now). "Services" + "Standort" still scroll to
+  // home anchors because they're sections, not pages.
   const isHome = pathname === "/";
-  const mobileExtras: ReadonlyArray<{ href: string; label: string }> = [
+  const mobileExtras: ReadonlyArray<{ href: string; label: string; isRoute?: boolean }> = [
+    { href: "/ueber-uns", label: "Über uns", isRoute: true },
+    { href: "/bewertungen", label: "Bewertungen", isRoute: true },
+    { href: "/faq", label: "FAQ", isRoute: true },
     { href: isHome ? "#services" : "/#services", label: t("services") },
-    { href: isHome ? "#reviews" : "/#reviews", label: "Bewertungen" },
     { href: isHome ? "#location" : "/#location", label: "Standort" },
-    { href: isHome ? "#faq" : "/#faq", label: "FAQ" },
   ];
 
   return (
@@ -174,26 +174,40 @@ export function Nav() {
                 ))}
               </ul>
               <ul className="flex flex-col items-start gap-3 border-t border-white/10 pt-7">
-                {mobileExtras.map((l, i) => (
-                  <motion.li
-                    key={l.href}
-                    initial={{ opacity: 0.999, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      delay: 0.05 * (i + links.length),
-                      duration: 0.4,
-                      ease: [0.16, 1, 0.3, 1],
-                    }}
-                  >
-                    <a
-                      href={l.href}
-                      className="block py-1.5 text-[18px] font-medium tracking-tight text-white/70 hover:text-white"
-                      onClick={() => setMobileOpen(false)}
+                {mobileExtras.map((l, i) => {
+                  const linkClass =
+                    "block py-1.5 text-[18px] font-medium tracking-tight text-white/70 hover:text-white";
+                  return (
+                    <motion.li
+                      key={l.href}
+                      initial={{ opacity: 0.999, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        delay: 0.05 * (i + links.length),
+                        duration: 0.4,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
                     >
-                      {l.label}
-                    </a>
-                  </motion.li>
-                ))}
+                      {l.isRoute ? (
+                        <Link
+                          href={l.href}
+                          className={linkClass}
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {l.label}
+                        </Link>
+                      ) : (
+                        <a
+                          href={l.href}
+                          className={linkClass}
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {l.label}
+                        </a>
+                      )}
+                    </motion.li>
+                  );
+                })}
               </ul>
               {/* Contact shortcut row: tap-to-call + WhatsApp at the
                * bottom of the menu so the primary action is always one

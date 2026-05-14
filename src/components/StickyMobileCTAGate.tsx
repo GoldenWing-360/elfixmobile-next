@@ -5,11 +5,11 @@ import { StickyMobileCTA } from "./StickyMobileCTA";
 
 /**
  * Renders the StickyMobileCTA on every page except the ones that ARE the
- * primary action (booking, calculator, contact form). On those pages the
- * bar would be redundant with the page content and would steal vertical
- * space from the form.
+ * primary action (booking, calculator, contact form) or admin routes
+ * (where the customer-facing CTA would be nonsensical above the admin
+ * panel).
  */
-const HIDE_ON = ["/buchen", "/preisrechner", "/kontakt"] as const;
+const HIDE_ON = ["/buchen", "/preisrechner", "/kontakt", "/admin", "/status"] as const;
 
 export function StickyMobileCTAGate() {
   const pathname = usePathname();
