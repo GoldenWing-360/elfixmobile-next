@@ -104,8 +104,21 @@ export function BrandGallery() {
                   <div className="text-[12px] uppercase tracking-[0.22em] text-white/55">
                     {t.rich("models_count", { count: b.count })}
                   </div>
-                  <div>
-                    <div className="text-[36px] font-semibold tracking-[-0.02em]">
+
+                  {/* Brand mark — simple-icons SVG inverted to white via
+                   * CSS filter. Centered in the card vertically between
+                   * the count and the label. opacity-90 prevents the
+                   * mark from competing too hard with the H3 label. */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`/brands/${b.id}.svg`}
+                    alt=""
+                    aria-hidden
+                    className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 opacity-90 [filter:brightness(0)_invert(1)] md:h-20 md:w-20"
+                  />
+
+                  <div className="relative">
+                    <div className="text-[28px] font-semibold tracking-[-0.02em] md:text-[32px]">
                       {b.label}
                     </div>
                     <div className="mt-3 inline-flex items-center gap-2 text-[13px] text-white/70">

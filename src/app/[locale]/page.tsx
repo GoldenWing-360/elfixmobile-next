@@ -8,6 +8,7 @@ import { ProcessSteps } from "@/components/sections/ProcessSteps";
 // Below-fold sections lazy-loaded to shrink first-load JS by ~150-200 kB
 const BrandGallery = dynamic(() => import("@/components/sections/BrandGallery").then(m => ({ default: m.BrandGallery })));
 const PriceCalculatorPreview = dynamic(() => import("@/components/sections/PriceCalculatorPreview").then(m => ({ default: m.PriceCalculatorPreview })));
+const MoreServices = dynamic(() => import("@/components/sections/MoreServices").then(m => ({ default: m.MoreServices })));
 const Location = dynamic(() => import("@/components/sections/Location").then(m => ({ default: m.Location })));
 const Reviews = dynamic(() => import("@/components/sections/Reviews").then(m => ({ default: m.Reviews })));
 const FAQ = dynamic(() => import("@/components/sections/FAQ").then(m => ({ default: m.FAQ })));
@@ -29,6 +30,7 @@ export default async function HomePage({
       <ProcessSteps />
       <BrandGallery />
       <PriceCalculatorPreview />
+      <MoreServices />
       <Location />
       <Reviews />
       <FAQ />
