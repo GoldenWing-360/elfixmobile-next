@@ -5,13 +5,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Plus } from "lucide-react";
 
+// Subset of the 8 Q/A pairs from the /faq namespace — order matches the
+// dedicated /faq page so the home preview is a consistent teaser. Keys
+// must exist in messages/<locale>.json under the faq.* namespace.
+const KEYS = [
+  "express",
+  "warranty",
+  "data",
+  "price",
+  "parts",
+  "pickup",
+  "pay",
+  "hours",
+] as const;
+
 export function FAQ() {
   const t = useTranslations("faq");
   const [open, setOpen] = useState<number | null>(0);
 
-  const items = Array.from({ length: 8 }).map((_, i) => ({
-    q: t(`q${i + 1}` as "q1"),
-    a: t(`a${i + 1}` as "a1"),
+  const items = KEYS.map((k) => ({
+    q: t(`q_${k}_q` as "q_express_q"),
+    a: t(`q_${k}_a` as "q_express_a"),
   }));
 
   return (
@@ -37,7 +51,7 @@ export function FAQ() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]"
           >
-            {t("headline")}
+            {t("h1")}
           </motion.h2>
         </header>
 
