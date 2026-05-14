@@ -243,8 +243,8 @@
     "success_sub": "Within 30 minutes during business hours."
   },
   "repair_label": {
-    "display": "Display Premium",
-    "display_orig": "Display OEM",
+    "display": "Display (full)",
+    "display_orig": "Display glass",
     "battery": "Battery",
     "charging_port": "Charging port",
     "camera_back": "Rear camera",

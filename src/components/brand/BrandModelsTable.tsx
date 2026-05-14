@@ -10,13 +10,22 @@ interface Props {
   limit?: number;
 }
 
+// Local label dict for the brand-card table. Kept in sync with the
+// canonical labels in @/data/repair-labels.ts — `display` is the full
+// module, `display_orig` is glass-only (different repairs, not
+// "premium vs OEM" of the same repair).
 const REPAIR_LABELS: Record<string, { de: string; en: string; ru: string; tr: string }> = {
-  display: { de: "Display", en: "Display", ru: "Дисплей", tr: "Ekran" },
+  display: {
+    de: "Display Komplett",
+    en: "Display (full)",
+    ru: "Дисплей (модуль)",
+    tr: "Ekran (modül)",
+  },
   display_orig: {
-    de: "Display Original",
-    en: "OEM Display",
-    ru: "Оригинальный дисплей",
-    tr: "Orijinal Ekran",
+    de: "Displayglas",
+    en: "Display glass",
+    ru: "Стекло дисплея",
+    tr: "Ekran camı",
   },
   battery: { de: "Akku", en: "Battery", ru: "Аккумулятор", tr: "Pil" },
   charging_port: {

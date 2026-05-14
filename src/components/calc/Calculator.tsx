@@ -4,10 +4,51 @@ import { useReducer, useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Check, ChevronLeft, RotateCcw, Search, Phone, MessageCircle, Calendar, Truck } from "lucide-react";
+import {
+  Check,
+  ChevronLeft,
+  RotateCcw,
+  Search,
+  Phone,
+  MessageCircle,
+  Calendar,
+  Truck,
+  Smartphone,
+  Battery,
+  BatteryCharging,
+  Camera,
+  Volume2,
+  Mic,
+  CircleDot,
+  Sun,
+  VolumeX,
+  Aperture,
+} from "lucide-react";
 import { Button } from "@/components/Button";
 import pricing from "@/data/pricing.json";
+import { repairDurationBucket } from "@/data/repair-labels";
 import { cn } from "@/lib/cn";
+
+// Icon per repair slug. Picked from lucide-react so we don't ship custom
+// SVGs. display + display_orig share Smartphone (the device the screen
+// belongs to). Fallback icon for unmapped slugs is Smartphone.
+const REPAIR_ICONS: Record<string, typeof Smartphone> = {
+  display: Smartphone,
+  display_orig: Smartphone,
+  battery: Battery,
+  charging_port: BatteryCharging,
+  camera_back: Camera,
+  camera_front: Camera,
+  camera_glass: Aperture,
+  back_cover: Smartphone,
+  speaker: Volume2,
+  earpiece: Volume2,
+  microphone: Mic,
+  home_button: CircleDot,
+  power_button: CircleDot,
+  mute_switch: VolumeX,
+  light_sensor: Sun,
+};
 
 type Brand = { id: string; label: string; parent_brand: string; device_type: string; models: Model[] };
 type Model = { slug: string; name: string; full_name: string; year: number | null; prices: Record<string, number> };
@@ -372,7 +413,30 @@ function StepRepair({
                   >
                     {active && <Check className="h-3 w-3 text-white" />}
                   </span>
-                  <span className="text-[15px] font-medium">{labelFor(r.slug)}</span>
+                  {(() => {
+                    const Icon = REPAIR_ICONS[r.slug] ?? Smartphone;
+                    return (
+                      <Icon
+                        className="h-4 w-4 shrink-0 text-[#6e6e73]"
+                        strokeWidth={1.5}
+                      />
+                    );
+                  })()}
+                  <div className="min-w-0">
+                    <div className="text-[15px] font-medium leading-tight">
+                      {labelFor(r.slug)}
+                    </div>
+                    <div className="mt-0.5 text-[11.5px] text-[#86868B]">
+                      {(() => {
+                        const b = repairDurationBucket(r.slug);
+                        return b === "express"
+                          ? "Express ab 30 Min"
+                          : b === "complex"
+                            ? "1-3 Tage"
+                            : "1-2 Stunden";
+                      })()}
+                    </div>
+                  </div>
                 </div>
                 <span className="font-semibold tabular-nums text-[var(--color-accent)]">
                   {price} €

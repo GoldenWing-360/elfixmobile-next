@@ -25,13 +25,24 @@ export type RepairSlug =
 
 type LabelMap = Record<RepairSlug, { de: string; en: string; ru: string; tr: string }>;
 
+// `display` = full display module (LCD/OLED + glass) replacement
+//   with Premium-Refurbished parts.
+// `display_orig` = front-glass-only swap using Original-Refurbished
+//   glass. Used when the LCD/OLED below is still intact and only the
+//   cover glass is broken. Different REPAIRS, not different qualities
+//   of the same repair — the user pays for only what's actually broken.
 export const REPAIR_LABELS: LabelMap = {
-  display: { de: "Display", en: "Display", ru: "Дисплей", tr: "Ekran" },
+  display: {
+    de: "Display Komplett",
+    en: "Display (full module)",
+    ru: "Дисплей (модуль)",
+    tr: "Ekran (modül)",
+  },
   display_orig: {
-    de: "Display Original",
-    en: "OEM Display",
-    ru: "Оригинальный дисплей",
-    tr: "Orijinal Ekran",
+    de: "Displayglas",
+    en: "Display glass only",
+    ru: "Стекло дисплея",
+    tr: "Sadece ekran camı",
   },
   battery: { de: "Akku", en: "Battery", ru: "Аккумулятор", tr: "Pil" },
   charging_port: {

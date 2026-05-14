@@ -243,8 +243,8 @@
     "success_sub": "Mesai saatlerinde 30 dakika içinde."
   },
   "repair_label": {
-    "display": "Ekran Premium",
-    "display_orig": "Ekran Orijinal",
+    "display": "Ekran (modül)",
+    "display_orig": "Ekran camı",
     "battery": "Batarya",
     "charging_port": "Şarj girişi",
     "camera_back": "Arka kamera",
