@@ -104,6 +104,11 @@ export function alternateLanguagesFor(path: string): Record<string, string> {
   for (const locale of routing.locales) {
     entries[locale] = `${SITE.url}/${locale}${cleanPath}`;
   }
-  entries["x-default"] = `${SITE.url}/${routing.defaultLocale}${cleanPath}`;
+  // x-default is the language-neutral URL Google falls back to when no
+  // Accept-Language matches a locale entry. We point it at the bare
+  // root path (no locale prefix) — next.config.ts redirects "/" to
+  // "/de", so Google still lands on the default locale, but the
+  // hreflang signal is correctly neutral instead of preferring de.
+  entries["x-default"] = `${SITE.url}${cleanPath || "/"}`;
   return entries;
 }

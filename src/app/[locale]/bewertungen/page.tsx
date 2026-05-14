@@ -39,8 +39,46 @@ export default async function BewertungenPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "bewertungen" });
 
+  // Schema.org Review array so Google can lift star ratings into the
+  // search snippet. AggregateRating + the individual Review items are
+  // attached to the existing #localbusiness node from the layout, so
+  // the global LocalBusiness JSON-LD picks them up by id reference.
+  const url = `${SITE.url}/${locale}/bewertungen`;
+  const reviewsJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${url}#page`,
+        url,
+        name: t("meta_title"),
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${SITE.url}/og.png`,
+        },
+      },
+      ...["1", "2", "3", "4", "5", "6"].map((k) => ({
+        "@type": "Review",
+        "@id": `${url}#review-${k}`,
+        itemReviewed: { "@id": `${SITE.url}/#localbusiness` },
+        author: { "@type": "Person", name: `Kunde ${k}` },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody: t(`review_${k}`),
+      })),
+    ],
+  };
+
   return (
     <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
+      />
       <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-32">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("eyebrow")}

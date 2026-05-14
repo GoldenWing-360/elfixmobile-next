@@ -68,7 +68,11 @@ export async function generateMetadata({
   };
 }
 
-function buildJsonLd(service: ReturnType<typeof getService>, locale: string, title: string) {
+async function buildJsonLd(
+  service: ReturnType<typeof getService>,
+  locale: string,
+  title: string,
+) {
   if (!service) return null;
   const url = `${SITE.url}/${locale}/${service.slug}`;
   const offers = service.priceRange
@@ -79,6 +83,19 @@ function buildJsonLd(service: ReturnType<typeof getService>, locale: string, tit
         highPrice: service.priceRange.to,
       }
     : undefined;
+  // ServiceBody renders 4 FAQ items (q_duration, q_warranty, q_data,
+  // q_pickup) keyed under services_page.<service.key>.q_<key>.{q,a}.
+  // Mirror them as FAQPage JSON-LD for rich-result eligibility.
+  const t = await getTranslations({
+    locale,
+    namespace: `services_page.${service.key}`,
+  });
+  const faqKeys = ["q_duration", "q_warranty", "q_data", "q_pickup"];
+  const faqEntities = faqKeys.map((k) => ({
+    "@type": "Question",
+    name: t(`${k}.q`),
+    acceptedAnswer: { "@type": "Answer", text: t(`${k}.a`) },
+  }));
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -90,6 +107,11 @@ function buildJsonLd(service: ReturnType<typeof getService>, locale: string, tit
         areaServed: { "@type": "City", name: "Wien" },
         url,
         ...(offers ? { offers } : {}),
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        mainEntity: faqEntities,
       },
       {
         "@type": "BreadcrumbList",
@@ -128,7 +150,7 @@ export default async function ServicePage({
       locale,
       namespace: `services_page.${service.key}`,
     });
-    const jsonLd = buildJsonLd(service, locale, t("meta_title"));
+    const jsonLd = await buildJsonLd(service, locale, t("meta_title"));
     return (
       <>
         <script

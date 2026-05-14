@@ -27,6 +27,18 @@ export const dynamic = "force-dynamic";
 
 const HoneypotShape = z.object({ _hp: z.string().optional() });
 
+// Loose-ish AT phone validation: allows +43, 0, internationalised, with
+// spaces/slashes/dashes — rejects raw alpha and overly-short strings.
+const PHONE_REGEX = /^[+0][\d\s/().-]{5,38}$/;
+const PhoneOptional = z
+  .string()
+  .max(40)
+  .optional()
+  .default("")
+  .refine((v) => v === "" || PHONE_REGEX.test(v), {
+    message: "invalid_phone_format",
+  });
+
 const BookingSchema = z.object({
   type: z.literal("booking"),
   service: z.enum(["walkin", "pickup", "send"]),
@@ -40,11 +52,13 @@ const BookingSchema = z.object({
     })
     .optional(),
   date: z.string().max(50).optional().default(""),
-  total: z.number().nullable().optional(),
+  // Cap the estimated price so a tampered client can't push a 9-digit
+  // number into the email subject line.
+  total: z.number().min(0).max(100_000).nullable().optional(),
   contact: z.object({
     name: z.string().min(2).max(120),
     email: z.string().email().max(200),
-    phone: z.string().max(40).optional().default(""),
+    phone: PhoneOptional,
     message: z.string().max(4000).optional().default(""),
   }),
 });
@@ -53,7 +67,7 @@ const ContactSchema = z.object({
   type: z.literal("contact"),
   name: z.string().min(2).max(120),
   email: z.string().email().max(200),
-  phone: z.string().max(40).optional().default(""),
+  phone: PhoneOptional,
   message: z.string().min(5).max(4000),
 });
 

@@ -67,7 +67,7 @@ export async function generateMetadata({
   };
 }
 
-function buildJsonLd(
+async function buildJsonLd(
   pair: NonNullable<ReturnType<typeof getModel>>,
   locale: string,
   prices: { slug: string; price: number }[],
@@ -76,6 +76,27 @@ function buildJsonLd(
   const priced = prices.filter((p) => typeof p.price === "number");
   const lo = priced.length ? Math.min(...priced.map((p) => p.price)) : null;
   const hi = priced.length ? Math.max(...priced.map((p) => p.price)) : null;
+
+  // Mirror the model-page FAQ (q_what_if_not_listed, q_genuine_parts,
+  // q_data_safe, q_pickup) as FAQPage JSON-LD.
+  const t = await getTranslations({ locale, namespace: "model_page" });
+  const faqKeys = [
+    "q_what_if_not_listed",
+    "q_genuine_parts",
+    "q_data_safe",
+    "q_pickup",
+  ];
+  const faqEntities = faqKeys.map((k) => ({
+    "@type": "Question",
+    name: t(`${k}.q`, { model: pair.model.full_name }),
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: t(`${k}.a`, {
+        model: pair.model.full_name,
+        brand: pair.brand.label,
+      }),
+    },
+  }));
 
   return {
     "@context": "https://schema.org",
@@ -106,6 +127,11 @@ function buildJsonLd(
               },
             }
           : {}),
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        mainEntity: faqEntities,
       },
       {
         "@type": "BreadcrumbList",
@@ -164,7 +190,7 @@ export default async function ModelPage({
       return a.price - b.price;
     });
 
-  const jsonLd = buildJsonLd(
+  const jsonLd = await buildJsonLd(
     pair,
     locale,
     repairs

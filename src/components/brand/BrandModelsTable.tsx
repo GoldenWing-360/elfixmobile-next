@@ -114,8 +114,11 @@ export function BrandModelsTable({ brand, limit = 20 }: Props) {
             <p className="text-[14px] text-[#525257]">
               {t("table_more", { count: remaining })}
             </p>
+            {/* Link to the dedicated modelle-index page where Google can
+             * crawl every model under this brand, instead of bouncing to
+             * /preisrechner which is a JS-heavy client island. */}
             <Link
-              href={{ pathname: "/preisrechner", query: { brand: brand.pricingBuckets[0] } }}
+              href={`/reparatur/${brand.slug}/modelle`}
               className="inline-flex items-center gap-2 rounded-full bg-[var(--color-text-dark)] px-6 py-3 text-[14px] font-medium text-white transition-transform hover:scale-[1.02]"
             >
               {t("table_cta_all")} <span aria-hidden>→</span>

@@ -63,9 +63,29 @@ export async function generateMetadata({
   };
 }
 
-function buildJsonLd(brand: ReturnType<typeof getBrand>, locale: string) {
+async function buildJsonLd(
+  brand: ReturnType<typeof getBrand>,
+  locale: string,
+) {
   if (!brand) return null;
   const url = `${SITE.url}/${locale}/reparatur/${brand.slug}`;
+  // The brand FAQ is rendered as 4 Q/A entries (BrandFAQ.tsx uses
+  // q_express, q_warranty, q_originalparts, q_pickup). Mirror them
+  // here as Schema.org FAQPage so Google can surface them as a
+  // rich-result accordion.
+  const t = await getTranslations({
+    locale,
+    namespace: "brand_page.faq",
+  });
+  const faqKeys = ["q_express", "q_warranty", "q_originalparts", "q_pickup"];
+  const faqEntities = faqKeys.map((k) => ({
+    "@type": "Question",
+    name: t(`${k}.q`, { brand: brand.label }),
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: t(`${k}.a`, { brand: brand.label }),
+    },
+  }));
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -77,6 +97,11 @@ function buildJsonLd(brand: ReturnType<typeof getBrand>, locale: string) {
         areaServed: { "@type": "City", name: "Wien" },
         serviceType: `${brand.label} smartphone repair`,
         url,
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        mainEntity: faqEntities,
       },
       {
         "@type": "BreadcrumbList",
@@ -116,7 +141,7 @@ export default async function BrandPage({
   const brand = getBrand(brandSlug);
   if (!brand) notFound();
 
-  const jsonLd = buildJsonLd(brand, locale);
+  const jsonLd = await buildJsonLd(brand, locale);
 
   return (
     <>

@@ -1,8 +1,24 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { DistrictDef } from "@/data/districts";
+import { SERVICES } from "@/data/services";
 import { Phone, MapPin, Truck } from "lucide-react";
 import { cn } from "@/lib/cn";
+
+// Service labels are German-only here because the district pages target
+// Vienna search queries and don't bother translating the chip text. The
+// rest of the page is i18n'd; this is the deliberate inconsistency.
+const SERVICE_LABELS: Record<string, string> = {
+  display: "Display Reparatur",
+  battery: "Akku Tausch",
+  data_recovery: "Datenrettung",
+  water_damage: "Wasserschaden",
+  unlock: "Handy entsperren",
+  wrap: "Handy Folierung",
+  camera: "Kamera Reparatur",
+  tablet: "Tablet Reparatur",
+  notebook: "Notebook Reparatur",
+};
 
 interface Props {
   district: DistrictDef;
@@ -109,21 +125,19 @@ export function DistrictView({ district }: Props) {
             <h3 className="text-[13px] font-medium uppercase tracking-[0.18em] text-[var(--color-accent)]">
               Beliebte Reparaturen
             </h3>
+            {/* Render the first 6 services from the central registry —
+             * keeps the district grid in sync if we ever add/remove
+             * services without touching this component. */}
             <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                { href: "/display-reparatur-wien", label: "Display Reparatur" },
-                { href: "/akku-tausch-wien", label: "Akku Tausch" },
-                { href: "/wasserschaden-handy-reparatur-wien", label: "Wasserschaden" },
-                { href: "/kamera-reparatur-handy-wien", label: "Kamera Reparatur" },
-                { href: "/tablet-reparatur-wien", label: "Tablet Reparatur" },
-                { href: "/notebook-reparatur-wien", label: "Notebook Reparatur" },
-              ].map((s) => (
-                <li key={s.href}>
+              {SERVICES.slice(0, 6).map((s) => (
+                <li key={s.slug}>
                   <Link
-                    href={s.href}
+                    href={`/${s.slug}`}
                     className="group flex items-center justify-between rounded-2xl bg-white px-5 py-4 ring-1 ring-black/[0.06] transition-colors hover:bg-black/[0.02]"
                   >
-                    <span className="text-[15px] font-medium">{s.label}</span>
+                    <span className="text-[15px] font-medium">
+                      {SERVICE_LABELS[s.key] ?? s.slug}
+                    </span>
                     <span aria-hidden className="text-[var(--color-accent)] transition-transform group-hover:translate-x-0.5">→</span>
                   </Link>
                 </li>
