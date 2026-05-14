@@ -14,6 +14,20 @@
 			"id": "d27db3d6fa2941c694318838f925ea12"
 		}
 	],
+	// Public test-domain. Activated after the bersaev.com zone is added to
+	// Cloudflare and its registrar nameservers point at the CF NS pair.
+	// Once that's done, the Worker auto-binds via `wrangler deploy` and
+	// CF provisions SSL within a minute.
+	"routes": [
+		{ "pattern": "bersaev.com", "custom_domain": true },
+		{ "pattern": "www.bersaev.com", "custom_domain": true }
+	],
+	"vars": {
+		// Public site URL the app uses for sitemap, hreflang, JSON-LD,
+		// canonical tags and OG image URLs. Override per-environment by
+		// setting NEXT_PUBLIC_SITE_URL on the Worker.
+		"NEXT_PUBLIC_SITE_URL": "https://bersaev.com"
+	},
 	"observability": {
 		"enabled": true
 	}

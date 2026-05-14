@@ -110,7 +110,22 @@ export async function generateMetadata({
       title: t.title,
       description: t.desc,
     },
-    robots: { index: true, follow: true },
+    // Test-domain (bersaev.com) gets noindex/nofollow so Google can't
+    // accidentally pick it up while elfixmobile.at production is still
+    // live. The check happens at request time (Worker reads SITE.url
+    // from NEXT_PUBLIC_SITE_URL); flip the env var on cutover and the
+    // robots flag becomes index: true automatically.
+    robots: (() => {
+      try {
+        const host = new URL(SITE.url).host;
+        if (host.endsWith("bersaev.com")) {
+          return { index: false, follow: false };
+        }
+      } catch {
+        // noop
+      }
+      return { index: true, follow: true };
+    })(),
     other: {
       "geo.region": "AT-9",
       "geo.placename": "Wien",
