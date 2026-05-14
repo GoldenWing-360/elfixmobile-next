@@ -6,18 +6,21 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 
-// Cards now route to the per-brand SEO landing pages (/reparatur/<slug>)
-// rather than straight to /preisrechner or /buchen. The landing page owns
-// the brand context and forwards onwards to the right CTA from there.
+// All cards share the same dark background — the brand mark IS the
+// differentiator. Previous design used 8 different gradient pairs
+// (zinc, blue-950, orange-950, ...) which felt noisy and amateur.
+// Apple's BrandShowcase idiom uses one consistent surface, brand
+// identity comes from the logo alone.
+const CARD_BG = "from-zinc-900 to-[#0a0a0c]";
 const BRANDS = [
-  { id: "apple",   href: "/reparatur/apple",   label: "Apple",   count: 97,  hasOnlinePrices: true,  bg: "from-zinc-900 to-zinc-800" },
-  { id: "samsung", href: "/reparatur/samsung", label: "Samsung", count: 122, hasOnlinePrices: true,  bg: "from-blue-950 to-blue-900" },
-  { id: "xiaomi",  href: "/reparatur/xiaomi",  label: "Xiaomi",  count: 60,  hasOnlinePrices: false, bg: "from-orange-950 to-orange-900" },
-  { id: "google",  href: "/reparatur/google",  label: "Google",  count: 24,  hasOnlinePrices: false, bg: "from-sky-950 to-sky-900" },
-  { id: "huawei",  href: "/reparatur/huawei",  label: "Huawei",  count: 38,  hasOnlinePrices: false, bg: "from-red-950 to-red-900" },
-  { id: "oneplus", href: "/reparatur/oneplus", label: "OnePlus", count: 28,  hasOnlinePrices: false, bg: "from-red-900 to-zinc-900" },
-  { id: "sony",    href: "/reparatur/sony",    label: "Sony",    count: 18,  hasOnlinePrices: false, bg: "from-slate-900 to-zinc-900" },
-  { id: "nokia",   href: "/reparatur/nokia",   label: "Nokia",   count: 22,  hasOnlinePrices: false, bg: "from-blue-900 to-zinc-900" },
+  { id: "apple",   href: "/reparatur/apple",   label: "Apple",   count: 97,  hasOnlinePrices: true  },
+  { id: "samsung", href: "/reparatur/samsung", label: "Samsung", count: 122, hasOnlinePrices: true  },
+  { id: "xiaomi",  href: "/reparatur/xiaomi",  label: "Xiaomi",  count: 60,  hasOnlinePrices: false },
+  { id: "google",  href: "/reparatur/google",  label: "Google",  count: 24,  hasOnlinePrices: false },
+  { id: "huawei",  href: "/reparatur/huawei",  label: "Huawei",  count: 38,  hasOnlinePrices: false },
+  { id: "oneplus", href: "/reparatur/oneplus", label: "OnePlus", count: 28,  hasOnlinePrices: false },
+  { id: "sony",    href: "/reparatur/sony",    label: "Sony",    count: 18,  hasOnlinePrices: false },
+  { id: "nokia",   href: "/reparatur/nokia",   label: "Nokia",   count: 22,  hasOnlinePrices: false },
 ] as const;
 
 export function BrandGallery() {
@@ -93,11 +96,11 @@ export function BrandGallery() {
                 className={cn(
                   "block aspect-[4/5] overflow-hidden rounded-3xl",
                   "bg-gradient-to-br text-white",
-                  "ring-1 ring-black/[0.06]",
+                  "ring-1 ring-white/[0.06]",
                   "shadow-[0_1px_2px_rgba(0,0,0,0.04),0_10px_30px_-12px_rgba(0,0,0,0.15)]",
                   "transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
                   "hover:-translate-y-1",
-                  b.bg
+                  CARD_BG,
                 )}
               >
                 <div className="relative flex h-full flex-col justify-between p-7">

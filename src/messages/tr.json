@@ -5,14 +5,15 @@
     "booking": "Randevu",
     "contact": "İletişim",
     "menu": "Menü",
-    "close": "Kapat"
+    "close": "Kapat",
+    "repair": "Tamir"
   },
   "hero": {
     "eyebrow": "EL FIX MOBILE - VİYANA 1220",
     "headline_1": "iPhone'un.",
     "headline_2": "Sıfır gibi.",
     "headline_3": "30 dakikada.",
-    "subline": "Aspern Seestadt'ta ekspres tamir. Orijinal parça. 12 ay garanti.",
+    "subline": "Ekran €49'dan. Pil €39'dan. Su hasarı €69'dan. Tamir öncesi sabit fiyat.",
     "cta_primary": "Fiyat al",
     "cta_secondary": "Randevu al",
     "trust_rating": "5 üzerinden 4,4",
@@ -164,7 +165,7 @@
     "step_model_title": "Model seç",
     "step_model_sub": "Modelinin ilk harflerini yaz.",
     "step_model_search": "iPhone 15 Pro, Galaxy S24 ...",
-    "step_model_empty": "Model bulunamadı. Daha az harf yaz veya 0660 6071414'ü ara.",
+    "step_model_empty": "Model bulunamadı. Daha az harf yaz veya +43 660 6071414'ü ara.",
     "step_repair_title": "Onarım seç",
     "step_repair_sub": "Birden fazla mümkün. Toplam fiyat veririz.",
     "step_repair_none_available": "Bu model için online fiyat henüz yok. Lütfen ara.",
@@ -178,7 +179,7 @@
     "result_cta_book": "Randevu al",
     "result_cta_whatsapp": "WhatsApp ile sor",
     "result_cta_pickup": "Viyana'da alım",
-    "result_cta_call": "0660 6071414",
+    "result_cta_call": "+43 660 6071414",
     "back": "Geri",
     "next": "Devam",
     "restart": "Yeniden başla"

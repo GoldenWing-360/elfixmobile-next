@@ -16,6 +16,7 @@ import { DISTRICTS } from "@/data/districts";
 
 const STATIC_PATHS = [
   "",
+  "/reparatur",
   "/preisrechner",
   "/buchen",
   "/kontakt",

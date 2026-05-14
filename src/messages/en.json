@@ -5,14 +5,15 @@
     "booking": "Book",
     "contact": "Contact",
     "menu": "Menu",
-    "close": "Close"
+    "close": "Close",
+    "repair": "Repairs"
   },
   "hero": {
     "eyebrow": "EL FIX MOBILE - VIENNA 1220",
     "headline_1": "Your iPhone.",
     "headline_2": "Like new.",
     "headline_3": "In 30 minutes.",
-    "subline": "Express repair in Aspern Seestadt. Original parts. 12-month warranty.",
+    "subline": "Display from €49. Battery from €39. Water damage from €69. Fixed price before we open the device.",
     "cta_primary": "Get a quote",
     "cta_secondary": "Book a time",
     "trust_rating": "4.4 out of 5",
@@ -164,7 +165,7 @@
     "step_model_title": "Pick the model",
     "step_model_sub": "Start typing the first letters of your model.",
     "step_model_search": "iPhone 15 Pro, Galaxy S24 ...",
-    "step_model_empty": "No model found. Type fewer letters or call 0660 6071414.",
+    "step_model_empty": "No model found. Type fewer letters or call +43 660 6071414.",
     "step_repair_title": "Pick the repair",
     "step_repair_sub": "Multiple possible. We add up the costs.",
     "step_repair_none_available": "We don't have online prices for this model yet. Please call.",
@@ -178,7 +179,7 @@
     "result_cta_book": "Book a time",
     "result_cta_whatsapp": "Ask on WhatsApp",
     "result_cta_pickup": "Pickup in Vienna",
-    "result_cta_call": "0660 6071414",
+    "result_cta_call": "+43 660 6071414",
     "back": "Back",
     "next": "Continue",
     "restart": "Start over"

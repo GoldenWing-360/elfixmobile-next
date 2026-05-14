@@ -48,7 +48,11 @@ export function Nav() {
     setMobileOpen(false);
   }, [pathname]);
 
+  // "Reparatur" is the new entry — funnels users into the 8-brand hub
+  // (/reparatur/apple, ...) that previously was only discoverable via the
+  // home gallery or footer. Crucially also a strong SEO internal-link.
   const links = [
+    { href: "/reparatur", label: t("repair") },
     { href: "/preisrechner", label: t("pricing") },
     { href: "/buchen", label: t("booking") },
     { href: "/kontakt", label: t("contact") },

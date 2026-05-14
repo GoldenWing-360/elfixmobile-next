@@ -5,14 +5,15 @@
     "booking": "Termin",
     "contact": "Kontakt",
     "menu": "Menü",
-    "close": "Schließen"
+    "close": "Schließen",
+    "repair": "Reparatur"
   },
   "hero": {
     "eyebrow": "EL FIX MOBILE - WIEN 1220",
     "headline_1": "Dein iPhone.",
     "headline_2": "Wie neu.",
     "headline_3": "In 30 Minuten.",
-    "subline": "Express-Reparatur in Aspern Seestadt. Originalteile. 12 Monate Garantie.",
+    "subline": "Display ab €49. Akku ab €39. Wasserschaden ab €69. Festpreis vor der Reparatur.",
     "cta_primary": "Preis berechnen",
     "cta_secondary": "Termin buchen",
     "trust_rating": "4,4 von 5",
@@ -164,7 +165,7 @@
     "step_model_title": "Modell wählen",
     "step_model_sub": "Tippen Sie die ersten Buchstaben Ihres Modells.",
     "step_model_search": "iPhone 15 Pro, Galaxy S24 ...",
-    "step_model_empty": "Kein Modell gefunden. Tippen Sie weniger Buchstaben oder rufen Sie 0660 6071414 an.",
+    "step_model_empty": "Kein Modell gefunden. Tippen Sie weniger Buchstaben oder rufen Sie +43 660 6071414 an.",
     "step_repair_title": "Reparatur wählen",
     "step_repair_sub": "Mehrere möglich. Wir rechnen Schäden zusammen.",
     "step_repair_none_available": "Für dieses Modell führen wir noch keine Preise online. Bitte anrufen.",
@@ -178,7 +179,7 @@
     "result_cta_book": "Termin buchen",
     "result_cta_whatsapp": "WhatsApp anfragen",
     "result_cta_pickup": "Abholung in Wien",
-    "result_cta_call": "0660 6071414",
+    "result_cta_call": "+43 660 6071414",
     "back": "Zurück",
     "next": "Weiter",
     "restart": "Neu starten"

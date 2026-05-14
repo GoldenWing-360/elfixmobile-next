@@ -5,14 +5,15 @@
     "booking": "Запись",
     "contact": "Контакт",
     "menu": "Меню",
-    "close": "Закрыть"
+    "close": "Закрыть",
+    "repair": "Ремонт"
   },
   "hero": {
     "eyebrow": "EL FIX MOBILE - ВЕНА 1220",
     "headline_1": "Ваш iPhone.",
     "headline_2": "Как новый.",
     "headline_3": "За 30 минут.",
-    "subline": "Экспресс-ремонт в Aspern Seestadt. Оригинальные запчасти. Гарантия 12 месяцев.",
+    "subline": "Дисплей от €49. Аккумулятор от €39. Вода от €69. Фикс-цена до начала ремонта.",
     "cta_primary": "Рассчитать цену",
     "cta_secondary": "Записаться",
     "trust_rating": "4,4 из 5",
@@ -164,7 +165,7 @@
     "step_model_title": "Выберите модель",
     "step_model_sub": "Начните вводить название модели.",
     "step_model_search": "iPhone 15 Pro, Galaxy S24 ...",
-    "step_model_empty": "Модель не найдена. Введите меньше букв или позвоните 0660 6071414.",
+    "step_model_empty": "Модель не найдена. Введите меньше букв или позвоните +43 660 6071414.",
     "step_repair_title": "Выберите ремонт",
     "step_repair_sub": "Можно несколько. Складываем стоимость.",
     "step_repair_none_available": "Для этой модели ещё нет онлайн-цен. Позвоните нам.",
@@ -178,7 +179,7 @@
     "result_cta_book": "Записаться",
     "result_cta_whatsapp": "Спросить в WhatsApp",
     "result_cta_pickup": "Вызов в Вене",
-    "result_cta_call": "0660 6071414",
+    "result_cta_call": "+43 660 6071414",
     "back": "Назад",
     "next": "Далее",
     "restart": "Начать заново"
