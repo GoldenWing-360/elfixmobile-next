@@ -1,0 +1,97 @@
+/**
+ * Telegram-Bot Notifier for new leads. Pushes a formatted message to a
+ * configured chat ID the moment a customer submits /api/lead, so Natalja
+ * sees the lead within seconds rather than whenever she next checks the
+ * GMX inbox.
+ *
+ * Setup:
+ *   1. Talk to @BotFather on Telegram, /newbot, get the bot token.
+ *   2. Start the bot in a private chat (send /start). Look at
+ *      https://api.telegram.org/bot<TOKEN>/getUpdates to find the
+ *      chat.id of that conversation.
+ *   3. Set both as Worker secrets:
+ *        wrangler secret put TELEGRAM_BOT_TOKEN
+ *        wrangler secret put TELEGRAM_CHAT_ID
+ *
+ * If either secret is missing the helper is a soft no-op (logs a
+ * warning and returns ok). Telegram outage doesn't fail the lead.
+ */
+
+interface LeadNotificationArgs {
+  /** The Lead UUID — included so Natalja can click the status URL. */
+  leadId: string;
+  /** Signed HMAC token to append to the status URL, or null in dev. */
+  leadToken: string | null;
+  /** Channel: "Buchung" or "Kontakt" — shapes the message header. */
+  type: "booking" | "contact";
+  /** Plain-text summary block already formatted by /api/lead. */
+  summary: string;
+  /** Customer name shown in the header. */
+  customerName: string;
+  /** Customer phone — first thing Natalja needs. */
+  customerPhone?: string;
+  /** Customer email — fallback channel. */
+  customerEmail?: string;
+  /** Optional public site URL so the status link is clickable. */
+  siteUrl: string;
+}
+
+function escapeMarkdownV2(s: string): string {
+  // Telegram MarkdownV2 needs these escaped: _ * [ ] ( ) ~ ` > # + - = | { } . !
+  return s.replace(/([_*\[\]()~`>#+\-=|{}.!])/g, "\\$1");
+}
+
+export async function notifyTelegram(
+  args: LeadNotificationArgs,
+): Promise<{ ok: boolean; skipped?: boolean }> {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!token || !chatId) {
+    console.warn(
+      "[telegram] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set — skipping notification",
+    );
+    return { ok: true, skipped: true };
+  }
+
+  const headerEmoji = args.type === "booking" ? "🔧" : "✉️";
+  const headerLabel = args.type === "booking" ? "Neue Buchung" : "Kontakt-Anfrage";
+  const statusUrl = `${args.siteUrl}/de/status/${args.leadId}${
+    args.leadToken ? `?t=${args.leadToken}` : ""
+  }`;
+
+  const lines = [
+    `${headerEmoji} *${escapeMarkdownV2(headerLabel)}*`,
+    "",
+    `👤 ${escapeMarkdownV2(args.customerName)}`,
+    args.customerPhone
+      ? `📞 [${escapeMarkdownV2(args.customerPhone)}](tel:${args.customerPhone.replace(/[^0-9+]/g, "")})`
+      : null,
+    args.customerEmail
+      ? `📧 ${escapeMarkdownV2(args.customerEmail)}`
+      : null,
+    "",
+    `\`\`\`\n${args.summary.slice(0, 800)}\n\`\`\``,
+    "",
+    `🔗 [Status\\-Seite öffnen](${escapeMarkdownV2(statusUrl)})`,
+    `🆔 \`${escapeMarkdownV2(args.leadId.slice(0, 8))}\``,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: lines,
+      parse_mode: "MarkdownV2",
+      disable_web_page_preview: true,
+    }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    console.error("[telegram] sendMessage failed", res.status, body);
+    return { ok: false };
+  }
+  return { ok: true };
+}

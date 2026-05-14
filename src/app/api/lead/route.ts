@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { z } from "zod";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { signLeadId } from "@/lib/lead-token";
+import { notifyTelegram } from "@/lib/telegram";
 import { SITE } from "@/lib/seo";
 
 /**
@@ -403,6 +404,29 @@ export async function POST(req: NextRequest) {
     to: RECIPIENT,
     replyTo,
   });
+
+  // Telegram push — fires regardless of email outcome so Natalja sees
+  // the lead within seconds even if Resend is down. notifyTelegram is
+  // a no-op when bot secrets aren't set.
+  const tgName =
+    payload.type === "booking" ? payload.contact.name : payload.name;
+  const tgPhone =
+    payload.type === "booking" ? payload.contact.phone : payload.phone;
+  const tgEmail =
+    payload.type === "booking" ? payload.contact.email : payload.email;
+  await notifyTelegram({
+    leadId,
+    leadToken: token || null,
+    type: payload.type,
+    summary: rendered.text,
+    customerName: tgName,
+    customerPhone: tgPhone,
+    customerEmail: tgEmail,
+    siteUrl: SITE.url,
+  }).catch((err) => {
+    console.error("[api/lead] telegram notify threw", err);
+  });
+
   if (!ownerSend.ok) {
     console.error("[api/lead] owner email failed", ownerSend.status, ownerSend.body);
     return Response.json(

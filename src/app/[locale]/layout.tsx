@@ -172,6 +172,15 @@ export default async function LocaleLayout({
             __html: JSON.stringify(localBusinessJsonLd(locale)),
           }}
         />
+        {/* Cloudflare Web Analytics — cookie-free, privacy-first visitor
+          * counter. The token is a public site-tag (not a secret), so
+          * hardcoding it is fine. Dashboard:
+          * https://dash.cloudflare.com/?to=/:account/analytics/web-analytics */}
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "b7957042348e4e50a40b14611f75def2"}'
+        />
         <NextIntlClientProvider>
           <LenisProvider>
             {/* Two-layer chrome gate: server-side (via request headers)

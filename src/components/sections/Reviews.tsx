@@ -1,15 +1,48 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Star } from "lucide-react";
 
 type Review = { text: string; name: string; date: string };
 
+interface LiveReview {
+  author: string;
+  rating: number;
+  relative: string;
+  text: string;
+  time: number; // unix seconds
+}
+
+interface LiveReviewsPayload {
+  rating: number | null;
+  total: number | null;
+  reviews: LiveReview[];
+  source: "google" | "unavailable";
+}
+
 export function Reviews() {
   const t = useTranslations("reviews");
+  // Live-pulled reviews when the Google Places API is configured;
+  // otherwise the static i18n fallback below stays in place. The state
+  // flip happens once, on mount, after the API answers.
+  const [live, setLive] = useState<LiveReviewsPayload | null>(null);
 
-  const reviews: Review[] = [
+  useEffect(() => {
+    fetch("/api/reviews")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data: LiveReviewsPayload | null) => {
+        if (data?.source === "google" && data.reviews.length > 0) {
+          setLive(data);
+        }
+      })
+      .catch(() => {
+        /* swallow — fallback already in place */
+      });
+  }, []);
+
+  const staticReviews: Review[] = [
     { text: t("review_1"), name: t("review_1_name"), date: "2026-03-12" },
     { text: t("review_2"), name: t("review_2_name"), date: "2026-02-28" },
     { text: t("review_3"), name: t("review_3_name"), date: "2026-02-14" },
@@ -19,6 +52,17 @@ export function Reviews() {
     { text: t("review_7"), name: t("review_7_name"), date: "2025-12-21" },
     { text: t("review_8"), name: t("review_8_name"), date: "2025-12-08" },
   ];
+
+  const reviews: Review[] =
+    live?.reviews && live.reviews.length > 0
+      ? live.reviews.map((r) => ({
+          text: r.text,
+          name: r.author,
+          // Google returns unix seconds; convert to YYYY-MM-DD for our
+          // existing ReviewCard rendering.
+          date: new Date(r.time * 1000).toISOString().slice(0, 10),
+        }))
+      : staticReviews;
 
   const row1 = reviews.slice(0, 4);
   const row2 = reviews.slice(4);
