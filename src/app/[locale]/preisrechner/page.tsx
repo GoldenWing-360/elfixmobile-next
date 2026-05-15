@@ -3,11 +3,18 @@ import { Suspense } from "react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Calculator } from "@/components/calc/Calculator";
 
-export const metadata: Metadata = {
-  title: "Preisrechner - Festpreis in 10 Sekunden",
-  description:
-    "Sofort-Preisrechner für Handy-, iPad- und Smartwatch-Reparatur in Wien. Marke und Modell wählen, Festpreis erhalten, gratis Abholung möglich.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "preisrechner_page" });
+  return {
+    title: t("meta_title"),
+    description: t("meta_description"),
+  };
+}
 
 export default async function PreisrechnerPage({
   params,

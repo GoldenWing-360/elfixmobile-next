@@ -980,5 +980,50 @@
     "footer_question": "Frage zum Status? Ruf uns direkt an unter",
     "footer_id_note": "und nenne deine Auftrags-ID.",
     "back_home": "Zur Startseite"
+  },
+  "reparatur_hub": {
+    "meta_title": "Reparatur - alle Marken und Services | EL Fix Mobile Wien",
+    "meta_description": "Wir reparieren iPhone, Samsung, Xiaomi, Google Pixel und mehr in Wien 1220 Aspern. Festpreise, 12 Monate Garantie, Express in 30 Minuten.",
+    "eyebrow": "REPARATUR",
+    "headline": "Wir reparieren alle.",
+    "sub": "8 Marken mit Festpreisen, 219 Modelle, alle Reparatur-Arten. Wähle deine Marke unten oder direkt eine Reparatur-Art.",
+    "h2_brand": "Marke wählen",
+    "h2_service": "Direkt zur Reparatur-Art",
+    "model_count": "{count} Modelle"
+  },
+  "service_labels": {
+    "display": "Display Reparatur",
+    "battery": "Akku Tausch",
+    "data_recovery": "Datenrettung",
+    "water_damage": "Wasserschaden",
+    "unlock": "Handy entsperren",
+    "wrap": "Handy Folierung",
+    "camera": "Kamera Reparatur",
+    "tablet": "Tablet Reparatur",
+    "notebook": "Notebook Reparatur"
+  },
+  "brand_modelle": {
+    "meta_title": "Alle {brand}-Modelle | EL Fix Mobile Wien",
+    "meta_description": "Vollständige Liste aller {brand}-Modelle, die wir in Wien 1220 Aspern reparieren. Festpreise, 12 Monate Garantie, Express-Service.",
+    "eyebrow_suffix": "REPARATUR",
+    "headline": "Alle {brand}-Modelle.",
+    "sub": "{count} Modelle, alle reparierbar in Wien 1220 Aspern. Festpreis vor der Reparatur, 12 Monate Garantie, Express-Service in 30 Minuten möglich.",
+    "older_group": "Ältere Modelle",
+    "footer_missing_prefix": "Modell nicht dabei? Wir reparieren auch ältere {brand}-Geräte auf Anfrage - ",
+    "footer_missing_link": "schreib uns kurz",
+    "footer_missing_middle": " oder ",
+    "footer_missing_call": "ruf direkt an",
+    "footer_missing_suffix": ".",
+    "back_overview": "Zurück zur {brand}-Übersicht"
+  },
+  "preisrechner_page": {
+    "meta_title": "Preisrechner - Festpreis in 10 Sekunden",
+    "meta_description": "Sofort-Preisrechner für Handy-, iPad- und Smartwatch-Reparatur in Wien. Marke und Modell wählen, Festpreis erhalten, gratis Abholung möglich."
+  },
+  "local_business": {
+    "description": "Express Smartphone, Tablet und Notebook Reparatur in Wien 1220 Aspern. Original Refurbished Displays, 12 Monate Garantie, 7 Tage offen."
+  },
+  "calc_whatsapp": {
+    "prefill": "Hi! Ich brauche eine {repairs} Reparatur für mein {model}. Festpreis laut Online-Rechner: {total} €."
   }
 }

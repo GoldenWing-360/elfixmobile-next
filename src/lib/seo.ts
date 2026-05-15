@@ -43,6 +43,13 @@ export const SITE = {
   priceRange: "$$",
 } as const;
 
+const LOCAL_BUSINESS_DESCRIPTION: Record<string, string> = {
+  de: "Express Smartphone, Tablet und Notebook Reparatur in Wien 1220 Aspern. Original Refurbished Displays, 12 Monate Garantie, 7 Tage offen.",
+  en: "Express smartphone, tablet and laptop repair in Vienna 1220 Aspern. Original-refurbished displays, 12 months warranty, open 7 days.",
+  ru: "Экспресс-ремонт смартфонов, планшетов и ноутбуков в Вене 1220 Aspern. Оригинал-восстановленные дисплеи, 12 месяцев гарантии, 7 дней в неделю.",
+  tr: "Viyana 1220 Aspern'de ekspres akıllı telefon, tablet ve dizüstü tamiri. Orijinal yenilenmiş ekranlar, 12 ay garanti, 7 gün açık.",
+};
+
 export function localBusinessJsonLd(locale: string) {
   return {
     "@context": "https://schema.org",
@@ -51,7 +58,7 @@ export function localBusinessJsonLd(locale: string) {
     name: SITE.legalName,
     alternateName: SITE.name,
     description:
-      "Express Smartphone, Tablet und Notebook Reparatur in Wien 1220 Aspern. Original Refurbished Displays, 12 Monate Garantie, 7 Tage offen.",
+      LOCAL_BUSINESS_DESCRIPTION[locale] ?? LOCAL_BUSINESS_DESCRIPTION.de,
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,

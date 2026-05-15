@@ -493,6 +493,7 @@ function StepResult({
   onRestart: () => void;
 }) {
   const t = useTranslations("calc_page");
+  const tw = useTranslations("calc_whatsapp");
   const [bookHref, setBookHref] = useState("/buchen");
 
   useEffect(() => {
@@ -507,7 +508,11 @@ function StepResult({
   }, [brand.id, model.slug, selected, total]);
 
   const waMsg = encodeURIComponent(
-    `Hi! Ich brauche eine ${selected.map(labelFor).join(", ")} Reparatur für mein ${model.full_name}. Festpreis laut Online-Rechner: ${total} €.`,
+    tw("prefill", {
+      repairs: selected.map(labelFor).join(", "),
+      model: model.full_name,
+      total: String(total),
+    }),
   );
 
   return (

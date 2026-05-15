@@ -980,5 +980,50 @@
     "footer_question": "Durumla ilgili soru? Doğrudan arayın",
     "footer_id_note": "ve sipariş numaranızı söyleyin.",
     "back_home": "Ana sayfaya"
+  },
+  "reparatur_hub": {
+    "meta_title": "Tamir - tüm markalar ve hizmetler | EL Fix Mobile Viyana",
+    "meta_description": "iPhone, Samsung, Xiaomi, Google Pixel ve daha fazlasını Viyana 1220 Aspern'de tamir ediyoruz. Sabit fiyatlar, 12 ay garanti, 30 dk ekspres.",
+    "eyebrow": "TAMİR",
+    "headline": "Hepsini tamir ederiz.",
+    "sub": "Sabit fiyatlı 8 marka, 219 model, her tamir türü. Aşağıdan markanızı seçin veya doğrudan tamir türüne gidin.",
+    "h2_brand": "Marka seç",
+    "h2_service": "Doğrudan tamir türüne",
+    "model_count": "{count} model"
+  },
+  "service_labels": {
+    "display": "Ekran tamiri",
+    "battery": "Pil değişimi",
+    "data_recovery": "Veri kurtarma",
+    "water_damage": "Su hasarı",
+    "unlock": "Telefon kilit açma",
+    "wrap": "Telefon kaplama",
+    "camera": "Kamera tamiri",
+    "tablet": "Tablet tamiri",
+    "notebook": "Dizüstü tamiri"
+  },
+  "brand_modelle": {
+    "meta_title": "Tüm {brand} modelleri | EL Fix Mobile Viyana",
+    "meta_description": "Viyana 1220 Aspern'de tamir ettiğimiz tüm {brand} modellerinin tam listesi. Sabit fiyatlar, 12 ay garanti, ekspres servis.",
+    "eyebrow_suffix": "TAMİR",
+    "headline": "Tüm {brand} modelleri.",
+    "sub": "{count} model, hepsi Viyana 1220 Aspern'de tamir edilebilir. Tamirden önce sabit fiyat, 12 ay garanti, 30 dakikada ekspres.",
+    "older_group": "Daha eski modeller",
+    "footer_missing_prefix": "Modeliniz yok mu? Daha eski {brand} cihazları da talep üzerine tamir ediyoruz - ",
+    "footer_missing_link": "bize yazın",
+    "footer_missing_middle": " veya ",
+    "footer_missing_call": "doğrudan arayın",
+    "footer_missing_suffix": ".",
+    "back_overview": "{brand} özetine dön"
+  },
+  "preisrechner_page": {
+    "meta_title": "Fiyat hesaplayıcı - 10 saniyede sabit fiyat",
+    "meta_description": "Viyana'da telefon, iPad ve akıllı saat tamiri için anlık fiyat hesaplayıcı. Marka ve modeli seçin, sabit fiyat alın, ücretsiz alım mümkün."
+  },
+  "local_business": {
+    "description": "Viyana 1220 Aspern'de ekspres akıllı telefon, tablet ve dizüstü tamiri. Orijinal yenilenmiş ekranlar, 12 ay garanti, 7 gün açık."
+  },
+  "calc_whatsapp": {
+    "prefill": "Merhaba! {model} için {repairs} tamiri lazım. Online hesaplayıcı fiyatı: {total} €."
   }
 }

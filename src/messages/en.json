@@ -980,5 +980,50 @@
     "footer_question": "Question about the status? Call us directly at",
     "footer_id_note": "and mention your order ID.",
     "back_home": "Back to home"
+  },
+  "reparatur_hub": {
+    "meta_title": "Repair - all brands and services | EL Fix Mobile Vienna",
+    "meta_description": "We repair iPhone, Samsung, Xiaomi, Google Pixel and more in Vienna 1220 Aspern. Fixed prices, 12 months warranty, express in 30 minutes.",
+    "eyebrow": "REPAIR",
+    "headline": "We repair all.",
+    "sub": "8 brands with fixed prices, 219 models, every repair type. Pick your brand below or jump straight to a repair type.",
+    "h2_brand": "Pick a brand",
+    "h2_service": "Jump straight to a repair type",
+    "model_count": "{count} models"
+  },
+  "service_labels": {
+    "display": "Display repair",
+    "battery": "Battery replacement",
+    "data_recovery": "Data recovery",
+    "water_damage": "Water damage",
+    "unlock": "Phone unlocking",
+    "wrap": "Phone wrap",
+    "camera": "Camera repair",
+    "tablet": "Tablet repair",
+    "notebook": "Laptop repair"
+  },
+  "brand_modelle": {
+    "meta_title": "All {brand} models | EL Fix Mobile Vienna",
+    "meta_description": "Full list of all {brand} models we repair in Vienna 1220 Aspern. Fixed prices, 12 months warranty, express service.",
+    "eyebrow_suffix": "REPAIR",
+    "headline": "All {brand} models.",
+    "sub": "{count} models, all repairable in Vienna 1220 Aspern. Fixed price before the repair, 12 months warranty, express service in 30 minutes possible.",
+    "older_group": "Older models",
+    "footer_missing_prefix": "Model not listed? We repair older {brand} devices on request - ",
+    "footer_missing_link": "drop us a line",
+    "footer_missing_middle": " or ",
+    "footer_missing_call": "call us directly",
+    "footer_missing_suffix": ".",
+    "back_overview": "Back to {brand} overview"
+  },
+  "preisrechner_page": {
+    "meta_title": "Price calculator - fixed price in 10 seconds",
+    "meta_description": "Instant price calculator for phone, iPad and smartwatch repair in Vienna. Pick brand and model, get a fixed price, free pickup available."
+  },
+  "local_business": {
+    "description": "Express smartphone, tablet and laptop repair in Vienna 1220 Aspern. Original-refurbished displays, 12 months warranty, open 7 days."
+  },
+  "calc_whatsapp": {
+    "prefill": "Hi! I need a {repairs} repair for my {model}. Online calculator quote: {total} €."
   }
 }

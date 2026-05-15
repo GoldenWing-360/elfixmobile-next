@@ -12,9 +12,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const title = "Reparatur — alle Marken & Services | EL Fix Mobile Wien";
-  const description =
-    "Wir reparieren iPhone, Samsung, Xiaomi, Google Pixel und mehr in Wien 1220 Aspern. Festpreise, 12 Monate Garantie, Express in 30 Minuten.";
+  const t = await getTranslations({ locale, namespace: "reparatur_hub" });
+  const title = t("meta_title");
+  const description = t("meta_description");
   return {
     title,
     description,
@@ -32,18 +32,6 @@ export async function generateMetadata({
   };
 }
 
-const SERVICE_LABELS: Record<string, string> = {
-  display: "Display Reparatur",
-  battery: "Akku Tausch",
-  data_recovery: "Datenrettung",
-  water_damage: "Wasserschaden",
-  unlock: "Handy entsperren",
-  wrap: "Handy Folierung",
-  camera: "Kamera Reparatur",
-  tablet: "Tablet Reparatur",
-  notebook: "Notebook Reparatur",
-};
-
 export default async function ReparaturHubPage({
   params,
 }: {
@@ -51,21 +39,21 @@ export default async function ReparaturHubPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  await getTranslations({ locale });
+  const t = await getTranslations({ locale, namespace: "reparatur_hub" });
+  const tl = await getTranslations({ locale, namespace: "service_labels" });
 
   return (
     <>
       <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
         <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-32">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
-            REPARATUR
+            {t("eyebrow")}
           </p>
           <h1 className="mt-5 text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
-            Wir reparieren alle.
+            {t("headline")}
           </h1>
           <p className="mt-7 max-w-2xl text-[18px] leading-[1.55] text-white/70">
-            8 Marken mit Festpreisen, 219 Modelle, alle Reparatur-Arten. Wähle
-            deine Marke unten oder direkt eine Reparatur-Art.
+            {t("sub")}
           </p>
         </div>
       </section>
@@ -74,7 +62,7 @@ export default async function ReparaturHubPage({
       <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
         <div className="mx-auto max-w-5xl px-6 py-20 md:px-8 md:py-28">
           <h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
-            Marke wählen
+            {t("h2_brand")}
           </h2>
           <ul className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
             {BRANDS.map((b) => (
@@ -95,7 +83,7 @@ export default async function ReparaturHubPage({
                       {b.label}
                     </div>
                     <div className="mt-0.5 text-[12px] text-[#86868B]">
-                      {b.modelCount} Modelle
+                      {t("model_count", { count: b.modelCount })}
                     </div>
                   </div>
                 </Link>
@@ -104,7 +92,7 @@ export default async function ReparaturHubPage({
           </ul>
 
           <h2 className="mt-20 text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
-            Direkt zur Reparatur-Art
+            {t("h2_service")}
           </h2>
           <ul className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
@@ -114,7 +102,14 @@ export default async function ReparaturHubPage({
                   className="group flex items-center justify-between rounded-2xl border border-black/[0.06] bg-white px-5 py-4 transition-colors hover:bg-black/[0.02]"
                 >
                   <span className="text-[15px] font-medium">
-                    {SERVICE_LABELS[s.key] ?? s.slug}
+                    {/* tl is the per-service-label namespace; falls back to slug */}
+                    {(() => {
+                      try {
+                        return tl(s.key as "display" | "battery" | "data_recovery" | "water_damage" | "unlock" | "wrap" | "camera" | "tablet" | "notebook");
+                      } catch {
+                        return s.slug;
+                      }
+                    })()}
                   </span>
                   <ArrowRight className="h-4 w-4 text-[var(--color-accent)] transition-transform group-hover:translate-x-0.5" />
                 </Link>
