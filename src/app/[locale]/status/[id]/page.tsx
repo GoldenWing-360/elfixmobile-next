@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { Link } from "@/i18n/navigation";
 import { Check, Clock, Wrench, PackageCheck } from "lucide-react";
@@ -41,22 +41,32 @@ async function fetchLead(id: string): Promise<StoredLead | null> {
   }
 }
 
-export const metadata: Metadata = {
-  title: "Reparatur-Status",
-  description: "Status deiner Reparatur bei EL Fix Mobile.",
-  robots: { index: false, follow: false }, // contains personal data
-};
-
-const STEPS: { key: Status; label: string; icon: typeof Check }[] = [
-  { key: "received", label: "Eingegangen", icon: Check },
-  { key: "confirmed", label: "Bestätigt", icon: Clock },
-  { key: "in_progress", label: "In Reparatur", icon: Wrench },
-  { key: "done", label: "Fertig zur Abholung", icon: PackageCheck },
-];
-
-function statusIndex(s: Status): number {
-  return STEPS.findIndex((step) => step.key === s);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "status_page" });
+  return {
+    title: t("meta_title"),
+    description: t("meta_description"),
+    robots: { index: false, follow: false }, // contains personal data
+  };
 }
+
+function statusIndex(s: Status, keys: readonly Status[]): number {
+  return keys.findIndex((k) => k === s);
+}
+
+// Map locale → BCP-47 for date formatting; falls back to en-GB to avoid
+// US m/d/y on unknown locales.
+const DATE_LOCALES: Record<string, string> = {
+  de: "de-AT",
+  en: "en-GB",
+  ru: "ru-RU",
+  tr: "tr-TR",
+};
 
 export default async function StatusPage({
   params,
@@ -68,6 +78,7 @@ export default async function StatusPage({
   const { locale, id } = await params;
   const { t: token } = await searchParams;
   setRequestLocale(locale);
+  const t = await getTranslations("status_page");
 
   // HMAC gate: in production STATUS_TOKEN_SECRET is set, so a valid token
   // is required. Locally (no secret), we fall back to the previous
@@ -78,7 +89,21 @@ export default async function StatusPage({
   const lead = await fetchLead(id);
   if (!lead) notFound();
 
-  const current = statusIndex(lead.status);
+  const stepKeys: Status[] = ["received", "confirmed", "in_progress", "done"];
+  const stepIcons: Record<Status, typeof Check> = {
+    received: Check,
+    confirmed: Clock,
+    in_progress: Wrench,
+    done: PackageCheck,
+  };
+  const stepLabels: Record<Status, string> = {
+    received: t("step_received"),
+    confirmed: t("step_confirmed"),
+    in_progress: t("step_in_progress"),
+    done: t("step_done"),
+  };
+
+  const current = statusIndex(lead.status, stepKeys);
   const created = new Date(lead.ts);
 
   // Extract user-facing fields without leaking the raw IP / honeypot etc.
@@ -87,38 +112,44 @@ export default async function StatusPage({
   if (lead.payload.type === "booking") {
     customerName = lead.payload.contact.name;
     summaryLines = [
-      `Gerät: ${lead.payload.device}`,
-      `Service: ${lead.payload.service}`,
-      lead.payload.total != null ? `Geschätzter Preis: € ${lead.payload.total}` : "",
+      `${t("summary_device")}: ${lead.payload.device}`,
+      `${t("summary_service")}: ${lead.payload.service}`,
+      lead.payload.total != null
+        ? `${t("summary_price")}: € ${lead.payload.total}`
+        : "",
     ].filter(Boolean);
   } else {
     customerName = lead.payload.name;
-    summaryLines = [`Nachricht: ${lead.payload.message.slice(0, 120)}${lead.payload.message.length > 120 ? "…" : ""}`];
+    summaryLines = [
+      `${t("summary_message")}: ${lead.payload.message.slice(0, 120)}${lead.payload.message.length > 120 ? "…" : ""}`,
+    ];
   }
+
+  const dateLocale = DATE_LOCALES[locale] ?? "en-GB";
 
   return (
     <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
       <div className="mx-auto max-w-3xl px-6 py-24 md:px-8 md:py-32">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
-          Reparatur-Status
+          {t("eyebrow")}
         </p>
         <h1 className="mt-4 text-[clamp(2rem,5vw,3.5rem)] font-semibold leading-[1.06] tracking-[-0.025em]">
-          Hallo {customerName}.
+          {t("hello", { name: customerName })}
         </h1>
         <p className="mt-5 text-[16px] text-[#525257]">
-          Eingang: {created.toLocaleString("de-AT")}
+          {t("received_at")}: {created.toLocaleString(dateLocale)}
           <br />
-          Auftrags-ID: <span className="font-mono">{lead.id.slice(0, 8)}…</span>
+          {t("order_id")}: <span className="font-mono">{lead.id.slice(0, 8)}…</span>
         </p>
 
         <ol className="mt-12 grid gap-3">
-          {STEPS.map((step, i) => {
+          {stepKeys.map((stepKey, i) => {
             const done = i < current;
             const active = i === current;
-            const Icon = step.icon;
+            const Icon = stepIcons[stepKey];
             return (
               <li
-                key={step.key}
+                key={stepKey}
                 className={cn(
                   "flex items-center gap-4 rounded-2xl border px-5 py-4",
                   done && "border-[var(--color-success)]/30 bg-[var(--color-success)]/[0.05]",
@@ -138,14 +169,14 @@ export default async function StatusPage({
                 </span>
                 <div>
                   <div className="text-[15px] font-medium tracking-[-0.005em]">
-                    {step.label}
+                    {stepLabels[stepKey]}
                   </div>
                   <div className="text-[12.5px] text-[#86868B]">
                     {done
-                      ? "Erledigt"
+                      ? t("step_state_done")
                       : active
-                        ? "Aktuell"
-                        : "Folgt"}
+                        ? t("step_state_current")
+                        : t("step_state_upcoming")}
                   </div>
                 </div>
               </li>
@@ -155,7 +186,7 @@ export default async function StatusPage({
 
         <div className="mt-12 rounded-2xl bg-white p-6 ring-1 ring-black/[0.04]">
           <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#86868B]">
-            Deine Anfrage
+            {t("summary_label")}
           </div>
           <ul className="mt-3 space-y-1 text-[14.5px] text-[#1d1d1f]">
             {summaryLines.map((l, i) => (
@@ -165,16 +196,16 @@ export default async function StatusPage({
         </div>
 
         <p className="mt-12 text-[13px] text-[#525257]">
-          Frage zum Status? Ruf uns direkt an unter{" "}
+          {t("footer_question")}{" "}
           <a href="tel:+436606071414" className="text-[var(--color-accent)] hover:underline">
             +43 660 6071414
           </a>{" "}
-          und nenne deine Auftrags-ID.
+          {t("footer_id_note")}
         </p>
 
         <p className="mt-3 text-[12px] text-[#86868B]">
           <Link href="/" className="hover:underline">
-            ← Zur Startseite
+            ← {t("back_home")}
           </Link>
         </p>
       </div>

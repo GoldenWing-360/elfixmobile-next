@@ -363,6 +363,7 @@ function StepRepair({
   onNext: () => void;
 }) {
   const t = useTranslations("calc_page");
+  const td = useTranslations("calc");
   return (
     <div className="p-6 md:p-12">
       <button
@@ -430,10 +431,10 @@ function StepRepair({
                       {(() => {
                         const b = repairDurationBucket(r.slug);
                         return b === "express"
-                          ? "Express ab 30 Min"
+                          ? td("duration_express")
                           : b === "complex"
-                            ? "1-3 Tage"
-                            : "1-2 Stunden";
+                            ? td("duration_complex")
+                            : td("duration_standard");
                       })()}
                     </div>
                   </div>

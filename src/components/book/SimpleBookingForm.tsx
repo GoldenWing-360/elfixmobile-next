@@ -1,13 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useSearchParams } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import { Check, Store, Truck, Mail, Clock } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { Link } from "@/i18n/navigation";
 import { repairLabel } from "@/data/repair-labels";
 
 /**
@@ -21,7 +23,7 @@ import { repairLabel } from "@/data/repair-labels";
  *   - Device + damage description
  *   - Service preference (walk-in / pickup / mail)
  *
- * Email + Wunschtermin are optional. URL parameters from the calculator
+ * Email + preferred-time are optional. URL parameters from the calculator
  * (?model=, ?repairs=, ?total=, ?service=) pre-fill the form so the
  * "from calculator" handoff still works. Photo upload is deferred until
  * an R2 bucket is bound; the description textarea takes its place.
@@ -45,28 +47,15 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-const SERVICE_OPTIONS: { value: Service; icon: typeof Store; label: string; sub: string }[] = [
-  {
-    value: "walkin",
-    icon: Store,
-    label: "Vorbeikommen",
-    sub: "Maria-Tusch-Strasse 17/1, Mo–Sa 9–19",
-  },
-  {
-    value: "pickup",
-    icon: Truck,
-    label: "Wir holen ab",
-    sub: "Gratis in Wien ab €70 Reparaturwert",
-  },
-  {
-    value: "send",
-    icon: Mail,
-    label: "Per Post schicken",
-    sub: "Versicherter Versand, österreichweit",
-  },
-];
+const SERVICE_ICONS: Record<Service, typeof Store> = {
+  walkin: Store,
+  pickup: Truck,
+  send: Mail,
+};
 
 export function SimpleBookingForm() {
+  const t = useTranslations("booking_form");
+  const locale = useLocale() as "de" | "en" | "ru" | "tr";
   const params = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
   const [leadId, setLeadId] = useState<string | null>(null);
@@ -78,21 +67,27 @@ export function SimpleBookingForm() {
     params.get("model") || params.get("device") || "";
   // Map calc-slugs like "display,battery" to a sentence the customer
   // can read and edit, instead of dumping the raw slug into the field.
-  // "display" -> "Display Komplett defekt" reads like a starter for
-  // the actual description.
-  const presetDamage = (() => {
+  // "display" -> "Display Komplett defekt - " (locale-aware) reads like
+  // a starter for the actual description.
+  const presetDamage = useMemo(() => {
     const raw = params.get("repairs");
     if (!raw) return "";
     const labels = raw
       .split(",")
       .map((s) => s.trim())
       .filter(Boolean)
-      .map((slug) => repairLabel(slug, "de"));
+      .map((slug) => repairLabel(slug, locale));
     if (labels.length === 0) return "";
-    return labels.join(", ") + " defekt - ";
-  })();
+    return labels.join(", ") + " - ";
+  }, [params, locale]);
   const presetService =
     (params.get("service") as Service | null) || "walkin";
+
+  const serviceOptions: { value: Service; label: string; sub: string }[] = [
+    { value: "walkin", label: t("service_walkin_label"), sub: t("service_walkin_sub") },
+    { value: "pickup", label: t("service_pickup_label"), sub: t("service_pickup_sub") },
+    { value: "send", label: t("service_send_label"), sub: t("service_send_sub") },
+  ];
 
   const {
     register,
@@ -142,9 +137,7 @@ export function SimpleBookingForm() {
       }),
     });
     if (!res.ok) {
-      setSubmitError(
-        "Senden hat nicht geklappt. Bitte direkt anrufen: +43 660 6071414",
-      );
+      setSubmitError(t("err_send_failed"));
       return;
     }
     const body = (await res.json().catch(() => ({}))) as {
@@ -169,27 +162,26 @@ export function SimpleBookingForm() {
             <Check className="h-7 w-7" strokeWidth={2.5} />
           </motion.div>
           <h1 className="mt-8 text-[clamp(2rem,5vw,3.5rem)] font-semibold leading-[1.04] tracking-[-0.025em]">
-            Anfrage eingegangen.
+            {t("success_h1")}
           </h1>
           <p className="mx-auto mt-5 max-w-md text-[16.5px] leading-[1.55] text-[#525257]">
-            Wir melden uns innerhalb 30 Minuten zurück mit Bestätigung und
-            Festpreis. Falls dringend: ruf direkt an.
+            {t("success_sub")}
           </p>
 
           {leadId && (
             <div className="mx-auto mt-10 max-w-md rounded-2xl border border-black/[0.06] bg-white p-5">
               <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#86868B]">
-                Auftrags-ID
+                {t("success_order_id_label")}
               </div>
               <div className="mt-1 font-mono text-[13px] text-[#1d1d1f]">
                 {leadId.slice(0, 8)}…
               </div>
-              <a
-                href={`/de/status/${leadId}${leadToken ? `?t=${leadToken}` : ""}`}
+              <Link
+                href={`/status/${leadId}${leadToken ? `?t=${leadToken}` : ""}`}
                 className="mt-3 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[var(--color-accent)] hover:underline"
               >
-                Status live verfolgen →
-              </a>
+                {t("success_status_link")} →
+              </Link>
             </div>
           )}
 
@@ -200,12 +192,12 @@ export function SimpleBookingForm() {
             >
               +43 660 6071414
             </a>
-            <a
-              href="/de"
+            <Link
+              href="/"
               className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white px-6 py-3 text-[14.5px] font-medium text-[#1d1d1f] transition-colors hover:bg-black/[0.04]"
             >
-              Zur Startseite
-            </a>
+              {t("success_back_home")}
+            </Link>
           </div>
         </div>
       </section>
@@ -216,10 +208,10 @@ export function SimpleBookingForm() {
     <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
       <div className="mx-auto max-w-3xl px-6 py-12 md:px-8 md:py-16">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-7">
-          {/* Honeypot — hidden from humans, populated only by naive bots. */}
+          {/* Honeypot - hidden from humans, populated only by naive bots. */}
           <div className="hidden" aria-hidden="true">
             <label>
-              Leave this empty
+              {t("honeypot_label")}
               <input
                 type="text"
                 name="_hp"
@@ -235,11 +227,11 @@ export function SimpleBookingForm() {
            * start; user can switch with one tap. */}
           <fieldset>
             <legend className="text-[12px] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">
-              Wie kommt das Gerät zu uns?
+              {t("service_legend")}
             </legend>
             <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-              {SERVICE_OPTIONS.map((opt) => {
-                const Icon = opt.icon;
+              {serviceOptions.map((opt) => {
+                const Icon = SERVICE_ICONS[opt.value];
                 const active = service === opt.value;
                 return (
                   <label
@@ -276,28 +268,25 @@ export function SimpleBookingForm() {
             </div>
           </fieldset>
 
-          {/* Device + damage in one block — these are the two questions
-            * that actually matter for a quote. */}
-          <Field label="Gerät" error={errors.device && "Mindestens 2 Zeichen"}>
+          <Field label={t("field_device")} error={errors.device && t("err_min_2")}>
             <input
               {...register("device")}
-              placeholder="z.B. iPhone 14 Pro, Samsung S23, MacBook Air"
+              placeholder={t("field_device_ph")}
               className={inputCls}
               autoComplete="off"
             />
           </Field>
 
-          <Field label="Was ist passiert?" error={errors.damage && "Mindestens 5 Zeichen"}>
+          <Field label={t("field_damage")} error={errors.damage && t("err_min_5")}>
             <textarea
               {...register("damage")}
               rows={4}
-              placeholder="Kurze Beschreibung: Display gesprungen, Akku schwach, Wasserschaden …"
+              placeholder={t("field_damage_ph")}
               className={cn(inputCls, "resize-none")}
             />
           </Field>
 
-          {/* Optional Wunschtermin */}
-          <Field label="Wunschtermin (optional)">
+          <Field label={t("field_date")}>
             <div className="flex items-center gap-2 rounded-2xl border border-black/[0.1] bg-white px-4 py-3">
               <Clock className="h-4 w-4 text-[#86868B]" />
               <input
@@ -308,34 +297,31 @@ export function SimpleBookingForm() {
             </div>
           </Field>
 
-          {/* Contact details — name + phone required. Email optional;
-            * we send a confirmation if provided but the call back happens
-            * via phone in 30 min regardless. */}
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <Field label="Dein Name" error={errors.name && "Pflichtfeld"}>
+            <Field label={t("field_name")} error={errors.name && t("err_required")}>
               <input
                 {...register("name")}
                 className={inputCls}
                 autoComplete="name"
               />
             </Field>
-            <Field label="Telefon" error={errors.phone && "Pflichtfeld"}>
+            <Field label={t("field_phone")} error={errors.phone && t("err_required")}>
               <input
                 {...register("phone")}
                 className={inputCls}
                 autoComplete="tel"
-                placeholder="+43 …"
+                placeholder={t("field_phone_ph")}
               />
             </Field>
           </div>
 
-          <Field label="E-Mail (optional)" error={errors.email && "Ungültige E-Mail"}>
+          <Field label={t("field_email")} error={errors.email && t("err_email_invalid")}>
             <input
               type="email"
               {...register("email")}
               className={inputCls}
               autoComplete="email"
-              placeholder="für die Bestätigungs-Mail"
+              placeholder={t("field_email_ph")}
             />
           </Field>
 
@@ -349,25 +335,22 @@ export function SimpleBookingForm() {
               className="mt-0.5 h-4 w-4 rounded border-black/30"
             />
             <span>
-              Ich akzeptiere die{" "}
-              <a
-                href="/de/agb"
+              {t("agb_prefix")}
+              <Link href="/agb" className="underline hover:text-[var(--color-accent)]">
+                {t("agb_link_agb")}
+              </Link>
+              {t("agb_and")}
+              <Link
+                href="/datenschutz"
                 className="underline hover:text-[var(--color-accent)]"
               >
-                AGB
-              </a>{" "}
-              und die{" "}
-              <a
-                href="/de/datenschutz"
-                className="underline hover:text-[var(--color-accent)]"
-              >
-                Datenschutzerklärung
-              </a>
-              .
+                {t("agb_link_dsgvo")}
+              </Link>
+              {t("agb_suffix")}
             </span>
           </label>
           {errors.agb && (
-            <p className="text-[12.5px] text-red-600">Bitte AGB bestätigen.</p>
+            <p className="text-[12.5px] text-red-600">{t("err_agb_required")}</p>
           )}
 
           {submitError && (
@@ -392,11 +375,11 @@ export function SimpleBookingForm() {
                 className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-current border-r-transparent"
               />
             )}
-            Reparatur anfragen
+            {t("submit")}
           </button>
 
           <p className="text-center text-[13px] text-[#86868B]">
-            Wir melden uns innerhalb 30 Minuten mit Bestätigung und Festpreis.
+            {t("footer_note")}
           </p>
         </form>
       </div>
