@@ -257,7 +257,7 @@ function StepBrand({ brands, onPick }: { brands: Brand[]; onPick: (id: string) =
               <div className="mt-1 text-[18px] font-semibold tracking-[-0.005em]">{b.label}</div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-[12px] text-[#6e6e73]">{b.models.length} Modelle</span>
+              <span className="text-[12px] text-[#6e6e73]">{t("brand_model_count", { count: b.models.length })}</span>
               <span className="text-[var(--color-accent)] transition-transform duration-300 group-hover:translate-x-0.5">→</span>
             </div>
           </button>

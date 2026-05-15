@@ -185,7 +185,8 @@
     "result_cta_call": "+43 660 6071414",
     "back": "Назад",
     "next": "Далее",
-    "restart": "Начать заново"
+    "restart": "Начать заново",
+    "brand_model_count": "{count} моделей"
   },
   "book": {
     "eyebrow": "ЗАПИСЬ",
@@ -982,7 +983,7 @@
     "back_home": "На главную"
   },
   "reparatur_hub": {
-    "meta_title": "Ремонт - все бренды и услуги | EL Fix Mobile Вена",
+    "meta_title": "Ремонт - все бренды и услуги",
     "meta_description": "Мы ремонтируем iPhone, Samsung, Xiaomi, Google Pixel и другие в Вене 1220 Aspern. Фиксированные цены, 12 месяцев гарантии, экспресс за 30 минут.",
     "eyebrow": "РЕМОНТ",
     "headline": "Чиним всё.",
@@ -1003,7 +1004,7 @@
     "notebook": "Ремонт ноутбука"
   },
   "brand_modelle": {
-    "meta_title": "Все модели {brand} | EL Fix Mobile Вена",
+    "meta_title": "Все модели {brand}",
     "meta_description": "Полный список моделей {brand}, которые мы ремонтируем в Вене 1220 Aspern. Фиксированные цены, 12 месяцев гарантии, экспресс-сервис.",
     "eyebrow_suffix": "РЕМОНТ",
     "headline": "Все модели {brand}.",

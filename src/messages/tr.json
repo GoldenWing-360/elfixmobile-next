@@ -185,7 +185,8 @@
     "result_cta_call": "+43 660 6071414",
     "back": "Geri",
     "next": "Devam",
-    "restart": "Yeniden başla"
+    "restart": "Yeniden başla",
+    "brand_model_count": "{count} model"
   },
   "book": {
     "eyebrow": "RANDEVU",
@@ -982,7 +983,7 @@
     "back_home": "Ana sayfaya"
   },
   "reparatur_hub": {
-    "meta_title": "Tamir - tüm markalar ve hizmetler | EL Fix Mobile Viyana",
+    "meta_title": "Tamir - tüm markalar ve hizmetler",
     "meta_description": "iPhone, Samsung, Xiaomi, Google Pixel ve daha fazlasını Viyana 1220 Aspern'de tamir ediyoruz. Sabit fiyatlar, 12 ay garanti, 30 dk ekspres.",
     "eyebrow": "TAMİR",
     "headline": "Hepsini tamir ederiz.",
@@ -1003,7 +1004,7 @@
     "notebook": "Dizüstü tamiri"
   },
   "brand_modelle": {
-    "meta_title": "Tüm {brand} modelleri | EL Fix Mobile Viyana",
+    "meta_title": "Tüm {brand} modelleri",
     "meta_description": "Viyana 1220 Aspern'de tamir ettiğimiz tüm {brand} modellerinin tam listesi. Sabit fiyatlar, 12 ay garanti, ekspres servis.",
     "eyebrow_suffix": "TAMİR",
     "headline": "Tüm {brand} modelleri.",

@@ -185,7 +185,8 @@
     "result_cta_call": "+43 660 6071414",
     "back": "Zurück",
     "next": "Weiter",
-    "restart": "Neu starten"
+    "restart": "Neu starten",
+    "brand_model_count": "{count} Modelle"
   },
   "book": {
     "eyebrow": "TERMIN BUCHEN",
@@ -982,7 +983,7 @@
     "back_home": "Zur Startseite"
   },
   "reparatur_hub": {
-    "meta_title": "Reparatur - alle Marken und Services | EL Fix Mobile Wien",
+    "meta_title": "Reparatur - alle Marken und Services",
     "meta_description": "Wir reparieren iPhone, Samsung, Xiaomi, Google Pixel und mehr in Wien 1220 Aspern. Festpreise, 12 Monate Garantie, Express in 30 Minuten.",
     "eyebrow": "REPARATUR",
     "headline": "Wir reparieren alle.",
@@ -1003,7 +1004,7 @@
     "notebook": "Notebook Reparatur"
   },
   "brand_modelle": {
-    "meta_title": "Alle {brand}-Modelle | EL Fix Mobile Wien",
+    "meta_title": "Alle {brand}-Modelle",
     "meta_description": "Vollständige Liste aller {brand}-Modelle, die wir in Wien 1220 Aspern reparieren. Festpreise, 12 Monate Garantie, Express-Service.",
     "eyebrow_suffix": "REPARATUR",
     "headline": "Alle {brand}-Modelle.",

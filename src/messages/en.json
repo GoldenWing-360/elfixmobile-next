@@ -185,7 +185,8 @@
     "result_cta_call": "+43 660 6071414",
     "back": "Back",
     "next": "Continue",
-    "restart": "Start over"
+    "restart": "Start over",
+    "brand_model_count": "{count} models"
   },
   "book": {
     "eyebrow": "BOOK A TIME",
@@ -982,7 +983,7 @@
     "back_home": "Back to home"
   },
   "reparatur_hub": {
-    "meta_title": "Repair - all brands and services | EL Fix Mobile Vienna",
+    "meta_title": "Repair - all brands and services",
     "meta_description": "We repair iPhone, Samsung, Xiaomi, Google Pixel and more in Vienna 1220 Aspern. Fixed prices, 12 months warranty, express in 30 minutes.",
     "eyebrow": "REPAIR",
     "headline": "We repair all.",
@@ -1003,7 +1004,7 @@
     "notebook": "Laptop repair"
   },
   "brand_modelle": {
-    "meta_title": "All {brand} models | EL Fix Mobile Vienna",
+    "meta_title": "All {brand} models",
     "meta_description": "Full list of all {brand} models we repair in Vienna 1220 Aspern. Fixed prices, 12 months warranty, express service.",
     "eyebrow_suffix": "REPAIR",
     "headline": "All {brand} models.",
