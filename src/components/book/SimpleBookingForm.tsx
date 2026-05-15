@@ -8,6 +8,7 @@ import { z } from "zod";
 import { useSearchParams } from "next/navigation";
 import { Check, Store, Truck, Mail, Clock } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { repairLabel } from "@/data/repair-labels";
 
 /**
  * Replaces the previous 6-step BookingFlow (service-picker -> device ->
@@ -75,9 +76,21 @@ export function SimpleBookingForm() {
 
   const presetDevice =
     params.get("model") || params.get("device") || "";
-  const presetDamage = params.get("repairs")
-    ? params.get("repairs")!.split(",").join(", ")
-    : "";
+  // Map calc-slugs like "display,battery" to a sentence the customer
+  // can read and edit, instead of dumping the raw slug into the field.
+  // "display" -> "Display Komplett defekt" reads like a starter for
+  // the actual description.
+  const presetDamage = (() => {
+    const raw = params.get("repairs");
+    if (!raw) return "";
+    const labels = raw
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean)
+      .map((slug) => repairLabel(slug, "de"));
+    if (labels.length === 0) return "";
+    return labels.join(", ") + " defekt - ";
+  })();
   const presetService =
     (params.get("service") as Service | null) || "walkin";
 
@@ -119,6 +132,7 @@ export function SimpleBookingForm() {
         device: data.device,
         damage: data.damage,
         date: data.date || "",
+        agb: data.agb,
         contact: {
           name: data.name,
           email: data.email || "no-email-provided@example.com",
@@ -330,6 +344,7 @@ export function SimpleBookingForm() {
           <label className="flex items-start gap-3 text-[13.5px] leading-[1.5] text-[#525257]">
             <input
               type="checkbox"
+              required
               {...register("agb")}
               className="mt-0.5 h-4 w-4 rounded border-black/30"
             />

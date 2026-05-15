@@ -327,7 +327,7 @@
       }
     },
     "meta": {
-      "title": "{brand} Tamiri Viyana | Ekspres 30 dk | EL Fix Mobile",
+      "title": "{brand} Tamiri Viyana | Ekspres 30 dk",
       "description": "Viyana 1220 Aspern'da {brand} ekspres tamiri. {count}+ model, 12 ay garanti, orijinal veya premium yenilenmiş parça. 4,4/5 (294 yorum)."
     }
   },
@@ -386,7 +386,7 @@
         "q": "Cihazı alıyor musunuz?",
         "a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım ve teslim. Aksi takdirde Maria-Tusch-Strasse 17/1, 1220 Viyana veya posta ile."
       },
-      "meta_title": "Ekran Tamiri Viyana | 30 dk Ekspres | EL Fix Mobile",
+      "meta_title": "Ekran Tamiri Viyana | 30 dk Ekspres",
       "meta_description": "Viyana 1220'da ekran değişimi: iPhone, Samsung, Xiaomi ve daha fazlası. 30 €'dan başlayan sabit fiyat, 30 dakikada hazır, 12 ay garanti."
     },
     "battery": {
@@ -428,7 +428,7 @@
         "q": "Su geçirmezliği yeniliyor musunuz?",
         "a": "Evet – su geçirmez modellerde yeni conta fiyata dahildir. Değişimden sonra su geçirmezlik testi yapıyoruz."
       },
-      "meta_title": "Pil Değişimi Viyana | 30 dk | EL Fix Mobile",
+      "meta_title": "Pil Değişimi Viyana | 30 dk",
       "meta_description": "Viyana 1220 Aspern pil değişimi: iPhone, Samsung, Xiaomi, tüm modeller. 20 €'dan sabit fiyat, 30 dk ekspres, 12 ay garanti. Walk-in veya ücretsiz alım."
     },
     "data_recovery": {
@@ -470,7 +470,7 @@
         "q": "Cihazı alıyor musunuz?",
         "a": "Evet, ama veri kurtarma için walk-in veya sigortalı posta öneriyoruz. Su hasarından sonra her saat önemli."
       },
-      "meta_title": "Veri Kurtarma Viyana | iPhone Samsung | EL Fix Mobile",
+      "meta_title": "Veri Kurtarma Viyana | iPhone Samsung",
       "meta_description": "Telefon veri kurtarma Viyana 1220: su, düşme, yazılım çöküşü sonrası. Ücretsiz teşhis, önceden başarı oranı, bulut yok. GDPR, walk-in veya posta."
     },
     "water_damage": {
@@ -512,7 +512,7 @@
         "q": "Telefonum ıslak – test için açayım mı?",
         "a": "Lütfen hayır. Açmak ana kartı bitirebilir. Mümkünse pil bağlantısını kes ve hemen bize getir."
       },
-      "meta_title": "Su Hasarı Telefon Viyana | Aynı Gün | EL Fix Mobile",
+      "meta_title": "Su Hasarı Telefon Viyana | Aynı Gün",
       "meta_description": "Su hasarlı telefon Viyana 1220: iPhone, Samsung, tüm markalar. Ultrason temizlik, parça değişimi, %60–80 başarı. Aspern Seestadt, acil walk-in."
     },
     "unlock": {
@@ -554,7 +554,7 @@
         "q": "Çalıntı cihazları açıyor musunuz?",
         "a": "Hayır – sahiplik belgesi olmadan çalıntı veya iCloud kilidi açmıyoruz. Hırsızlık malı, yapmıyoruz."
       },
-      "meta_title": "Telefon Kilit Açma Viyana | SIM-Lock IMEI | EL Fix Mobile",
+      "meta_title": "Telefon Kilit Açma Viyana | SIM-Lock IMEI",
       "meta_description": "Telefon kilit açma Viyana 1220: SIM-lock, operatör kilidi, Mi hesabı. IMEI servisi üzerinden yasal, sahiplik kanıtı zorunlu. Aspern Seestadt, 1–14 gün."
     },
     "wrap": {
@@ -596,7 +596,7 @@
         "q": "Kendi tasarımımı getirebilir miyim?",
         "a": "Evet – en az 300 DPI logo/foto gönder. Baskı ve kesim için 2 gün. Fiyat karmaşıklığa bağlı."
       },
-      "meta_title": "Telefon Kaplama Viyana | Skin Vinil | EL Fix Mobile",
+      "meta_title": "Telefon Kaplama Viyana | Skin Vinil",
       "meta_description": "Premium telefon kaplama Viyana 1220: iPhone, Samsung, iPad. 3M vinil, 40+ tasarım, custom baskı. 30 dk'da kabarcıksız, iz bırakmadan çıkar."
     },
     "camera": {
@@ -638,7 +638,7 @@
         "q": "Cihazı alıyor musunuz?",
         "a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım ve teslim. Aksi takdirde walk-in veya sigortalı posta."
       },
-      "meta_title": "Telefon Kamera Tamiri Viyana | 60 dk | EL Fix Mobile",
+      "meta_title": "Telefon Kamera Tamiri Viyana | 60 dk",
       "meta_description": "Telefon kamera değişimi Viyana 1220 Aspern: iPhone, Samsung, Xiaomi ve daha fazlası. Ön + arka + lens camı. 30 €'dan sabit fiyat, 12 ay garanti."
     },
     "tablet": {
@@ -680,7 +680,7 @@
         "q": "Tableti alıyor musunuz?",
         "a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım. Tabletler büyük — uygun paketleme yanımızda."
       },
-      "meta_title": "Tablet Tamiri Viyana | iPad Galaxy Tab | EL Fix Mobile",
+      "meta_title": "Tablet Tamiri Viyana | iPad Galaxy Tab",
       "meta_description": "Tablet tamiri Viyana 1220: iPad, Samsung Galaxy Tab, Huawei. Ekran, pil, şarj soketi. 70 €'dan sabit fiyat, 12 ay garanti."
     },
     "notebook": {
@@ -722,7 +722,7 @@
         "q": "Dizüstüyü alıyor musunuz?",
         "a": "€ 100'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım. Antistatik paketleme yanımızda."
       },
-      "meta_title": "Dizüstü Tamiri Viyana | MacBook + Windows | EL Fix Mobile",
+      "meta_title": "Dizüstü Tamiri Viyana | MacBook + Windows",
       "meta_description": "Dizüstü + laptop tamiri Viyana 1220 Aspern: MacBook, Lenovo, Dell, HP. Ekran, pil, klavye, ana kart, veri kurtarma. Ücretsiz teşhis, 12 ay garanti."
     }
   },
@@ -766,7 +766,7 @@
       "q": "{model}'i alıyor musunuz?",
       "a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım ve teslim. Aksi takdirde walk-in (Maria-Tusch-Strasse 17/1, 1220 Viyana) veya sigortalı posta."
     },
-    "meta_title": "{model} Tamiri Viyana | Sabit fiyat 30 dk | EL Fix Mobile",
+    "meta_title": "{model} Tamiri Viyana | Sabit fiyat 30 dk",
     "meta_description": "Viyana 1220 Aspern'da {model} tamiri: ekran, pil, şarj soketi ve daha fazlası. Peşin sabit fiyat, 12 ay garanti, 30 dk ekspres."
   },
   "geo_page": {
@@ -785,7 +785,7 @@
       "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Viyana",
       "card_pickup_title": "Alırız",
       "card_pickup_sub": "Her siparişte Seestadt'ta ücretsiz alım",
-      "meta_title": "Telefon Tamiri Aspern Seestadt Viyana | EL Fix Mobile",
+      "meta_title": "Telefon Tamiri Aspern Seestadt Viyana",
       "meta_description": "Aspern Seestadt 1220'da telefon tamiri: U2 Aspern Nord'dan 3 dk. Ekran, pil, su hasarı. Sabit fiyat, 12 ay garanti, ücretsiz alım."
     },
     "donaustadt": {
@@ -803,7 +803,7 @@
       "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Viyana Donaustadt",
       "card_pickup_title": "Alırız",
       "card_pickup_sub": "Tüm Donaustadt'ta ücretsiz — Stadlau, Kagran, Hirschstetten, Essling",
-      "meta_title": "Telefon Tamiri Donaustadt | 22. Bölge Viyana | EL Fix Mobile",
+      "meta_title": "Telefon Tamiri Donaustadt | 22. Bölge Viyana",
       "meta_description": "Donaustadt 1220 Viyana telefon tamiri: Stadlau, Kagran, Hirschstetten, Essling. Ücretsiz alım, sabit fiyat, 12 ay garanti."
     },
     "floridsdorf": {
@@ -821,7 +821,7 @@
       "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Viyana Aspern",
       "card_pickup_title": "Alırız",
       "card_pickup_sub": "Floridsdorf'ta ücretsiz — Strebersdorf, Stammersdorf, Leopoldau",
-      "meta_title": "Telefon Tamiri Floridsdorf | 21. Bölge | EL Fix Mobile",
+      "meta_title": "Telefon Tamiri Floridsdorf | 21. Bölge",
       "meta_description": "Floridsdorf 1210 Viyana telefon tamiri: ücretsiz alım, sabit fiyat, 12 ay garanti. Strebersdorf, Stammersdorf, Großjedlersdorf, Leopoldau."
     },
     "gaenserndorf": {
@@ -839,7 +839,7 @@
       "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Viyana (Marchfeld'den S1)",
       "card_pickup_title": "Posta servisi",
       "card_pickup_sub": "İki yönlü sigortalı kargo dahil",
-      "meta_title": "Telefon Tamiri Gänserndorf ve A. Avusturya | EL Fix Mobile",
+      "meta_title": "Telefon Tamiri Gänserndorf ve A. Avusturya",
       "meta_description": "Gänserndorf, Marchegg, A. Avusturya telefon tamiri: iki yönlü sigortalı kargo, 24–72 saatte tamir, sabit fiyat, 12 ay garanti."
     }
   },

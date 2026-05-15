@@ -4,7 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { SimpleBookingForm } from "@/components/book/SimpleBookingForm";
 
 export const metadata: Metadata = {
-  title: "Reparatur anfragen - 30 Min Rückmeldung | EL Fix Mobile",
+  title: "Reparatur anfragen - 30 Min Rückmeldung",
   description:
     "Ein Formular, ein Anruf zurück in 30 Minuten. Festpreis vor der Reparatur. Vorbeikommen, abholen lassen oder per Post schicken.",
 };

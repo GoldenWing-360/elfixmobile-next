@@ -217,7 +217,7 @@ export default async function ModelPage({
           </p>
           <h1 className="mt-5 text-[clamp(2.25rem,6vw,4.5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
             {t("title_prefix")}{" "}
-            <span className="block text-white">{pair.model.full_name}</span>
+            <span className="block text-white">{pair.model.full_name}</span>{" "}
             <span className="block text-white/70">{t("title_suffix")}</span>
           </h1>
           <p className="mt-7 max-w-2xl text-[18px] leading-[1.55] text-white/75">

@@ -327,7 +327,7 @@
       }
     },
     "meta": {
-      "title": "{brand} Reparatur Wien | Express 30 Min | EL Fix Mobile",
+      "title": "{brand} Reparatur Wien | Express 30 Min",
       "description": "Express {brand}-Reparatur in Wien 1220 Aspern. {count}+ Modelle, 12 Monate Garantie, Original- oder Premium-Refurbished-Teile. 4,4/5 (294 Bewertungen)."
     }
   },
@@ -386,7 +386,7 @@
         "q": "Holt ihr das Handy ab?",
         "a": "Ab € 70 Reparaturwert kostenlos in Wien und NÖ-Umland. Sonst Maria-Tusch-Straße 17/1, 1220 Wien, oder per Post."
       },
-      "meta_title": "Display Reparatur Wien | Express 30 Min | EL Fix Mobile",
+      "meta_title": "Display Reparatur Wien | Express 30 Min",
       "meta_description": "Display-Tausch Wien 1220: iPhone, Samsung, Xiaomi und mehr. Festpreis ab 30 €, fertig in 30 Min, 12 Monate Garantie. Aspern Seestadt, walk-in oder Abholung."
     },
     "battery": {
@@ -428,7 +428,7 @@
         "q": "Macht ihr Wasserdicht-Versiegelung neu?",
         "a": "Ja – bei wasserdichten Modellen ist ein neuer Dichtungsring im Preis inkludiert. Wir testen die Dichtigkeit nach dem Tausch."
       },
-      "meta_title": "Akku Tausch Wien | iPhone Samsung in 30 Min | EL Fix Mobile",
+      "meta_title": "Akku Tausch Wien | iPhone Samsung in 30 Min",
       "meta_description": "Akku-Tausch Wien 1220 Aspern: iPhone, Samsung, Xiaomi, alle Modelle. Festpreis ab 20 €, 30 Minuten Express, 12 Monate Garantie. Walk-in oder gratis Abholung."
     },
     "data_recovery": {
@@ -470,7 +470,7 @@
         "q": "Holt ihr das Gerät ab?",
         "a": "Ja – für Datenrettung empfehlen wir aber den persönlichen Walk-in oder versicherten Postversand. Gerade bei Wasserschaden zählt jede Stunde."
       },
-      "meta_title": "Datenrettung Handy Wien | iPhone Samsung | EL Fix Mobile",
+      "meta_title": "Datenrettung Handy Wien | iPhone Samsung",
       "meta_description": "Datenrettung Handy Wien 1220: nach Wasser, Sturz, Software-Crash. Diagnose kostenlos, Erfolgsquote vorab, kein Cloud-Upload. DSGVO-konform, walk-in oder Post."
     },
     "water_damage": {
@@ -512,7 +512,7 @@
         "q": "Mein Handy ist nass – soll ich es einschalten zum Testen?",
         "a": "Bitte NEIN. Einschalten kann das Mainboard zerstören. Akku raus oder Akku-Kabel abklemmen falls möglich, und sofort zu uns."
       },
-      "meta_title": "Wasserschaden Handy Wien | Sofort-Reparatur | EL Fix Mobile",
+      "meta_title": "Wasserschaden Handy Wien | Sofort-Reparatur",
       "meta_description": "Wasserschaden Handy Wien 1220: iPhone, Samsung, alle Marken. Ultraschall-Reinigung, Komponententausch, 60–80% Erfolg. Aspern Seestadt, walk-in sofort."
     },
     "unlock": {
@@ -554,7 +554,7 @@
         "q": "Kann ich gestohlene Geräte entsperren lassen?",
         "a": "Nein – wir entsperren keine gestohlenen Geräte und keine iCloud-Sperren ohne Eigentumsnachweis. Das ist Hehlerei, machen wir nicht."
       },
-      "meta_title": "Handy Entsperren Wien | SIM-Lock IMEI | EL Fix Mobile",
+      "meta_title": "Handy Entsperren Wien | SIM-Lock IMEI",
       "meta_description": "Handy entsperren Wien 1220: SIM-Lock, Netzentsperrung, Mi-Account. Legal über IMEI-Service, Eigentumsnachweis Pflicht. Aspern Seestadt, 1–14 Tage."
     },
     "wrap": {
@@ -596,7 +596,7 @@
         "q": "Kann ich Custom-Folie mit eigenem Design?",
         "a": "Ja – schicke uns Logo/Foto in mind. 300 DPI. 2 Tage Vorlauf für Druck und Schnitt. Preis je nach Komplexität."
       },
-      "meta_title": "Handy Folierung Wien | Skin Vinyl iPhone Samsung | EL Fix Mobile",
+      "meta_title": "Handy Folierung Wien | Skin Vinyl iPhone Samsung",
       "meta_description": "Premium-Folierung Wien 1220: iPhone, Samsung, iPad. 3M-Vinyl, 40+ Designs, Custom-Druck. Blasenfrei in 30 Min, rückstandsfrei entfernbar. Aspern Seestadt."
     },
     "camera": {
@@ -638,7 +638,7 @@
         "q": "Holt ihr das Gerät ab?",
         "a": "Ab € 70 Reparaturwert kostenlos in Wien und NÖ-Umland. Sonst Walk-in (Maria-Tusch-Straße 17/1) oder Postversand."
       },
-      "meta_title": "Kamera Reparatur Handy Wien | Festpreis 60 Min | EL Fix Mobile",
+      "meta_title": "Kamera Reparatur Handy Wien | Festpreis 60 Min",
       "meta_description": "Handy-Kamera-Tausch Wien 1220 Aspern: iPhone, Samsung, Xiaomi und mehr. Front + Hauptkamera + Kameraglas. Festpreis ab 30 €, 12 Monate Garantie."
     },
     "tablet": {
@@ -680,7 +680,7 @@
         "q": "Holt ihr das Tablet ab?",
         "a": "Ab € 70 Reparaturwert gratis in Wien und NÖ. Tablets sind sperriger — wir packen die Verpackung mit."
       },
-      "meta_title": "Tablet Reparatur Wien | iPad Galaxy Tab | EL Fix Mobile",
+      "meta_title": "Tablet Reparatur Wien | iPad Galaxy Tab",
       "meta_description": "Tablet-Reparatur Wien 1220: iPad, Samsung Galaxy Tab, Huawei. Display, Akku, Ladebuchse. Festpreis ab 70 €, 12 Monate Garantie, gratis Abholung."
     },
     "notebook": {
@@ -722,7 +722,7 @@
         "q": "Holt ihr das Notebook ab?",
         "a": "Ab € 100 Reparaturwert gratis in Wien und NÖ. Wir bringen Anti-Statik-Verpackung."
       },
-      "meta_title": "Notebook Reparatur Wien | MacBook + Windows | EL Fix Mobile",
+      "meta_title": "Notebook Reparatur Wien | MacBook + Windows",
       "meta_description": "Notebook + Laptop Reparatur Wien 1220 Aspern: MacBook, Lenovo, Dell, HP. Display, Akku, Tastatur, Mainboard, Datenrettung. Diagnose gratis, 12 Mon. Garantie."
     }
   },
@@ -766,7 +766,7 @@
       "q": "Holt ihr das {model} ab?",
       "a": "Ab € 70 Reparaturwert gratis in Wien und Niederösterreich-Umland. Sonst Walk-in (Maria-Tusch-Strasse 17/1, 1220 Wien) oder versicherter Postversand."
     },
-    "meta_title": "{model} Reparatur Wien | Festpreis ab 30 Min | EL Fix Mobile",
+    "meta_title": "{model} Reparatur Wien | Festpreis ab 30 Min",
     "meta_description": "{model}-Reparatur in Wien 1220 Aspern: Display, Akku, Ladebuchse und mehr. Festpreise vorab, 12 Monate Garantie, Express in 30 Minuten. 4,4/5 (294 Bewertungen)."
   },
   "geo_page": {
@@ -785,7 +785,7 @@
       "card_visit_sub": "Maria-Tusch-Straße 17/1, 1220 Wien",
       "card_pickup_title": "Wir holen ab",
       "card_pickup_sub": "Gratis-Abholung in der Seestadt bei jedem Auftrag",
-      "meta_title": "Handy Reparatur Aspern Seestadt | Express 30 Min | EL Fix Mobile",
+      "meta_title": "Handy Reparatur Aspern Seestadt | Express 30 Min",
       "meta_description": "Handy-Reparatur direkt in Aspern Seestadt 1220: 3 Min von U2 Aspern Nord. Display, Akku, Wasserschaden. Festpreis, 12 Mon. Garantie, gratis Abholung."
     },
     "donaustadt": {
@@ -803,7 +803,7 @@
       "card_visit_sub": "Maria-Tusch-Straße 17/1, 1220 Wien Donaustadt",
       "card_pickup_title": "Wir holen ab",
       "card_pickup_sub": "Gratis in ganz Donaustadt — Stadlau, Kagran, Hirschstetten, Essling",
-      "meta_title": "Handy Reparatur Donaustadt | 22. Bezirk | EL Fix Mobile",
+      "meta_title": "Handy Reparatur Donaustadt | 22. Bezirk",
       "meta_description": "Handy-Reparatur Donaustadt 1220 Wien: Stadlau, Kagran, Hirschstetten, Essling. Gratis Abholung, Festpreis, 12 Mon. Garantie. Express 30 Min."
     },
     "floridsdorf": {
@@ -821,7 +821,7 @@
       "card_visit_sub": "Maria-Tusch-Straße 17/1, 1220 Wien Aspern",
       "card_pickup_title": "Wir holen ab",
       "card_pickup_sub": "Gratis in Floridsdorf — Strebersdorf, Stammersdorf, Leopoldau",
-      "meta_title": "Handy Reparatur Floridsdorf | 21. Bezirk | EL Fix Mobile",
+      "meta_title": "Handy Reparatur Floridsdorf | 21. Bezirk",
       "meta_description": "Handy-Reparatur Floridsdorf 1210 Wien: Gratis Abholung, Festpreis, 12 Mon. Garantie. Strebersdorf, Stammersdorf, Großjedlersdorf, Leopoldau."
     },
     "gaenserndorf": {
@@ -839,7 +839,7 @@
       "card_visit_sub": "Maria-Tusch-Straße 17/1, 1220 Wien (S1 vom Marchfeld)",
       "card_pickup_title": "Versand-Service",
       "card_pickup_sub": "Versicherter Hin- und Rückversand inklusive",
-      "meta_title": "Handy Reparatur Gänserndorf & Niederösterreich | EL Fix Mobile",
+      "meta_title": "Handy Reparatur Gänserndorf & Niederösterreich",
       "meta_description": "Handy-Reparatur Gänserndorf, Marchegg, Niederösterreich: Postversand mit Tracking, Reparatur 24–72h, Festpreis, 12 Mon. Garantie."
     }
   },

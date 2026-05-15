@@ -80,7 +80,10 @@ export const Button = forwardRef<HTMLElement, Props>(function Button(
     base,
     variants[variant],
     variant !== "tertiary" && sizes[size],
-    variant === "tertiary" && "text-[15px]",
+    // Tertiary stays link-style (no border, no fill) but reserves a
+    // 44 x 44 invisible tap area so the WCAG 2.5.5 minimum is met.
+    // items-center on .base centers the text within the min-height.
+    variant === "tertiary" && "min-h-[44px] text-[15px]",
     className,
   );
 

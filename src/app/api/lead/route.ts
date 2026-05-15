@@ -56,6 +56,10 @@ const BookingSchema = z.object({
   // Cap the estimated price so a tampered client can't push a 9-digit
   // number into the email subject line.
   total: z.number().min(0).max(100_000).nullable().optional(),
+  // AGB / Datenschutz consent. Required by AT consumer law for booking
+  // forms (KSchG §5c, FAGG). Server-side enforcement, not just disabling
+  // the submit button - bots and JS-disabled clients bypass that.
+  agb: z.literal(true, { message: "agb_required" }),
   contact: z.object({
     name: z.string().min(2).max(120),
     email: z.string().email().max(200),
@@ -70,6 +74,7 @@ const ContactSchema = z.object({
   email: z.string().email().max(200),
   phone: PhoneOptional,
   message: z.string().min(5).max(4000),
+  agb: z.literal(true, { message: "agb_required" }),
 });
 
 const Schema = z.discriminatedUnion("type", [BookingSchema, ContactSchema]);
@@ -296,8 +301,13 @@ export async function POST(req: NextRequest) {
 
   const parsed = Schema.safeParse(raw);
   if (!parsed.success) {
+    // Don't leak the full Zod error tree to public callers - it
+    // fingerprints the schema (field paths, regex names, validator
+    // labels). Detail stays in the Worker log; client gets a stable
+    // generic error code.
+    console.warn("[api/lead] schema rejection", parsed.error.toString().slice(0, 500));
     return Response.json(
-      { ok: false, error: "invalid_payload", detail: parsed.error.toString() },
+      { ok: false, error: "invalid_payload" },
       { status: 400 },
     );
   }
@@ -428,11 +438,19 @@ export async function POST(req: NextRequest) {
   });
 
   if (!ownerSend.ok) {
+    // The lead is durable in KV and Telegram has already fired - the
+    // owner-side email is the slowest layer, not the source of truth.
+    // A 502 here misrepresents the state: customer thinks the form
+    // failed and retries (dedup catches it but they see no feedback).
+    // Return 200 with a warning instead so the success card still
+    // renders; ops sees the failure in the Worker log + Telegram diff.
     console.error("[api/lead] owner email failed", ownerSend.status, ownerSend.body);
-    return Response.json(
-      { ok: false, error: "send_failed", id: leadId },
-      { status: 502 },
-    );
+    return Response.json({
+      ok: true,
+      id: leadId,
+      token,
+      warning: "owner_email_delayed",
+    });
   }
 
   return Response.json({ ok: true, id: leadId, token });

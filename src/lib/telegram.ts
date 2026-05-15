@@ -41,6 +41,22 @@ function escapeMarkdownV2(s: string): string {
   return s.replace(/([_*\[\]()~`>#+\-=|{}.!])/g, "\\$1");
 }
 
+// Inside MarkdownV2 link URLs, only ) and \ require escaping. Running
+// the full punctuation escape over a URL would mangle the path (each
+// "." and "-" becomes "\." / "\-" which some clients don't unwrap,
+// producing a broken link).
+function escapeMarkdownV2Url(s: string): string {
+  return s.replace(/([)\\])/g, "\\$1");
+}
+
+// Inside a MarkdownV2 code-fence, only backticks and backslashes need
+// escaping. A raw backtick in the customer summary would close the
+// fence and let the rest inject markdown - Telegram returns 400
+// "can't parse entities" and the notification never delivers.
+function escapeMarkdownV2Code(s: string): string {
+  return s.replace(/\\/g, "\\\\").replace(/`/g, "\\`");
+}
+
 export async function notifyTelegram(
   args: LeadNotificationArgs,
 ): Promise<{ ok: boolean; skipped?: boolean }> {
@@ -70,10 +86,10 @@ export async function notifyTelegram(
       ? `📧 ${escapeMarkdownV2(args.customerEmail)}`
       : null,
     "",
-    `\`\`\`\n${args.summary.slice(0, 800)}\n\`\`\``,
+    `\`\`\`\n${escapeMarkdownV2Code(args.summary.slice(0, 800))}\n\`\`\``,
     "",
-    `🔗 [Status\\-Seite öffnen](${escapeMarkdownV2(statusUrl)})`,
-    `🆔 \`${escapeMarkdownV2(args.leadId.slice(0, 8))}\``,
+    `🔗 [Status\\-Seite öffnen](${escapeMarkdownV2Url(statusUrl)})`,
+    `🆔 \`${escapeMarkdownV2Code(args.leadId.slice(0, 8))}\``,
   ]
     .filter(Boolean)
     .join("\n");
@@ -81,6 +97,10 @@ export async function notifyTelegram(
   const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
+    // 5 s ceiling: workerd fetch has no default timeout, and a slow
+    // Telegram response would otherwise tie up the entire /api/lead
+    // POST until the Worker CPU limit fires.
+    signal: AbortSignal.timeout(5000),
     body: JSON.stringify({
       chat_id: chatId,
       text: lines,

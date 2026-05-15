@@ -327,7 +327,7 @@
       }
     },
     "meta": {
-      "title": "{brand} Repair Vienna | Express 30 min | EL Fix Mobile",
+      "title": "{brand} Repair Vienna | Express 30 min",
       "description": "Express {brand} repair in Vienna 1220 Aspern. {count}+ models, 12-month warranty, original or premium refurbished parts. 4.4/5 (294 reviews)."
     }
   },
@@ -386,7 +386,7 @@
         "q": "Do you collect the device?",
         "a": "Free pickup and return in Vienna and Lower Austria for repairs from € 70. Otherwise Maria-Tusch-Strasse 17/1, 1220 Vienna, or by post."
       },
-      "meta_title": "Phone Display Repair Vienna | 30 min Express | EL Fix Mobile",
+      "meta_title": "Phone Display Repair Vienna | 30 min Express",
       "meta_description": "Screen replacement Vienna 1220: iPhone, Samsung, Xiaomi and more. Fixed prices from € 30, done in 30 min, 12-month warranty. Aspern Seestadt, walk-in or pickup."
     },
     "battery": {
@@ -428,7 +428,7 @@
         "q": "Do you reseal water-resistance?",
         "a": "Yes – on water-resistant models a fresh gasket is included in the price. We test for water resistance after the swap."
       },
-      "meta_title": "Phone Battery Replacement Vienna | 30 min | EL Fix Mobile",
+      "meta_title": "Phone Battery Replacement Vienna | 30 min",
       "meta_description": "Battery swap Vienna 1220 Aspern: iPhone, Samsung, Xiaomi, all models. Fixed price from € 20, 30 min express, 12-month warranty. Walk-in or free pickup."
     },
     "data_recovery": {
@@ -470,7 +470,7 @@
         "q": "Do you collect the device?",
         "a": "Yes – but for data recovery we recommend walk-in or insured mail. Every hour counts after water damage."
       },
-      "meta_title": "Phone Data Recovery Vienna | iPhone Samsung | EL Fix Mobile",
+      "meta_title": "Phone Data Recovery Vienna | iPhone Samsung",
       "meta_description": "Phone data recovery Vienna 1220: after water, drop, software crash. Free diagnosis, success rate stated upfront, no cloud upload. GDPR-compliant, walk-in or mail."
     },
     "water_damage": {
@@ -512,7 +512,7 @@
         "q": "My phone is wet – should I power it on to test?",
         "a": "Please don't. Powering on can destroy the mainboard. Disconnect the battery if you can, and bring it to us immediately."
       },
-      "meta_title": "Water-Damage Phone Repair Vienna | Same-Day | EL Fix Mobile",
+      "meta_title": "Water-Damage Phone Repair Vienna | Same-Day",
       "meta_description": "Water-damage phone Vienna 1220: iPhone, Samsung, all brands. Ultrasonic clean, part swap, 60–80 % success. Aspern Seestadt, immediate walk-in."
     },
     "unlock": {
@@ -554,7 +554,7 @@
         "q": "Can I unlock stolen devices?",
         "a": "No – we don't unlock stolen devices or iCloud locks without proof of ownership. That's handling stolen goods, we don't do it."
       },
-      "meta_title": "Phone Unlocking Vienna | SIM-Lock IMEI | EL Fix Mobile",
+      "meta_title": "Phone Unlocking Vienna | SIM-Lock IMEI",
       "meta_description": "Phone unlocking Vienna 1220: SIM-lock, network unlock, Mi account. Legal via IMEI service, ownership proof required. Aspern Seestadt, 1–14 days."
     },
     "wrap": {
@@ -596,7 +596,7 @@
         "q": "Can I bring my own design?",
         "a": "Yes – send us a logo/photo at 300 DPI minimum. 2 days for print and cut. Price depends on complexity."
       },
-      "meta_title": "Phone Wrap Vienna | Skin Vinyl iPhone Samsung | EL Fix Mobile",
+      "meta_title": "Phone Wrap Vienna | Skin Vinyl iPhone Samsung",
       "meta_description": "Premium phone wrap Vienna 1220: iPhone, Samsung, iPad. 3M vinyl, 40+ designs, custom print. Bubble-free in 30 min, residue-free removal."
     },
     "camera": {
@@ -638,7 +638,7 @@
         "q": "Do you collect the device?",
         "a": "Free pickup and return for repairs from € 70 in Vienna and Lower Austria. Otherwise walk-in or insured mail."
       },
-      "meta_title": "Phone Camera Repair Vienna | 60 min Express | EL Fix Mobile",
+      "meta_title": "Phone Camera Repair Vienna | 60 min Express",
       "meta_description": "Phone camera swap Vienna 1220 Aspern: iPhone, Samsung, Xiaomi and more. Front + rear + lens glass. Fixed price from € 30, 12-month warranty."
     },
     "tablet": {
@@ -680,7 +680,7 @@
         "q": "Do you collect the tablet?",
         "a": "Free pickup in Vienna and Lower Austria from € 70 repair value. Tablets are bulky — we bring proper packaging."
       },
-      "meta_title": "Tablet Repair Vienna | iPad Galaxy Tab | EL Fix Mobile",
+      "meta_title": "Tablet Repair Vienna | iPad Galaxy Tab",
       "meta_description": "Tablet repair Vienna 1220: iPad, Samsung Galaxy Tab, Huawei. Display, battery, charging port. Fixed price from € 70, 12-month warranty, free pickup."
     },
     "notebook": {
@@ -722,7 +722,7 @@
         "q": "Do you collect the laptop?",
         "a": "Free pickup in Vienna and Lower Austria from € 100 repair value. We bring anti-static packaging."
       },
-      "meta_title": "Laptop Repair Vienna | MacBook + Windows | EL Fix Mobile",
+      "meta_title": "Laptop Repair Vienna | MacBook + Windows",
       "meta_description": "Notebook + laptop repair Vienna 1220 Aspern: MacBook, Lenovo, Dell, HP. Display, battery, keyboard, mainboard, data recovery. Free diagnosis, 12-month warranty."
     }
   },
@@ -766,7 +766,7 @@
       "q": "Do you collect the {model}?",
       "a": "Free pickup and return for repairs from € 70 within Vienna and Lower Austria. Otherwise walk-in (Maria-Tusch-Strasse 17/1, 1220 Vienna) or insured mail."
     },
-    "meta_title": "{model} Repair Vienna | Fixed price 30 min | EL Fix Mobile",
+    "meta_title": "{model} Repair Vienna | Fixed price 30 min",
     "meta_description": "{model} repair in Vienna 1220 Aspern: display, battery, charging port and more. Fixed prices upfront, 12-month warranty, 30-min express. 4.4/5 (294 reviews)."
   },
   "geo_page": {
@@ -785,7 +785,7 @@
       "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Vienna",
       "card_pickup_title": "We collect",
       "card_pickup_sub": "Free pickup in Seestadt on every order",
-      "meta_title": "Phone Repair Aspern Seestadt Vienna | EL Fix Mobile",
+      "meta_title": "Phone Repair Aspern Seestadt Vienna",
       "meta_description": "Phone repair right in Aspern Seestadt 1220: 3 min from U2 Aspern Nord. Display, battery, water damage. Fixed price, 12-month warranty, free pickup."
     },
     "donaustadt": {
@@ -803,7 +803,7 @@
       "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Vienna Donaustadt",
       "card_pickup_title": "We collect",
       "card_pickup_sub": "Free across Donaustadt — Stadlau, Kagran, Hirschstetten, Essling",
-      "meta_title": "Phone Repair Donaustadt | 22nd District Vienna | EL Fix Mobile",
+      "meta_title": "Phone Repair Donaustadt | 22nd District Vienna",
       "meta_description": "Phone repair Donaustadt 1220 Vienna: Stadlau, Kagran, Hirschstetten, Essling. Free pickup, fixed price, 12-month warranty. 30-min express."
     },
     "floridsdorf": {
@@ -821,7 +821,7 @@
       "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Vienna Aspern",
       "card_pickup_title": "We collect",
       "card_pickup_sub": "Free across Floridsdorf — Strebersdorf, Stammersdorf, Leopoldau",
-      "meta_title": "Phone Repair Floridsdorf | 21st District Vienna | EL Fix Mobile",
+      "meta_title": "Phone Repair Floridsdorf | 21st District Vienna",
       "meta_description": "Phone repair Floridsdorf 1210 Vienna: free pickup, fixed price, 12-month warranty. Strebersdorf, Stammersdorf, Großjedlersdorf, Leopoldau."
     },
     "gaenserndorf": {
@@ -839,7 +839,7 @@
       "card_visit_sub": "Maria-Tusch-Strasse 17/1, 1220 Vienna (S1 from Marchfeld)",
       "card_pickup_title": "Mail-in service",
       "card_pickup_sub": "Insured shipping both ways included",
-      "meta_title": "Phone Repair Gänserndorf & Lower Austria | EL Fix Mobile",
+      "meta_title": "Phone Repair Gänserndorf & Lower Austria",
       "meta_description": "Phone repair Gänserndorf, Marchegg, Lower Austria: insured shipping both ways, repair 24–72h, fixed price, 12-month warranty."
     }
   },
