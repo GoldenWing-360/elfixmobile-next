@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Truck } from "lucide-react";
 
 export function Nav() {
   const t = useTranslations("nav");
@@ -115,7 +115,20 @@ export function Nav() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-1.5 md:gap-2">
+          <div className="flex items-center gap-1.5 md:gap-3">
+            {/* Pickup CTA replaces the standalone PickupBanner section -
+             * always visible in the header so the gratis-Abholung offer
+             * follows the user across the whole site. Green accent so it
+             * pops on the dark glass nav without competing with the
+             * primary CTAs in the hero. Desktop-only; mobile gets it in
+             * the menu sheet instead. */}
+            <Link
+              href={{ pathname: "/buchen", query: { service: "pickup" } }}
+              className="hidden md:inline-flex items-center gap-1.5 rounded-full bg-[var(--color-success)] px-4 py-2 text-[13px] font-medium text-black transition-all hover:brightness-95"
+            >
+              <Truck className="h-3.5 w-3.5" strokeWidth={2} />
+              {t("pickup_cta")}
+            </Link>
             <LanguageSwitcher />
             {/* Mobile menu button — bumped to 44x44 (Apple HIG touch
              * target). The previous 36x36 was below the recommended
@@ -213,10 +226,18 @@ export function Nav() {
                   );
                 })}
               </ul>
-              {/* Contact shortcut row: tap-to-call + WhatsApp at the
-               * bottom of the menu so the primary action is always one
-               * tap away even on long brand-list pages. */}
+              {/* Contact shortcut row: pickup CTA + tap-to-call + WhatsApp
+               * at the bottom of the menu so the primary action is always
+               * one tap away even on long brand-list pages. */}
               <div className="mt-auto flex flex-wrap gap-3 pt-6 text-[14px]">
+                <Link
+                  href={{ pathname: "/buchen", query: { service: "pickup" } }}
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-success)] px-5 py-3 font-medium text-black"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <Truck className="h-4 w-4" strokeWidth={2} />
+                  {t("pickup_cta")}
+                </Link>
                 <a
                   href="tel:+436606071414"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-medium text-black"

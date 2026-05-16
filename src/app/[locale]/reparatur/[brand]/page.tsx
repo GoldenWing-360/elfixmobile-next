@@ -8,7 +8,6 @@ import { BrandHero } from "@/components/brand/BrandHero";
 import { BrandModelsTable } from "@/components/brand/BrandModelsTable";
 import { BrandQuoteCta } from "@/components/brand/BrandQuoteCta";
 import { BrandFAQ } from "@/components/brand/BrandFAQ";
-import { PickupBanner } from "@/components/sections/PickupBanner";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 type Params = { locale: string; brand: string };
@@ -156,7 +155,6 @@ export default async function BrandPage({
       ) : (
         <BrandQuoteCta brand={brand} />
       )}
-      <PickupBanner />
       <BrandFAQ brand={brand} />
       <FinalCTA />
     </>

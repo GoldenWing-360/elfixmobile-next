@@ -8,7 +8,6 @@ import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { ServiceHero } from "@/components/service/ServiceHero";
 import { ServiceBody } from "@/components/service/ServiceBody";
 import { DistrictView } from "@/components/district/DistrictView";
-import { PickupBanner } from "@/components/sections/PickupBanner";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 type Params = { locale: string; service: string };
@@ -160,7 +159,6 @@ export default async function ServicePage({
         />
         <ServiceHero service={service} />
         <ServiceBody service={service} />
-        <PickupBanner />
         <FinalCTA />
       </>
     );
@@ -172,7 +170,6 @@ export default async function ServicePage({
   return (
     <>
       <DistrictView district={district} />
-      <PickupBanner />
       <FinalCTA />
     </>
   );

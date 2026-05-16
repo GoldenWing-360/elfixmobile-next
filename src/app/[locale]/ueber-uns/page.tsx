@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { SITE, alternateLanguagesFor } from "@/lib/seo";
-import { PickupBanner } from "@/components/sections/PickupBanner";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export async function generateMetadata({
@@ -101,7 +100,6 @@ export default async function UeberUnsPage({
         </div>
       </section>
 
-      <PickupBanner />
       <FinalCTA />
     </>
   );

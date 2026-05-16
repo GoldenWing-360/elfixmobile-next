@@ -7,7 +7,6 @@ import { repairLabel, repairDurationBucket } from "@/data/repair-labels";
 import { cn } from "@/lib/cn";
 import { routing } from "@/i18n/routing";
 import { SITE, alternateLanguagesFor } from "@/lib/seo";
-import { PickupBanner } from "@/components/sections/PickupBanner";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { RepairDisclaimer } from "@/components/RepairDisclaimer";
 
@@ -351,7 +350,6 @@ export default async function ModelPage({
         </div>
       </section>
 
-      <PickupBanner />
 
       {/* FAQ */}
       <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
