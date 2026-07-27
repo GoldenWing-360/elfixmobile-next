@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/Button";
-import { Smartphone, Battery, Droplets } from "lucide-react";
 
 const cardEnter = {
   hidden: { opacity: 0.999, y: 40 },
@@ -33,8 +33,7 @@ export function ServiceShowcase() {
       price: t("display_price"),
       gradient:
         "from-[#0a0a0c] via-[#0a1a3a] to-[#001e4d]",
-      accent: "rgba(0,113,227,0.4)",
-      Icon: Smartphone,
+      image: "/media/service-display.webp",
     },
     {
       key: "battery",
@@ -44,8 +43,7 @@ export function ServiceShowcase() {
       price: t("battery_price"),
       gradient:
         "from-[#0a0a0c] via-[#1a3a0a] to-[#073d22]",
-      accent: "rgba(48,209,88,0.4)",
-      Icon: Battery,
+      image: "/media/service-battery.webp",
     },
     {
       key: "water",
@@ -55,8 +53,7 @@ export function ServiceShowcase() {
       price: t("water_price"),
       gradient:
         "from-[#0a0a0c] via-[#0a2a3a] to-[#003a4d]",
-      accent: "rgba(100,200,255,0.4)",
-      Icon: Droplets,
+      image: "/media/service-water.webp",
     },
   ];
 
@@ -114,31 +111,13 @@ export function ServiceShowcase() {
               <div
                 className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${c.gradient}`}
               >
-                {/* atmospheric glow */}
-                <div
-                  className="absolute inset-0 transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.12]"
-                  style={{
-                    backgroundImage: `radial-gradient(circle at 30% 30%, ${c.accent} 0px, transparent 55%), radial-gradient(circle at 75% 75%, ${c.accent.replace("0.4", "0.18")} 0px, transparent 55%)`,
-                  }}
-                  aria-hidden
-                />
-                {/* big themed icon */}
-                <div className="absolute inset-0 grid place-items-center">
-                  <c.Icon
-                    aria-hidden
-                    className="h-32 w-32 text-white/80 drop-shadow-[0_8px_30px_rgba(0,0,0,0.4)] transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.08]"
-                    strokeWidth={1.25}
-                  />
-                </div>
-                {/* subtle grid pattern */}
-                <div
-                  className="absolute inset-0 opacity-[0.08]"
-                  aria-hidden
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-                    backgroundSize: "32px 32px",
-                  }}
+                <Image
+                  src={c.image}
+                  alt={c.title}
+                  fill
+                  unoptimized
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/40 to-transparent" />
                 <span className="absolute right-4 top-4 inline-flex items-center rounded-full bg-white/95 px-3 py-1.5 text-[12px] font-semibold tracking-tight text-black shadow-sm backdrop-blur-md">
