@@ -18,10 +18,10 @@
  */
 
 interface LeadNotificationArgs {
-  /** The Lead UUID — included so Natalja can click the status URL. */
+  /** The Lead UUID — shown as a short reference ID in the message. */
   leadId: string;
-  /** Signed HMAC token to append to the status URL, or null in dev. */
-  leadToken: string | null;
+  /** Fully-built public status URL (with token) — caller owns the shape. */
+  statusUrl: string;
   /** Channel: "Buchung" or "Kontakt" — shapes the message header. */
   type: "booking" | "contact";
   /** Plain-text summary block already formatted by /api/lead. */
@@ -32,8 +32,6 @@ interface LeadNotificationArgs {
   customerPhone?: string;
   /** Customer email — fallback channel. */
   customerEmail?: string;
-  /** Optional public site URL so the status link is clickable. */
-  siteUrl: string;
 }
 
 function escapeMarkdownV2(s: string): string {
@@ -71,9 +69,6 @@ export async function notifyTelegram(
 
   const headerEmoji = args.type === "booking" ? "🔧" : "✉️";
   const headerLabel = args.type === "booking" ? "Neue Buchung" : "Kontakt-Anfrage";
-  const statusUrl = `${args.siteUrl}/de/status/${args.leadId}${
-    args.leadToken ? `?t=${args.leadToken}` : ""
-  }`;
 
   const lines = [
     `${headerEmoji} *${escapeMarkdownV2(headerLabel)}*`,
@@ -88,7 +83,7 @@ export async function notifyTelegram(
     "",
     `\`\`\`\n${escapeMarkdownV2Code(args.summary.slice(0, 800))}\n\`\`\``,
     "",
-    `🔗 [Status\\-Seite öffnen](${escapeMarkdownV2Url(statusUrl)})`,
+    `🔗 [Status\\-Seite öffnen](${escapeMarkdownV2Url(args.statusUrl)})`,
     `🆔 \`${escapeMarkdownV2Code(args.leadId.slice(0, 8))}\``,
   ]
     .filter(Boolean)

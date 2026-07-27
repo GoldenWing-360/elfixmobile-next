@@ -1,14 +1,15 @@
-import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { getKv, getWaitUntil, type KvLike } from "@/lib/kv";
+import type { ReviewsPayload } from "@/lib/reviews-types";
 
 /**
  * /api/reviews — public read endpoint that returns recent Google
- * Reviews for the shop. Pulled live from Google's Places API, cached
- * in LEADS_KV for 24 hours so we don't hammer Google on every page
- * load.
+ * Reviews for the shop. Pulled from the Places API (New, v1), cached
+ * in LEADS_KV with stale-while-revalidate so we don't hammer Google on
+ * every page load and never burst the quota on cache expiry.
  *
  * Setup (one-time):
- *   1. Get a Google Maps Platform API key with "Places API" enabled:
- *      https://console.cloud.google.com/google/maps-apis
+ *   1. Get a Google Maps Platform API key with "Places API (New)"
+ *      enabled: https://console.cloud.google.com/google/maps-apis
  *   2. Find the Place ID for "EL Fix Mobile Wien Maria-Tusch":
  *      https://developers.google.com/maps/documentation/places/web-service/place-id
  *      Output: a ChIJ... string.
@@ -23,122 +24,119 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 export const dynamic = "force-dynamic";
 
-const CACHE_TTL_SEC = 60 * 60 * 24; // 24 h
+// Freshness window: within it the cache is served as-is. Past it the
+// stale copy is still served (no user-visible latency) while one
+// background fetch refreshes the KV entry via waitUntil.
+const FRESH_TTL_SEC = 60 * 60 * 24; // 24 h
+// Hard KV eviction — after this even stale data is gone and the next
+// request blocks on Google again.
+const HARD_TTL_SEC = 60 * 60 * 24 * 7; // 7 d
+// Best-effort refresh lock: bounds a cold-stale herd to the handful of
+// requests that race the lock write, instead of every request.
+const REFRESH_LOCK_TTL_SEC = 120;
 
-interface GoogleReview {
-  author_name: string;
-  author_url?: string;
-  profile_photo_url?: string;
-  rating: number;
-  relative_time_description: string;
-  text: string;
-  time: number; // unix seconds
-  language?: string;
+const CACHE_KEY = "reviews:google:cache";
+const LOCK_KEY = "reviews:google:refreshing";
+
+interface PlaceV1Review {
+  rating?: number;
+  relativePublishTimeDescription?: string;
+  publishTime?: string; // RFC 3339
+  text?: { text?: string };
+  originalText?: { text?: string };
+  authorAttribution?: { displayName?: string };
 }
 
-interface PlaceDetailsResponse {
-  result?: {
-    name?: string;
-    rating?: number;
-    user_ratings_total?: number;
-    reviews?: GoogleReview[];
-  };
-  status: string;
-  error_message?: string;
+interface PlaceV1Response {
+  rating?: number;
+  userRatingCount?: number;
+  reviews?: PlaceV1Review[];
+  error?: { code?: number; status?: string; message?: string };
 }
 
-interface CachedPayload {
-  rating: number | null;
-  total: number | null;
-  reviews: ReviewPublic[];
-  fetched_at: string;
-}
-
-interface ReviewPublic {
-  author: string;
-  rating: number;
-  relative: string;
-  text: string;
-  time: number;
-}
-
-interface KvLike {
-  get: (key: string, options?: { type?: "text" | "json" }) => Promise<string | null>;
-  put: (
-    key: string,
-    value: string,
-    options?: { expirationTtl?: number },
-  ) => Promise<void>;
-}
-
-function getKv(): KvLike | null {
-  try {
-    const ctx = getCloudflareContext();
-    return (ctx.env as unknown as { LEADS_KV?: KvLike }).LEADS_KV ?? null;
-  } catch {
-    return null;
-  }
-}
-
-async function fetchGoogle(): Promise<CachedPayload | null> {
+async function fetchGoogle(): Promise<ReviewsPayload | null> {
   const key = process.env.GOOGLE_PLACES_API_KEY;
   const placeId = process.env.GOOGLE_PLACE_ID;
   if (!key || !placeId) return null;
 
-  const url = new URL("https://maps.googleapis.com/maps/api/place/details/json");
-  url.searchParams.set("place_id", placeId);
-  url.searchParams.set("fields", "name,rating,user_ratings_total,reviews");
-  url.searchParams.set("language", "de");
-  url.searchParams.set("key", key);
-
-  const res = await fetch(url.toString());
+  const res = await fetch(
+    `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}?languageCode=de`,
+    {
+      headers: {
+        "X-Goog-Api-Key": key,
+        "X-Goog-FieldMask": "rating,userRatingCount,reviews",
+      },
+    },
+  );
   if (!res.ok) {
     console.error("[reviews] google fetch", res.status, await res.text());
     return null;
   }
-  const data = (await res.json()) as PlaceDetailsResponse;
-  if (data.status !== "OK" || !data.result) {
-    console.error("[reviews] google status", data.status, data.error_message);
+  const data = (await res.json()) as PlaceV1Response;
+  if (data.error) {
+    console.error("[reviews] google status", data.error.status, data.error.message);
     return null;
   }
-  const result = data.result;
   return {
-    rating: result.rating ?? null,
-    total: result.user_ratings_total ?? null,
-    reviews:
-      result.reviews?.map((r) => ({
-        author: r.author_name,
-        rating: r.rating,
-        relative: r.relative_time_description,
-        text: r.text,
-        time: r.time,
-      })) ?? [],
+    rating: data.rating ?? null,
+    total: data.userRatingCount ?? null,
+    reviews: (data.reviews ?? [])
+      .map((r) => ({
+        author: r.authorAttribution?.displayName ?? "Google Nutzer",
+        rating: r.rating ?? 5,
+        relative: r.relativePublishTimeDescription ?? "",
+        text: r.text?.text ?? r.originalText?.text ?? "",
+        time: r.publishTime ? Math.floor(Date.parse(r.publishTime) / 1000) : 0,
+      }))
+      .filter((r) => r.text.length > 0),
     fetched_at: new Date().toISOString(),
   };
 }
 
+async function refreshCache(kv: KvLike): Promise<void> {
+  if (await kv.get(LOCK_KEY)) return;
+  await kv.put(LOCK_KEY, "1", { expirationTtl: REFRESH_LOCK_TTL_SEC });
+  const fresh = await fetchGoogle();
+  if (fresh) {
+    await kv.put(CACHE_KEY, JSON.stringify(fresh), {
+      expirationTtl: HARD_TTL_SEC,
+    });
+  }
+}
+
 export async function GET() {
   const kv = getKv();
-  const cacheKey = "reviews:google:cache";
 
-  // 1. Try KV cache first
+  // 1. KV cache — fresh: serve. Stale: serve anyway, refresh behind the
+  //    response so exactly one caller pays the Google round-trip.
   if (kv) {
-    const cached = await kv.get(cacheKey);
-    if (cached) {
-      return new Response(cached, {
-        headers: {
-          "content-type": "application/json",
-          "cache-control": "public, max-age=3600",
-        },
-      });
+    const cachedRaw = await kv.get(CACHE_KEY);
+    if (cachedRaw) {
+      let cached: ReviewsPayload | null = null;
+      try {
+        cached = JSON.parse(cachedRaw) as ReviewsPayload;
+      } catch {
+        // Corrupted entry — fall through to a blocking refetch.
+      }
+      if (cached) {
+        const ageSec = (Date.now() - Date.parse(cached.fetched_at)) / 1000;
+        if (ageSec > FRESH_TTL_SEC) {
+          const waitUntil = getWaitUntil();
+          if (waitUntil) waitUntil(refreshCache(kv));
+        }
+        return Response.json(
+          { ...cached, source: "google" },
+          { headers: { "cache-control": "public, max-age=3600" } },
+        );
+      }
     }
   }
 
-  // 2. Cache miss / no KV — try live fetch
+  // 2. Cold miss / no KV — one blocking live fetch.
   const fresh = await fetchGoogle();
   if (!fresh) {
-    // Return a stable empty shape so the client component knows to use
-    // the static fallback rather than failing.
+    // Stable empty shape so the client component knows to use the
+    // static fallback rather than failing.
     return Response.json({
       rating: null,
       total: null,
@@ -148,10 +146,9 @@ export async function GET() {
     });
   }
 
-  // 3. Persist cache for 24 h
   if (kv) {
-    await kv.put(cacheKey, JSON.stringify(fresh), {
-      expirationTtl: CACHE_TTL_SEC,
+    await kv.put(CACHE_KEY, JSON.stringify(fresh), {
+      expirationTtl: HARD_TTL_SEC,
     });
   }
   return Response.json({ ...fresh, source: "google" });

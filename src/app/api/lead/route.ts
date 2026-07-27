@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { z } from "zod";
-import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { getKv } from "@/lib/kv";
 import { signLeadId } from "@/lib/lead-token";
 import { notifyTelegram } from "@/lib/telegram";
 import { SITE } from "@/lib/seo";
@@ -80,7 +80,10 @@ const ContactSchema = z.object({
 const Schema = z.discriminatedUnion("type", [BookingSchema, ContactSchema]);
 
 const RECIPIENT = "elfixmobile@gmx.at";
-const SENDER = "EL Fix Mobile <onboarding@resend.dev>";
+// Production needs a verified-domain sender (Resend rejects the sandbox
+// address for recipients outside the team): wrangler secret put RESEND_FROM
+// with e.g. "EL Fix Mobile <termin@elfixmobile.at>".
+const SENDER = process.env.RESEND_FROM ?? "EL Fix Mobile <onboarding@resend.dev>";
 
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_WINDOW_SEC = 600; // 10 minutes
@@ -204,14 +207,10 @@ async function sendViaResend(args: {
 function renderCustomerConfirmation(
   payload: z.infer<typeof Schema>,
   statusUrl: string,
-  isContactForm: boolean,
 ): { to: string; subject: string; html: string; text: string } {
-  const to = isContactForm
-    ? (payload as z.infer<typeof ContactSchema>).email
-    : (payload as z.infer<typeof BookingSchema>).contact.email;
-  const name = isContactForm
-    ? (payload as z.infer<typeof ContactSchema>).name
-    : (payload as z.infer<typeof BookingSchema>).contact.name;
+  const isContactForm = payload.type === "contact";
+  const to = isContactForm ? payload.email : payload.contact.email;
+  const name = isContactForm ? payload.name : payload.contact.name;
 
   const subject = isContactForm
     ? "Wir haben deine Nachricht — EL Fix Mobile"
@@ -260,26 +259,6 @@ function renderCustomerConfirmation(
   return { to, subject, html, text };
 }
 
-interface KvLike {
-  get: (key: string) => Promise<string | null>;
-  put: (
-    key: string,
-    value: string,
-    options?: { expirationTtl?: number },
-  ) => Promise<void>;
-}
-
-function getKv(): KvLike | null {
-  try {
-    const ctx = getCloudflareContext();
-    const kv = (ctx.env as unknown as { LEADS_KV?: KvLike }).LEADS_KV;
-    return kv ?? null;
-  } catch {
-    // Build-time evaluation or local dev without bindings — soft no-op.
-    return null;
-  }
-}
-
 export async function POST(req: NextRequest) {
   let raw: unknown;
   try {
@@ -316,10 +295,17 @@ export async function POST(req: NextRequest) {
   const kv = getKv();
 
   // Per-IP rate-limit — cheap, KV-backed counter with TTL window.
-  const ip =
-    req.headers.get("cf-connecting-ip") ||
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    "0.0.0.0";
+  // Known limitation (accepted): the read-modify-write on KV is not
+  // atomic, so a coordinated burst can slip a few requests past the
+  // limit before the counters converge. This is soft throttling against
+  // sloppy scrapers and refresh-mashers; the honeypot + dedup layers
+  // catch what slips through. A Durable Object counter is the upgrade
+  // path if abuse ever shows up in the logs.
+  //
+  // Only cf-connecting-ip is trusted: the Worker sits behind Cloudflare
+  // exclusively, and an x-forwarded-for fallback would let direct hits
+  // rotate fake IPs to bypass the limit.
+  const ip = req.headers.get("cf-connecting-ip") ?? "unknown";
   if (kv) {
     const rlKey = `rl:${ip}`;
     const cur = Number((await kv.get(rlKey)) ?? 0);
@@ -374,11 +360,7 @@ export async function POST(req: NextRequest) {
   // The customer confirmation always goes out — also when dedup matched.
   // The shop-owner email is suppressed on dedup so the inbox doesn't get
   // five copies of the same lead.
-  const customerEmail = renderCustomerConfirmation(
-    payload,
-    statusUrl,
-    payload.type === "contact",
-  );
+  const customerEmail = renderCustomerConfirmation(payload, statusUrl);
   const customerSend = await sendViaResend({
     ...customerEmail,
     replyTo: RECIPIENT,
@@ -426,13 +408,12 @@ export async function POST(req: NextRequest) {
     payload.type === "booking" ? payload.contact.email : payload.email;
   await notifyTelegram({
     leadId,
-    leadToken: token || null,
+    statusUrl,
     type: payload.type,
     summary: rendered.text,
     customerName: tgName,
     customerPhone: tgPhone,
     customerEmail: tgEmail,
-    siteUrl: SITE.url,
   }).catch((err) => {
     console.error("[api/lead] telegram notify threw", err);
   });

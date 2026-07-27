@@ -4,35 +4,22 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Star } from "lucide-react";
+import type { ReviewsResponse } from "@/lib/reviews-types";
 
 type Review = { text: string; name: string; date: string };
-
-interface LiveReview {
-  author: string;
-  rating: number;
-  relative: string;
-  text: string;
-  time: number; // unix seconds
-}
-
-interface LiveReviewsPayload {
-  rating: number | null;
-  total: number | null;
-  reviews: LiveReview[];
-  source: "google" | "unavailable";
-}
 
 export function Reviews() {
   const t = useTranslations("reviews");
   // Live-pulled reviews when the Google Places API is configured;
   // otherwise the static i18n fallback below stays in place. The state
   // flip happens once, on mount, after the API answers.
-  const [live, setLive] = useState<LiveReviewsPayload | null>(null);
+  const [live, setLive] = useState<ReviewsResponse | null>(null);
 
   useEffect(() => {
-    fetch("/api/reviews")
+    const controller = new AbortController();
+    fetch("/api/reviews", { signal: controller.signal })
       .then((r) => (r.ok ? r.json() : null))
-      .then((data: LiveReviewsPayload | null) => {
+      .then((data: ReviewsResponse | null) => {
         if (data?.source === "google" && data.reviews.length > 0) {
           setLive(data);
         }
@@ -40,6 +27,7 @@ export function Reviews() {
       .catch(() => {
         /* swallow — fallback already in place */
       });
+    return () => controller.abort();
   }, []);
 
   const staticReviews: Review[] = [
@@ -54,7 +42,7 @@ export function Reviews() {
   ];
 
   const reviews: Review[] =
-    live?.reviews && live.reviews.length > 0
+    live && live.reviews.length > 0
       ? live.reviews.map((r) => ({
           text: r.text,
           name: r.author,
@@ -74,7 +62,7 @@ export function Reviews() {
           <motion.p
             initial={{ opacity: 0.999, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]"
           >
@@ -83,7 +71,7 @@ export function Reviews() {
           <motion.h2
             initial={{ opacity: 0.999, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]"
           >
@@ -117,7 +105,9 @@ function Marquee({
   direction: "left" | "right";
   speed: number;
 }) {
-  const double = [...items, ...items, ...items, ...items];
+  // Two copies: the loop translates by -50% (exactly one copy's width),
+  // so a doubled row is the minimum for a seamless wrap.
+  const double = [...items, ...items];
   return (
     <div className="overflow-hidden group/marquee">
       <motion.div
@@ -129,7 +119,6 @@ function Marquee({
           repeat: Infinity,
           ease: "linear",
         }}
-        whileHover={{ scale: 1 }}
       >
         {double.map((r, i) => (
           <ReviewCard key={`${r.name}-${i}`} review={r} />
