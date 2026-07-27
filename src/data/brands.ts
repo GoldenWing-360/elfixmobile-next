@@ -76,7 +76,7 @@ export const BRANDS: ReadonlyArray<BrandDef> = [
   },
   {
     slug: "google",
-    label: "Google",
+    label: "Google Pixel",
     searchTerms: "Pixel, Pixel Pro, Pixel Fold",
     pricingBuckets: [],
     hasOnlinePrices: false,

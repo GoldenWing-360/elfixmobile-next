@@ -6,7 +6,6 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { LenisProvider } from "@/components/LenisProvider";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
@@ -182,7 +181,6 @@ export default async function LocaleLayout({
           data-cf-beacon='{"token": "b7957042348e4e50a40b14611f75def2"}'
         />
         <NextIntlClientProvider>
-          <LenisProvider>
             {/* Two-layer chrome gate: server-side (via request headers)
              * keeps the SSR HTML clean, client-side ChromeGate is the
              * fallback for runtimes where the headers don't expose the
@@ -204,7 +202,6 @@ export default async function LocaleLayout({
                 <CookieBanner />
               </ChromeGate>
             )}
-          </LenisProvider>
         </NextIntlClientProvider>
       </body>
     </html>

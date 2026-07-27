@@ -304,7 +304,7 @@
     "table_cta_all": "View all models",
     "quote_eyebrow": "Quote on request",
     "quote_headline": "{brand} repair – quote in under 1 hour",
-    "quote_sub": "For {brand} ({count}+ models) we draft the quote manually because spare-part prices vary widely between models. You will receive a written estimate the same day.",
+    "quote_sub": "For {brand} ({count}+ models) we draft the quote manually because spare-part prices vary widely between models. You will receive a written estimate usually within one hour during opening hours.",
     "quote_primary_cta": "Request a repair quote",
     "quote_secondary_cta": "Call us",
     "quote_bullet_diagnose": "Diagnosis & quote always free of charge",
