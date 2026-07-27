@@ -62,10 +62,15 @@ export function localBusinessJsonLd(locale: string) {
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
-    image: `${SITE.url}/og.png`,
+    image: `${SITE.url}/opengraph-image`,
     logo: `${SITE.url}/logo.svg`,
     inLanguage: locale,
     priceRange: SITE.priceRange,
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${SITE.name} ${SITE.address.street} ${SITE.address.postalCode} ${SITE.address.locality}`,
+    )}`,
+    paymentAccepted: "Cash, Credit Card, Debit Card",
+    currenciesAccepted: "EUR",
     vatID: SITE.vatId,
     founder: {
       "@type": "Person",
