@@ -1027,5 +1027,17 @@
   },
   "calc_whatsapp": {
     "prefill": "Hi! I need a {repairs} repair for my {model}. Online calculator quote: {total} €."
+  },
+  "workshop": {
+    "eyebrow": "WORKSHOP",
+    "headline": "Precision is our craft.",
+    "sub": "Every repair happens at our own bench in Seestadt Aspern: ESD-protected, with professional tools and tested parts. No shipping to third parties, your device stays in-house.",
+    "stat_1_value": "30 min",
+    "stat_1_label": "Express repair",
+    "stat_2_value": "12 months",
+    "stat_2_label": "Warranty",
+    "stat_3_value": "7 / 7",
+    "stat_3_label": "days open",
+    "video_label": "Video: smartphone repair at our workbench"
   }
 }

@@ -1,0 +1,994 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "EL Fix Mobile - Startseite" [ref=e4] [cursor=pointer]:
+        - /url: /de
+        - img "EL Fix Mobile" [ref=e5]
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Reparatur" [ref=e8] [cursor=pointer]:
+            - /url: /de/reparatur
+        - listitem [ref=e9]:
+          - link "Preisrechner" [ref=e10] [cursor=pointer]:
+            - /url: /de/preisrechner
+        - listitem [ref=e11]:
+          - link "Termin" [ref=e12] [cursor=pointer]:
+            - /url: /de/buchen
+        - listitem [ref=e13]:
+          - link "Kontakt" [ref=e14] [cursor=pointer]:
+            - /url: /de/kontakt
+      - button "de" [ref=e17]:
+        - img [ref=e18]
+        - generic [ref=e21]: de
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: EL FIX MOBILE - WIEN 1220
+      - heading "Dein iPhone. Wie neu. In 30 Minuten." [level=1] [ref=e26]:
+        - generic [ref=e28]:
+          - generic [ref=e30]: Dein
+          - generic [ref=e32]: iPhone.
+        - generic [ref=e34]:
+          - generic [ref=e36]: Wie
+          - generic [ref=e38]: neu.
+        - generic [ref=e40]:
+          - generic [ref=e42]: In
+          - generic [ref=e44]: "30"
+          - generic [ref=e46]: Minuten.
+      - paragraph [ref=e47]: Display ab €49. Akku ab €39. Wasserschaden ab €69. Festpreis vor der Reparatur.
+      - generic [ref=e54]: 09:41
+      - generic [ref=e62]:
+        - link "Preis berechnen" [ref=e63] [cursor=pointer]:
+          - /url: /de/preisrechner
+        - link "Termin buchen →" [ref=e64] [cursor=pointer]:
+          - /url: /de/buchen
+          - text: Termin buchen
+          - generic [ref=e65]: →
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - img [ref=e69]
+          - generic [ref=e71]:
+            - text: 4,4 von 5
+            - generic [ref=e72]: · 294 Google-Bewertungen
+        - generic [ref=e73]:
+          - img [ref=e75]
+          - generic [ref=e78]: Express in 30 Min
+        - generic [ref=e79]:
+          - img [ref=e81]
+          - generic [ref=e83]: 12 Monate Garantie
+        - generic [ref=e84]:
+          - img [ref=e86]
+          - generic [ref=e88]: 7 Tage offen
+    - link "Gratis Abholung in Wien Wir holen Ihr Gerät ab Innerhalb Wiens kostenlos. Außerhalb gegen kleinen Aufpreis. Wir liefern repariert zurück. Abholung anfragen" [ref=e91] [cursor=pointer]:
+      - /url: /de/buchen?service=pickup
+      - generic [ref=e92]:
+        - img [ref=e94]
+        - generic [ref=e99]:
+          - generic [ref=e100]: Gratis Abholung in Wien
+          - heading "Wir holen Ihr Gerät ab" [level=2] [ref=e102]
+          - paragraph [ref=e103]: Innerhalb Wiens kostenlos. Außerhalb gegen kleinen Aufpreis. Wir liefern repariert zurück.
+      - generic [ref=e104]:
+        - text: Abholung anfragen
+        - img [ref=e105]
+    - generic [ref=e108]:
+      - generic [ref=e109]:
+        - paragraph [ref=e110]: WIR REPARIEREN
+        - heading "Alles, was kaputt geht. Schneller als der Hersteller." [level=2] [ref=e111]
+        - paragraph [ref=e112]: Display, Akku, Kamera, Wasserschaden. Express-Diagnose gratis, Festpreis vor der Reparatur.
+      - generic [ref=e113]:
+        - article [ref=e114]:
+          - generic [ref=e115]:
+            - img [ref=e118]
+            - generic [ref=e122]: ab 49 €
+          - generic [ref=e123]:
+            - heading "Display Tausch" [level=3] [ref=e124]
+            - paragraph [ref=e125]: Sprung, Touch-Aussetzer, schwarzes Bild. Original Refurbished oder Premium-Nachbau, oft in 30 Minuten.
+            - link "Reparatur starten →" [ref=e127] [cursor=pointer]:
+              - /url: /de/display-reparatur-wien
+              - text: Reparatur starten
+              - generic [ref=e128]: →
+        - article [ref=e129]:
+          - generic [ref=e130]:
+            - img [ref=e133]
+            - generic [ref=e137]: ab 39 €
+          - generic [ref=e138]:
+            - heading "Akku Tausch" [level=3] [ref=e139]
+            - paragraph [ref=e140]: Volle Kapazität, längere Laufzeit. Auf Wunsch Original-Akku ohne iOS-Warnmeldung.
+            - link "Reparatur starten →" [ref=e142] [cursor=pointer]:
+              - /url: /de/akku-tausch-wien
+              - text: Reparatur starten
+              - generic [ref=e143]: →
+        - article [ref=e144]:
+          - generic [ref=e145]:
+            - img [ref=e148]
+            - generic [ref=e153]: ab 69 €
+          - generic [ref=e154]:
+            - heading "Wasserschaden" [level=3] [ref=e155]
+            - paragraph [ref=e156]: Komplett-Reinigung im Ultraschallbad, Bauteil-Diagnose und Reparatur. Auch bei IP68-Geräten.
+            - link "Reparatur starten →" [ref=e158] [cursor=pointer]:
+              - /url: /de/wasserschaden-handy-reparatur-wien
+              - text: Reparatur starten
+              - generic [ref=e159]: →
+    - generic [ref=e161]:
+      - generic [ref=e163]:
+        - paragraph [ref=e164]: ABLAUF
+        - heading "So einfach geht's." [level=2] [ref=e165]
+        - paragraph [ref=e166]: Vier Schritte, kein Termin nötig. Vorbeikommen, einsenden oder Abholung anfragen.
+      - list [ref=e167]:
+        - listitem [ref=e169]:
+          - generic [ref=e172]:
+            - img [ref=e173]
+            - generic [ref=e175]: "1"
+          - generic [ref=e176]:
+            - heading "Anfrage" [level=3] [ref=e177]
+            - paragraph [ref=e178]: Online-Formular, Anruf oder direkt vorbeikommen. Wir antworten meist innerhalb von 30 Minuten.
+        - listitem [ref=e179]:
+          - generic [ref=e182]:
+            - img [ref=e183]
+            - generic [ref=e186]: "2"
+          - generic [ref=e187]:
+            - heading "Kostenlose Diagnose" [level=3] [ref=e188]
+            - paragraph [ref=e189]: Wir prüfen Ihr Gerät und nennen einen Festpreis. Unverbindlich, keine versteckten Kosten.
+        - listitem [ref=e190]:
+          - generic [ref=e193]:
+            - img [ref=e194]
+            - generic [ref=e196]: "3"
+          - generic [ref=e197]:
+            - heading "Reparatur" [level=3] [ref=e198]
+            - paragraph [ref=e199]: Display- und Akku-Tausch oft in 30 Minuten. Komplexere Schäden in 1 bis 2 Werktagen.
+        - listitem [ref=e200]:
+          - generic [ref=e203]:
+            - img [ref=e204]
+            - generic [ref=e207]: "4"
+          - generic [ref=e208]:
+            - heading "Abholung und Garantie" [level=3] [ref=e209]
+            - paragraph [ref=e210]: Abholen oder per Post zurück. 12 Monate Garantie auf jedes Ersatzteil und unsere Arbeit.
+    - generic [ref=e211]:
+      - generic [ref=e213]:
+        - paragraph [ref=e214]: MARKEN
+        - heading "Wir reparieren alle." [level=2] [ref=e215]
+        - paragraph [ref=e216]: Apple, Samsung, Xiaomi, Google und mehr. Originalteile oder geprüfte Premium-Nachbauteile.
+      - generic [ref=e217]:
+        - link "97 Modelle Apple Reparatur →" [ref=e219] [cursor=pointer]:
+          - /url: /de/reparatur/apple
+          - generic [ref=e220]:
+            - generic [ref=e221]: 97 Modelle
+            - img [ref=e222]
+            - generic [ref=e223]:
+              - generic [ref=e224]: Apple
+              - generic [ref=e225]:
+                - generic [ref=e226]: Reparatur
+                - generic [ref=e227]: →
+        - link "122 Modelle Samsung Reparatur →" [ref=e229] [cursor=pointer]:
+          - /url: /de/reparatur/samsung
+          - generic [ref=e230]:
+            - generic [ref=e231]: 122 Modelle
+            - img [ref=e232]
+            - generic [ref=e233]:
+              - generic [ref=e234]: Samsung
+              - generic [ref=e235]:
+                - generic [ref=e236]: Reparatur
+                - generic [ref=e237]: →
+        - link "60 Modelle Xiaomi Anfrage →" [ref=e239] [cursor=pointer]:
+          - /url: /de/reparatur/xiaomi
+          - generic [ref=e240]:
+            - generic [ref=e241]: 60 Modelle
+            - img [ref=e242]
+            - generic [ref=e243]:
+              - generic [ref=e244]: Xiaomi
+              - generic [ref=e245]:
+                - generic [ref=e246]: Anfrage
+                - generic [ref=e247]: →
+        - link "24 Modelle Google Anfrage →" [ref=e249] [cursor=pointer]:
+          - /url: /de/reparatur/google
+          - generic [ref=e250]:
+            - generic [ref=e251]: 24 Modelle
+            - img [ref=e252]
+            - generic [ref=e253]:
+              - generic [ref=e254]: Google
+              - generic [ref=e255]:
+                - generic [ref=e256]: Anfrage
+                - generic [ref=e257]: →
+        - link "38 Modelle Huawei Anfrage →" [ref=e259] [cursor=pointer]:
+          - /url: /de/reparatur/huawei
+          - generic [ref=e260]:
+            - generic [ref=e261]: 38 Modelle
+            - img [ref=e262]
+            - generic [ref=e263]:
+              - generic [ref=e264]: Huawei
+              - generic [ref=e265]:
+                - generic [ref=e266]: Anfrage
+                - generic [ref=e267]: →
+        - link "28 Modelle OnePlus Anfrage →" [ref=e269] [cursor=pointer]:
+          - /url: /de/reparatur/oneplus
+          - generic [ref=e270]:
+            - generic [ref=e271]: 28 Modelle
+            - img [ref=e272]
+            - generic [ref=e273]:
+              - generic [ref=e274]: OnePlus
+              - generic [ref=e275]:
+                - generic [ref=e276]: Anfrage
+                - generic [ref=e277]: →
+        - link "18 Modelle Sony Anfrage →" [ref=e279] [cursor=pointer]:
+          - /url: /de/reparatur/sony
+          - generic [ref=e280]:
+            - generic [ref=e281]: 18 Modelle
+            - img [ref=e282]
+            - generic [ref=e283]:
+              - generic [ref=e284]: Sony
+              - generic [ref=e285]:
+                - generic [ref=e286]: Anfrage
+                - generic [ref=e287]: →
+        - link "22 Modelle Nokia Anfrage →" [ref=e289] [cursor=pointer]:
+          - /url: /de/reparatur/nokia
+          - generic [ref=e290]:
+            - generic [ref=e291]: 22 Modelle
+            - img [ref=e292]
+            - generic [ref=e293]:
+              - generic [ref=e294]: Nokia
+              - generic [ref=e295]:
+                - generic [ref=e296]: Anfrage
+                - generic [ref=e297]: →
+    - generic [ref=e300]:
+      - generic [ref=e301]:
+        - paragraph [ref=e302]: PREISRECHNER
+        - heading "In 10 Sekunden zum Festpreis." [level=2] [ref=e303]
+        - paragraph [ref=e304]: Marke wählen, Modell auswählen, Schaden eintragen. Wir nennen den Preis sofort.
+      - generic [ref=e305]:
+        - link "Display Apple · iPhone 16 Pro Max ab 260 € inkl. Ersatzteil, Einbau, 12 Monate Garantie Diese Reparatur buchen" [ref=e306] [cursor=pointer]:
+          - /url: /de/preisrechner?brand=apple-iphone&model=iPhone+16+Pro+Max&repairs=display
+          - generic [ref=e308]:
+            - img [ref=e309]
+            - generic [ref=e311]: Display
+          - generic [ref=e312]:
+            - generic [ref=e313]: Apple · iPhone 16 Pro Max
+            - generic [ref=e314]:
+              - generic [ref=e315]: ab
+              - generic [ref=e316]: "260"
+              - generic [ref=e317]: €
+            - paragraph [ref=e318]: inkl. Ersatzteil, Einbau, 12 Monate Garantie
+          - generic [ref=e319]:
+            - text: Diese Reparatur buchen
+            - img [ref=e320]
+        - link "Display Samsung · Galaxy S25 Ultra ab 230 € inkl. Ersatzteil, Einbau, 12 Monate Garantie Diese Reparatur buchen" [ref=e322] [cursor=pointer]:
+          - /url: /de/preisrechner?brand=samsung-galaxy&model=Samsung+S25+Ultra&repairs=display
+          - generic [ref=e324]:
+            - img [ref=e325]
+            - generic [ref=e327]: Display
+          - generic [ref=e328]:
+            - generic [ref=e329]: Samsung · Galaxy S25 Ultra
+            - generic [ref=e330]:
+              - generic [ref=e331]: ab
+              - generic [ref=e332]: "230"
+              - generic [ref=e333]: €
+            - paragraph [ref=e334]: inkl. Ersatzteil, Einbau, 12 Monate Garantie
+          - generic [ref=e335]:
+            - text: Diese Reparatur buchen
+            - img [ref=e336]
+        - link "Akku Apple · iPad Pro 11 (2025) ab 150 € inkl. Ersatzteil, Einbau, 12 Monate Garantie Diese Reparatur buchen" [ref=e338] [cursor=pointer]:
+          - /url: /de/preisrechner?brand=apple-ipad&model=iPad+Pro+11+%282025%29&repairs=battery
+          - generic [ref=e340]:
+            - img [ref=e341]
+            - generic [ref=e343]: Akku
+          - generic [ref=e344]:
+            - generic [ref=e345]: Apple · iPad Pro 11 (2025)
+            - generic [ref=e346]:
+              - generic [ref=e347]: ab
+              - generic [ref=e348]: "150"
+              - generic [ref=e349]: €
+            - paragraph [ref=e350]: inkl. Ersatzteil, Einbau, 12 Monate Garantie
+          - generic [ref=e351]:
+            - text: Diese Reparatur buchen
+            - img [ref=e352]
+      - generic [ref=e354]:
+        - paragraph [ref=e355]: Anderes Modell oder Reparatur? Komplett-Rechner deckt 219 Modelle ab.
+        - link "Vollständigen Preisrechner öffnen" [ref=e356] [cursor=pointer]:
+          - /url: /de/preisrechner
+          - text: Vollständigen Preisrechner öffnen
+          - img [ref=e357]
+    - generic [ref=e360]:
+      - generic [ref=e361]:
+        - paragraph [ref=e362]: MEHR ALS REPARATUR
+        - heading "Du brauchst ein neues Handy? Auch das machen wir." [level=2] [ref=e363]
+        - paragraph [ref=e364]: Vom Vertrag bis zum Zubehör — wir sind die zentrale Anlaufstelle für alles rund ums Handy in Wien Aspern.
+      - generic [ref=e365]:
+        - link "Tarif-Beratung Wir verkaufen Tarife für alle drei österreichischen Netze. Persönliche Beratung, keine Hotline. A1 Magenta Drei Beratung anfragen" [ref=e366] [cursor=pointer]:
+          - /url: /de/kontakt?topic=tarif
+          - img [ref=e367]
+          - heading "Tarif-Beratung" [level=3] [ref=e369]
+          - paragraph [ref=e370]: Wir verkaufen Tarife für alle drei österreichischen Netze. Persönliche Beratung, keine Hotline.
+          - list [ref=e371]:
+            - listitem [ref=e372]: A1
+            - listitem [ref=e373]: Magenta
+            - listitem [ref=e374]: Drei
+          - generic [ref=e375]:
+            - text: Beratung anfragen
+            - img [ref=e376]
+        - link "Handy-Kauf mit 0% Finanzierung Neues iPhone oder Galaxy bei uns kaufen, in Raten zahlen. Santander 0% Finanzierung direkt im Geschäft. Santander 0% Mehr erfahren" [ref=e378] [cursor=pointer]:
+          - /url: /de/kontakt?topic=kauf-finanzierung
+          - img [ref=e379]
+          - heading "Handy-Kauf mit 0% Finanzierung" [level=3] [ref=e382]
+          - paragraph [ref=e383]: Neues iPhone oder Galaxy bei uns kaufen, in Raten zahlen. Santander 0% Finanzierung direkt im Geschäft.
+          - list [ref=e384]:
+            - listitem [ref=e385]: Santander 0%
+          - generic [ref=e386]:
+            - text: Mehr erfahren
+            - img [ref=e387]
+        - link "An- und Verkauf Wir kaufen dein altes Handy zum fairen Preis und verkaufen geprüfte Gebrauchtgeräte mit Garantie. Gerät schätzen lassen" [ref=e389] [cursor=pointer]:
+          - /url: /de/kontakt?topic=an-und-verkauf
+          - img [ref=e390]
+          - heading "An- und Verkauf" [level=3] [ref=e395]
+          - paragraph [ref=e396]: Wir kaufen dein altes Handy zum fairen Preis und verkaufen geprüfte Gebrauchtgeräte mit Garantie.
+          - generic [ref=e397]:
+            - text: Gerät schätzen lassen
+            - img [ref=e398]
+        - link "Zubehör vor Ort Hüllen, Folien, Ladekabel, Powerbanks, Kopfhörer. Walk-in, kein Versand-Stress. Was wir da haben" [ref=e400] [cursor=pointer]:
+          - /url: /de/kontakt?topic=zubehoer
+          - img [ref=e401]
+          - heading "Zubehör vor Ort" [level=3] [ref=e403]
+          - paragraph [ref=e404]: Hüllen, Folien, Ladekabel, Powerbanks, Kopfhörer. Walk-in, kein Versand-Stress.
+          - generic [ref=e405]:
+            - text: Was wir da haben
+            - img [ref=e406]
+    - generic [ref=e409]:
+      - generic [ref=e410]:
+        - paragraph [ref=e411]: STANDORT
+        - heading "Aspern Seestadt, Wien 1220." [level=2] [ref=e412]
+        - paragraph [ref=e413]: Drei Minuten Fußweg von der U2-Station Aspern Nord. Kostenlose Parkplätze vor der Tür.
+        - generic [ref=e414]:
+          - link "Route in Google Maps" [ref=e415] [cursor=pointer]:
+            - /url: https://www.google.com/maps/search/?api=1&query=Maria-Tusch-Strasse+17%2F1%2C+1220+Wien
+          - link "Jetzt anrufen" [ref=e416] [cursor=pointer]:
+            - /url: tel:+436606071414
+            - img [ref=e417]
+            - text: Jetzt anrufen
+      - generic [ref=e419]:
+        - generic [ref=e420]:
+          - generic [ref=e421]:
+            - img [ref=e423]
+            - text: Adresse
+          - generic [ref=e426]:
+            - text: Maria-Tusch-Strasse 17/1
+            - text: 1220 Wien (Aspern Seestadt)
+        - generic [ref=e427]:
+          - generic [ref=e428]:
+            - img [ref=e430]
+            - text: Telefon
+          - link "+43 660 6071414" [ref=e433] [cursor=pointer]:
+            - /url: tel:+436606071414
+        - generic [ref=e434]:
+          - generic [ref=e435]:
+            - img [ref=e437]
+            - text: E-Mail
+          - link "elfixmobile@gmx.at" [ref=e441] [cursor=pointer]:
+            - /url: mailto:elfixmobile@gmx.at
+        - generic [ref=e442]:
+          - generic [ref=e443]:
+            - img [ref=e445]
+            - text: Öffnungszeiten
+          - generic [ref=e448]:
+            - text: Montag bis Samstag 09:00 bis 19:00
+            - text: Sonntag 09:00 bis 18:00
+      - iframe [ref=e451]:
+        
+    - generic [ref=e452]:
+      - generic [ref=e454]:
+        - paragraph [ref=e455]: BEWERTUNGEN
+        - heading "Was unsere Kundinnen und Kunden sagen." [level=2] [ref=e456]
+        - paragraph [ref=e457]: 4,4 von 5 Sternen aus 294 echten Google-Bewertungen.
+      - generic [ref=e458]:
+        - generic [ref=e460]:
+          - article [ref=e461]:
+            - generic [ref=e462]:
+              - img "5 von 5 Sternen" [ref=e463]:
+                - img [ref=e464]
+                - img [ref=e466]
+                - img [ref=e468]
+                - img [ref=e470]
+                - img [ref=e472]
+              - generic [ref=e474]:
+                - img [ref=e475]
+                - text: Google
+            - paragraph [ref=e476]: Display in 25 Minuten getauscht, freundliches Team, transparenter Festpreis. Sehr zu empfehlen.
+            - generic [ref=e477]:
+              - generic [ref=e478]: Alexandra K.
+              - time [ref=e479]: Mar 2026
+          - article [ref=e480]:
+            - generic [ref=e481]:
+              - img "5 von 5 Sternen" [ref=e482]:
+                - img [ref=e483]
+                - img [ref=e485]
+                - img [ref=e487]
+                - img [ref=e489]
+                - img [ref=e491]
+              - generic [ref=e493]:
+                - img [ref=e494]
+                - text: Google
+            - paragraph [ref=e495]: Akku gewechselt während ich kurz Kaffee trinken war. Funktioniert wieder wie am ersten Tag.
+            - generic [ref=e496]:
+              - generic [ref=e497]: Markus W.
+              - time [ref=e498]: Feb 2026
+          - article [ref=e499]:
+            - generic [ref=e500]:
+              - img "5 von 5 Sternen" [ref=e501]:
+                - img [ref=e502]
+                - img [ref=e504]
+                - img [ref=e506]
+                - img [ref=e508]
+                - img [ref=e510]
+              - generic [ref=e512]:
+                - img [ref=e513]
+                - text: Google
+            - paragraph [ref=e514]: Mein iPhone war nach einem Wasserschaden tot. Hier haben sie es wieder zum Leben erweckt.
+            - generic [ref=e515]:
+              - generic [ref=e516]: Sema Y.
+              - time [ref=e517]: Feb 2026
+          - article [ref=e518]:
+            - generic [ref=e519]:
+              - img "5 von 5 Sternen" [ref=e520]:
+                - img [ref=e521]
+                - img [ref=e523]
+                - img [ref=e525]
+                - img [ref=e527]
+                - img [ref=e529]
+              - generic [ref=e531]:
+                - img [ref=e532]
+                - text: Google
+            - paragraph [ref=e533]: Faire Preise, kein Schmäh. Endlich ein Reparatur-Shop in Aspern, dem man vertrauen kann.
+            - generic [ref=e534]:
+              - generic [ref=e535]: Florian G.
+              - time [ref=e536]: Jan 2026
+          - article [ref=e537]:
+            - generic [ref=e538]:
+              - img "5 von 5 Sternen" [ref=e539]:
+                - img [ref=e540]
+                - img [ref=e542]
+                - img [ref=e544]
+                - img [ref=e546]
+                - img [ref=e548]
+              - generic [ref=e550]:
+                - img [ref=e551]
+                - text: Google
+            - paragraph [ref=e552]: Display in 25 Minuten getauscht, freundliches Team, transparenter Festpreis. Sehr zu empfehlen.
+            - generic [ref=e553]:
+              - generic [ref=e554]: Alexandra K.
+              - time [ref=e555]: Mar 2026
+          - article [ref=e556]:
+            - generic [ref=e557]:
+              - img "5 von 5 Sternen" [ref=e558]:
+                - img [ref=e559]
+                - img [ref=e561]
+                - img [ref=e563]
+                - img [ref=e565]
+                - img [ref=e567]
+              - generic [ref=e569]:
+                - img [ref=e570]
+                - text: Google
+            - paragraph [ref=e571]: Akku gewechselt während ich kurz Kaffee trinken war. Funktioniert wieder wie am ersten Tag.
+            - generic [ref=e572]:
+              - generic [ref=e573]: Markus W.
+              - time [ref=e574]: Feb 2026
+          - article [ref=e575]:
+            - generic [ref=e576]:
+              - img "5 von 5 Sternen" [ref=e577]:
+                - img [ref=e578]
+                - img [ref=e580]
+                - img [ref=e582]
+                - img [ref=e584]
+                - img [ref=e586]
+              - generic [ref=e588]:
+                - img [ref=e589]
+                - text: Google
+            - paragraph [ref=e590]: Mein iPhone war nach einem Wasserschaden tot. Hier haben sie es wieder zum Leben erweckt.
+            - generic [ref=e591]:
+              - generic [ref=e592]: Sema Y.
+              - time [ref=e593]: Feb 2026
+          - article [ref=e594]:
+            - generic [ref=e595]:
+              - img "5 von 5 Sternen" [ref=e596]:
+                - img [ref=e597]
+                - img [ref=e599]
+                - img [ref=e601]
+                - img [ref=e603]
+                - img [ref=e605]
+              - generic [ref=e607]:
+                - img [ref=e608]
+                - text: Google
+            - paragraph [ref=e609]: Faire Preise, kein Schmäh. Endlich ein Reparatur-Shop in Aspern, dem man vertrauen kann.
+            - generic [ref=e610]:
+              - generic [ref=e611]: Florian G.
+              - time [ref=e612]: Jan 2026
+          - article [ref=e613]:
+            - generic [ref=e614]:
+              - img "5 von 5 Sternen" [ref=e615]:
+                - img [ref=e616]
+                - img [ref=e618]
+                - img [ref=e620]
+                - img [ref=e622]
+                - img [ref=e624]
+              - generic [ref=e626]:
+                - img [ref=e627]
+                - text: Google
+            - paragraph [ref=e628]: Display in 25 Minuten getauscht, freundliches Team, transparenter Festpreis. Sehr zu empfehlen.
+            - generic [ref=e629]:
+              - generic [ref=e630]: Alexandra K.
+              - time [ref=e631]: Mar 2026
+          - article [ref=e632]:
+            - generic [ref=e633]:
+              - img "5 von 5 Sternen" [ref=e634]:
+                - img [ref=e635]
+                - img [ref=e637]
+                - img [ref=e639]
+                - img [ref=e641]
+                - img [ref=e643]
+              - generic [ref=e645]:
+                - img [ref=e646]
+                - text: Google
+            - paragraph [ref=e647]: Akku gewechselt während ich kurz Kaffee trinken war. Funktioniert wieder wie am ersten Tag.
+            - generic [ref=e648]:
+              - generic [ref=e649]: Markus W.
+              - time [ref=e650]: Feb 2026
+          - article [ref=e651]:
+            - generic [ref=e652]:
+              - img "5 von 5 Sternen" [ref=e653]:
+                - img [ref=e654]
+                - img [ref=e656]
+                - img [ref=e658]
+                - img [ref=e660]
+                - img [ref=e662]
+              - generic [ref=e664]:
+                - img [ref=e665]
+                - text: Google
+            - paragraph [ref=e666]: Mein iPhone war nach einem Wasserschaden tot. Hier haben sie es wieder zum Leben erweckt.
+            - generic [ref=e667]:
+              - generic [ref=e668]: Sema Y.
+              - time [ref=e669]: Feb 2026
+          - article [ref=e670]:
+            - generic [ref=e671]:
+              - img "5 von 5 Sternen" [ref=e672]:
+                - img [ref=e673]
+                - img [ref=e675]
+                - img [ref=e677]
+                - img [ref=e679]
+                - img [ref=e681]
+              - generic [ref=e683]:
+                - img [ref=e684]
+                - text: Google
+            - paragraph [ref=e685]: Faire Preise, kein Schmäh. Endlich ein Reparatur-Shop in Aspern, dem man vertrauen kann.
+            - generic [ref=e686]:
+              - generic [ref=e687]: Florian G.
+              - time [ref=e688]: Jan 2026
+          - article [ref=e689]:
+            - generic [ref=e690]:
+              - img "5 von 5 Sternen" [ref=e691]:
+                - img [ref=e692]
+                - img [ref=e694]
+                - img [ref=e696]
+                - img [ref=e698]
+                - img [ref=e700]
+              - generic [ref=e702]:
+                - img [ref=e703]
+                - text: Google
+            - paragraph [ref=e704]: Display in 25 Minuten getauscht, freundliches Team, transparenter Festpreis. Sehr zu empfehlen.
+            - generic [ref=e705]:
+              - generic [ref=e706]: Alexandra K.
+              - time [ref=e707]: Mar 2026
+          - article [ref=e708]:
+            - generic [ref=e709]:
+              - img "5 von 5 Sternen" [ref=e710]:
+                - img [ref=e711]
+                - img [ref=e713]
+                - img [ref=e715]
+                - img [ref=e717]
+                - img [ref=e719]
+              - generic [ref=e721]:
+                - img [ref=e722]
+                - text: Google
+            - paragraph [ref=e723]: Akku gewechselt während ich kurz Kaffee trinken war. Funktioniert wieder wie am ersten Tag.
+            - generic [ref=e724]:
+              - generic [ref=e725]: Markus W.
+              - time [ref=e726]: Feb 2026
+          - article [ref=e727]:
+            - generic [ref=e728]:
+              - img "5 von 5 Sternen" [ref=e729]:
+                - img [ref=e730]
+                - img [ref=e732]
+                - img [ref=e734]
+                - img [ref=e736]
+                - img [ref=e738]
+              - generic [ref=e740]:
+                - img [ref=e741]
+                - text: Google
+            - paragraph [ref=e742]: Mein iPhone war nach einem Wasserschaden tot. Hier haben sie es wieder zum Leben erweckt.
+            - generic [ref=e743]:
+              - generic [ref=e744]: Sema Y.
+              - time [ref=e745]: Feb 2026
+          - article [ref=e746]:
+            - generic [ref=e747]:
+              - img "5 von 5 Sternen" [ref=e748]:
+                - img [ref=e749]
+                - img [ref=e751]
+                - img [ref=e753]
+                - img [ref=e755]
+                - img [ref=e757]
+              - generic [ref=e759]:
+                - img [ref=e760]
+                - text: Google
+            - paragraph [ref=e761]: Faire Preise, kein Schmäh. Endlich ein Reparatur-Shop in Aspern, dem man vertrauen kann.
+            - generic [ref=e762]:
+              - generic [ref=e763]: Florian G.
+              - time [ref=e764]: Jan 2026
+        - generic [ref=e767]:
+          - article [ref=e768]:
+            - generic [ref=e769]:
+              - img "5 von 5 Sternen" [ref=e770]:
+                - img [ref=e771]
+                - img [ref=e773]
+                - img [ref=e775]
+                - img [ref=e777]
+                - img [ref=e779]
+              - generic [ref=e781]:
+                - img [ref=e782]
+                - text: Google
+            - paragraph [ref=e783]: Hot fix when my Samsung went dead. They were patient, explained everything in English. Top.
+            - generic [ref=e784]:
+              - generic [ref=e785]: Daniel B.
+              - time [ref=e786]: Jan 2026
+          - article [ref=e787]:
+            - generic [ref=e788]:
+              - img "5 von 5 Sternen" [ref=e789]:
+                - img [ref=e790]
+                - img [ref=e792]
+                - img [ref=e794]
+                - img [ref=e796]
+                - img [ref=e798]
+              - generic [ref=e800]:
+                - img [ref=e801]
+                - text: Google
+            - paragraph [ref=e802]: Cпасибо большое, починили iPhone быстро и по адекватной цене. Очень доволен.
+            - generic [ref=e803]:
+              - generic [ref=e804]: Vladimir T.
+              - time [ref=e805]: Jan 2026
+          - article [ref=e806]:
+            - generic [ref=e807]:
+              - img "5 von 5 Sternen" [ref=e808]:
+                - img [ref=e809]
+                - img [ref=e811]
+                - img [ref=e813]
+                - img [ref=e815]
+                - img [ref=e817]
+              - generic [ref=e819]:
+                - img [ref=e820]
+                - text: Google
+            - paragraph [ref=e821]: Yedek parça orijinal, garanti gerçek, fiyat dürüst. Tavsiye ederim.
+            - generic [ref=e822]:
+              - generic [ref=e823]: Mehmet O.
+              - time [ref=e824]: Dec 2025
+          - article [ref=e825]:
+            - generic [ref=e826]:
+              - img "5 von 5 Sternen" [ref=e827]:
+                - img [ref=e828]
+                - img [ref=e830]
+                - img [ref=e832]
+                - img [ref=e834]
+                - img [ref=e836]
+              - generic [ref=e838]:
+                - img [ref=e839]
+                - text: Google
+            - paragraph [ref=e840]: iPad-Display nach 24 Stunden Lieferzeit getauscht, perfekt verklebt, kein Staub drunter.
+            - generic [ref=e841]:
+              - generic [ref=e842]: Bianca S.
+              - time [ref=e843]: Dec 2025
+          - article [ref=e844]:
+            - generic [ref=e845]:
+              - img "5 von 5 Sternen" [ref=e846]:
+                - img [ref=e847]
+                - img [ref=e849]
+                - img [ref=e851]
+                - img [ref=e853]
+                - img [ref=e855]
+              - generic [ref=e857]:
+                - img [ref=e858]
+                - text: Google
+            - paragraph [ref=e859]: Hot fix when my Samsung went dead. They were patient, explained everything in English. Top.
+            - generic [ref=e860]:
+              - generic [ref=e861]: Daniel B.
+              - time [ref=e862]: Jan 2026
+          - article [ref=e863]:
+            - generic [ref=e864]:
+              - img "5 von 5 Sternen" [ref=e865]:
+                - img [ref=e866]
+                - img [ref=e868]
+                - img [ref=e870]
+                - img [ref=e872]
+                - img [ref=e874]
+              - generic [ref=e876]:
+                - img [ref=e877]
+                - text: Google
+            - paragraph [ref=e878]: Cпасибо большое, починили iPhone быстро и по адекватной цене. Очень доволен.
+            - generic [ref=e879]:
+              - generic [ref=e880]: Vladimir T.
+              - time [ref=e881]: Jan 2026
+          - article [ref=e882]:
+            - generic [ref=e883]:
+              - img "5 von 5 Sternen" [ref=e884]:
+                - img [ref=e885]
+                - img [ref=e887]
+                - img [ref=e889]
+                - img [ref=e891]
+                - img [ref=e893]
+              - generic [ref=e895]:
+                - img [ref=e896]
+                - text: Google
+            - paragraph [ref=e897]: Yedek parça orijinal, garanti gerçek, fiyat dürüst. Tavsiye ederim.
+            - generic [ref=e898]:
+              - generic [ref=e899]: Mehmet O.
+              - time [ref=e900]: Dec 2025
+          - article [ref=e901]:
+            - generic [ref=e902]:
+              - img "5 von 5 Sternen" [ref=e903]:
+                - img [ref=e904]
+                - img [ref=e906]
+                - img [ref=e908]
+                - img [ref=e910]
+                - img [ref=e912]
+              - generic [ref=e914]:
+                - img [ref=e915]
+                - text: Google
+            - paragraph [ref=e916]: iPad-Display nach 24 Stunden Lieferzeit getauscht, perfekt verklebt, kein Staub drunter.
+            - generic [ref=e917]:
+              - generic [ref=e918]: Bianca S.
+              - time [ref=e919]: Dec 2025
+          - article [ref=e920]:
+            - generic [ref=e921]:
+              - img "5 von 5 Sternen" [ref=e922]:
+                - img [ref=e923]
+                - img [ref=e925]
+                - img [ref=e927]
+                - img [ref=e929]
+                - img [ref=e931]
+              - generic [ref=e933]:
+                - img [ref=e934]
+                - text: Google
+            - paragraph [ref=e935]: Hot fix when my Samsung went dead. They were patient, explained everything in English. Top.
+            - generic [ref=e936]:
+              - generic [ref=e937]: Daniel B.
+              - time [ref=e938]: Jan 2026
+          - article [ref=e939]:
+            - generic [ref=e940]:
+              - img "5 von 5 Sternen" [ref=e941]:
+                - img [ref=e942]
+                - img [ref=e944]
+                - img [ref=e946]
+                - img [ref=e948]
+                - img [ref=e950]
+              - generic [ref=e952]:
+                - img [ref=e953]
+                - text: Google
+            - paragraph [ref=e954]: Cпасибо большое, починили iPhone быстро и по адекватной цене. Очень доволен.
+            - generic [ref=e955]:
+              - generic [ref=e956]: Vladimir T.
+              - time [ref=e957]: Jan 2026
+          - article [ref=e958]:
+            - generic [ref=e959]:
+              - img "5 von 5 Sternen" [ref=e960]:
+                - img [ref=e961]
+                - img [ref=e963]
+                - img [ref=e965]
+                - img [ref=e967]
+                - img [ref=e969]
+              - generic [ref=e971]:
+                - img [ref=e972]
+                - text: Google
+            - paragraph [ref=e973]: Yedek parça orijinal, garanti gerçek, fiyat dürüst. Tavsiye ederim.
+            - generic [ref=e974]:
+              - generic [ref=e975]: Mehmet O.
+              - time [ref=e976]: Dec 2025
+          - article [ref=e977]:
+            - generic [ref=e978]:
+              - img "5 von 5 Sternen" [ref=e979]:
+                - img [ref=e980]
+                - img [ref=e982]
+                - img [ref=e984]
+                - img [ref=e986]
+                - img [ref=e988]
+              - generic [ref=e990]:
+                - img [ref=e991]
+                - text: Google
+            - paragraph [ref=e992]: iPad-Display nach 24 Stunden Lieferzeit getauscht, perfekt verklebt, kein Staub drunter.
+            - generic [ref=e993]:
+              - generic [ref=e994]: Bianca S.
+              - time [ref=e995]: Dec 2025
+          - article [ref=e996]:
+            - generic [ref=e997]:
+              - img "5 von 5 Sternen" [ref=e998]:
+                - img [ref=e999]
+                - img [ref=e1001]
+                - img [ref=e1003]
+                - img [ref=e1005]
+                - img [ref=e1007]
+              - generic [ref=e1009]:
+                - img [ref=e1010]
+                - text: Google
+            - paragraph [ref=e1011]: Hot fix when my Samsung went dead. They were patient, explained everything in English. Top.
+            - generic [ref=e1012]:
+              - generic [ref=e1013]: Daniel B.
+              - time [ref=e1014]: Jan 2026
+          - article [ref=e1015]:
+            - generic [ref=e1016]:
+              - img "5 von 5 Sternen" [ref=e1017]:
+                - img [ref=e1018]
+                - img [ref=e1020]
+                - img [ref=e1022]
+                - img [ref=e1024]
+                - img [ref=e1026]
+              - generic [ref=e1028]:
+                - img [ref=e1029]
+                - text: Google
+            - paragraph [ref=e1030]: Cпасибо большое, починили iPhone быстро и по адекватной цене. Очень доволен.
+            - generic [ref=e1031]:
+              - generic [ref=e1032]: Vladimir T.
+              - time [ref=e1033]: Jan 2026
+          - article [ref=e1034]:
+            - generic [ref=e1035]:
+              - img "5 von 5 Sternen" [ref=e1036]:
+                - img [ref=e1037]
+                - img [ref=e1039]
+                - img [ref=e1041]
+                - img [ref=e1043]
+                - img [ref=e1045]
+              - generic [ref=e1047]:
+                - img [ref=e1048]
+                - text: Google
+            - paragraph [ref=e1049]: Yedek parça orijinal, garanti gerçek, fiyat dürüst. Tavsiye ederim.
+            - generic [ref=e1050]:
+              - generic [ref=e1051]: Mehmet O.
+              - time [ref=e1052]: Dec 2025
+          - article [ref=e1053]:
+            - generic [ref=e1054]:
+              - img "5 von 5 Sternen" [ref=e1055]:
+                - img [ref=e1056]
+                - img [ref=e1058]
+                - img [ref=e1060]
+                - img [ref=e1062]
+                - img [ref=e1064]
+              - generic [ref=e1066]:
+                - img [ref=e1067]
+                - text: Google
+            - paragraph [ref=e1068]: iPad-Display nach 24 Stunden Lieferzeit getauscht, perfekt verklebt, kein Staub drunter.
+            - generic [ref=e1069]:
+              - generic [ref=e1070]: Bianca S.
+              - time [ref=e1071]: Dec 2025
+    - generic [ref=e1073]:
+      - generic [ref=e1074]:
+        - paragraph [ref=e1075]: FAQ
+        - heading "Häufige Fragen." [level=2] [ref=e1076]
+      - generic [ref=e1077]:
+        - generic [ref=e1078]:
+          - button "Wie lange dauert eine Express-Reparatur?" [expanded] [ref=e1079]:
+            - generic [ref=e1080]: Wie lange dauert eine Express-Reparatur?
+            - img [ref=e1082]
+          - region [ref=e1085]:
+            - paragraph [ref=e1086]: Display- und Akku-Tausch ca. 30 Minuten, bei wasserdichten Modellen rechnen wir 60 Min ein (neue Dichtung inklusive). Mainboard und Wasserschaden brauchen 24–72 Stunden.
+        - button "Wie viel Garantie bekomme ich?" [ref=e1088]:
+          - generic [ref=e1089]: Wie viel Garantie bekomme ich?
+          - img [ref=e1091]
+        - button "Sind meine Daten sicher?" [ref=e1093]:
+          - generic [ref=e1094]: Sind meine Daten sicher?
+          - img [ref=e1096]
+        - button "Wie ehrlich sind eure Festpreise?" [ref=e1098]:
+          - generic [ref=e1099]: Wie ehrlich sind eure Festpreise?
+          - img [ref=e1101]
+        - button "Welche Ersatzteile verwendet ihr?" [ref=e1103]:
+          - generic [ref=e1104]: Welche Ersatzteile verwendet ihr?
+          - img [ref=e1106]
+        - button "Holt ihr das Gerät ab?" [ref=e1108]:
+          - generic [ref=e1109]: Holt ihr das Gerät ab?
+          - img [ref=e1111]
+        - button "Welche Zahlungsmethoden?" [ref=e1113]:
+          - generic [ref=e1114]: Welche Zahlungsmethoden?
+          - img [ref=e1116]
+        - button "Wann seid ihr offen?" [ref=e1118]:
+          - generic [ref=e1119]: Wann seid ihr offen?
+          - img [ref=e1121]
+    - generic [ref=e1123]:
+      - heading "Bereit für die Reparatur?" [level=2] [ref=e1124]
+      - paragraph [ref=e1125]: Festpreis in 10 Sekunden. Termin in unter einer Minute. Zwei Klicks bis zum Ergebnis.
+      - generic [ref=e1126]:
+        - link "Preis berechnen" [ref=e1127] [cursor=pointer]:
+          - /url: /de/preisrechner
+        - link "Termin buchen" [ref=e1128] [cursor=pointer]:
+          - /url: /de/buchen
+  - contentinfo [ref=e1129]:
+    - generic [ref=e1130]:
+      - generic [ref=e1131]:
+        - generic [ref=e1132]:
+          - img "EL Fix Mobile" [ref=e1133]
+          - paragraph [ref=e1134]: Reparatur-Werkstatt in Wien Aspern. Seit 2019.
+          - generic [ref=e1135]:
+            - generic [ref=e1136]: Adresse
+            - text: Maria-Tusch-Strasse 17/1
+            - text: 1220 Wien (Aspern Seestadt)
+            - link "+43 660 6071414" [ref=e1137] [cursor=pointer]:
+              - /url: tel:+436606071414
+          - generic [ref=e1138]:
+            - generic [ref=e1139]: Öffnungszeiten
+            - text: Mo bis Sa 09:00 bis 19:00
+            - text: Sonntag 09:00 bis 18:00
+        - generic [ref=e1140]:
+          - generic [ref=e1141]: Services
+          - list [ref=e1142]:
+            - listitem [ref=e1143]:
+              - link "Display Reparatur" [ref=e1144] [cursor=pointer]:
+                - /url: /de/display-reparatur-wien
+            - listitem [ref=e1145]:
+              - link "Akku Tausch" [ref=e1146] [cursor=pointer]:
+                - /url: /de/akku-tausch-wien
+            - listitem [ref=e1147]:
+              - link "Wasserschaden" [ref=e1148] [cursor=pointer]:
+                - /url: /de/wasserschaden-handy-reparatur-wien
+            - listitem [ref=e1149]:
+              - link "Kamera Reparatur" [ref=e1150] [cursor=pointer]:
+                - /url: /de/datenrettung-handy-wien
+        - generic [ref=e1151]:
+          - generic [ref=e1152]: Marken
+          - list [ref=e1153]:
+            - listitem [ref=e1154]:
+              - link "iPhone" [ref=e1155] [cursor=pointer]:
+                - /url: /de/reparatur/apple
+            - listitem [ref=e1156]:
+              - link "Samsung" [ref=e1157] [cursor=pointer]:
+                - /url: /de/reparatur/samsung
+            - listitem [ref=e1158]:
+              - link "Xiaomi" [ref=e1159] [cursor=pointer]:
+                - /url: /de/reparatur/xiaomi
+            - listitem [ref=e1160]:
+              - link "Google Pixel" [ref=e1161] [cursor=pointer]:
+                - /url: /de/reparatur/google
+        - generic [ref=e1162]:
+          - generic [ref=e1163]: Unternehmen
+          - list [ref=e1164]:
+            - listitem [ref=e1165]:
+              - link "Über uns" [ref=e1166] [cursor=pointer]:
+                - /url: /de/ueber-uns
+            - listitem [ref=e1167]:
+              - link "Bewertungen" [ref=e1168] [cursor=pointer]:
+                - /url: /de/bewertungen
+            - listitem [ref=e1169]:
+              - link "FAQ" [ref=e1170] [cursor=pointer]:
+                - /url: /de/faq
+            - listitem [ref=e1171]:
+              - link "Kontakt" [ref=e1172] [cursor=pointer]:
+                - /url: /de/kontakt
+        - generic [ref=e1173]:
+          - generic [ref=e1174]: Rechtliches
+          - list [ref=e1175]:
+            - listitem [ref=e1176]:
+              - link "Impressum" [ref=e1177] [cursor=pointer]:
+                - /url: /de/impressum
+            - listitem [ref=e1178]:
+              - link "Datenschutz" [ref=e1179] [cursor=pointer]:
+                - /url: /de/datenschutz
+            - listitem [ref=e1180]:
+              - link "AGB" [ref=e1181] [cursor=pointer]:
+                - /url: /de/agb
+      - generic [ref=e1182]:
+        - paragraph [ref=e1183]: © 2026 EL Fix Mobile e.U. Alle Rechte vorbehalten.
+        - paragraph [ref=e1184]:
+          - text: EL Fix Mobile e.U. · UID ATU74938026 · Handelsgericht Wien·
+          - link "Webdesign von GoldenWing" [ref=e1185] [cursor=pointer]:
+            - /url: https://goldenwing.at
+  - complementary "Quick contact":
+    - link "WhatsApp Chat mit EL Fix Mobile" [ref=e1186] [cursor=pointer]:
+      - /url: https://wa.me/436606071414?text=Hi!%20Ich%20brauche%20eine%20Reparatur%20f%C3%BCr%20mein%20Handy%2C%20bitte%20um%20R%C3%BCckruf.
+      - img [ref=e1187]
+  - alert [ref=e1190]
+  - dialog "Cookie-Einstellungen" [ref=e1191]:
+    - generic [ref=e1192]:
+      - generic [ref=e1193]:
+        - text: Wir nutzen ausschließlich technisch notwendige Cookies. Optionale Statistik-Cookies erst nach deiner Zustimmung. Details in der
+        - link "Datenschutzerklärung" [ref=e1194] [cursor=pointer]:
+          - /url: /de/datenschutz
+        - text: .
+      - generic [ref=e1195]:
+        - button "Nur notwendige" [ref=e1196]
+        - button "Alle akzeptieren" [ref=e1197]

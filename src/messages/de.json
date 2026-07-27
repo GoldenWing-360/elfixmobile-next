@@ -1027,5 +1027,17 @@
   },
   "calc_whatsapp": {
     "prefill": "Hi! Ich brauche eine {repairs} Reparatur für mein {model}. Festpreis laut Online-Rechner: {total} €."
+  },
+  "workshop": {
+    "eyebrow": "WERKSTATT",
+    "headline": "Präzision ist unser Handwerk.",
+    "sub": "Jede Reparatur läuft über unsere eigene Werkbank in der Seestadt Aspern: ESD-geschützt, mit Profi-Werkzeug und geprüften Ersatzteilen. Kein Versand an Dritte, dein Gerät bleibt im Haus.",
+    "stat_1_value": "30 Min",
+    "stat_1_label": "Express-Reparatur",
+    "stat_2_value": "12 Monate",
+    "stat_2_label": "Garantie",
+    "stat_3_value": "7 Tage",
+    "stat_3_label": "die Woche geöffnet",
+    "video_label": "Video: Smartphone-Reparatur an unserer Werkbank"
   }
 }

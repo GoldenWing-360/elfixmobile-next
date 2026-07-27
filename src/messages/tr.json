@@ -1027,5 +1027,17 @@
   },
   "calc_whatsapp": {
     "prefill": "Merhaba! {model} için {repairs} tamiri lazım. Online hesaplayıcı fiyatı: {total} €."
+  },
+  "workshop": {
+    "eyebrow": "ATÖLYE",
+    "headline": "Hassasiyet bizim zanaatımız.",
+    "sub": "Her onarım Seestadt Aspern'deki kendi tezgahımızda yapılır: ESD korumalı, profesyonel aletler ve test edilmiş parçalarla. Üçüncü kişilere gönderim yok, cihazınız bizde kalır.",
+    "stat_1_value": "30 dk",
+    "stat_1_label": "Ekspres onarım",
+    "stat_2_value": "12 ay",
+    "stat_2_label": "Garanti",
+    "stat_3_value": "7 / 7",
+    "stat_3_label": "gün açık",
+    "video_label": "Video: tezgahımızda akıllı telefon onarımı"
   }
 }

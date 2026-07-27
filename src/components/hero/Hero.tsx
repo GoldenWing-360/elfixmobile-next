@@ -9,6 +9,7 @@ import {
   useReducedMotion,
   type Variants,
 } from "framer-motion";
+import Image from "next/image";
 import { Star, Shield, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/Button";
 
@@ -115,7 +116,7 @@ export function Hero() {
           {t("subline")}
         </motion.p>
 
-        {/* Device mock (CSS-only iPhone) */}
+        {/* Device shot — real render on black, blends into the hero bg */}
         <motion.div
           style={{
             y: deviceY,
@@ -125,10 +126,20 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.75, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="my-10 md:my-14"
+          className="my-4 md:my-6"
           aria-hidden
         >
-          <DeviceMock />
+          <Image
+            src="/media/hero-phone.webp"
+            alt=""
+            width={956}
+            height={1440}
+            priority
+            unoptimized
+            // Radial mask feathers the render's near-black backdrop into
+            // the true-black hero so no rectangular edge shows.
+            className="pointer-events-none h-[440px] w-auto select-none md:h-[540px] [mask-image:radial-gradient(ellipse_60%_52%_at_50%_48%,black_58%,transparent_82%)]"
+          />
         </motion.div>
 
         {/* CTAs */}
@@ -187,47 +198,6 @@ function TrustPill({
     <div className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-[12px] md:text-[13px] text-white/70">
       <span className="text-[var(--color-accent)]">{icon}</span>
       <span className="truncate">{children}</span>
-    </div>
-  );
-}
-
-/** Pure-CSS iPhone-ish frame so we don't ship a placeholder JPG */
-function DeviceMock() {
-  return (
-    <div className="relative">
-      <div
-        className="relative h-[400px] w-[200px] rounded-[44px] border border-white/10 bg-gradient-to-b from-[#1a1a1c] to-[#0a0a0b] shadow-[0_30px_120px_-20px_rgba(0,113,227,0.45),_0_0_0_1px_rgba(255,255,255,0.04)] md:h-[480px] md:w-[240px]"
-        style={{
-          boxShadow:
-            "0 30px 120px -20px rgba(0,113,227,0.45), 0 0 0 1px rgba(255,255,255,0.05), inset 0 0 0 2px rgba(255,255,255,0.04)",
-        }}
-      >
-        {/* Notch / Dynamic Island */}
-        <div className="absolute left-1/2 top-3 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-black md:h-7 md:w-28" />
-        {/* Screen */}
-        <div className="absolute inset-2 overflow-hidden rounded-[36px] bg-gradient-to-br from-[#001a4d] via-[#000814] to-black">
-          <div
-            className="absolute inset-0 opacity-60"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 30% 20%, rgba(0,113,227,0.4) 0px, transparent 50%), radial-gradient(circle at 70% 80%, rgba(48,209,88,0.15) 0px, transparent 50%)",
-            }}
-          />
-          {/* faux time */}
-          <div className="absolute left-6 top-3 text-[10px] font-semibold text-white/85">
-            09:41
-          </div>
-          <div className="absolute right-6 top-3 flex items-center gap-1 text-white/85">
-            <span className="h-1.5 w-1 rounded-sm bg-white/85" />
-            <span className="h-2 w-1 rounded-sm bg-white/85" />
-            <span className="h-2.5 w-1 rounded-sm bg-white/85" />
-          </div>
-        </div>
-        {/* Side button */}
-        <span className="absolute -right-[1px] top-24 h-12 w-[2px] rounded-r bg-white/10" />
-        <span className="absolute -left-[1px] top-20 h-8 w-[2px] rounded-l bg-white/10" />
-        <span className="absolute -left-[1px] top-32 h-12 w-[2px] rounded-l bg-white/10" />
-      </div>
     </div>
   );
 }
