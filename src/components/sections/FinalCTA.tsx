@@ -62,7 +62,7 @@ export function FinalCTA() {
             width={939}
             height={1400}
             unoptimized
-            className="pointer-events-none h-[420px] w-auto select-none md:h-[560px] [mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)]"
+            className="pointer-events-none h-[420px] w-auto select-none md:h-[560px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_45%,black_55%,transparent_92%)]"
           />
         </motion.div>
       </div>

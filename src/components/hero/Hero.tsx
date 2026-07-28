@@ -139,8 +139,9 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Healing shot: shattered display repairs itself, then holds the
-            pristine frame — the promise ("Wie neu.") shown, not told. */}
+        {/* Healing shot: our ambassador holds a shattered display that
+            repairs itself in her hand, then holds the pristine frame —
+            the promise ("Wie neu.") shown, not told. */}
         <motion.div
           style={{ y: deviceY }}
           initial={{ opacity: 0, y: 30 }}
@@ -149,16 +150,16 @@ export function Hero() {
           className="flex justify-center md:col-span-5 md:justify-end"
           aria-hidden
         >
-          <div className="[mask-image:radial-gradient(ellipse_62%_55%_at_50%_48%,black_55%,transparent_82%)]">
+          <div className="[mask-image:radial-gradient(ellipse_72%_62%_at_50%_46%,black_58%,transparent_92%)]">
             {prefersReduced ? (
               <Image
-                src="/media/hero-heal-still.webp"
+                src="/media/hero-girl-still.webp"
                 alt=""
-                width={480}
+                width={540}
                 height={720}
                 priority
                 unoptimized
-                className="pointer-events-none h-[420px] w-auto select-none md:h-[560px]"
+                className="pointer-events-none h-[440px] w-auto select-none md:h-[560px]"
               />
             ) : (
               <video
@@ -166,10 +167,10 @@ export function Hero() {
                 muted
                 playsInline
                 preload="auto"
-                poster="/media/hero-heal-poster.webp"
-                className="pointer-events-none h-[420px] w-auto select-none md:h-[560px]"
+                poster="/media/hero-girl-poster.webp"
+                className="pointer-events-none h-[440px] w-auto select-none md:h-[560px]"
               >
-                <source src="/media/hero-heal.mp4" type="video/mp4" />
+                <source src="/media/hero-girl.mp4" type="video/mp4" />
               </video>
             )}
           </div>
