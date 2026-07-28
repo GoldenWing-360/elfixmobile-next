@@ -31,10 +31,16 @@ export const SITE = {
     count: 294,
     best: 5,
   },
+  // Sonntag geschlossen (User-Ansage 2026-07-28) — nur Mo–Sa.
   hours: [
     { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "09:00", closes: "19:00" },
-    { days: ["Sunday"], opens: "09:00", closes: "18:00" },
   ],
+  foundingDate: "2019",
+  credentials: [
+    "Apple Authorized Service Provider",
+    "Samsung zertifizierter Reparaturpartner",
+  ],
+  reparaturbonPartner: true,
   social: {
     facebook: "https://www.facebook.com/ElFixMobile",
     instagram: "https://www.instagram.com/elfixmobile/",
@@ -44,15 +50,32 @@ export const SITE = {
 } as const;
 
 const LOCAL_BUSINESS_DESCRIPTION: Record<string, string> = {
-  de: "Express Smartphone, Tablet und Notebook Reparatur in Wien 1220 Aspern. Original Refurbished Displays, 12 Monate Garantie, 7 Tage offen.",
-  en: "Express smartphone, tablet and laptop repair in Vienna 1220 Aspern. Original-refurbished displays, 12 months warranty, open 7 days.",
-  ru: "Экспресс-ремонт смартфонов, планшетов и ноутбуков в Вене 1220 Aspern. Оригинал-восстановленные дисплеи, 12 месяцев гарантии, 7 дней в неделю.",
-  tr: "Viyana 1220 Aspern'de ekspres akıllı telefon, tablet ve dizüstü tamiri. Orijinal yenilenmiş ekranlar, 12 ay garanti, 7 gün açık.",
+  de: "Express Smartphone, Tablet und Notebook Reparatur in Wien 1220 Aspern. Original Refurbished Displays, 12 Monate Garantie, Mo–Sa geöffnet.",
+  en: "Express smartphone, tablet and laptop repair in Vienna 1220 Aspern. Original-refurbished displays, 12 months warranty, open Mon–Sat.",
+  ru: "Экспресс-ремонт смартфонов, планшетов и ноутбуков в Вене 1220 Aspern. Оригинал-восстановленные дисплеи, 12 месяцев гарантии, работаем Пн–Сб.",
+  tr: "Viyana 1220 Aspern'de ekspres akıllı telefon, tablet ve dizüstü tamiri. Orijinal yenilenmiş ekranlar, 12 ay garanti, Pzt–Cmt açık.",
 };
 
 export function localBusinessJsonLd(locale: string) {
   return {
     "@context": "https://schema.org",
+    "@graph": [websiteNode(locale), localBusinessNode(locale)],
+  };
+}
+
+function websiteNode(locale: string) {
+  return {
+    "@type": "WebSite",
+    "@id": `${SITE.url}/#website`,
+    url: SITE.url,
+    name: SITE.name,
+    inLanguage: locale,
+    publisher: { "@id": `${SITE.url}/#localbusiness` },
+  };
+}
+
+function localBusinessNode(locale: string) {
+  return {
     "@type": "MobilePhoneStore",
     "@id": `${SITE.url}/#localbusiness`,
     name: SITE.legalName,
@@ -63,9 +86,24 @@ export function localBusinessJsonLd(locale: string) {
     telephone: SITE.phone,
     email: SITE.email,
     image: `${SITE.url}/opengraph-image`,
-    logo: `${SITE.url}/logo.svg`,
+    logo: `${SITE.url}/logo-512.png`,
     inLanguage: locale,
     priceRange: SITE.priceRange,
+    foundingDate: SITE.foundingDate,
+    hasCredential: SITE.credentials.map((c) => ({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "certification",
+      name: c,
+    })),
+    knowsAbout: [
+      "Smartphone Reparatur",
+      "iPhone Display Tausch",
+      "Akku Tausch",
+      "Wasserschaden Behandlung",
+      "Datenrettung",
+      "Tablet Reparatur",
+      "MacBook Reparatur",
+    ],
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
       `${SITE.name} ${SITE.address.street} ${SITE.address.postalCode} ${SITE.address.locality}`,
     )}`,

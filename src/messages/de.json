@@ -21,7 +21,7 @@
     "trust_reviews": "294 Google-Bewertungen",
     "trust_express": "Express in 30 Min",
     "trust_warranty": "12 Monate Garantie",
-    "trust_open": "7 Tage offen"
+    "trust_open": "Mo–Sa offen"
   },
   "services": {
     "eyebrow": "WIR REPARIEREN",
@@ -83,7 +83,7 @@
     "email": "elfixmobile@gmx.at",
     "hours_label": "Öffnungszeiten",
     "hours_mo_sa": "Montag bis Samstag 09:00 bis 19:00",
-    "hours_so": "Sonntag 09:00 bis 18:00",
+    "hours_so": "Sonntag geschlossen",
     "directions_cta": "Route in Google Maps",
     "call_cta": "Jetzt anrufen"
   },
@@ -127,7 +127,7 @@
     "q_pay_q": "Welche Zahlungsmethoden?",
     "q_pay_a": "Bar, Bankomat, Kreditkarte, EPS und Überweisung. Rechnung mit MwSt-Ausweis bekommst du immer.",
     "q_hours_q": "Wann seid ihr offen?",
-    "q_hours_a": "Mo bis Sa 9–19 Uhr, So 9–18 Uhr. 7 Tage offen.",
+    "q_hours_a": "Montag bis Samstag 9–19 Uhr. Sonntag geschlossen. Kein Termin nötig – komm einfach vorbei.",
     "meta_title": "FAQ | EL Fix Mobile Wien Aspern",
     "meta_description": "Antworten auf die häufigsten Fragen: Dauer, Garantie, Preise, Ersatzteile, Abholung. EL Fix Mobile Wien 1220 Aspern."
   },
@@ -142,7 +142,7 @@
     "address_label": "Adresse",
     "hours_label": "Öffnungszeiten",
     "hours_mo_sa": "Mo bis Sa 09:00 bis 19:00",
-    "hours_so": "Sonntag 09:00 bis 18:00",
+    "hours_so": "Sonntag geschlossen",
     "services": "Services",
     "brands": "Marken",
     "company": "Unternehmen",
@@ -245,7 +245,9 @@
     "field_message_ph": "iPhone 14 Display gesprungen, möchte abholen lassen ...",
     "submit": "Senden",
     "success_title": "Danke, wir melden uns.",
-    "success_sub": "Innerhalb von 30 Minuten zu Geschäftszeiten."
+    "success_sub": "Innerhalb von 30 Minuten zu Geschäftszeiten.",
+    "meta_title": "Kontakt & Standort Aspern | EL Fix Mobile Wien 1220",
+    "meta_description": "EL Fix Mobile in Wien 1220 Aspern Seestadt, Maria-Tusch-Straße 17/1. Telefon 0660 6071414, WhatsApp, E-Mail. Antwort meist in 30 Minuten. Mo–Sa 9–19 Uhr."
   },
   "repair_label": {
     "display": "Display Komplett",
@@ -311,7 +313,7 @@
     "quote_bullet_diagnose": "Diagnose & Kostenvoranschlag immer kostenlos",
     "quote_bullet_warranty": "12 Monate Garantie auf Ersatzteil und Einbau",
     "quote_bullet_pickup": "Gratis Abholung in Wien & Umland (ab € 70 Reparaturwert)",
-    "quote_bullet_walkin": "Walk-in: Mo–Sa 9–19 Uhr, So 9–18 Uhr",
+    "quote_bullet_walkin": "Walk-in: Mo–Sa 9–19 Uhr",
     "faq": {
       "eyebrow": "FAQ",
       "headline": "Häufige Fragen zur {brand}-Reparatur",
@@ -351,7 +353,11 @@
       "cta_primary_book": "Reparatur anfragen",
       "cta_secondary": "Direkt anrufen",
       "faq_eyebrow": "FAQ",
-      "faq_headline": "Häufige Fragen"
+      "faq_headline": "Häufige Fragen",
+      "reparaturbon_title": "Wiener Reparaturbon: bis zu 100 € sparen",
+      "reparaturbon_body": "EL Fix Mobile ist gelisteter Partnerbetrieb des Wiener Reparaturbons. Die Stadt Wien übernimmt bis zu 50 % deiner Reparaturkosten (max. 100 €) – Bon online holen, bei uns einlösen.",
+      "reparaturbon_link": "So funktioniert der Reparaturbon →",
+      "related_headline": "Passende Ratgeber aus unserer Werkstatt"
     },
     "display": {
       "h1": "Display Reparatur Wien.",
@@ -370,7 +376,7 @@
       },
       "step_2": {
         "title": "Termin oder vorbeibringen",
-        "body": "Walk-in Mo–Sa 9–19 Uhr, So 9–18 Uhr. Oder gratis Abholung in Wien ab € 70 Reparaturwert."
+        "body": "Walk-in Mo–Sa 9–19 Uhr. Oder gratis Abholung in Wien ab € 70 Reparaturwert."
       },
       "step_3": {
         "title": "30 Minuten später abholen",
@@ -412,7 +418,7 @@
       },
       "step_2": {
         "title": "Termin oder vorbeibringen",
-        "body": "Walk-in Mo–Sa 9–19, So 9–18. Gratis Abholung in Wien ab € 70."
+        "body": "Walk-in Mo–Sa 9–19. Gratis Abholung in Wien ab € 70."
       },
       "step_3": {
         "title": "Voller Akku, voller Tag",
@@ -622,7 +628,7 @@
       },
       "step_2": {
         "title": "Vorbeibringen oder schicken",
-        "body": "Walk-in Mo–Sa 9–19, So 9–18. Oder Postversand wenn du in NÖ wohnst."
+        "body": "Walk-in Mo–Sa 9–19. Oder Postversand wenn du in NÖ wohnst."
       },
       "step_3": {
         "title": "Tests vor Übergabe",
@@ -730,6 +736,132 @@
       },
       "meta_title": "Notebook Reparatur Wien | MacBook + Windows",
       "meta_description": "Notebook + Laptop Reparatur Wien 1220 Aspern: MacBook, Lenovo, Dell, HP. Display, Akku, Tastatur, Mainboard, Datenrettung. Diagnose gratis, 12 Mon. Garantie."
+    },
+    "macbook": {
+      "h1": "MacBook Reparatur Wien",
+      "intro": "MacBook Air oder Pro defekt? Wir reparieren Display, Akku, Tastatur, Ladeanschluss und Logic Board – als Apple Authorized Service Provider mit Originalteilen, direkt in Wien 1220 Aspern.",
+      "included_headline": "Alle MacBook-Reparaturen aus einer Hand",
+      "included_sub": "Vom Displaytausch bis zur Mikrolötung am Logic Board – kostenlose Diagnose, schriftlicher Kostenvoranschlag, keine Reparatur ohne dein OK.",
+      "meta_title": "MacBook Reparatur Wien | Air & Pro, Originalteile",
+      "meta_description": "MacBook Reparatur in Wien 1220: Display, Akku, Tastatur, Logic Board. Apple Authorized Service Provider, 12 Monate Garantie, kostenlose Diagnose.",
+      "bullet_1": "Display-Tausch (Glas, Panel, Hintergrundbeleuchtung)",
+      "bullet_2": "Akku-Tausch bei schwacher Laufzeit",
+      "bullet_3": "Tastatur- und Trackpad-Reparatur",
+      "bullet_4": "Ladeanschluss / MagSafe-Reparatur",
+      "bullet_5": "Wasserschaden-Behandlung im Ultraschallbad",
+      "bullet_6": "SSD-Upgrade und Datenübernahme",
+      "step_1": {
+        "title": "Kostenlose Diagnose",
+        "body": "Bring dein MacBook vorbei oder schick es ein. Wir analysieren den Fehler und schicken dir einen schriftlichen Kostenvoranschlag – meist am selben Tag."
+      },
+      "step_2": {
+        "title": "Reparatur nach Freigabe",
+        "body": "Erst wenn du den Festpreis bestätigst, reparieren wir. Walk-in Mo–Sa 9–19 Uhr, gratis Abholung in Wien ab € 70 Reparaturwert."
+      },
+      "step_3": {
+        "title": "Abholen mit Garantie",
+        "body": "Auf Ersatzteil und Einbau bekommst du 12 Monate Garantie. Deine Daten bleiben unangetastet auf dem Gerät."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert eine MacBook Reparatur?",
+        "a": "Akku- und Tastatur-Tausch meist 1–2 Werktage, Display je nach Modell 1–3 Werktage, Logic-Board-Reparaturen bis zu 5 Werktage. Express nach Absprache."
+      },
+      "q_warranty": {
+        "q": "Bekomme ich Garantie auf die Reparatur?",
+        "a": "Ja, 12 Monate auf Ersatzteil und Einbau. Als Apple Authorized Service Provider arbeiten wir mit Originalteilen – deine Apple-Garantie bleibt erhalten."
+      },
+      "q_data": {
+        "q": "Sind meine Daten sicher?",
+        "a": "Ja. Für die meisten Reparaturen bleiben deine Daten unberührt auf der SSD. Vor Logic-Board-Arbeiten empfehlen wir ein Backup – wir helfen dir dabei."
+      },
+      "q_pickup": {
+        "q": "Holt ihr mein MacBook auch ab?",
+        "a": "Ja, in Wien gratis ab € 70 Reparaturwert. Alternativ Walk-in ohne Termin (Mo–Sa 9–19 Uhr) oder versicherter Postversand aus ganz Österreich."
+      }
+    },
+    "ipad": {
+      "h1": "iPad Reparatur Wien",
+      "intro": "Display gesprungen, Akku schwach oder Ladebuchse defekt? Wir reparieren alle iPad-Modelle – iPad, Air, Pro und mini – mit Originalteilen und 12 Monaten Garantie in Wien 1220 Aspern.",
+      "included_headline": "Alle iPad-Reparaturen mit Festpreis",
+      "included_sub": "Ab € 70, Festpreis vor der Reparatur. Kostenlose Diagnose, Express je nach Modell in 3 Stunden.",
+      "meta_title": "iPad Reparatur Wien | Alle Modelle ab € 70",
+      "meta_description": "iPad Reparatur in Wien 1220 Aspern: Display, Akku, Ladebuchse für iPad, Air, Pro, mini. Festpreis ab € 70, Express in 3 Stunden, 12 Monate Garantie.",
+      "bullet_1": "Display- und Touchscreen-Tausch",
+      "bullet_2": "Akku-Tausch bei schneller Entladung",
+      "bullet_3": "Ladebuchsen-Reparatur (USB-C und Lightning)",
+      "bullet_4": "Kamera- und Mikrofon-Reparatur",
+      "bullet_5": "Wasserschaden-Behandlung",
+      "bullet_6": "Software-Probleme und Updates",
+      "step_1": {
+        "title": "Preis online berechnen",
+        "body": "Wähle dein iPad-Modell im Preisrechner und sieh sofort den Festpreis für deine Reparatur."
+      },
+      "step_2": {
+        "title": "Vorbeibringen oder abholen lassen",
+        "body": "Walk-in Mo–Sa 9–19 Uhr ohne Termin. Oder gratis Abholung in Wien ab € 70 Reparaturwert."
+      },
+      "step_3": {
+        "title": "Express-Reparatur",
+        "body": "Die meisten iPad-Reparaturen sind in 3 Stunden fertig – mit 12 Monaten Garantie auf Teil und Einbau."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert eine iPad Reparatur?",
+        "a": "Display und Akku meist in 3 Stunden, seltene Modelle 1–2 Werktage, wenn das Ersatzteil bestellt werden muss."
+      },
+      "q_warranty": {
+        "q": "Gibt es Garantie?",
+        "a": "Ja, 12 Monate auf Ersatzteil und Einbau – als Apple Authorized Service Provider arbeiten wir mit Originalteilen."
+      },
+      "q_data": {
+        "q": "Bleiben meine Daten erhalten?",
+        "a": "Ja, bei Display-, Akku- und Ladebuchsen-Reparaturen bleiben alle Daten auf dem Gerät. Kein Zurücksetzen nötig."
+      },
+      "q_pickup": {
+        "q": "Holt ihr mein iPad ab?",
+        "a": "Ja, gratis in Wien ab € 70 Reparaturwert. Oder komm einfach Mo–Sa 9–19 Uhr in die Maria-Tusch-Straße 17."
+      }
+    },
+    "charging_port": {
+      "h1": "Ladebuchse Reparatur Wien",
+      "intro": "Dein Handy lädt nicht mehr, nur in einer bestimmten Kabel-Position oder das Kabel wackelt? Wir reinigen oder tauschen die Ladebuchse – ab € 29, oft in 45 Minuten, in Wien 1220 Aspern.",
+      "included_headline": "Vom Reinigen bis zum Buchsen-Tausch",
+      "included_sub": "Oft steckt nur Staub in der Buchse – das prüfen wir kostenlos, bevor irgendetwas getauscht wird.",
+      "meta_title": "Ladebuchse Reparatur Wien | Ab € 29 in 45 Min",
+      "meta_description": "Handy lädt nicht mehr? Ladebuchsen-Reinigung ab € 29, Tausch in 45 Min für iPhone, Samsung & Co. Kostenlose Diagnose in Wien 1220 Aspern, 12 Monate Garantie.",
+      "bullet_1": "Professionelle Reinigung der Ladebuchse (ab € 29)",
+      "bullet_2": "Ladebuchsen-Tausch USB-C und Lightning",
+      "bullet_3": "Ladeelektronik-Diagnose (Ladechip, Flexkabel)",
+      "bullet_4": "Kabelbruch- und Netzteil-Check",
+      "bullet_5": "Wireless-Charging-Diagnose",
+      "bullet_6": "Alle Marken: iPhone, Samsung, Xiaomi & mehr",
+      "step_1": {
+        "title": "Kostenlose Diagnose",
+        "body": "Wir prüfen zuerst, ob Reinigung reicht oder die Buchse getauscht werden muss – du bekommst sofort den Festpreis."
+      },
+      "step_2": {
+        "title": "Reparatur in 45 Minuten",
+        "body": "Reinigung sofort, Buchsen-Tausch meist in 45–60 Minuten. Walk-in Mo–Sa 9–19 Uhr ohne Termin."
+      },
+      "step_3": {
+        "title": "Testen und mitnehmen",
+        "body": "Wir testen Laden, Datenübertragung und Schnellladen vor der Übergabe – mit 12 Monaten Garantie."
+      },
+      "q_duration": {
+        "q": "Wie lange dauert die Reparatur der Ladebuchse?",
+        "a": "Reinigung: sofort, während du wartest. Buchsen-Tausch: meist 45–60 Minuten, je nach Modell."
+      },
+      "q_warranty": {
+        "q": "Gibt es Garantie auf die neue Ladebuchse?",
+        "a": "Ja, 12 Monate auf Ersatzteil und Einbau – wie auf alle unsere Reparaturen."
+      },
+      "q_data": {
+        "q": "Bleiben meine Daten am Handy?",
+        "a": "Ja, bei einer Ladebuchsen-Reparatur bleiben alle Daten unangetastet auf dem Gerät."
+      },
+      "q_pickup": {
+        "q": "Was, wenn es nicht an der Buchse liegt?",
+        "a": "Dann sagen wir dir das ehrlich: Oft ist es nur das Kabel, das Netzteil oder der Akku. Die Diagnose ist immer kostenlos – du zahlst nur die tatsächliche Reparatur."
+      }
     }
   },
   "model_page": {
@@ -773,7 +905,8 @@
       "a": "Ab € 70 Reparaturwert gratis in Wien und Niederösterreich-Umland. Sonst Walk-in (Maria-Tusch-Strasse 17/1, 1220 Wien) oder versicherter Postversand."
     },
     "meta_title": "{model} Reparatur Wien | Festpreis ab 30 Min",
-    "meta_description": "{model}-Reparatur in Wien 1220 Aspern: Display, Akku, Ladebuchse und mehr. Festpreise vorab, 12 Monate Garantie, Express in 30 Minuten. 4,4/5 (294 Bewertungen)."
+    "meta_description": "{model}-Reparatur in Wien 1220 Aspern: Display, Akku, Ladebuchse und mehr. Festpreise vorab, 12 Monate Garantie, Express in 30 Minuten. 4,4/5 (294 Bewertungen).",
+    "siblings_headline": "Andere {brand} Modelle reparieren"
   },
   "geo_page": {
     "aspern_seestadt": {
@@ -867,7 +1000,22 @@
     "values_4_title": "Keine versteckten Aufpreise",
     "values_4_body": "Ersatzteil, Einbau, Steuer – alles im Festpreis. Gratis-Abholung ab € 70 Reparaturwert.",
     "meta_title": "Über uns | EL Fix Mobile Wien Aspern",
-    "meta_description": "Wer ist EL Fix Mobile? Familienbetrieb in Wien 1220 Aspern, seit 2019, 294 Google-Bewertungen, 12 Monate Garantie, ehrliche Festpreise."
+    "meta_description": "Wer ist EL Fix Mobile? Familienbetrieb in Wien 1220 Aspern, seit 2019, 294 Google-Bewertungen, 12 Monate Garantie, ehrliche Festpreise.",
+    "owner_eyebrow": "INHABERIN",
+    "owner_title": "Natalja Rahimova führt EL Fix Mobile seit 2019.",
+    "owner_body": "2019 hat Natalja Rahimova den Laden in der Maria-Tusch-Straße in der Seestadt Aspern eröffnet – mit einem klaren Anspruch: Reparaturen auf Hersteller-Niveau, ehrliche Festpreise und Tempo, das den Namen Express verdient. Heute steht dahinter ein eingespieltes Werkstatt-Team mit ESD-geschütztem Arbeitsplatz, Mikroskop-Löttechnik und geprüften Ersatzteilen.",
+    "workshop_image_alt": "Werkbank bei EL Fix Mobile: Techniker repariert ein geöffnetes Smartphone",
+    "cred_section_title": "Zertifiziert und ausgezeichnet",
+    "cred_1_title": "Apple Authorized Service Provider",
+    "cred_1_body": "Autorisierter Apple-Service: Original-Ersatzteile, Apple-Diagnosewerkzeuge und Reparaturen, bei denen deine Garantie erhalten bleibt.",
+    "cred_2_title": "Samsung zertifizierter Reparaturpartner",
+    "cred_2_body": "Von Samsung zertifiziert: Galaxy-Reparaturen mit Service-Pack-Displays und herstellerkonformen Verfahren – inklusive Knox-Sicherheit.",
+    "cred_3_title": "Partnerbetrieb Wiener Reparaturbon",
+    "cred_3_body": "Als gelisteter Partnerbetrieb kannst du bei uns den Wiener Reparaturbon einlösen: bis zu 50 % Förderung (max. 100 €) auf deine Reparatur.",
+    "stat_founded": "gegründet",
+    "stat_reviews": "294 Google-Bewertungen",
+    "stat_models": "Modelle mit Festpreis",
+    "stat_express": "Express-Reparatur"
   },
   "bewertungen": {
     "eyebrow": "BEWERTUNGEN",
@@ -1003,7 +1151,10 @@
     "wrap": "Handy Folierung",
     "camera": "Kamera Reparatur",
     "tablet": "Tablet Reparatur",
-    "notebook": "Notebook Reparatur"
+    "notebook": "Notebook Reparatur",
+    "macbook": "MacBook Reparatur",
+    "ipad": "iPad Reparatur",
+    "charging_port": "Ladebuchse Reparatur"
   },
   "brand_modelle": {
     "meta_title": "Alle {brand}-Modelle",
@@ -1024,7 +1175,7 @@
     "meta_description": "Sofort-Preisrechner für Handy-, iPad- und Smartwatch-Reparatur in Wien. Marke und Modell wählen, Festpreis erhalten, gratis Abholung möglich."
   },
   "local_business": {
-    "description": "Express Smartphone, Tablet und Notebook Reparatur in Wien 1220 Aspern. Original Refurbished Displays, 12 Monate Garantie, 7 Tage offen."
+    "description": "Express Smartphone, Tablet und Notebook Reparatur in Wien 1220 Aspern. Original Refurbished Displays, 12 Monate Garantie, Mo–Sa offen."
   },
   "calc_whatsapp": {
     "prefill": "Hi! Ich brauche eine {repairs} Reparatur für mein {model}. Festpreis laut Online-Rechner: {total} €."
@@ -1037,8 +1188,8 @@
     "stat_1_label": "Express-Reparatur",
     "stat_2_value": "12 Monate",
     "stat_2_label": "Garantie",
-    "stat_3_value": "7 Tage",
-    "stat_3_label": "die Woche geöffnet",
+    "stat_3_value": "Mo–Sa",
+    "stat_3_label": "9–19 Uhr geöffnet",
     "video_label": "Video: Smartphone-Reparatur an unserer Werkbank"
   }
 }

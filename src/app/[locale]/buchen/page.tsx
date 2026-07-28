@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { SimpleBookingForm } from "@/components/book/SimpleBookingForm";
 
 export async function generateMetadata({
@@ -13,6 +14,17 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    alternates: {
+      canonical: `/${locale}/buchen`,
+      languages: alternateLanguagesFor("/buchen"),
+    },
+    openGraph: {
+      type: "website",
+      title: t("title"),
+      description: t("description"),
+      url: `${SITE.url}/${locale}/buchen`,
+      siteName: SITE.name,
+    },
   };
 }
 

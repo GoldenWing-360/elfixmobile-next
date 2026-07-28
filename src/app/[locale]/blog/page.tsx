@@ -37,8 +37,51 @@ export default async function BlogHubPage({
   const ratgeber = getRatgeber();
   const glossar = getGlossar();
 
+  const hubUrl = `${SITE.url}/de/blog`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": `${hubUrl}#blog`,
+        url: hubUrl,
+        name: "EL Fix Mobile Ratgeber & Glossar",
+        inLanguage: "de",
+        publisher: { "@id": `${SITE.url}/#localbusiness` },
+        blogPost: ratgeber.slice(0, 10).map((a) => ({
+          "@type": "BlogPosting",
+          headline: a.title,
+          url: `${hubUrl}/${a.slug}`,
+          datePublished: a.date,
+        })),
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": `${hubUrl}#glossar`,
+        name: "EL Fix Mobile Technik-Glossar",
+        url: hubUrl,
+        hasDefinedTerm: glossar.map((a) => ({
+          "@type": "DefinedTerm",
+          name: a.title.replace(/^Was ist (ein |eine |der |die |das )?/i, "").replace(/\?$/, ""),
+          url: `${hubUrl}/${a.slug}`,
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "EL Fix Mobile", item: `${SITE.url}/de` },
+          { "@type": "ListItem", position: 2, name: "Ratgeber", item: hubUrl },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-32 md:px-8 md:pb-36 md:pt-44">
         <header className="max-w-3xl">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">

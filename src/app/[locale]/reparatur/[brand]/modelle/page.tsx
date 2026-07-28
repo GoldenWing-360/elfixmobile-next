@@ -89,8 +89,43 @@ export default async function BrandModelsIndexPage({
   const groups = groupByYear(models);
   const t = await getTranslations({ locale, namespace: "brand_modelle" });
 
+  const pageUrl = `${SITE.url}/${locale}/reparatur/${brand.slug}/modelle`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${pageUrl}#page`,
+        url: pageUrl,
+        name: t("meta_title", { brand: brand.label }),
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: models.length,
+          itemListElement: models.slice(0, 30).map((m, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: `${m.full_name} Reparatur`,
+            url: `${SITE.url}/${locale}/reparatur/${brand.slug}/${m.slug}`,
+          })),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}/${locale}` },
+          { "@type": "ListItem", position: 2, name: brand.label, item: `${SITE.url}/${locale}/reparatur/${brand.slug}` },
+          { "@type": "ListItem", position: 3, name: t("headline", { brand: brand.label }), item: pageUrl },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section
         className={`relative overflow-hidden bg-gradient-to-br ${brand.gradient} text-white`}
       >

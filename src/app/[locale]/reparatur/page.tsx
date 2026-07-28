@@ -42,8 +42,42 @@ export default async function ReparaturHubPage({
   const t = await getTranslations({ locale, namespace: "reparatur_hub" });
   const tl = await getTranslations({ locale, namespace: "service_labels" });
 
+  const hubUrl = `${SITE.url}/${locale}/reparatur`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${hubUrl}#page`,
+        url: hubUrl,
+        name: t("meta_title"),
+        about: { "@id": `${SITE.url}/#localbusiness` },
+        mainEntity: {
+          "@type": "ItemList",
+          itemListElement: BRANDS.map((b, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: `${b.label} Reparatur Wien`,
+            url: `${SITE.url}/${locale}/reparatur/${b.slug}`,
+          })),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}/${locale}` },
+          { "@type": "ListItem", position: 2, name: t("headline"), item: hubUrl },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
         <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-32">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">

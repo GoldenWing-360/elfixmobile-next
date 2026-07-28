@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { Calculator } from "@/components/calc/Calculator";
 
 export async function generateMetadata({
@@ -13,6 +14,17 @@ export async function generateMetadata({
   return {
     title: t("meta_title"),
     description: t("meta_description"),
+    alternates: {
+      canonical: `/${locale}/preisrechner`,
+      languages: alternateLanguagesFor("/preisrechner"),
+    },
+    openGraph: {
+      type: "website",
+      title: t("meta_title"),
+      description: t("meta_description"),
+      url: `${SITE.url}/${locale}/preisrechner`,
+      siteName: SITE.name,
+    },
   };
 }
 

@@ -167,8 +167,53 @@ export default async function ServicePage({
   const district = getDistrict(slug);
   if (!district) notFound();
 
+  // Geo-landing JSON-LD: the repair service scoped to the district's
+  // area, so local queries ("handy reparatur donaustadt") get an
+  // explicit areaServed match instead of no structured data at all.
+  const tGeo = await getTranslations({
+    locale,
+    namespace: `geo_page.${district.key}`,
+  });
+  const districtUrl = `${SITE.url}/${locale}/${district.slug}`;
+  const districtJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `${districtUrl}#service`,
+        name: tGeo("meta_title"),
+        serviceType: "Smartphone repair",
+        provider: { "@id": `${SITE.url}/#localbusiness` },
+        areaServed: {
+          "@type": "Place",
+          name: tGeo("h1"),
+          address: {
+            "@type": "PostalAddress",
+            addressLocality:
+              district.key === "gaenserndorf" ? "Gänserndorf" : "Wien",
+            postalCode: district.postalCodes[0],
+            addressCountry: "AT",
+          },
+        },
+        url: districtUrl,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}/${locale}` },
+          { "@type": "ListItem", position: 2, name: tGeo("h1"), item: districtUrl },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(districtJsonLd) }}
+      />
       <DistrictView district={district} />
       <FinalCTA />
     </>

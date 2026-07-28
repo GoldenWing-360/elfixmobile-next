@@ -21,7 +21,7 @@
     "trust_reviews": "294 Google yorumu",
     "trust_express": "30 dk ekspres",
     "trust_warranty": "12 ay garanti",
-    "trust_open": "7 gün açık"
+    "trust_open": "Pzt–Cmt açık"
   },
   "services": {
     "eyebrow": "NELER ONARIYORUZ",
@@ -83,7 +83,7 @@
     "email": "elfixmobile@gmx.at",
     "hours_label": "Çalışma saatleri",
     "hours_mo_sa": "Pazartesi - Cumartesi 09:00 - 19:00",
-    "hours_so": "Pazar 09:00 - 18:00",
+    "hours_so": "Pazar kapalı",
     "directions_cta": "Google Maps'te aç",
     "call_cta": "Hemen ara"
   },
@@ -127,7 +127,7 @@
     "q_pay_q": "Hangi ödeme yöntemleri?",
     "q_pay_a": "Nakit, banka kartı, kredi kartı, EPS ve havale. KDV dökümlü fatura her zaman dahil.",
     "q_hours_q": "Açılış saatleri?",
-    "q_hours_a": "Pzt–Cmt 9–19, Paz 9–18. Haftanın 7 günü açık.",
+    "q_hours_a": "Pazartesi–Cumartesi 9–19. Pazar kapalı. Randevu gerekmez, uğramanız yeterli.",
     "meta_title": "SSS | EL Fix Mobile Viyana Aspern",
     "meta_description": "En sık sorulanlara cevaplar: süre, garanti, fiyatlar, parçalar, alım. EL Fix Mobile Viyana 1220 Aspern."
   },
@@ -142,7 +142,7 @@
     "address_label": "Adres",
     "hours_label": "Çalışma saatleri",
     "hours_mo_sa": "Pzt - Cmt 09:00 - 19:00",
-    "hours_so": "Pazar 09:00 - 18:00",
+    "hours_so": "Pazar kapalı",
     "services": "Hizmetler",
     "brands": "Markalar",
     "company": "Şirket",
@@ -245,7 +245,9 @@
     "field_message_ph": "iPhone 14 ekranı kırık, alım istiyorum ...",
     "submit": "Gönder",
     "success_title": "Teşekkürler, dönüş yapacağız.",
-    "success_sub": "Mesai saatlerinde 30 dakika içinde."
+    "success_sub": "Mesai saatlerinde 30 dakika içinde.",
+    "meta_title": "İletişim ve Adres Aspern | EL Fix Mobile Viyana 1220",
+    "meta_description": "EL Fix Mobile, Viyana 1220 Aspern Seestadt, Maria-Tusch-Strasse 17/1. Telefon 0660 6071414, WhatsApp, e-posta. Genellikle 30 dakikada yanıt. Pzt–Cmt 9–19."
   },
   "repair_label": {
     "display": "Ekran (modül)",
@@ -311,7 +313,7 @@
     "quote_bullet_diagnose": "Teşhis ve teklif her zaman ücretsiz",
     "quote_bullet_warranty": "Parça ve işçiliğe 12 ay garanti",
     "quote_bullet_pickup": "Viyana ve çevresinde ücretsiz alım (€ 70'den itibaren)",
-    "quote_bullet_walkin": "Walk-in: Pzt–Cmt 9–19, Paz 9–18",
+    "quote_bullet_walkin": "Walk-in: Pzt–Cmt 9–19",
     "faq": {
       "eyebrow": "Sıkça Sorulanlar",
       "headline": "{brand} tamiri hakkında sık sorulan sorular",
@@ -351,7 +353,11 @@
       "cta_primary_book": "Tamir teklif al",
       "cta_secondary": "Bizi ara",
       "faq_eyebrow": "Sık Sorulanlar",
-      "faq_headline": "Sık sorulan sorular"
+      "faq_headline": "Sık sorulan sorular",
+      "reparaturbon_title": "Viyana onarım kuponu: 100 €'ya kadar tasarruf",
+      "reparaturbon_body": "EL Fix Mobile, Wiener Reparaturbon programının listeli partner işletmesidir. Viyana Belediyesi onarım maliyetinizin %50'sine kadarını (maks. 100 €) karşılar; kuponu online alın, bizde kullanın.",
+      "reparaturbon_link": "",
+      "related_headline": ""
     },
     "display": {
       "h1": "Ekran tamiri Viyana.",
@@ -370,7 +376,7 @@
       },
       "step_2": {
         "title": "Rezervasyon veya walk-in",
-        "body": "Walk-in Pzt–Cmt 9–19, Paz 9–18. Veya Viyana'da € 70'den itibaren ücretsiz alım."
+        "body": "Walk-in Pzt–Cmt 9–19. Veya Viyana'da € 70'den itibaren ücretsiz alım."
       },
       "step_3": {
         "title": "30 dakikada al",
@@ -412,7 +418,7 @@
       },
       "step_2": {
         "title": "Rezervasyon veya walk-in",
-        "body": "Walk-in Pzt–Cmt 9–19, Paz 9–18. Viyana'da € 70'den itibaren ücretsiz alım."
+        "body": "Walk-in Pzt–Cmt 9–19. Viyana'da € 70'den itibaren ücretsiz alım."
       },
       "step_3": {
         "title": "Tam şarj, tam gün",
@@ -622,7 +628,7 @@
       },
       "step_2": {
         "title": "Getir veya gönder",
-        "body": "Walk-in Pzt–Cmt 9–19, Paz 9–18. Veya Aşağı Avusturya'dan posta ile."
+        "body": "Walk-in Pzt–Cmt 9–19. Veya Aşağı Avusturya'dan posta ile."
       },
       "step_3": {
         "title": "Teslim öncesi test",
@@ -730,6 +736,132 @@
       },
       "meta_title": "Dizüstü Tamiri Viyana | MacBook + Windows",
       "meta_description": "Dizüstü + laptop tamiri Viyana 1220 Aspern: MacBook, Lenovo, Dell, HP. Ekran, pil, klavye, ana kart, veri kurtarma. Ücretsiz teşhis, 12 ay garanti."
+    },
+    "macbook": {
+      "h1": "MacBook Tamiri Viyana",
+      "intro": "MacBook Air veya Pro arızalı mı? Ekran, batarya, klavye, şarj portu ve anakartı onarıyoruz – Apple Authorized Service Provider olarak orijinal parçalarla, Viyana 1220 Aspern'de.",
+      "included_headline": "Tüm MacBook onarımları tek adreste",
+      "included_sub": "Ekran değişiminden anakart mikro lehimlemeye: ücretsiz tanı, yazılı teklif, onayınız olmadan onarım yok.",
+      "meta_title": "MacBook Tamiri Viyana | Air & Pro, orijinal parça",
+      "meta_description": "Viyana 1220'de MacBook tamiri: ekran, batarya, klavye, anakart. Apple Authorized Service Provider, 12 ay garanti, ücretsiz tanı.",
+      "bullet_1": "Ekran değişimi (cam, panel, aydınlatma)",
+      "bullet_2": "Batarya değişimi",
+      "bullet_3": "Klavye ve trackpad onarımı",
+      "bullet_4": "Şarj portu / MagSafe onarımı",
+      "bullet_5": "Ultrasonik banyoda sıvı hasarı tedavisi",
+      "bullet_6": "SSD yükseltme ve veri aktarımı",
+      "step_1": {
+        "title": "Ücretsiz tanı",
+        "body": "MacBook'unuzu getirin veya kargoyla gönderin. Arızayı bulup yazılı teklif göndeririz – genellikle aynı gün."
+      },
+      "step_2": {
+        "title": "Onaydan sonra onarım",
+        "body": "Sabit fiyatı onaylamanızdan sonra onarırız. Pzt–Cmt 9–19, Viyana'da 70 € üzeri ücretsiz alım."
+      },
+      "step_3": {
+        "title": "Garantiyle teslim",
+        "body": "Parça ve işçilikte 12 ay garanti. Verileriniz cihazda dokunulmadan kalır."
+      },
+      "q_duration": {
+        "q": "MacBook tamiri ne kadar sürer?",
+        "a": "Batarya ve klavye genellikle 1–2 iş günü, ekran 1–3 gün, anakart onarımı 5 güne kadar."
+      },
+      "q_warranty": {
+        "q": "Garanti var mı?",
+        "a": "Evet, parça ve işçilikte 12 ay. Apple Authorized Service Provider olarak orijinal parça kullanıyoruz – Apple garantiniz korunur."
+      },
+      "q_data": {
+        "q": "Verilerim güvende mi?",
+        "a": "Evet, çoğu onarım verilere dokunmaz. Anakart işlemlerinden önce yedek öneririz – yardımcı oluruz."
+      },
+      "q_pickup": {
+        "q": "MacBook'umu alıyor musunuz?",
+        "a": "Evet, Viyana'da 70 € üzeri ücretsiz. Ya da Pzt–Cmt 9–19 uğrayın veya Avusturya genelinden sigortalı kargo."
+      }
+    },
+    "ipad": {
+      "h1": "iPad Tamiri Viyana",
+      "intro": "Ekran çatlak, batarya zayıf veya şarj portu bozuk mu? Tüm iPad modellerini onarıyoruz – iPad, Air, Pro ve mini – orijinal parçalarla ve 12 ay garantiyle, Viyana 1220 Aspern'de.",
+      "included_headline": "Tüm iPad onarımları sabit fiyatla",
+      "included_sub": "70 €'dan itibaren, onarım öncesi sabit fiyat. Ücretsiz tanı, modele göre 3 saatte ekspres.",
+      "meta_title": "iPad Tamiri Viyana | Tüm modeller 70 €'dan",
+      "meta_description": "Viyana 1220'de iPad tamiri: iPad, Air, Pro, mini için ekran, batarya, şarj portu. 70 €'dan sabit fiyat, 3 saatte ekspres, 12 ay garanti.",
+      "bullet_1": "Ekran ve dokunmatik değişimi",
+      "bullet_2": "Batarya değişimi",
+      "bullet_3": "Şarj portu onarımı (USB-C ve Lightning)",
+      "bullet_4": "Kamera ve mikrofon onarımı",
+      "bullet_5": "Sıvı hasarı tedavisi",
+      "bullet_6": "Yazılım sorunları ve güncellemeler",
+      "step_1": {
+        "title": "Fiyatı online hesaplayın",
+        "body": "Fiyat hesaplayıcıda iPad modelinizi seçin, sabit fiyatı anında görün."
+      },
+      "step_2": {
+        "title": "Getirin veya aldırın",
+        "body": "Pzt–Cmt 9–19 randevusuz. Ya da Viyana'da 70 € üzeri ücretsiz alım."
+      },
+      "step_3": {
+        "title": "Ekspres onarım",
+        "body": "Çoğu iPad onarımı 3 saatte hazır – parça ve işçilikte 12 ay garantiyle."
+      },
+      "q_duration": {
+        "q": "iPad tamiri ne kadar sürer?",
+        "a": "Ekran ve batarya genellikle 3 saat; nadir modellerde parça siparişi gerekirse 1–2 iş günü."
+      },
+      "q_warranty": {
+        "q": "Garanti var mı?",
+        "a": "Evet, parça ve işçilikte 12 ay – orijinal parçalarla çalışıyoruz."
+      },
+      "q_data": {
+        "q": "Verilerim kalır mı?",
+        "a": "Evet, ekran, batarya ve port onarımlarında tüm veriler cihazda kalır."
+      },
+      "q_pickup": {
+        "q": "iPad'imi alıyor musunuz?",
+        "a": "Evet, Viyana'da 70 € üzeri ücretsiz. Ya da Pzt–Cmt 9–19, Maria-Tusch-Strasse 17'ye uğrayın."
+      }
+    },
+    "charging_port": {
+      "h1": "Şarj Portu Tamiri Viyana",
+      "intro": "Telefonunuz şarj olmuyor veya kablo ancak belirli pozisyonda tutunca mı çalışıyor? Şarj portunu temizliyor veya değiştiriyoruz – 29 €'dan, çoğunlukla 45 dakikada, Viyana 1220 Aspern'de.",
+      "included_headline": "Temizlikten komple port değişimine",
+      "included_sub": "Çoğu zaman portta sadece toz vardır – bir şey değiştirmeden önce bunu ücretsiz kontrol ederiz.",
+      "meta_title": "Şarj Portu Tamiri Viyana | 29 €'dan 45 dk'da",
+      "meta_description": "Telefon şarj olmuyor mu? Port temizliği 29 €'dan, değişim 45 dk – iPhone, Samsung vb. Viyana 1220'de ücretsiz tanı, 12 ay garanti.",
+      "bullet_1": "Profesyonel port temizliği (29 €'dan)",
+      "bullet_2": "USB-C ve Lightning port değişimi",
+      "bullet_3": "Şarj elektroniği tanısı",
+      "bullet_4": "Kablo ve adaptör kontrolü",
+      "bullet_5": "Kablosuz şarj tanısı",
+      "bullet_6": "Tüm markalar: iPhone, Samsung, Xiaomi ve daha fazlası",
+      "step_1": {
+        "title": "Ücretsiz tanı",
+        "body": "Önce temizliğin yeterli mi yoksa portun değişmesi mi gerektiğini kontrol ederiz – sabit fiyatı hemen söyleriz."
+      },
+      "step_2": {
+        "title": "45 dakikada onarım",
+        "body": "Temizlik hemen, port değişimi genellikle 45–60 dakika. Pzt–Cmt 9–19."
+      },
+      "step_3": {
+        "title": "Test edip teslim",
+        "body": "Teslimden önce şarj, veri aktarımı ve hızlı şarjı test ederiz – 12 ay garantiyle."
+      },
+      "q_duration": {
+        "q": "Onarım ne kadar sürer?",
+        "a": "Temizlik: beklerken hemen. Port değişimi: modele göre genellikle 45–60 dakika."
+      },
+      "q_warranty": {
+        "q": "Yeni porta garanti var mı?",
+        "a": "Evet, parça ve işçilikte 12 ay – tüm onarımlarımızda olduğu gibi."
+      },
+      "q_data": {
+        "q": "Verilerim telefonda kalır mı?",
+        "a": "Evet, şarj portu onarımı verilere dokunmaz."
+      },
+      "q_pickup": {
+        "q": "Ya sorun portta değilse?",
+        "a": "O zaman dürüstçe söyleriz: çoğu zaman suçlu kablo, adaptör veya bataryadır. Tanı her zaman ücretsiz – sadece gerçek onarımı ödersiniz."
+      }
     }
   },
   "model_page": {
@@ -773,7 +905,8 @@
       "a": "€ 70'den itibaren Viyana ve Aşağı Avusturya'da ücretsiz alım ve teslim. Aksi takdirde walk-in (Maria-Tusch-Strasse 17/1, 1220 Viyana) veya sigortalı posta."
     },
     "meta_title": "{model} Tamiri Viyana | Sabit fiyat 30 dk",
-    "meta_description": "Viyana 1220 Aspern'da {model} tamiri: ekran, pil, şarj soketi ve daha fazlası. Peşin sabit fiyat, 12 ay garanti, 30 dk ekspres."
+    "meta_description": "Viyana 1220 Aspern'da {model} tamiri: ekran, pil, şarj soketi ve daha fazlası. Peşin sabit fiyat, 12 ay garanti, 30 dk ekspres.",
+    "siblings_headline": "Diğer {brand} modellerini onarın"
   },
   "geo_page": {
     "aspern_seestadt": {
@@ -867,7 +1000,22 @@
     "values_4_title": "Gizli ücret yok",
     "values_4_body": "Parça, işçilik, vergi — hepsi sabit fiyata dahil. € 70'den itibaren ücretsiz alım.",
     "meta_title": "Hakkımızda | EL Fix Mobile Viyana Aspern",
-    "meta_description": "EL Fix Mobile kim? 2019'dan beri Viyana 1220 Aspern'da aile şirketi, 294 Google yorumu, 12 ay garanti, dürüst sabit fiyat."
+    "meta_description": "EL Fix Mobile kim? 2019'dan beri Viyana 1220 Aspern'da aile şirketi, 294 Google yorumu, 12 ay garanti, dürüst sabit fiyat.",
+    "owner_eyebrow": "İŞLETME SAHİBİ",
+    "owner_title": "Natalja Rahimova 2019'dan beri EL Fix Mobile'ı yönetiyor.",
+    "owner_body": "Natalja Rahimova 2019'da Seestadt Aspern'deki Maria-Tusch-Strasse'de dükkanı açtı; net bir standartla: üretici seviyesinde onarım, dürüst sabit fiyatlar ve ekspres adını hak eden hız. Bugün arkasında ESD korumalı tezgah, mikroskoplu lehim ve test edilmiş parçalarla deneyimli bir atölye ekibi var.",
+    "workshop_image_alt": "EL Fix Mobile tezgahı: teknisyen açılmış bir akıllı telefonu onarıyor",
+    "cred_section_title": "Sertifikalı ve yetkili",
+    "cred_1_title": "Apple Authorized Service Provider",
+    "cred_1_body": "Yetkili Apple servisi: orijinal parçalar, Apple tanı araçları ve garantinizi koruyan onarımlar.",
+    "cred_2_title": "Samsung sertifikalı onarım partneri",
+    "cred_2_body": "Samsung sertifikalı: Service-Pack ekranlarla ve üretici standartlarında Galaxy onarımı, Knox güvenliği dahil.",
+    "cred_3_title": "Viyana Reparaturbon partneri",
+    "cred_3_body": "Listeli partner işletme olarak Viyana onarım kuponunu bizde kullanabilirsiniz: onarımınızda %50'ye kadar destek (maks. 100 €).",
+    "stat_founded": "kuruluş",
+    "stat_reviews": "294 Google yorumu",
+    "stat_models": "sabit fiyatlı model",
+    "stat_express": "ekspres onarım"
   },
   "bewertungen": {
     "eyebrow": "YORUMLAR",
@@ -1003,7 +1151,10 @@
     "wrap": "Telefon kaplama",
     "camera": "Kamera tamiri",
     "tablet": "Tablet tamiri",
-    "notebook": "Dizüstü tamiri"
+    "notebook": "Dizüstü tamiri",
+    "macbook": "MacBook tamiri",
+    "ipad": "iPad tamiri",
+    "charging_port": "Şarj portu tamiri"
   },
   "brand_modelle": {
     "meta_title": "Tüm {brand} modelleri",
@@ -1024,7 +1175,7 @@
     "meta_description": "Viyana'da telefon, iPad ve akıllı saat tamiri için anlık fiyat hesaplayıcı. Marka ve modeli seçin, sabit fiyat alın, ücretsiz alım mümkün."
   },
   "local_business": {
-    "description": "Viyana 1220 Aspern'de ekspres akıllı telefon, tablet ve dizüstü tamiri. Orijinal yenilenmiş ekranlar, 12 ay garanti, 7 gün açık."
+    "description": "Viyana 1220 Aspern'de ekspres akıllı telefon, tablet ve dizüstü tamiri. Orijinal yenilenmiş ekranlar, 12 ay garanti, Pzt–Cmt açık."
   },
   "calc_whatsapp": {
     "prefill": "Merhaba! {model} için {repairs} tamiri lazım. Online hesaplayıcı fiyatı: {total} €."
@@ -1037,8 +1188,8 @@
     "stat_1_label": "Ekspres onarım",
     "stat_2_value": "12 ay",
     "stat_2_label": "Garanti",
-    "stat_3_value": "7 / 7",
-    "stat_3_label": "gün açık",
+    "stat_3_value": "Pzt–Cmt",
+    "stat_3_label": "9–19 açık",
     "video_label": "Video: tezgahımızda akıllı telefon onarımı"
   }
 }

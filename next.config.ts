@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 import path from "node:path";
 import createNextIntlPlugin from "next-intl/plugin";
 import blogRedirects from "./src/data/blog/redirects.json";
+import wpPageRedirects from "./src/data/blog/wp-page-redirects.json";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
@@ -62,6 +63,9 @@ const nextConfig: NextConfig = {
         "kamera-reparatur-handy-wien",
         "tablet-reparatur-wien",
         "notebook-reparatur-wien",
+        "macbook-reparatur-wien",
+        "ipad-reparatur-wien",
+        "ladebuchse-reparatur-wien",
         "handy-reparatur-aspern-seestadt",
         "handy-reparatur-donaustadt",
         "handy-reparatur-floridsdorf",
@@ -76,6 +80,15 @@ const nextConfig: NextConfig = {
       // rankings. The 4 old iphone-13-* device posts point at the richer
       // model pages instead of the blog.
       ...Object.entries(blogRedirects as Record<string, string>).map(
+        ([slug, destination]) => ({
+          source: `/${slug}`,
+          destination,
+          permanent: false,
+        }),
+      ),
+      // Remaining WP page slugs (brand hubs, old service/landing pages)
+      // mapped to their closest Next equivalent for the domain cutover.
+      ...Object.entries(wpPageRedirects as Record<string, string>).map(
         ([slug, destination]) => ({
           source: `/${slug}`,
           destination,

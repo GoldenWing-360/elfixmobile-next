@@ -1,12 +1,31 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { ContactView } from "@/components/contact/ContactView";
 
-export const metadata: Metadata = {
-  title: "Kontakt - Telefon, WhatsApp und Werkstatt-Adresse Wien",
-  description:
-    "EL Fix Mobile in Wien 1220 Aspern Seestadt. Maria-Tusch-Strasse 17/1. Telefon 0660 6071414, WhatsApp, E-Mail. Antwort meist in 30 Minuten.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
+  return {
+    title: t("meta_title"),
+    description: t("meta_description"),
+    alternates: {
+      canonical: `/${locale}/kontakt`,
+      languages: alternateLanguagesFor("/kontakt"),
+    },
+    openGraph: {
+      type: "website",
+      title: t("meta_title"),
+      description: t("meta_description"),
+      url: `${SITE.url}/${locale}/kontakt`,
+      siteName: SITE.name,
+    },
+  };
+}
 
 export default async function KontaktPage({
   params,
@@ -15,5 +34,37 @@ export default async function KontaktPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <ContactView />;
+  const t = await getTranslations({ locale, namespace: "contact" });
+
+  const url = `${SITE.url}/${locale}/kontakt`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": `${url}#page`,
+        url,
+        name: t("meta_title"),
+        about: { "@id": `${SITE.url}/#localbusiness` },
+        inLanguage: locale,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "EL Fix Mobile", item: `${SITE.url}/${locale}` },
+          { "@type": "ListItem", position: 2, name: t("meta_title") },
+        ],
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ContactView />
+    </>
+  );
 }

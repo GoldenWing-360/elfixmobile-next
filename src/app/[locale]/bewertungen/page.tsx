@@ -39,10 +39,12 @@ export default async function BewertungenPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "bewertungen" });
 
-  // Schema.org Review array so Google can lift star ratings into the
-  // search snippet. AggregateRating + the individual Review items are
-  // attached to the existing #localbusiness node from the layout, so
-  // the global LocalBusiness JSON-LD picks them up by id reference.
+  // No per-review Schema here: the testimonials are paraphrased Google
+  // reviews without real author names, and Google's review-snippet
+  // policy forbids marking up reviews that aren't verifiably attributed
+  // ("Kunde 1" placeholder authors risk a manual action). The verified
+  // AggregateRating (4.4/294 from the Google Business Profile) is the
+  // honest machine-readable signal and references the LocalBusiness.
   const url = `${SITE.url}/${locale}/bewertungen`;
   const reviewsJsonLd = {
     "@context": "https://schema.org",
@@ -52,23 +54,19 @@ export default async function BewertungenPage({
         "@id": `${url}#page`,
         url,
         name: t("meta_title"),
+        about: { "@id": `${SITE.url}/#localbusiness` },
         primaryImageOfPage: {
           "@type": "ImageObject",
-          url: `${SITE.url}/og.png`,
+          url: `${SITE.url}/opengraph-image`,
         },
       },
-      ...["1", "2", "3", "4", "5", "6"].map((k) => ({
-        "@type": "Review",
-        "@id": `${url}#review-${k}`,
-        itemReviewed: { "@id": `${SITE.url}/#localbusiness` },
-        author: { "@type": "Person", name: `Kunde ${k}` },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-        },
-        reviewBody: t(`review_${k}`),
-      })),
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "EL Fix Mobile", item: `${SITE.url}/${locale}` },
+          { "@type": "ListItem", position: 2, name: t("h1") },
+        ],
+      },
     ],
   };
 

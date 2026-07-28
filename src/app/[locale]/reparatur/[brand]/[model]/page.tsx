@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { allBrandModelPairs, getModel } from "@/data/brands";
+import { allBrandModelPairs, getModel, getModelsForBrand } from "@/data/brands";
 import { repairLabel, repairDurationBucket } from "@/data/repair-labels";
 import { cn } from "@/lib/cn";
 import { routing } from "@/i18n/routing";
@@ -104,9 +104,26 @@ async function buildJsonLd(
       {
         "@type": "Product",
         "@id": `${url}#product`,
-        name: pair.model.full_name,
+        name: `${pair.model.full_name} Reparatur`,
         brand: { "@type": "Brand", name: pair.brand.label },
         category: "Smartphone",
+        image: `${url}/opengraph-image`,
+        // Same AggregateOffer as the Service node — Product is the type
+        // Google actually surfaces price rich results for.
+        ...(lo != null && hi != null
+          ? {
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "EUR",
+                lowPrice: lo,
+                highPrice: hi,
+                offerCount: priced.length,
+                priceValidUntil: `${new Date().getFullYear()}-12-31`,
+                availability: "https://schema.org/InStock",
+                seller: { "@id": `${SITE.url}/#localbusiness` },
+              },
+            }
+          : {}),
       },
       {
         "@type": "Service",
@@ -338,6 +355,38 @@ export default async function ModelPage({
               {t("cta_secondary")}
             </Link>
           </div>
+
+          {/* Sibling models — internal linking within the brand so link
+              equity flows between the 219 long-tail model pages instead
+              of pooling only on the brand hub. */}
+          {(() => {
+            const models = getModelsForBrand(pair.brand);
+            const idx = models.findIndex((m) => m.slug === pair.model.slug);
+            const siblings = [
+              ...models.slice(Math.max(0, idx - 2), idx),
+              ...models.slice(idx + 1, idx + 3),
+            ].slice(0, 4);
+            if (siblings.length === 0) return null;
+            return (
+              <div className="mt-12">
+                <h3 className="text-[15px] font-semibold tracking-[-0.01em]">
+                  {t("siblings_headline", { brand: pair.brand.label })}
+                </h3>
+                <ul className="mt-4 flex flex-wrap gap-2.5">
+                  {siblings.map((m) => (
+                    <li key={m.slug}>
+                      <Link
+                        href={`/reparatur/${pair.brand.slug}/${m.slug}`}
+                        className="inline-block rounded-full border border-black/10 bg-white px-4 py-2 text-[13.5px] font-medium text-[var(--color-text-dark)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+                      >
+                        {m.full_name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })()}
 
           <p className="mt-10 text-[13px] text-[#86868B]">
             <Link

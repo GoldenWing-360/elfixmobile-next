@@ -21,7 +21,7 @@
     "trust_reviews": "294 Google reviews",
     "trust_express": "30-minute express",
     "trust_warranty": "12-month warranty",
-    "trust_open": "Open 7 days"
+    "trust_open": "Open Mon–Sat"
   },
   "services": {
     "eyebrow": "WHAT WE FIX",
@@ -83,7 +83,7 @@
     "email": "elfixmobile@gmx.at",
     "hours_label": "Opening hours",
     "hours_mo_sa": "Monday to Saturday 09:00 to 19:00",
-    "hours_so": "Sunday 09:00 to 18:00",
+    "hours_so": "Sunday closed",
     "directions_cta": "Open in Google Maps",
     "call_cta": "Call now"
   },
@@ -127,7 +127,7 @@
     "q_pay_q": "What payment methods?",
     "q_pay_a": "Cash, debit card, credit card, EPS and bank transfer. VAT-itemised invoice always included.",
     "q_hours_q": "When are you open?",
-    "q_hours_a": "Mon–Sat 9–19, Sun 9–18. Open 7 days a week.",
+    "q_hours_a": "Monday to Saturday 9–19. Closed on Sundays. No appointment needed – just drop by.",
     "meta_title": "FAQ | EL Fix Mobile Vienna Aspern",
     "meta_description": "Answers to the most common questions: duration, warranty, prices, parts, pickup. EL Fix Mobile Vienna 1220 Aspern."
   },
@@ -142,7 +142,7 @@
     "address_label": "Address",
     "hours_label": "Opening hours",
     "hours_mo_sa": "Mon to Sat 09:00 to 19:00",
-    "hours_so": "Sunday 09:00 to 18:00",
+    "hours_so": "Sunday closed",
     "services": "Services",
     "brands": "Brands",
     "company": "Company",
@@ -245,7 +245,9 @@
     "field_message_ph": "iPhone 14 with cracked display, would like pickup ...",
     "submit": "Send",
     "success_title": "Thanks, we will get back to you.",
-    "success_sub": "Within 30 minutes during business hours."
+    "success_sub": "Within 30 minutes during business hours.",
+    "meta_title": "Contact & Location Aspern | EL Fix Mobile Vienna 1220",
+    "meta_description": "EL Fix Mobile in Vienna 1220 Aspern Seestadt, Maria-Tusch-Strasse 17/1. Phone 0660 6071414, WhatsApp, email. Reply usually within 30 minutes. Mon–Sat 9–19."
   },
   "repair_label": {
     "display": "Display (full)",
@@ -311,7 +313,7 @@
     "quote_bullet_diagnose": "Diagnosis & quote always free of charge",
     "quote_bullet_warranty": "12-month warranty on part and labour",
     "quote_bullet_pickup": "Free pickup in Vienna and surroundings (from € 70 repair value)",
-    "quote_bullet_walkin": "Walk-in: Mon–Sat 9 a.m.–7 p.m., Sun 9 a.m.–6 p.m.",
+    "quote_bullet_walkin": "Walk-in: Mon–Sat 9 a.m.–7 p.m.",
     "faq": {
       "eyebrow": "FAQ",
       "headline": "Common questions about {brand} repair",
@@ -351,7 +353,11 @@
       "cta_primary_book": "Request a repair",
       "cta_secondary": "Call us",
       "faq_eyebrow": "FAQ",
-      "faq_headline": "Common questions"
+      "faq_headline": "Common questions",
+      "reparaturbon_title": "Vienna repair voucher: save up to €100",
+      "reparaturbon_body": "EL Fix Mobile is a listed partner of the Wiener Reparaturbon. The City of Vienna covers up to 50% of your repair cost (max. €100) – get the voucher online and redeem it with us.",
+      "reparaturbon_link": "",
+      "related_headline": ""
     },
     "display": {
       "h1": "Phone display repair Vienna.",
@@ -370,7 +376,7 @@
       },
       "step_2": {
         "title": "Book or walk in",
-        "body": "Walk-in Mon–Sat 9–19, Sun 9–18. Or free pickup in Vienna for repairs from € 70."
+        "body": "Walk-in Mon–Sat 9–19. Or free pickup in Vienna for repairs from € 70."
       },
       "step_3": {
         "title": "Collect in 30 minutes",
@@ -412,7 +418,7 @@
       },
       "step_2": {
         "title": "Book or walk in",
-        "body": "Walk-in Mon–Sat 9–19, Sun 9–18. Free pickup in Vienna from € 70."
+        "body": "Walk-in Mon–Sat 9–19. Free pickup in Vienna from € 70."
       },
       "step_3": {
         "title": "Full charge, full day",
@@ -622,7 +628,7 @@
       },
       "step_2": {
         "title": "Drop off or ship",
-        "body": "Walk-in Mon–Sat 9–19, Sun 9–18. Or mail in if you live in Lower Austria."
+        "body": "Walk-in Mon–Sat 9–19. Or mail in if you live in Lower Austria."
       },
       "step_3": {
         "title": "Test before handover",
@@ -730,6 +736,132 @@
       },
       "meta_title": "Laptop Repair Vienna | MacBook + Windows",
       "meta_description": "Notebook + laptop repair Vienna 1220 Aspern: MacBook, Lenovo, Dell, HP. Display, battery, keyboard, mainboard, data recovery. Free diagnosis, 12-month warranty."
+    },
+    "macbook": {
+      "h1": "MacBook Repair Vienna",
+      "intro": "MacBook Air or Pro broken? We repair display, battery, keyboard, charging port and logic board – as an Apple Authorized Service Provider with genuine parts, in Vienna 1220 Aspern.",
+      "included_headline": "Every MacBook repair under one roof",
+      "included_sub": "From display swaps to micro-soldering on the logic board – free diagnosis, written quote, no repair without your approval.",
+      "meta_title": "MacBook Repair Vienna | Air & Pro, genuine parts",
+      "meta_description": "MacBook repair in Vienna 1220: display, battery, keyboard, logic board. Apple Authorized Service Provider, 12 months warranty, free diagnosis.",
+      "bullet_1": "Display replacement (glass, panel, backlight)",
+      "bullet_2": "Battery replacement",
+      "bullet_3": "Keyboard and trackpad repair",
+      "bullet_4": "Charging port / MagSafe repair",
+      "bullet_5": "Water damage treatment in ultrasonic bath",
+      "bullet_6": "SSD upgrade and data migration",
+      "step_1": {
+        "title": "Free diagnosis",
+        "body": "Drop your MacBook off or ship it in. We analyse the fault and send you a written quote – usually the same day."
+      },
+      "step_2": {
+        "title": "Repair after approval",
+        "body": "We only repair once you confirm the fixed price. Walk-in Mon–Sat 9–19, free pickup in Vienna from €70 repair value."
+      },
+      "step_3": {
+        "title": "Pick up with warranty",
+        "body": "12 months warranty on part and labour. Your data stays untouched on the device."
+      },
+      "q_duration": {
+        "q": "How long does a MacBook repair take?",
+        "a": "Battery and keyboard usually 1–2 working days, displays 1–3 days depending on model, logic board repairs up to 5 days."
+      },
+      "q_warranty": {
+        "q": "Is there a warranty?",
+        "a": "Yes, 12 months on part and labour. As an Apple Authorized Service Provider we use genuine parts – your Apple warranty stays intact."
+      },
+      "q_data": {
+        "q": "Is my data safe?",
+        "a": "Yes. Most repairs leave your data untouched. Before logic-board work we recommend a backup – we'll help you make one."
+      },
+      "q_pickup": {
+        "q": "Do you pick up my MacBook?",
+        "a": "Yes, free in Vienna from €70 repair value. Or walk in Mon–Sat 9–19, or insured shipping from anywhere in Austria."
+      }
+    },
+    "ipad": {
+      "h1": "iPad Repair Vienna",
+      "intro": "Cracked display, weak battery or broken charging port? We repair all iPad models – iPad, Air, Pro and mini – with genuine parts and 12 months warranty in Vienna 1220 Aspern.",
+      "included_headline": "Every iPad repair at a fixed price",
+      "included_sub": "From €70, fixed price before the repair. Free diagnosis, express in 3 hours depending on model.",
+      "meta_title": "iPad Repair Vienna | All models from €70",
+      "meta_description": "iPad repair in Vienna 1220 Aspern: display, battery, charging port for iPad, Air, Pro, mini. Fixed price from €70, express in 3 hours, 12 months warranty.",
+      "bullet_1": "Display and touchscreen replacement",
+      "bullet_2": "Battery replacement",
+      "bullet_3": "Charging port repair (USB-C and Lightning)",
+      "bullet_4": "Camera and microphone repair",
+      "bullet_5": "Water damage treatment",
+      "bullet_6": "Software issues and updates",
+      "step_1": {
+        "title": "Calculate your price online",
+        "body": "Pick your iPad model in the price calculator and see the fixed price instantly."
+      },
+      "step_2": {
+        "title": "Drop off or pickup",
+        "body": "Walk-in Mon–Sat 9–19 without appointment. Or free pickup in Vienna from €70 repair value."
+      },
+      "step_3": {
+        "title": "Express repair",
+        "body": "Most iPad repairs are done in 3 hours – with 12 months warranty on part and labour."
+      },
+      "q_duration": {
+        "q": "How long does an iPad repair take?",
+        "a": "Display and battery usually 3 hours; rare models 1–2 working days if the part needs ordering."
+      },
+      "q_warranty": {
+        "q": "Is there a warranty?",
+        "a": "Yes, 12 months on part and labour – as an Apple Authorized Service Provider we use genuine parts."
+      },
+      "q_data": {
+        "q": "Does my data survive?",
+        "a": "Yes, display, battery and charging-port repairs leave all data on the device. No reset needed."
+      },
+      "q_pickup": {
+        "q": "Do you pick up my iPad?",
+        "a": "Yes, free in Vienna from €70 repair value. Or just walk in Mon–Sat 9–19, Maria-Tusch-Strasse 17."
+      }
+    },
+    "charging_port": {
+      "h1": "Charging Port Repair Vienna",
+      "intro": "Your phone won't charge, only charges in a certain cable position, or the cable wobbles? We clean or replace the charging port – from €29, often in 45 minutes, in Vienna 1220 Aspern.",
+      "included_headline": "From cleaning to a full port swap",
+      "included_sub": "Often it's just dust in the port – we check that for free before anything gets replaced.",
+      "meta_title": "Charging Port Repair Vienna | From €29 in 45 min",
+      "meta_description": "Phone not charging? Port cleaning from €29, replacement in 45 min for iPhone, Samsung & co. Free diagnosis in Vienna 1220 Aspern, 12 months warranty.",
+      "bullet_1": "Professional port cleaning (from €29)",
+      "bullet_2": "Port replacement USB-C and Lightning",
+      "bullet_3": "Charging electronics diagnosis (IC, flex cable)",
+      "bullet_4": "Cable and charger check",
+      "bullet_5": "Wireless charging diagnosis",
+      "bullet_6": "All brands: iPhone, Samsung, Xiaomi & more",
+      "step_1": {
+        "title": "Free diagnosis",
+        "body": "We first check whether cleaning is enough or the port needs replacing – you get the fixed price immediately."
+      },
+      "step_2": {
+        "title": "Repair in 45 minutes",
+        "body": "Cleaning on the spot, port swap usually 45–60 minutes. Walk-in Mon–Sat 9–19."
+      },
+      "step_3": {
+        "title": "Test and go",
+        "body": "We test charging, data transfer and fast charging before handover – with 12 months warranty."
+      },
+      "q_duration": {
+        "q": "How long does the repair take?",
+        "a": "Cleaning: immediately while you wait. Port replacement: usually 45–60 minutes depending on model."
+      },
+      "q_warranty": {
+        "q": "Is there a warranty on the new port?",
+        "a": "Yes, 12 months on part and labour – like on all our repairs."
+      },
+      "q_data": {
+        "q": "Does my data stay on the phone?",
+        "a": "Yes, a charging-port repair leaves all data untouched."
+      },
+      "q_pickup": {
+        "q": "What if the port isn't the problem?",
+        "a": "Then we tell you honestly: often it's just the cable, the charger or the battery. Diagnosis is always free – you only pay for the actual repair."
+      }
     }
   },
   "model_page": {
@@ -773,7 +905,8 @@
       "a": "Free pickup and return for repairs from € 70 within Vienna and Lower Austria. Otherwise walk-in (Maria-Tusch-Strasse 17/1, 1220 Vienna) or insured mail."
     },
     "meta_title": "{model} Repair Vienna | Fixed price 30 min",
-    "meta_description": "{model} repair in Vienna 1220 Aspern: display, battery, charging port and more. Fixed prices upfront, 12-month warranty, 30-min express. 4.4/5 (294 reviews)."
+    "meta_description": "{model} repair in Vienna 1220 Aspern: display, battery, charging port and more. Fixed prices upfront, 12-month warranty, 30-min express. 4.4/5 (294 reviews).",
+    "siblings_headline": "Repair other {brand} models"
   },
   "geo_page": {
     "aspern_seestadt": {
@@ -867,7 +1000,22 @@
     "values_4_title": "No hidden fees",
     "values_4_body": "Part, labour, tax — all in the fixed price. Free pickup from € 70 repair value.",
     "meta_title": "About | EL Fix Mobile Vienna Aspern",
-    "meta_description": "Who is EL Fix Mobile? Family-run shop in Vienna 1220 Aspern since 2019, 294 Google reviews, 12-month warranty, honest fixed prices."
+    "meta_description": "Who is EL Fix Mobile? Family-run shop in Vienna 1220 Aspern since 2019, 294 Google reviews, 12-month warranty, honest fixed prices.",
+    "owner_eyebrow": "OWNER",
+    "owner_title": "Natalja Rahimova has run EL Fix Mobile since 2019.",
+    "owner_body": "Natalja Rahimova opened the shop on Maria-Tusch-Strasse in Seestadt Aspern in 2019 with a clear standard: manufacturer-level repairs, honest fixed prices and speed that earns the word express. Behind it today is a seasoned workshop team with an ESD-protected bench, microscope soldering and tested parts.",
+    "workshop_image_alt": "Workbench at EL Fix Mobile: technician repairing an opened smartphone",
+    "cred_section_title": "Certified and accredited",
+    "cred_1_title": "Apple Authorized Service Provider",
+    "cred_1_body": "Authorized Apple service: genuine parts, Apple diagnostic tools and repairs that keep your warranty intact.",
+    "cred_2_title": "Samsung certified repair partner",
+    "cred_2_body": "Certified by Samsung: Galaxy repairs with service-pack displays and manufacturer-compliant procedures, including Knox security.",
+    "cred_3_title": "Vienna Reparaturbon partner",
+    "cred_3_body": "As a listed partner business you can redeem the Vienna repair voucher with us: up to 50% funding (max. €100) on your repair.",
+    "stat_founded": "founded",
+    "stat_reviews": "294 Google reviews",
+    "stat_models": "models with fixed prices",
+    "stat_express": "express repair"
   },
   "bewertungen": {
     "eyebrow": "REVIEWS",
@@ -1003,7 +1151,10 @@
     "wrap": "Phone wrap",
     "camera": "Camera repair",
     "tablet": "Tablet repair",
-    "notebook": "Laptop repair"
+    "notebook": "Laptop repair",
+    "macbook": "MacBook repair",
+    "ipad": "iPad repair",
+    "charging_port": "Charging port repair"
   },
   "brand_modelle": {
     "meta_title": "All {brand} models",
@@ -1024,7 +1175,7 @@
     "meta_description": "Instant price calculator for phone, iPad and smartwatch repair in Vienna. Pick brand and model, get a fixed price, free pickup available."
   },
   "local_business": {
-    "description": "Express smartphone, tablet and laptop repair in Vienna 1220 Aspern. Original-refurbished displays, 12 months warranty, open 7 days."
+    "description": "Express smartphone, tablet and laptop repair in Vienna 1220 Aspern. Original-refurbished displays, 12 months warranty, open Mon–Sat."
   },
   "calc_whatsapp": {
     "prefill": "Hi! I need a {repairs} repair for my {model}. Online calculator quote: {total} €."
@@ -1037,8 +1188,8 @@
     "stat_1_label": "Express repair",
     "stat_2_value": "12 months",
     "stat_2_label": "Warranty",
-    "stat_3_value": "7 / 7",
-    "stat_3_label": "days open",
+    "stat_3_value": "Mon–Sat",
+    "stat_3_label": "open 9–19",
     "video_label": "Video: smartphone repair at our workbench"
   }
 }

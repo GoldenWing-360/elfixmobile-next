@@ -19,7 +19,10 @@ export type ServiceSlug =
   | "handy-folierung-wien"
   | "kamera-reparatur-handy-wien"
   | "tablet-reparatur-wien"
-  | "notebook-reparatur-wien";
+  | "notebook-reparatur-wien"
+  | "macbook-reparatur-wien"
+  | "ipad-reparatur-wien"
+  | "ladebuchse-reparatur-wien";
 
 export interface PriceRange {
   from: number;
@@ -106,6 +109,33 @@ export const SERVICES: ReadonlyArray<ServiceDef> = [
     gradient: "from-zinc-900 to-stone-900",
     // No online quote — notebook prices vary too widely between MacBook
     // logic-board repairs and a basic Windows-laptop keyboard swap.
+    hasOnlineQuote: false,
+  },
+  // SE-Ranking 2026-07: "macbook reparatur wien" 110/Monat bei KD 5 und
+  // "ipad reparatur wien" 90/Monat bei KD 12 — the old WP pages ranked
+  // for both, so they get dedicated landings instead of redirecting into
+  // the generic notebook/tablet pages.
+  {
+    slug: "macbook-reparatur-wien",
+    key: "macbook",
+    gradient: "from-neutral-900 to-zinc-800",
+    // Same reasoning as notebook: logic-board vs. keyboard spreads too
+    // wide for an honest online price band.
+    hasOnlineQuote: false,
+  },
+  {
+    slug: "ipad-reparatur-wien",
+    key: "ipad",
+    gradient: "from-slate-900 to-blue-950",
+    priceRange: { from: 70, to: 400 },
+    hasOnlineQuote: true,
+  },
+  {
+    slug: "ladebuchse-reparatur-wien",
+    key: "charging_port",
+    gradient: "from-amber-950 to-stone-900",
+    priceRange: { from: 29, to: 129 },
+    durationMinutes: 45,
     hasOnlineQuote: false,
   },
 ] as const;

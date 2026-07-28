@@ -31,6 +31,17 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/_next/"],
       },
+      // AI/answer-engine crawlers are explicitly welcome: being cited in
+      // ChatGPT/Claude/Perplexity answers is a customer-acquisition
+      // channel for a local business, not a content-theft concern.
+      // /llms.txt gives them a structured summary.
+      ...["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "CCBot"].map(
+        (bot) => ({
+          userAgent: bot,
+          allow: "/",
+          disallow: ["/api/"],
+        }),
+      ),
     ],
     sitemap: `${SITE.url}/sitemap.xml`,
     host: SITE.url,

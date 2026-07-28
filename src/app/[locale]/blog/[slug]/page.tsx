@@ -53,9 +53,28 @@ export default async function BlogArticlePage({
   if (!article) notFound();
 
   const isGlossar = article.category === "glossar";
+  // Topic-based related: rank same-category articles by word overlap in
+  // title + focus keyword instead of taking the first four alphabetically.
+  const tokenize = (s: string) =>
+    new Set(
+      s
+        .toLowerCase()
+        .replace(/[^a-zäöüß0-9 ]/g, " ")
+        .split(/\s+/)
+        .filter((w) => w.length > 3),
+    );
+  const own = tokenize(`${article.title} ${article.focusKeyword}`);
   const related = (isGlossar ? getGlossar() : getRatgeber())
     .filter((a) => a.slug !== article.slug)
-    .slice(0, 4);
+    .map((a) => {
+      const words = tokenize(`${a.title} ${a.focusKeyword}`);
+      let score = 0;
+      for (const w of words) if (own.has(w)) score++;
+      return { a, score };
+    })
+    .sort((x, y) => y.score - x.score)
+    .slice(0, 4)
+    .map((x) => x.a);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -68,20 +87,40 @@ export default async function BlogArticlePage({
         dateModified: article.modified,
         inLanguage: "de",
         mainEntityOfPage: `${SITE.url}/de/blog/${article.slug}`,
+        image: `${SITE.url}/opengraph-image`,
         author: {
-          "@type": "Organization",
-          name: SITE.legalName,
-          url: SITE.url,
+          "@type": "Person",
+          name: SITE.owner,
+          jobTitle: "Inhaberin",
+          worksFor: { "@id": `${SITE.url}/#localbusiness` },
         },
+        reviewedBy: { "@id": `${SITE.url}/#localbusiness` },
         publisher: {
           "@type": "Organization",
           name: SITE.legalName,
           logo: {
             "@type": "ImageObject",
-            url: `${SITE.url}/logo.svg`,
+            url: `${SITE.url}/logo-512.png`,
           },
         },
       },
+      // Glossary entries double as DefinedTerm so answer engines can
+      // treat them as term definitions, not just blog posts.
+      ...(isGlossar
+        ? [
+            {
+              "@type": "DefinedTerm",
+              name: article.title.replace(/^Was ist (ein |eine |der |die |das )?/i, "").replace(/\?$/, ""),
+              description: article.metaDescription,
+              url: `${SITE.url}/de/blog/${article.slug}`,
+              inDefinedTermSet: {
+                "@type": "DefinedTermSet",
+                name: "EL Fix Mobile Technik-Glossar",
+                url: `${SITE.url}/de/blog`,
+              },
+            },
+          ]
+        : []),
       {
         "@type": "BreadcrumbList",
         itemListElement: [
@@ -127,6 +166,23 @@ export default async function BlogArticlePage({
           dangerouslySetInnerHTML={{ __html: article.html }}
         />
 
+        {/* E-E-A-T author box: real workshop, real certifications */}
+        <aside className="mt-12 flex items-start gap-4 rounded-2xl bg-white p-6 ring-1 ring-black/[0.05]">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[15px] font-semibold text-white">
+            EL
+          </div>
+          <div className="text-[13.5px] leading-[1.55] text-[#525257]">
+            <p className="font-semibold text-black">
+              Geprüft vom Werkstatt-Team von EL Fix Mobile
+            </p>
+            <p className="mt-1">
+              Apple Authorized Service Provider · Samsung zertifizierter
+              Reparaturpartner · Partnerbetrieb Wiener Reparaturbon. Seit 2019
+              in der Seestadt Aspern, über 294 Google-Bewertungen.
+            </p>
+          </div>
+        </aside>
+
         {/* Conversion block */}
         <aside className="mt-14 rounded-3xl bg-black p-8 text-white md:p-10">
           <h2 className="text-[22px] font-semibold tracking-[-0.01em] md:text-[26px]">
@@ -134,7 +190,7 @@ export default async function BlogArticlePage({
           </h2>
           <p className="mt-3 max-w-xl text-[15.5px] leading-[1.55] text-white/70">
             Kostenlose Diagnose, Festpreis vor der Reparatur, Express in 30
-            Minuten. 7 Tage die Woche geöffnet.
+            Minuten. Mo–Sa 9–19 Uhr geöffnet.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link

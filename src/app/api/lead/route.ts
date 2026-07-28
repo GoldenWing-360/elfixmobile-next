@@ -221,7 +221,7 @@ function renderCustomerConfirmation(
     : "Buchung eingegangen.";
 
   const body = isContactForm
-    ? "Vielen Dank für deine Nachricht. Wir antworten meist innerhalb von 30 Minuten während der Geschäftszeiten (Mo–Sa 9–19, So 9–18). Bei dringenden Anliegen ruf gerne direkt an: +43 660 6071414."
+    ? "Vielen Dank für deine Nachricht. Wir antworten meist innerhalb von 30 Minuten während der Geschäftszeiten (Mo–Sa 9–19). Bei dringenden Anliegen ruf gerne direkt an: +43 660 6071414."
     : "Vielen Dank für deine Reparatur-Buchung. Wir prüfen die Angaben und melden uns innerhalb von 30 Minuten zur Bestätigung. Bei Fragen ruf direkt an: +43 660 6071414.";
 
   const text = [
