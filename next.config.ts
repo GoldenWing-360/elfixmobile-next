@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import path from "node:path";
 import createNextIntlPlugin from "next-intl/plugin";
+import blogRedirects from "./src/data/blog/redirects.json";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
@@ -70,6 +71,17 @@ const nextConfig: NextConfig = {
         destination: `/de/${s}`,
         permanent: false,
       })),
+      // Migrated WP blog posts + glossary lived at root level on the old
+      // site — forward the exact slugs so a domain cutover keeps their
+      // rankings. The 4 old iphone-13-* device posts point at the richer
+      // model pages instead of the blog.
+      ...Object.entries(blogRedirects as Record<string, string>).map(
+        ([slug, destination]) => ({
+          source: `/${slug}`,
+          destination,
+          permanent: false,
+        }),
+      ),
     ];
   },
   experimental: {

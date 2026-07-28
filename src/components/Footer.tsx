@@ -36,6 +36,7 @@ export function Footer() {
         { href: "/ueber-uns", label: "Über uns" },
         { href: "/bewertungen", label: "Bewertungen" },
         { href: "/faq", label: "FAQ" },
+        { href: "/blog", label: fl("blog") },
         { href: "/kontakt", label: fl("contact") },
       ],
     },

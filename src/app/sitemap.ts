@@ -4,6 +4,7 @@ import { SITE } from "@/lib/seo";
 import { BRANDS, allBrandModelPairs } from "@/data/brands";
 import { SERVICES } from "@/data/services";
 import { DISTRICTS } from "@/data/districts";
+import { getAllArticles } from "@/lib/blog";
 
 /**
  * Single-file sitemap. At 1000 URLs we're well under Google's 50k-per-file
@@ -67,6 +68,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const p of SERVICE_PATHS) emit(p, 0.9);
   for (const p of DISTRICT_PATHS) emit(p, 0.85);
   for (const p of MODEL_PATHS) emit(p, 0.6);
+
+  // Blog + glossary are German-only — emit /de URLs without alternates
+  // instead of claiming translations that don't exist.
+  out.push({
+    url: `${SITE.url}/de/blog`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  });
+  for (const a of getAllArticles()) {
+    out.push({
+      url: `${SITE.url}/de/blog/${a.slug}`,
+      lastModified: new Date(a.modified),
+      changeFrequency: "monthly",
+      priority: a.category === "ratgeber" ? 0.6 : 0.5,
+    });
+  }
 
   return out;
 }

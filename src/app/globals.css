@@ -165,3 +165,63 @@ html.lenis body {
   margin: 32px 0;
 }
 .legal-prose > *:first-child { margin-top: 0; }
+
+/* Migrated blog articles render raw HTML — style the semantic tags to
+   match the site's editorial look without a typography plugin. */
+.blog-prose {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: #3a3a3f;
+}
+.blog-prose h2 {
+  margin-top: 2.2em;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: #000;
+}
+.blog-prose h3 {
+  margin-top: 1.8em;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #000;
+}
+.blog-prose p {
+  margin-top: 1em;
+}
+.blog-prose ul,
+.blog-prose ol {
+  margin-top: 1em;
+  padding-left: 1.4em;
+}
+.blog-prose ul { list-style: disc; }
+.blog-prose ol { list-style: decimal; }
+.blog-prose li { margin-top: 0.45em; }
+.blog-prose strong { color: #000; font-weight: 600; }
+.blog-prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.blog-prose a:hover { opacity: 0.8; }
+.blog-prose table {
+  margin-top: 1.4em;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.blog-prose th,
+.blog-prose td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.blog-prose th {
+  font-weight: 600;
+  color: #000;
+  background: rgba(0, 0, 0, 0.03);
+}
+.blog-prose > :first-child { margin-top: 0; }
