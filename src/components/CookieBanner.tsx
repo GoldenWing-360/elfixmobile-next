@@ -58,7 +58,7 @@ export function CookieBanner() {
       className="fixed inset-x-3 top-[calc(env(safe-area-inset-top)+4rem)] z-[60] mx-auto max-w-3xl rounded-3xl border border-white/10 bg-black/95 p-5 text-white shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl md:inset-x-auto md:bottom-4 md:left-1/2 md:top-auto md:-translate-x-1/2"
     >
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-6">
-        <div className="flex-1 text-[13.5px] leading-[1.5] text-white/80">
+        <div className="flex-1 text-[14px] leading-[1.5] text-white/80">
           Wir nutzen ausschließlich technisch notwendige Cookies. Optionale
           Statistik-Cookies erst nach deiner Zustimmung. Details in der{" "}
           <Link href="/datenschutz" className="underline hover:text-white">
@@ -70,14 +70,14 @@ export function CookieBanner() {
           <button
             type="button"
             onClick={() => decide("declined")}
-            className="rounded-full border border-white/20 px-5 py-2 text-[13.5px] font-medium hover:bg-white/10"
+            className="rounded-full border border-white/20 px-5 py-2 text-[14px] font-medium hover:bg-white/10"
           >
             Nur notwendige
           </button>
           <button
             type="button"
             onClick={() => decide("accepted")}
-            className="rounded-full bg-white px-5 py-2 text-[13.5px] font-medium text-black hover:bg-white/90"
+            className="rounded-full bg-white px-5 py-2 text-[14px] font-medium text-black hover:bg-white/90"
           >
             Alle akzeptieren
           </button>

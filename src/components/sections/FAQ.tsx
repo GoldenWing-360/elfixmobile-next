@@ -33,8 +33,8 @@ export function FAQ() {
       id="faq"
       className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]"
     >
-      <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-40">
-        <header className="text-center">
+      <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-36">
+        <header className="max-w-3xl">
           <motion.p
             initial={{ opacity: 0.999, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]"
+            className="mt-4 t-h1"
           >
             {t("h1")}
           </motion.h2>
@@ -67,7 +67,7 @@ export function FAQ() {
                   aria-controls={`faq-panel-${i}`}
                   className="flex w-full items-center justify-between gap-8 py-6 text-left md:py-8"
                 >
-                  <span className="text-[18px] font-semibold tracking-[-0.005em] text-[#1d1d1f] md:text-[22px]">
+                  <span className="text-[18px] font-semibold tracking-[-0.005em] text-[#1d1d1f]">
                     {it.q}
                   </span>
                   <motion.span

@@ -15,7 +15,7 @@ export function BrandFAQ({ brand }: Props) {
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("eyebrow")}
         </p>
-        <h2 className="mt-4 text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
+        <h2 className="mt-4 t-h2">
           {t("headline", { brand: brand.label })}
         </h2>
 

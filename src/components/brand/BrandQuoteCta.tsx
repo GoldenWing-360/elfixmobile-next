@@ -20,7 +20,7 @@ export function BrandQuoteCta({ brand }: Props) {
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("quote_eyebrow")}
         </p>
-        <h2 className="mt-4 text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
+        <h2 className="mt-4 t-h2">
           {t("quote_headline", { brand: brand.label })}
         </h2>
         <p className="mt-5 mx-auto max-w-2xl text-[17px] leading-[1.55] text-[#525257]">

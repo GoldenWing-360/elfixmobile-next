@@ -133,7 +133,7 @@ export default async function BrandModelsIndexPage({
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
             {brand.label.toUpperCase()} {t("eyebrow_suffix")}
           </p>
-          <h1 className="mt-4 text-[clamp(2.25rem,6vw,4.5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+          <h1 className="mt-4 t-h1">
             {t("headline", { brand: brand.label })}
           </h1>
           <p className="mt-6 max-w-2xl text-[18px] leading-[1.55] text-white/75">
@@ -146,7 +146,7 @@ export default async function BrandModelsIndexPage({
         <div className="mx-auto max-w-5xl px-6 py-16 md:px-8 md:py-24">
           {groups.map((g) => (
             <div key={String(g.year)} className="mb-12">
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold tracking-[-0.02em]">
+              <h2 className="t-h3">
                 {g.year === "older" ? t("older_group") : g.year}
               </h2>
               <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

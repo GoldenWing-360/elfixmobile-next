@@ -17,11 +17,11 @@ export function ServiceHero({ service }: Props) {
         service.gradient,
       )}
     >
-      <div className="mx-auto max-w-6xl px-6 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-24 md:px-8 md:py-36">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
           {tCommon("eyebrow")}
         </p>
-        <h1 className="mt-5 text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+        <h1 className="mt-5 t-h1">
           {t("h1")}
         </h1>
         <p className="mt-7 max-w-2xl text-[18px] leading-[1.55] text-white/75">

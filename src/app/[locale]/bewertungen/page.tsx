@@ -77,17 +77,17 @@ export default async function BewertungenPage({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
       />
-      <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-36">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("eyebrow")}
         </p>
-        <h1 className="mt-5 text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+        <h1 className="mt-5 t-h1">
           {t("h1")}
         </h1>
 
         <div className="mt-10 flex items-center gap-4 rounded-3xl border border-black/[0.06] bg-white p-7">
           <div className="flex shrink-0 items-baseline gap-2">
-            <span className="text-[clamp(2.5rem,5vw,3.75rem)] font-semibold leading-none tracking-[-0.03em]">
+            <span className="t-h1 leading-none">
               {t("rating_value")}
             </span>
             <span className="text-[18px] text-[#86868B]">/ 5</span>
@@ -119,7 +119,7 @@ export default async function BewertungenPage({
                   <Star key={i} className="h-3.5 w-3.5" fill="currentColor" />
                 ))}
               </div>
-              <p className="mt-4 text-[15.5px] leading-[1.55] text-[#1d1d1f]">
+              <p className="mt-4 text-[16px] leading-[1.55] text-[#1d1d1f]">
                 &ldquo;{t(`review_${k}`)}&rdquo;
               </p>
             </li>

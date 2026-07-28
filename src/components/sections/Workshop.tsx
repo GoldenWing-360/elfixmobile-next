@@ -48,7 +48,7 @@ export function Workshop() {
 
   return (
     <section id="werkstatt" className="relative bg-black text-white">
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-40">
+      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
         <header className="max-w-3xl">
           <motion.p
             initial={{ opacity: 0.999, y: 10 }}
@@ -64,7 +64,7 @@ export function Workshop() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]"
+            className="mt-4 t-h1"
           >
             {t("headline")}
           </motion.h2>
@@ -105,7 +105,7 @@ export function Workshop() {
                 <dt className="text-[10px] uppercase tracking-[0.14em] text-white/60 md:text-[12px] md:tracking-[0.16em]">
                   {s.label}
                 </dt>
-                <dd className="mt-1 text-[19px] font-semibold tracking-[-0.02em] md:text-[32px]">
+                <dd className="mt-1 text-[18px] font-semibold tracking-[-0.02em] md:text-[32px]">
                   {s.value}
                 </dd>
               </div>

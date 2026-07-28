@@ -34,7 +34,7 @@ export async function RepairDisclaimer({ showIp68 = true }: Props) {
     >
       <div className="flex items-start gap-3">
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
-        <div className="text-[13.5px] leading-[1.55] text-[#525257]">
+        <div className="text-[14px] leading-[1.55] text-[#525257]">
           <strong className="font-semibold text-[#1d1d1f]">{t("title")}</strong>
           <ul className="mt-2 space-y-1.5 list-none">
             {showIp68 && <li>{t("ip68")}</li>}

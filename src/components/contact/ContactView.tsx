@@ -37,7 +37,7 @@ export function ContactView() {
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("eyebrow")}
         </p>
-        <h1 className="mt-4 text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+        <h1 className="mt-4 t-h1">
           {t("headline")}
         </h1>
         <p className="mt-6 max-w-2xl text-[18px] leading-[1.55] text-[#525257]">
@@ -105,7 +105,7 @@ export function ContactView() {
             <div className="mt-0.5 text-[17px] font-semibold tracking-[-0.005em]">
               Natalja Rahimova
             </div>
-            <div className="text-[13.5px] text-[#525257]">
+            <div className="text-[14px] text-[#525257]">
               Inhaberin · Antwort meist innerhalb 30 Minuten
             </div>
           </div>
@@ -148,7 +148,7 @@ export function ContactView() {
             {tp("sub")}
             <Link
               href={{ pathname: "/buchen", query: { service: "pickup" } }}
-              className="mt-1 inline-flex items-center gap-1 text-[13.5px] text-[var(--color-accent)] hover:underline"
+              className="mt-1 inline-flex items-center gap-1 text-[14px] text-[var(--color-accent)] hover:underline"
             >
               {tp("pill")} →
             </Link>
@@ -159,8 +159,8 @@ export function ContactView() {
       {/* 6. Closing CTA back to booking flow for users who decided to
         * commit to a repair while reading the contact page. Single
         * sentence + a primary action, nothing else. */}
-      <section className="mx-auto max-w-3xl px-6 py-24 text-center md:px-8 md:py-32">
-        <h2 className="text-[clamp(1.625rem,3vw,2.25rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
+      <section className="mx-auto max-w-3xl px-6 py-24 text-center md:px-8 md:py-36">
+        <h2 className="t-h3">
           Schon bereit für die Reparatur?
         </h2>
         <Link

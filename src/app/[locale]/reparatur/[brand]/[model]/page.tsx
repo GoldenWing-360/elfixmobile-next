@@ -227,11 +227,11 @@ export default async function ModelPage({
       <section
         className={`relative overflow-hidden bg-gradient-to-br ${pair.brand.gradient} text-white`}
       >
-        <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-32">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-36">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
             {t("eyebrow", { brand: pair.brand.label, model: pair.model.name })}
           </p>
-          <h1 className="mt-5 text-[clamp(2.25rem,6vw,4.5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+          <h1 className="mt-5 t-h1">
             {t("title_prefix")}{" "}
             <span className="block text-white">{pair.model.full_name}</span>{" "}
             <span className="block text-white/70">{t("title_suffix")}</span>
@@ -268,7 +268,7 @@ export default async function ModelPage({
             <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
               {t("prices_eyebrow", { model: pair.model.full_name })}
             </p>
-            <h2 className="mt-4 text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
+            <h2 className="mt-4 t-h2">
               {t("prices_headline", { model: pair.model.full_name })}
             </h2>
             <p className="mt-4 text-[16px] text-[#525257]">
@@ -377,7 +377,7 @@ export default async function ModelPage({
                     <li key={m.slug}>
                       <Link
                         href={`/reparatur/${pair.brand.slug}/${m.slug}`}
-                        className="inline-block rounded-full border border-black/10 bg-white px-4 py-2 text-[13.5px] font-medium text-[var(--color-text-dark)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+                        className="inline-block rounded-full border border-black/10 bg-white px-4 py-2 text-[14px] font-medium text-[var(--color-text-dark)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
                       >
                         {m.full_name}
                       </Link>
@@ -406,7 +406,7 @@ export default async function ModelPage({
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("faq_eyebrow")}
           </p>
-          <h2 className="mt-4 text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
+          <h2 className="mt-4 t-h2">
             {t("faq_headline", { model: pair.model.full_name })}
           </h2>
           <dl className="mt-12 divide-y divide-white/10">

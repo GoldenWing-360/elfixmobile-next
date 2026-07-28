@@ -13,12 +13,12 @@ export function LegalLayout({
 }) {
   return (
     <section className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-2xl px-6 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-2xl px-6 py-24 md:px-8 md:py-36">
         <header className="border-b border-black/[0.08] pb-10">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {eyebrow}
           </p>
-          <h1 className="mt-3 text-[clamp(2.25rem,5vw,3.75rem)] font-semibold leading-[1.06] tracking-[-0.025em]">
+          <h1 className="mt-3 t-h1">
             {title}
           </h1>
           {updated && (
@@ -27,7 +27,7 @@ export function LegalLayout({
             </p>
           )}
         </header>
-        <article className="legal-prose mt-10 text-[15.5px] leading-[1.65] text-[#3a3a3a] md:text-[16px]">
+        <article className="legal-prose mt-10 text-[16px] leading-[1.65] text-[#3a3a3a] md:text-[16px]">
           {children}
         </article>
       </div>

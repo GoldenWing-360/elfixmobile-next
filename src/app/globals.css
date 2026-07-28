@@ -169,7 +169,7 @@ html.lenis body {
 /* Migrated blog articles render raw HTML — style the semantic tags to
    match the site's editorial look without a typography plugin. */
 .blog-prose {
-  font-size: 16.5px;
+  font-size: 17px;
   line-height: 1.65;
   color: #3a3a3f;
 }
@@ -225,3 +225,34 @@ html.lenis body {
   background: rgba(0, 0, 0, 0.03);
 }
 .blog-prose > :first-child { margin-top: 0; }
+
+/* ---------- Typographic scale ----------
+   ONE scale for all display/heading text. 4 steps, nothing else.
+   t-display: home hero + final CTA only
+   t-h1:      page heroes + home section headlines
+   t-h2:      standard section headlines
+   t-h3:      sub-section headlines / card group titles */
+.t-display {
+  font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+.t-h1 {
+  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+.t-h2 {
+  font-size: clamp(1.875rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.t-h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}

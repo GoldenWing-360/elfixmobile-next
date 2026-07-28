@@ -62,7 +62,7 @@ export function ServiceShowcase() {
       id="services"
       className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]"
     >
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36 lg:py-44">
+      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
         <header className="max-w-3xl">
           <motion.p
             initial={{ opacity: 0.999, y: 10 }}
@@ -82,7 +82,7 @@ export function ServiceShowcase() {
               ease: [0.16, 1, 0.3, 1],
               delay: 0.05,
             }}
-            className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]"
+            className="mt-4 t-h1"
           >
             {t("headline")}
           </motion.h2>

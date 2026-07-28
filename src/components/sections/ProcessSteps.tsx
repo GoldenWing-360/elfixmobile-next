@@ -36,7 +36,7 @@ export function ProcessSteps() {
             <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
               {t("eyebrow")}
             </p>
-            <h2 className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]">
+            <h2 className="mt-4 t-h1">
               {t("headline")}
             </h2>
             <p className="mt-6 max-w-md text-[17px] leading-[1.55] text-white/65">
@@ -82,7 +82,7 @@ export function ProcessSteps() {
                 <h3 className="text-[22px] font-semibold tracking-[-0.01em]">
                   {s.title}
                 </h3>
-                <p className="mt-2 max-w-md text-[15.5px] leading-[1.6] text-white/65">
+                <p className="mt-2 max-w-md text-[16px] leading-[1.6] text-white/65">
                   {s.desc}
                 </p>
               </div>

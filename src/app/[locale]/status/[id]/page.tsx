@@ -129,11 +129,11 @@ export default async function StatusPage({
 
   return (
     <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-3xl px-6 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-3xl px-6 py-24 md:px-8 md:py-36">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("eyebrow")}
         </p>
-        <h1 className="mt-4 text-[clamp(2rem,5vw,3.5rem)] font-semibold leading-[1.06] tracking-[-0.025em]">
+        <h1 className="mt-4 t-h2">
           {t("hello", { name: customerName })}
         </h1>
         <p className="mt-5 text-[16px] text-[#525257]">
@@ -188,7 +188,7 @@ export default async function StatusPage({
           <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#86868B]">
             {t("summary_label")}
           </div>
-          <ul className="mt-3 space-y-1 text-[14.5px] text-[#1d1d1f]">
+          <ul className="mt-3 space-y-1 text-[15px] text-[#1d1d1f]">
             {summaryLines.map((l, i) => (
               <li key={i}>{l}</li>
             ))}

@@ -73,7 +73,7 @@ export function Reviews() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]"
+            className="mt-4 t-h1"
           >
             {t("headline")}
           </motion.h2>
@@ -152,7 +152,7 @@ function ReviewCard({ review }: { review: Review }) {
           Google
         </span>
       </div>
-      <p className="mt-4 text-[15.5px] leading-[1.55] text-[#1d1d1f]">{review.text}</p>
+      <p className="mt-4 text-[16px] leading-[1.55] text-[#1d1d1f]">{review.text}</p>
       <footer className="mt-5 flex items-center justify-between text-[12.5px] text-[#6e6e73]">
         <span className="font-medium text-[#1d1d1f]">{review.name}</span>
         <time dateTime={review.date}>

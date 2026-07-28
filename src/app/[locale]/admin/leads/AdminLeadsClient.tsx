@@ -87,7 +87,7 @@ export function AdminLeadsClient() {
             <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
               ADMIN
             </p>
-            <h1 className="mt-3 text-[clamp(1.875rem,4vw,3rem)] font-semibold tracking-[-0.02em]">
+            <h1 className="mt-3 t-h2">
               Leads ({leads?.length ?? "—"})
             </h1>
           </div>
@@ -151,7 +151,7 @@ export function AdminLeadsClient() {
                       {name}{" "}
                       <span className="text-[#86868B] font-normal">— {email}</span>
                     </div>
-                    <div className="mt-1 text-[14.5px] text-[#525257]">{summary}</div>
+                    <div className="mt-1 text-[15px] text-[#525257]">{summary}</div>
                   </div>
                   <div className="flex gap-1">
                     {STATUSES.map((s) => (

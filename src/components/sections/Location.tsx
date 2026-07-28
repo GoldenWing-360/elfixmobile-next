@@ -19,7 +19,7 @@ export function Location() {
 
   return (
     <section id="location" className="relative bg-black text-white">
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
         {/* Stacked vertical layout (per user feedback): full-width text/CTAs
          * + facts grid on top, full-width landscape map below. The previous
          * side-by-side 5/7 grid made the map a tall portrait that wasted
@@ -34,7 +34,7 @@ export function Location() {
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-4 text-[clamp(2.25rem,6vw,5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+          <h2 className="mt-4 t-h1">
             {t("headline")}
           </h2>
           <p className="mt-6 max-w-2xl text-[18px] leading-[1.55] text-white/65">
@@ -113,7 +113,7 @@ function Fact({
         <span className="text-[var(--color-accent)]">{icon}</span>
         {label}
       </div>
-      <div className="mt-2 text-[15.5px] leading-[1.6] text-white/85">{children}</div>
+      <div className="mt-2 text-[16px] leading-[1.6] text-white/85">{children}</div>
     </div>
   );
 }

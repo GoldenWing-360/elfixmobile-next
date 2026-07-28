@@ -78,7 +78,7 @@ export function MoreServices() {
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]">
+          <h2 className="mt-4 t-h1">
             {t("headline")}
           </h2>
           <p className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">
@@ -99,7 +99,7 @@ export function MoreServices() {
                 <h3 className="mt-7 text-[20px] font-semibold tracking-[-0.01em]">
                   {t(tile.titleKey)}
                 </h3>
-                <p className="mt-3 text-[14.5px] leading-[1.55] text-[#525257]">
+                <p className="mt-3 text-[15px] leading-[1.55] text-[#525257]">
                   {t(tile.bodyKey)}
                 </p>
 
@@ -117,7 +117,7 @@ export function MoreServices() {
                   </ul>
                 )}
 
-                <div className="mt-auto flex items-center gap-1.5 pt-7 text-[13.5px] font-medium text-[var(--color-accent)]">
+                <div className="mt-auto flex items-center gap-1.5 pt-7 text-[14px] font-medium text-[var(--color-accent)]">
                   {t(tile.ctaKey)}
                   <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </div>

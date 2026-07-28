@@ -182,7 +182,7 @@ export function Nav() {
                   >
                     <Link
                       href={l.href}
-                      className="text-[clamp(2rem,9vw,2.75rem)] leading-tight font-semibold tracking-tight"
+                      className="t-h2 leading-tight tracking-tight"
                       onClick={() => setMobileOpen(false)}
                     >
                       {l.label}

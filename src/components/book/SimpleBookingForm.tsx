@@ -152,7 +152,7 @@ export function SimpleBookingForm() {
   if (submitted) {
     return (
       <section className="bg-[var(--color-bg-secondary)]">
-        <div className="mx-auto max-w-3xl px-6 py-32 text-center md:px-8 md:py-40">
+        <div className="mx-auto max-w-3xl px-6 py-24 text-center md:px-8 md:py-36">
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -161,10 +161,10 @@ export function SimpleBookingForm() {
           >
             <Check className="h-7 w-7" strokeWidth={2.5} />
           </motion.div>
-          <h1 className="mt-8 text-[clamp(2rem,5vw,3.5rem)] font-semibold leading-[1.04] tracking-[-0.025em]">
+          <h1 className="mt-8 t-h2">
             {t("success_h1")}
           </h1>
-          <p className="mx-auto mt-5 max-w-md text-[16.5px] leading-[1.55] text-[#525257]">
+          <p className="mx-auto mt-5 max-w-md text-[17px] leading-[1.55] text-[#525257]">
             {t("success_sub")}
           </p>
 
@@ -178,7 +178,7 @@ export function SimpleBookingForm() {
               </div>
               <Link
                 href={`/status/${leadId}${leadToken ? `?t=${leadToken}` : ""}`}
-                className="mt-3 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[var(--color-accent)] hover:underline"
+                className="mt-3 inline-flex items-center gap-1.5 text-[14px] font-medium text-[var(--color-accent)] hover:underline"
               >
                 {t("success_status_link")} →
               </Link>
@@ -188,13 +188,13 @@ export function SimpleBookingForm() {
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <a
               href="tel:+436606071414"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-text-dark)] px-6 py-3 text-[14.5px] font-medium text-white transition-colors hover:bg-black"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-text-dark)] px-6 py-3 text-[15px] font-medium text-white transition-colors hover:bg-black"
             >
               +43 660 6071414
             </a>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white px-6 py-3 text-[14.5px] font-medium text-[#1d1d1f] transition-colors hover:bg-black/[0.04]"
+              className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white px-6 py-3 text-[15px] font-medium text-[#1d1d1f] transition-colors hover:bg-black/[0.04]"
             >
               {t("success_back_home")}
             </Link>
@@ -256,7 +256,7 @@ export function SimpleBookingForm() {
                       )}
                       strokeWidth={1.5}
                     />
-                    <div className="mt-4 text-[14.5px] font-semibold tracking-[-0.005em]">
+                    <div className="mt-4 text-[15px] font-semibold tracking-[-0.005em]">
                       {opt.label}
                     </div>
                     <div className="mt-1 text-[12.5px] text-[#525257]">
@@ -327,7 +327,7 @@ export function SimpleBookingForm() {
 
           {/* AGB-checkbox is required by AT consumer law for booking
             * forms. Kept as a single line, not in its own card. */}
-          <label className="flex items-start gap-3 text-[13.5px] leading-[1.5] text-[#525257]">
+          <label className="flex items-start gap-3 text-[14px] leading-[1.5] text-[#525257]">
             <input
               type="checkbox"
               required

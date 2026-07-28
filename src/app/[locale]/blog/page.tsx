@@ -87,7 +87,7 @@ export default async function BlogHubPage({
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             Ratgeber
           </p>
-          <h1 className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]">
+          <h1 className="mt-4 t-h1">
             Wissen, das dein Handy länger leben lässt.
           </h1>
           <p className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">
@@ -103,10 +103,10 @@ export default async function BlogHubPage({
               href={`/blog/${a.slug}`}
               className="group flex flex-col rounded-3xl bg-white p-7 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)] ring-1 ring-black/[0.04] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_2px_4px_rgba(0,0,0,0.05),0_24px_40px_-20px_rgba(0,0,0,0.2)]"
             >
-              <h2 className="text-[19px] font-semibold leading-[1.3] tracking-[-0.01em] text-black group-hover:text-[var(--color-accent)]">
+              <h2 className="text-[18px] font-semibold leading-[1.3] tracking-[-0.01em] text-black group-hover:text-[var(--color-accent)]">
                 {a.title}
               </h2>
-              <p className="mt-3 flex-1 text-[14.5px] leading-[1.55] text-[#525257]">
+              <p className="mt-3 flex-1 text-[15px] leading-[1.55] text-[#525257]">
                 {a.excerpt}
               </p>
               <span className="mt-5 text-[14px] font-medium text-[var(--color-accent)]">
@@ -119,7 +119,7 @@ export default async function BlogHubPage({
         <section className="mt-24" aria-labelledby="glossar-heading">
           <h2
             id="glossar-heading"
-            className="text-[clamp(1.6rem,3.5vw,2.5rem)] font-semibold tracking-[-0.02em]"
+            className="t-h3"
           >
             Technik-Glossar
           </h2>
@@ -132,7 +132,7 @@ export default async function BlogHubPage({
               <Link
                 key={a.slug}
                 href={`/blog/${a.slug}`}
-                className="rounded-2xl bg-white px-5 py-4 text-[14.5px] font-medium text-black ring-1 ring-black/[0.05] transition-colors hover:bg-[var(--color-accent)] hover:text-white"
+                className="rounded-2xl bg-white px-5 py-4 text-[15px] font-medium text-black ring-1 ring-black/[0.05] transition-colors hover:bg-[var(--color-accent)] hover:text-white"
               >
                 {a.title.replace(/^Was ist (ein |eine |der |die |das )?/i, "").replace(/\?$/, "")}
               </Link>

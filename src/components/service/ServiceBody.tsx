@@ -51,7 +51,7 @@ export function ServiceBody({ service }: Props) {
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {tCommon("included_eyebrow")}
           </p>
-          <h2 className="mt-4 text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
+          <h2 className="mt-4 t-h2">
             {t("included_headline")}
           </h2>
           <p className="mt-4 max-w-2xl text-[16px] text-[#525257]">
@@ -83,7 +83,7 @@ export function ServiceBody({ service }: Props) {
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {tCommon("process_eyebrow")}
           </p>
-          <h2 className="mt-4 text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
+          <h2 className="mt-4 t-h2">
             {tCommon("process_headline")}
           </h2>
 
@@ -129,7 +129,7 @@ export function ServiceBody({ service }: Props) {
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {tCommon("faq_eyebrow")}
           </p>
-          <h2 className="mt-4 text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
+          <h2 className="mt-4 t-h2">
             {tCommon("faq_headline")}
           </h2>
           <dl className="mt-12 divide-y divide-black/10">
@@ -177,7 +177,7 @@ export function ServiceBody({ service }: Props) {
                   <li key={a.slug}>
                     <Link
                       href={`/blog/${a.slug}`}
-                      className="block rounded-2xl bg-white px-5 py-4 text-[14.5px] font-medium text-black ring-1 ring-black/[0.05] transition-colors hover:bg-[var(--color-accent)] hover:text-white"
+                      className="block rounded-2xl bg-white px-5 py-4 text-[15px] font-medium text-black ring-1 ring-black/[0.05] transition-colors hover:bg-[var(--color-accent)] hover:text-white"
                     >
                       {a.title}
                     </Link>

@@ -536,7 +536,7 @@ function StepResult({
             {t("result_title")}
           </div>
           <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-[clamp(3.5rem,9vw,6rem)] font-semibold leading-none tracking-[-0.04em] text-black">
+            <span className="t-display leading-none text-black">
               {total}
             </span>
             <span className="text-[32px] font-medium text-[#6e6e73]">€</span>
@@ -556,7 +556,7 @@ function StepResult({
           <div className="text-[11px] uppercase tracking-[0.18em] text-[var(--color-success)]">
             {t("result_includes_eyebrow")}
           </div>
-          <ul className="mt-3 space-y-2.5 text-[14.5px] text-[#1d1d1f]">
+          <ul className="mt-3 space-y-2.5 text-[15px] text-[#1d1d1f]">
             {[1, 2, 3, 4].map((i) => (
               <li key={i} className="flex items-start gap-2.5">
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-success)]" />

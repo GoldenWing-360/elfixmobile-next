@@ -16,11 +16,11 @@ export function BrandHero({ brand }: Props) {
         brand.gradient,
       )}
     >
-      <div className="mx-auto max-w-6xl px-6 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-24 md:px-8 md:py-36">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
           {t("eyebrow")}
         </p>
-        <h1 className="mt-5 text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+        <h1 className="mt-5 t-h1">
           {t("title_prefix")} {brand.label}{" "}
           <span className="block text-white/70">{t("title_suffix")}</span>
         </h1>

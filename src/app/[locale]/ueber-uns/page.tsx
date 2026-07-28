@@ -88,11 +88,11 @@ export default async function UeberUnsPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-        <div className="mx-auto max-w-4xl px-6 py-24 md:px-8 md:py-32">
+        <div className="mx-auto max-w-4xl px-6 py-24 md:px-8 md:py-36">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("eyebrow")}
           </p>
-          <h1 className="mt-5 text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+          <h1 className="mt-5 t-h1">
             {t("h1")}
           </h1>
           <p className="mt-7 max-w-2xl text-[18px] leading-[1.55] text-white/75">
@@ -105,7 +105,7 @@ export default async function UeberUnsPage({
         <div className="mx-auto max-w-4xl px-6 py-20 md:px-8 md:py-28">
           <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-16">
             <div>
-              <h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
+              <h2 className="t-h3">
                 {t("section_story_title")}
               </h2>
               <p className="mt-5 text-[17px] leading-[1.6] text-[#525257]">
@@ -113,7 +113,7 @@ export default async function UeberUnsPage({
               </p>
             </div>
             <div>
-              <h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
+              <h2 className="t-h3">
                 {t("section_team_title")}
               </h2>
               <p className="mt-5 text-[17px] leading-[1.6] text-[#525257]">
@@ -132,7 +132,7 @@ export default async function UeberUnsPage({
               <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
                 {t("owner_eyebrow")}
               </p>
-              <h2 className="mt-4 text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
+              <h2 className="mt-4 t-h3">
                 {t("owner_title")}
               </h2>
               <p className="mt-5 text-[17px] leading-[1.6] text-[#525257]">
@@ -149,7 +149,7 @@ export default async function UeberUnsPage({
             />
           </div>
 
-          <h2 className="mt-20 text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
+          <h2 className="mt-20 t-h3">
             {t("cred_section_title")}
           </h2>
           <ul className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
@@ -161,7 +161,7 @@ export default async function UeberUnsPage({
                 <h3 className="text-[17px] font-semibold tracking-[-0.01em]">
                   {c.title}
                 </h3>
-                <p className="mt-3 text-[14.5px] leading-[1.55] text-[#525257]">
+                <p className="mt-3 text-[15px] leading-[1.55] text-[#525257]">
                   {c.body}
                 </p>
               </li>
@@ -185,7 +185,7 @@ export default async function UeberUnsPage({
 
       <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
         <div className="mx-auto max-w-5xl px-6 py-20 md:px-8 md:py-28">
-          <h2 className="text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
+          <h2 className="t-h2">
             {t("section_values_title")}
           </h2>
           <ul className="mt-12 grid grid-cols-1 gap-7 sm:grid-cols-2">
@@ -197,7 +197,7 @@ export default async function UeberUnsPage({
                 <h3 className="text-[20px] font-semibold tracking-[-0.01em]">
                   {t(`values_${k}_title`)}
                 </h3>
-                <p className="mt-3 text-[15.5px] leading-[1.55] text-white/65">
+                <p className="mt-3 text-[16px] leading-[1.55] text-white/65">
                   {t(`values_${k}_body`)}
                 </p>
               </li>

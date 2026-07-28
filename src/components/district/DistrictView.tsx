@@ -40,11 +40,11 @@ export function DistrictView({ district }: Props) {
           district.gradient,
         )}
       >
-        <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-32">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-36">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
             Wien {district.postalCodes.join(", ")}
           </p>
-          <h1 className="mt-5 text-[clamp(2.25rem,6vw,4.5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+          <h1 className="mt-5 t-h1">
             {t("h1")}
           </h1>
           <p className="mt-7 max-w-2xl text-[18px] leading-[1.55] text-white/75">
@@ -94,7 +94,7 @@ export function DistrictView({ district }: Props) {
               <div className="mt-5 text-[11px] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">
                 {t("card_visit_title")}
               </div>
-              <div className="mt-1 text-[15.5px] font-semibold tracking-[-0.005em] leading-snug">
+              <div className="mt-1 text-[16px] font-semibold tracking-[-0.005em] leading-snug">
                 {t("card_visit_sub")}
               </div>
             </Link>
@@ -106,14 +106,14 @@ export function DistrictView({ district }: Props) {
               <div className="mt-5 text-[11px] font-medium uppercase tracking-[0.18em] text-[#6e6e73]">
                 {t("card_pickup_title")}
               </div>
-              <div className="mt-1 text-[15.5px] font-semibold tracking-[-0.005em] leading-snug">
+              <div className="mt-1 text-[16px] font-semibold tracking-[-0.005em] leading-snug">
                 {t("card_pickup_sub")}
               </div>
             </Link>
           </div>
 
           <div className="mt-16 max-w-3xl">
-            <h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
+            <h2 className="t-h3">
               {t("section_title")}
             </h2>
             <p className="mt-5 text-[17px] leading-[1.6] text-[#525257]">

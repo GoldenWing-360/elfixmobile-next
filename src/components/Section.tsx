@@ -22,7 +22,7 @@ export function Section({
     <section className={cn("relative w-full", toneCls, className)} {...rest}>
       <div
         className={cn(
-          "mx-auto py-24 md:py-32 lg:py-40",
+          "mx-auto py-24 md:py-36",
           full ? "px-6 md:px-8" : "max-w-7xl px-6 md:px-8"
         )}
       >
@@ -64,9 +64,9 @@ export function Headline({
   as?: "h1" | "h2" | "h3";
 }) {
   const sizes = {
-    hero: "text-[clamp(2.5rem,7vw,6rem)] leading-[1.02] tracking-[-0.04em]",
-    section: "text-[clamp(2rem,5vw,4.5rem)] leading-[1.08] tracking-[-0.025em]",
-    sub: "text-[clamp(1.5rem,2.5vw,2.25rem)] leading-[1.15] tracking-[-0.02em]",
+    hero:"t-display",
+    section:"t-h1",
+    sub:"t-h3",
   } as const;
   return (
     <Comp className={cn("font-semibold", sizes[size], className)}>{children}</Comp>

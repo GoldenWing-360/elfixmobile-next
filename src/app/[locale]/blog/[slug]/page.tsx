@@ -146,10 +146,10 @@ export default async function BlogArticlePage({
           <span aria-hidden> / </span>
           <span>{isGlossar ? "Glossar" : "Artikel"}</span>
         </nav>
-        <h1 className="mt-4 text-[clamp(1.9rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
+        <h1 className="mt-4 t-h2">
           {article.title}
         </h1>
-        <p className="mt-4 text-[13.5px] text-[#6e6e73]">
+        <p className="mt-4 text-[14px] text-[#6e6e73]">
           <time dateTime={article.modified}>
             Aktualisiert am{" "}
             {new Date(article.modified).toLocaleDateString("de-AT", {
@@ -171,7 +171,7 @@ export default async function BlogArticlePage({
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[15px] font-semibold text-white">
             EL
           </div>
-          <div className="text-[13.5px] leading-[1.55] text-[#525257]">
+          <div className="text-[14px] leading-[1.55] text-[#525257]">
             <p className="font-semibold text-black">
               Geprüft vom Werkstatt-Team von EL Fix Mobile
             </p>
@@ -188,7 +188,7 @@ export default async function BlogArticlePage({
           <h2 className="text-[22px] font-semibold tracking-[-0.01em] md:text-[26px]">
             Reparatur nötig? Wir sind in Wien 1220 für dich da.
           </h2>
-          <p className="mt-3 max-w-xl text-[15.5px] leading-[1.55] text-white/70">
+          <p className="mt-3 max-w-xl text-[16px] leading-[1.55] text-white/70">
             Kostenlose Diagnose, Festpreis vor der Reparatur, Express in 30
             Minuten. Mo–Sa 9–19 Uhr geöffnet.
           </p>
@@ -218,7 +218,7 @@ export default async function BlogArticlePage({
                 <li key={a.slug}>
                   <Link
                     href={`/blog/${a.slug}`}
-                    className="block rounded-2xl bg-white px-5 py-4 text-[14.5px] font-medium text-black ring-1 ring-black/[0.05] transition-colors hover:bg-[var(--color-accent)] hover:text-white"
+                    className="block rounded-2xl bg-white px-5 py-4 text-[15px] font-medium text-black ring-1 ring-black/[0.05] transition-colors hover:bg-[var(--color-accent)] hover:text-white"
                   >
                     {a.title}
                   </Link>

@@ -45,7 +45,7 @@ export default async function PreisrechnerPage({
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("eyebrow")}
           </p>
-          <h1 className="mt-3 text-[clamp(2.25rem,5.5vw,4.5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+          <h1 className="mt-3 t-h1">
             {t("headline")}
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">

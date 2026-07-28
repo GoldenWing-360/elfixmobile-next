@@ -19,11 +19,11 @@ export default function Error({
 
   return (
     <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-      <div className="mx-auto max-w-2xl px-6 py-32 md:px-8 md:py-40 text-center">
+      <div className="mx-auto max-w-2xl px-6 py-24 md:px-8 md:py-36 text-center">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           Fehler
         </p>
-        <h1 className="mt-5 text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+        <h1 className="mt-5 t-h1">
           Da ist etwas schiefgelaufen.
         </h1>
         <p className="mt-7 text-[18px] leading-[1.55] text-white/70">

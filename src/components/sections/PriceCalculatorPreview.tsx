@@ -69,12 +69,12 @@ export function PriceCalculatorPreview() {
       id="calc"
       className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]"
     >
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36 lg:py-44">
+      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
         <header className="max-w-3xl">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-4 text-[clamp(2rem,5vw,4.25rem)] font-semibold leading-[1.06] tracking-[-0.025em]">
+          <h2 className="mt-4 t-h1">
             {t("headline")}
           </h2>
           <p className="mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">
@@ -113,7 +113,7 @@ export function PriceCalculatorPreview() {
                     <span className="text-[12px] uppercase tracking-[0.16em] text-[#6e6e73]">
                       ab
                     </span>
-                    <span className="text-[clamp(3rem,6vw,4.5rem)] font-semibold leading-none tracking-[-0.04em] tabular-nums">
+                    <span className="t-h1 leading-none tabular-nums">
                       {tile.price}
                     </span>
                     <span className="text-[24px] font-medium text-[#86868B]">€</span>
@@ -123,7 +123,7 @@ export function PriceCalculatorPreview() {
                   </p>
                 </div>
 
-                <div className="mt-7 flex items-center gap-1.5 text-[13.5px] font-medium text-[var(--color-accent)]">
+                <div className="mt-7 flex items-center gap-1.5 text-[14px] font-medium text-[var(--color-accent)]">
                   Diese Reparatur buchen
                   <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </div>
@@ -139,7 +139,7 @@ export function PriceCalculatorPreview() {
           </p>
           <Link
             href="/preisrechner"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-text-dark)] px-6 py-3 text-[14.5px] font-medium text-white transition-colors hover:bg-black"
+            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-text-dark)] px-6 py-3 text-[15px] font-medium text-white transition-colors hover:bg-black"
           >
             <Droplets className="h-4 w-4" aria-hidden style={{ display: "none" }} />
             {t("open_calc")}

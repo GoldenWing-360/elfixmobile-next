@@ -79,11 +79,11 @@ export default async function ReparaturHubPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-        <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-32">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-36">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("eyebrow")}
           </p>
-          <h1 className="mt-5 text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+          <h1 className="mt-5 t-h1">
             {t("headline")}
           </h1>
           <p className="mt-7 max-w-2xl text-[18px] leading-[1.55] text-white/70">
@@ -95,7 +95,7 @@ export default async function ReparaturHubPage({
       {/* Brands grid */}
       <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
         <div className="mx-auto max-w-5xl px-6 py-20 md:px-8 md:py-28">
-          <h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
+          <h2 className="t-h3">
             {t("h2_brand")}
           </h2>
           <ul className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
@@ -125,7 +125,7 @@ export default async function ReparaturHubPage({
             ))}
           </ul>
 
-          <h2 className="mt-20 text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
+          <h2 className="mt-20 t-h3">
             {t("h2_service")}
           </h2>
           <ul className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
