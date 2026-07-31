@@ -13,6 +13,25 @@ import {
 import { Star, Shield, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/Button";
 
+// Repair brands + carrier partners (A1, Magenta, Drei — real partners of
+// the shop). SVGs render white via brightness-0+invert; brands without a
+// usable mark are typeset wordmarks in the same monochrome tone.
+const BRAND_STRIP: ReadonlyArray<
+  { src: string; label: string; h?: string } | { text: string; label: string }
+> = [
+  { src: "/brands/apple.svg", label: "Apple" },
+  // Samsung's mark is a wide wordmark inside the square viewBox — needs
+  // extra height to reach the same optical size as the icon logos.
+  { src: "/brands/samsung.svg", label: "Samsung", h: "h-10" },
+  { text: "A1", label: "A1 Telekom" },
+  { src: "/brands/tmobile.svg", label: "Magenta T-Mobile" },
+  { text: "Drei", label: "Drei Österreich" },
+  { src: "/brands/xiaomi.svg", label: "Xiaomi" },
+  { src: "/brands/huawei.svg", label: "Huawei" },
+  { text: "ZTE", label: "ZTE" },
+  { src: "/brands/google.svg", label: "Google Pixel" },
+];
+
 const wordReveal: Variants = {
   hidden: { y: "110%" },
   visible: (i: number) => ({
@@ -176,6 +195,37 @@ export function Hero() {
           </div>
         </motion.div>
       </div>
+
+      {/* Brand & partner strip — monochrome, fills the quiet bottom band */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="relative mx-auto max-w-7xl px-6 pb-10 md:px-8"
+      >
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 border-t border-white/10 pt-8 md:justify-between">
+          {BRAND_STRIP.map((b) =>
+            "src" in b ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={b.label}
+                src={b.src}
+                alt={b.label}
+                title={b.label}
+                className={`${b.h ?? "h-6"} w-auto brightness-0 invert opacity-40 transition-opacity hover:opacity-70`}
+              />
+            ) : (
+              <span
+                key={b.label}
+                title={b.label}
+                className="text-[19px] font-bold tracking-tight text-white/40 transition-opacity hover:text-white/70"
+              >
+                {b.text}
+              </span>
+            ),
+          )}
+        </div>
+      </motion.div>
 
       {/* Bottom fade into next section */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-black" aria-hidden />
