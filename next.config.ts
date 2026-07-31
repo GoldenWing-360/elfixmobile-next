@@ -41,14 +41,14 @@ const nextConfig: NextConfig = {
       "/agb",
     ];
     return [
-      { source: "/", destination: "/de", permanent: false },
+      { source: "/", destination: "/de", permanent: false /* locale pick, keep 302 */ },
       ...TOP.map((p) => ({
         source: p,
         destination: `/de${p}`,
-        permanent: false,
+        permanent: true,
       })),
       // /reparatur/<brand>/<model> deep links
-      { source: "/reparatur/:rest*", destination: "/de/reparatur/:rest*", permanent: false },
+      { source: "/reparatur/:rest*", destination: "/de/reparatur/:rest*", permanent: true },
       // /status/<id>?t=<token> share links
       { source: "/status/:rest*", destination: "/de/status/:rest*", permanent: false },
       // Service- and district-slugs are leaf URLs (no sub-segments),
@@ -73,7 +73,7 @@ const nextConfig: NextConfig = {
       ].map((s) => ({
         source: `/${s}`,
         destination: `/de/${s}`,
-        permanent: false,
+        permanent: true,
       })),
       // Migrated WP blog posts + glossary lived at root level on the old
       // site — forward the exact slugs so a domain cutover keeps their
@@ -83,7 +83,7 @@ const nextConfig: NextConfig = {
         ([slug, destination]) => ({
           source: `/${slug}`,
           destination,
-          permanent: false,
+          permanent: true,
         }),
       ),
       // Remaining WP page slugs (brand hubs, old service/landing pages)
@@ -92,7 +92,7 @@ const nextConfig: NextConfig = {
         ([slug, destination]) => ({
           source: `/${slug}`,
           destination,
-          permanent: false,
+          permanent: true,
         }),
       ),
     ];

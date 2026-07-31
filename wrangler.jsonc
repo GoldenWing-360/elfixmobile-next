@@ -24,13 +24,19 @@
 	// CF provisions SSL within a minute.
 	"routes": [
 		{ "pattern": "bersaev.com", "custom_domain": true },
-		{ "pattern": "www.bersaev.com", "custom_domain": true }
+		{ "pattern": "www.bersaev.com", "custom_domain": true },
+		// Production domain (cutover 2026-07-31). www is canonical — the
+		// WP incumbent's backlinks all point at www.elfixmobile.at.
+		{ "pattern": "elfixmobile.at", "custom_domain": true },
+		{ "pattern": "www.elfixmobile.at", "custom_domain": true }
 	],
 	"vars": {
 		// Public site URL the app uses for sitemap, hreflang, JSON-LD,
 		// canonical tags and OG image URLs. Override per-environment by
 		// setting NEXT_PUBLIC_SITE_URL on the Worker.
-		"NEXT_PUBLIC_SITE_URL": "https://bersaev.com"
+		// NOTE: switching this off the bersaev test domain also disables
+		// the robots/noindex kill-switch — intended, this is the cutover.
+		"NEXT_PUBLIC_SITE_URL": "https://www.elfixmobile.at"
 	},
 	"observability": {
 		"enabled": true
