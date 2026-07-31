@@ -107,7 +107,11 @@ export function Hero() {
       {/* Top gradient fade so content under nav stays legible */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent" aria-hidden />
 
-      <div className="relative mx-auto grid min-h-[100svh] max-w-7xl grid-cols-1 items-center gap-x-10 gap-y-8 px-6 pb-16 pt-28 md:grid-cols-12 md:px-8 md:pb-20 md:pt-32">
+      {/* Column layout keeps the whole hero at exactly 100svh: the grid
+          takes the free space, the brand slider fills the formerly empty
+          bottom band instead of extending the section. */}
+      <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col px-6 md:px-8">
+      <div className="grid flex-1 grid-cols-1 items-center gap-x-10 gap-y-8 pb-8 pt-28 md:grid-cols-12 md:pb-10 md:pt-32">
         {/* Copy + conversion block */}
         <motion.div style={{ y: headlineY }} className="md:col-span-7">
           <motion.p
@@ -221,7 +225,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative mx-auto max-w-7xl px-6 pb-10 md:px-8"
+        className="relative pb-8"
       >
         <div className="border-t border-white/10 pt-8">
           {prefersReduced ? (
@@ -256,6 +260,7 @@ export function Hero() {
           )}
         </div>
       </motion.div>
+      </div>
 
       {/* Bottom fade into next section */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-black" aria-hidden />
