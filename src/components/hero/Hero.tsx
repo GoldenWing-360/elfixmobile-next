@@ -15,22 +15,41 @@ import { Button } from "@/components/Button";
 
 // Repair brands + carrier partners (A1, Magenta, Drei — real partners of
 // the shop). SVGs render white via brightness-0+invert; brands without a
-// usable mark are typeset wordmarks in the same monochrome tone.
+// usable mono mark are typeset wordmarks. Every entry carries a tuned
+// height so all marks sit at the same OPTICAL size — simple-icons boxes
+// have wildly different ink coverage (wordmarks vs. square icons).
 const BRAND_STRIP: ReadonlyArray<
-  { src: string; label: string; h?: string } | { text: string; label: string }
+  { src: string; label: string; h: string } | { text: string; label: string }
 > = [
-  { src: "/brands/apple.svg", label: "Apple" },
-  // Samsung's mark is a wide wordmark inside the square viewBox — needs
-  // extra height to reach the same optical size as the icon logos.
-  { src: "/brands/samsung.svg", label: "Samsung", h: "h-10" },
+  { src: "/brands/apple.svg", label: "Apple", h: "h-7" },
+  { src: "/brands/samsung.svg", label: "Samsung", h: "h-12" },
   { text: "A1", label: "A1 Telekom" },
-  { src: "/brands/tmobile.svg", label: "Magenta T-Mobile" },
+  { src: "/brands/tmobile.svg", label: "Magenta T-Mobile", h: "h-6" },
   { text: "Drei", label: "Drei Österreich" },
-  { src: "/brands/xiaomi.svg", label: "Xiaomi" },
-  { src: "/brands/huawei.svg", label: "Huawei" },
+  { src: "/brands/xiaomi.svg", label: "Xiaomi", h: "h-7" },
+  { src: "/brands/huawei.svg", label: "Huawei", h: "h-7" },
   { text: "ZTE", label: "ZTE" },
-  { src: "/brands/google.svg", label: "Google Pixel" },
+  { src: "/brands/google.svg", label: "Google Pixel", h: "h-7" },
 ];
+
+function BrandMark({ b }: { b: (typeof BRAND_STRIP)[number] }) {
+  return "src" in b ? (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={b.src}
+      alt={b.label}
+      title={b.label}
+      className={`${b.h} w-auto shrink-0 brightness-0 invert opacity-40`}
+    />
+  ) : (
+    <span
+      title={b.label}
+      className="shrink-0 text-[20px] font-bold tracking-tight text-white/40"
+    >
+      {b.text}
+    </span>
+  );
+}
 
 const wordReveal: Variants = {
   hidden: { y: "110%" },
@@ -196,33 +215,44 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Brand & partner strip — monochrome, fills the quiet bottom band */}
+      {/* Brand & partner slider — monochrome marquee, same pattern as the
+          Reviews section. Reduced-motion users get a static wrapped row. */}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="relative mx-auto max-w-7xl px-6 pb-10 md:px-8"
       >
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 border-t border-white/10 pt-8 md:justify-between">
-          {BRAND_STRIP.map((b) =>
-            "src" in b ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={b.label}
-                src={b.src}
-                alt={b.label}
-                title={b.label}
-                className={`${b.h ?? "h-6"} w-auto brightness-0 invert opacity-40 transition-opacity hover:opacity-70`}
-              />
-            ) : (
-              <span
-                key={b.label}
-                title={b.label}
-                className="text-[19px] font-bold tracking-tight text-white/40 transition-opacity hover:text-white/70"
+        <div className="border-t border-white/10 pt-8">
+          {prefersReduced ? (
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+              {BRAND_STRIP.map((b) => (
+                <BrandMark key={b.label} b={b} />
+              ))}
+            </div>
+          ) : (
+            <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+              <motion.div
+                className="flex w-max"
+                initial={{ x: 0 }}
+                animate={{ x: "-50%" }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
               >
-                {b.text}
-              </span>
-            ),
+                {/* Two identical copies incl. trailing gap → -50% lands
+                    exactly on the copy boundary, seamless loop. */}
+                {[0, 1].map((copy) => (
+                  <div
+                    key={copy}
+                    aria-hidden={copy === 1}
+                    className="flex items-center gap-16 pr-16"
+                  >
+                    {BRAND_STRIP.map((b) => (
+                      <BrandMark key={`${copy}-${b.label}`} b={b} />
+                    ))}
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           )}
         </div>
       </motion.div>
