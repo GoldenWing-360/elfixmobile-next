@@ -33,7 +33,10 @@ export function FAQ() {
       id="faq"
       className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]"
     >
-      <div className="mx-auto max-w-3xl px-6 py-24 md:px-8 md:py-36">
+      {/* Full container so the header lines up with every other home
+          section; the accordion itself stays a left-aligned reading
+          block inside it. */}
+      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
         <header className="max-w-2xl">
           <motion.p
             initial={{ opacity: 0.999, y: 10 }}
@@ -55,7 +58,7 @@ export function FAQ() {
           </motion.h2>
         </header>
 
-        <div className="mt-14 divide-y divide-black/[0.08] md:mt-20">
+        <div className="mt-14 max-w-3xl divide-y divide-black/[0.08] md:mt-20">
           {items.map((it, i) => {
             const isOpen = open === i;
             return (
