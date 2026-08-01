@@ -2,6 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { ServiceDef } from "@/data/services";
 import { getArticle } from "@/lib/blog";
+import { FaqSplit } from "@/components/FaqSplit";
 
 interface Props {
   service: ServiceDef;
@@ -35,6 +36,7 @@ const RELATED_ARTICLES: Record<string, string[]> = {
 export function ServiceBody({ service }: Props) {
   const t = useTranslations(`services_page.${service.key}`);
   const tCommon = useTranslations("services_page.common");
+  const tFaq = useTranslations("faq");
   const locale = useLocale();
   const related =
     locale === "de"
@@ -123,71 +125,65 @@ export function ServiceBody({ service }: Props) {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-        <div className="mx-auto max-w-3xl px-6 py-20 md:px-8 md:py-28">
-          <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
-            {tCommon("faq_eyebrow")}
+      {/* FAQ — sitewide editorial split pattern */}
+      <FaqSplit
+        eyebrow={tCommon("faq_eyebrow")}
+        headline={tCommon("faq_headline")}
+        items={FAQ_KEYS.map((k) => ({ q: t(`${k}.q`), a: t(`${k}.a`) }))}
+        note={
+          <>
+            {tFaq("escape_q")}{" "}
+            <a
+              href="tel:+436606071414"
+              className="font-medium text-[var(--color-accent)] hover:underline"
+            >
+              +43 660 6071414
+            </a>
+          </>
+        }
+      >
+        {/* Wiener Reparaturbon — real partner business, strong local
+            conversion + trust signal on every service page */}
+        <aside className="mt-10 rounded-3xl bg-white p-7 ring-1 ring-black/[0.05]">
+          <h3 className="text-[17px] font-semibold tracking-[-0.01em]">
+            {tCommon("reparaturbon_title")}
+          </h3>
+          <p className="mt-2 text-[15px] leading-[1.55] text-[#525257]">
+            {tCommon("reparaturbon_body")}
+            {locale === "de" && (
+              <>
+                {" "}
+                <Link
+                  href="/blog/wiener-reparaturbon-handy-reparatur"
+                  className="font-medium text-[var(--color-accent)] underline underline-offset-2"
+                >
+                  {tCommon("reparaturbon_link")}
+                </Link>
+              </>
+            )}
           </p>
-          <h2 className="mt-4 t-h2">
-            {tCommon("faq_headline")}
-          </h2>
-          <dl className="mt-12 divide-y divide-black/10">
-            {FAQ_KEYS.map((k) => (
-              <div key={k} className="py-7">
-                <dt className="text-[18px] font-semibold tracking-[-0.01em]">
-                  {t(`${k}.q`)}
-                </dt>
-                <dd className="mt-3 text-[16px] leading-[1.6] text-[#525257]">
-                  {t(`${k}.a`)}
-                </dd>
-              </div>
-            ))}
-          </dl>
+        </aside>
 
-          {/* Wiener Reparaturbon — real partner business, strong local
-              conversion + trust signal on every service page */}
-          <aside className="mt-12 rounded-3xl bg-white p-7 ring-1 ring-black/[0.05]">
+        {related.length > 0 && (
+          <div className="mt-10">
             <h3 className="text-[17px] font-semibold tracking-[-0.01em]">
-              {tCommon("reparaturbon_title")}
+              {tCommon("related_headline")}
             </h3>
-            <p className="mt-2 text-[15px] leading-[1.55] text-[#525257]">
-              {tCommon("reparaturbon_body")}
-              {locale === "de" && (
-                <>
-                  {" "}
+            <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {related.map((a) => (
+                <li key={a.slug}>
                   <Link
-                    href="/blog/wiener-reparaturbon-handy-reparatur"
-                    className="font-medium text-[var(--color-accent)] underline underline-offset-2"
+                    href={`/blog/${a.slug}`}
+                    className="block rounded-2xl bg-white px-5 py-4 text-[15px] font-medium text-black ring-1 ring-black/[0.05] transition-colors hover:bg-[var(--color-accent)] hover:text-white"
                   >
-                    {tCommon("reparaturbon_link")}
+                    {a.title}
                   </Link>
-                </>
-              )}
-            </p>
-          </aside>
-
-          {related.length > 0 && (
-            <div className="mt-12">
-              <h3 className="text-[17px] font-semibold tracking-[-0.01em]">
-                {tCommon("related_headline")}
-              </h3>
-              <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {related.map((a) => (
-                  <li key={a.slug}>
-                    <Link
-                      href={`/blog/${a.slug}`}
-                      className="block rounded-2xl bg-white px-5 py-4 text-[15px] font-medium text-black ring-1 ring-black/[0.05] transition-colors hover:bg-[var(--color-accent)] hover:text-white"
-                    >
-                      {a.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </section>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </FaqSplit>
     </>
   );
 }

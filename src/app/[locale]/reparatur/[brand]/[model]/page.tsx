@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { RepairDisclaimer } from "@/components/RepairDisclaimer";
+import { FaqSplit } from "@/components/FaqSplit";
 
 type Params = { locale: string; brand: string; model: string };
 type Locale = "de" | "en" | "ru" | "tr";
@@ -196,6 +197,7 @@ export default async function ModelPage({
   if (!pair) notFound();
 
   const t = await getTranslations({ locale, namespace: "model_page" });
+  const tFaq = await getTranslations({ locale, namespace: "faq" });
 
   // Sort repair rows by price (cheapest first), missing prices last.
   const repairs = Object.entries(pair.model.prices)
@@ -400,31 +402,29 @@ export default async function ModelPage({
       </section>
 
 
-      {/* FAQ */}
-      <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-        <div className="mx-auto max-w-3xl px-6 py-20 md:px-8 md:py-28">
-          <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
-            {t("faq_eyebrow")}
-          </p>
-          <h2 className="mt-4 t-h2">
-            {t("faq_headline", { model: pair.model.full_name })}
-          </h2>
-          <dl className="mt-12 divide-y divide-white/10">
-            {(["q_what_if_not_listed", "q_genuine_parts", "q_data_safe", "q_pickup"] as const).map(
-              (k) => (
-                <div key={k} className="py-7">
-                  <dt className="text-[18px] font-semibold tracking-[-0.01em]">
-                    {t(`${k}.q`, { model: pair.model.full_name })}
-                  </dt>
-                  <dd className="mt-3 text-[16px] leading-[1.6] text-white/70">
-                    {t(`${k}.a`, { model: pair.model.full_name, brand: pair.brand.label })}
-                  </dd>
-                </div>
-              ),
-            )}
-          </dl>
-        </div>
-      </section>
+      {/* FAQ — sitewide editorial split pattern */}
+      <FaqSplit
+        dark
+        eyebrow={t("faq_eyebrow")}
+        headline={t("faq_headline", { model: pair.model.full_name })}
+        items={(["q_what_if_not_listed", "q_genuine_parts", "q_data_safe", "q_pickup"] as const).map(
+          (k) => ({
+            q: t(`${k}.q`, { model: pair.model.full_name }),
+            a: t(`${k}.a`, { model: pair.model.full_name, brand: pair.brand.label }),
+          }),
+        )}
+        note={
+          <>
+            {tFaq("escape_q")}{" "}
+            <a
+              href="tel:+436606071414"
+              className="font-medium text-[var(--color-accent)] hover:underline"
+            >
+              +43 660 6071414
+            </a>
+          </>
+        }
+      />
 
       <FinalCTA />
     </>

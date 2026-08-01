@@ -33,11 +33,13 @@ export function FAQ() {
       id="faq"
       className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]"
     >
-      {/* Full container so the header lines up with every other home
-          section; the accordion itself stays a left-aligned reading
-          block inside it. */}
+      {/* Editorial split like ProcessSteps: sticky header left, the
+          accordion carries the right column — the Full grid is used
+          structurally instead of leaving half the row empty. */}
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
-        <header className="max-w-2xl">
+        <div className="grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-12">
+        <header className="md:col-span-5">
+          <div className="md:sticky md:top-28">
           <motion.p
             initial={{ opacity: 0.999, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,9 +58,19 @@ export function FAQ() {
           >
             {t("h1")}
           </motion.h2>
+          <p className="mt-6 max-w-2xl text-[15px] leading-[1.55] text-[#6e6e73]">
+            {t("escape_q")}{" "}
+            <a
+              href="tel:+436606071414"
+              className="font-medium text-[var(--color-accent)] hover:underline"
+            >
+              +43 660 6071414
+            </a>
+          </p>
+          </div>
         </header>
 
-        <div className="mt-14 max-w-3xl divide-y divide-black/[0.08] md:mt-20">
+        <div className="divide-y divide-black/[0.08] md:col-span-7">
           {items.map((it, i) => {
             const isOpen = open === i;
             return (
@@ -106,6 +118,7 @@ export function FAQ() {
               </div>
             );
           })}
+        </div>
         </div>
       </div>
     </section>
