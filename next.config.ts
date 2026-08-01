@@ -59,6 +59,11 @@ const nextConfig: NextConfig = {
         destination: "https://www.elfixmobile.at/:path*",
         permanent: true,
       })),
+      // Old WP sitemap URLs Google still requests — point them at the
+      // single Next sitemap so Search Console doesn't error out.
+      { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },
+      { source: "/post-sitemap.xml", destination: "/sitemap.xml", permanent: true },
+      { source: "/page-sitemap.xml", destination: "/sitemap.xml", permanent: true },
       { source: "/", destination: "/de", permanent: false /* locale pick, keep 302 */ },
       ...TOP.map((p) => ({
         source: p,
