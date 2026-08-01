@@ -1,13 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Plus } from "lucide-react";
+import { FaqSplit } from "@/components/FaqSplit";
 
-// Subset of the 8 Q/A pairs from the /faq namespace — order matches the
-// dedicated /faq page so the home preview is a consistent teaser. Keys
-// must exist in messages/<locale>.json under the faq.* namespace.
+// Same 8 Q/A pairs as the dedicated /faq page — the home section is a
+// consistent teaser rendered through the sitewide FaqSplit pattern.
 const KEYS = [
   "express",
   "warranty",
@@ -21,106 +18,15 @@ const KEYS = [
 
 export function FAQ() {
   const t = useTranslations("faq");
-  const [open, setOpen] = useState<number | null>(0);
-
-  const items = KEYS.map((k) => ({
-    q: t(`q_${k}_q` as "q_express_q"),
-    a: t(`q_${k}_a` as "q_express_a"),
-  }));
-
   return (
-    <section
+    <FaqSplit
       id="faq"
-      className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]"
-    >
-      {/* Editorial split like ProcessSteps: sticky header left, the
-          accordion carries the right column — the Full grid is used
-          structurally instead of leaving half the row empty. */}
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
-        <div className="grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-12">
-        <header className="md:col-span-5">
-          <div className="md:sticky md:top-28">
-          <motion.p
-            initial={{ opacity: 0.999, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]"
-          >
-            {t("eyebrow")}
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0.999, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0, margin: "200px 0px 200px 0px" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 t-h1"
-          >
-            {t("h1")}
-          </motion.h2>
-          <p className="mt-6 max-w-2xl text-[15px] leading-[1.55] text-[#6e6e73]">
-            {t("escape_q")}{" "}
-            <a
-              href="tel:+436606071414"
-              className="font-medium text-[var(--color-accent)] hover:underline"
-            >
-              +43 660 6071414
-            </a>
-          </p>
-          </div>
-        </header>
-
-        <div className="divide-y divide-black/[0.08] md:col-span-7">
-          {items.map((it, i) => {
-            const isOpen = open === i;
-            return (
-              <div key={i} className="group">
-                <button
-                  type="button"
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  aria-expanded={isOpen}
-                  aria-controls={`faq-panel-${i}`}
-                  className="flex w-full items-center justify-between gap-8 py-6 text-left md:py-8"
-                >
-                  <span className="text-[18px] font-semibold tracking-[-0.005em] text-[#1d1d1f]">
-                    {it.q}
-                  </span>
-                  <motion.span
-                    aria-hidden
-                    animate={{ rotate: isOpen ? 45 : 0 }}
-                    transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                    className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-black/[0.04] text-[#1d1d1f] transition-colors group-hover:bg-black/[0.08] md:h-10 md:w-10"
-                  >
-                    <Plus className="h-4 w-4" />
-                  </motion.span>
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      id={`faq-panel-${i}`}
-                      role="region"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{
-                        height: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-                        opacity: { duration: 0.25 },
-                      }}
-                      className="overflow-hidden"
-                    >
-                      <p className="pb-6 pr-14 text-[16px] leading-[1.6] text-[#525257] md:pb-8 md:pr-20 md:text-[17px]">
-                        {it.a}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
-        </div>
-        </div>
-      </div>
-    </section>
+      eyebrow={t("eyebrow")}
+      headline={t("h1")}
+      items={KEYS.map((k) => ({
+        q: t(`q_${k}_q` as "q_express_q"),
+        a: t(`q_${k}_a` as "q_express_a"),
+      }))}
+    />
   );
 }

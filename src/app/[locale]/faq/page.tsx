@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { FaqSplit } from "@/components/FaqSplit";
 
 export async function generateMetadata({
   params,
@@ -69,32 +70,14 @@ export default async function FaqPage({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-        <div className="mx-auto max-w-3xl px-6 py-24 md:px-8 md:py-36">
-          <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
-            {t("eyebrow")}
-          </p>
-          <h1 className="mt-5 t-h1">
-            {t("h1")}
-          </h1>
-          <p className="mt-7 text-[18px] leading-[1.55] text-white/70">
-            {t("intro")}
-          </p>
-
-          <dl className="mt-14 divide-y divide-white/10">
-            {Q_KEYS.map((k) => (
-              <div key={k} className="py-7">
-                <dt className="text-[18px] font-semibold tracking-[-0.01em]">
-                  {t(`q_${k}_q`)}
-                </dt>
-                <dd className="mt-3 text-[16px] leading-[1.6] text-white/70">
-                  {t(`q_${k}_a`)}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
+      <FaqSplit
+        dark
+        titleAs="h1"
+        eyebrow={t("eyebrow")}
+        headline={t("h1")}
+        sub={t("intro")}
+        items={Q_KEYS.map((k) => ({ q: t(`q_${k}_q`), a: t(`q_${k}_a`) }))}
+      />
       <FinalCTA />
     </>
   );

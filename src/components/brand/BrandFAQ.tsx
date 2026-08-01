@@ -10,7 +10,6 @@ const FAQ_KEYS = ["q_express", "q_warranty", "q_originalparts", "q_pickup"] as c
 
 export function BrandFAQ({ brand }: Props) {
   const t = useTranslations("brand_page.faq");
-  const tFaq = useTranslations("faq");
   return (
     <FaqSplit
       dark
@@ -20,17 +19,6 @@ export function BrandFAQ({ brand }: Props) {
         q: t(`${k}.q`, { brand: brand.label }),
         a: t(`${k}.a`, { brand: brand.label }),
       }))}
-      note={
-        <>
-          {tFaq("escape_q")}{" "}
-          <a
-            href="tel:+436606071414"
-            className="font-medium text-[var(--color-accent)] hover:underline"
-          >
-            +43 660 6071414
-          </a>
-        </>
-      }
     />
   );
 }

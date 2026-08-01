@@ -197,7 +197,6 @@ export default async function ModelPage({
   if (!pair) notFound();
 
   const t = await getTranslations({ locale, namespace: "model_page" });
-  const tFaq = await getTranslations({ locale, namespace: "faq" });
 
   // Sort repair rows by price (cheapest first), missing prices last.
   const repairs = Object.entries(pair.model.prices)
@@ -413,17 +412,6 @@ export default async function ModelPage({
             a: t(`${k}.a`, { model: pair.model.full_name, brand: pair.brand.label }),
           }),
         )}
-        note={
-          <>
-            {tFaq("escape_q")}{" "}
-            <a
-              href="tel:+436606071414"
-              className="font-medium text-[var(--color-accent)] hover:underline"
-            >
-              +43 660 6071414
-            </a>
-          </>
-        }
       />
 
       <FinalCTA />

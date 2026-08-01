@@ -36,7 +36,6 @@ const RELATED_ARTICLES: Record<string, string[]> = {
 export function ServiceBody({ service }: Props) {
   const t = useTranslations(`services_page.${service.key}`);
   const tCommon = useTranslations("services_page.common");
-  const tFaq = useTranslations("faq");
   const locale = useLocale();
   const related =
     locale === "de"
@@ -130,17 +129,6 @@ export function ServiceBody({ service }: Props) {
         eyebrow={tCommon("faq_eyebrow")}
         headline={tCommon("faq_headline")}
         items={FAQ_KEYS.map((k) => ({ q: t(`${k}.q`), a: t(`${k}.a`) }))}
-        note={
-          <>
-            {tFaq("escape_q")}{" "}
-            <a
-              href="tel:+436606071414"
-              className="font-medium text-[var(--color-accent)] hover:underline"
-            >
-              +43 660 6071414
-            </a>
-          </>
-        }
       >
         {/* Wiener Reparaturbon — real partner business, strong local
             conversion + trust signal on every service page */}
