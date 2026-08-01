@@ -78,7 +78,7 @@ export default async function BewertungenPage({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
       />
-      <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-36">
+      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("eyebrow")}
         </p>

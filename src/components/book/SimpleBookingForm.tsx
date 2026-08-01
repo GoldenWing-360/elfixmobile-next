@@ -164,12 +164,12 @@ export function SimpleBookingForm() {
           <h1 className="mt-8 t-h2">
             {t("success_h1")}
           </h1>
-          <p className="mx-auto mt-5 max-w-md text-[17px] leading-[1.55] text-[#525257]">
+          <p className="mx-auto mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">
             {t("success_sub")}
           </p>
 
           {leadId && (
-            <div className="mx-auto mt-10 max-w-md rounded-2xl border border-black/[0.06] bg-white p-5">
+            <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-black/[0.06] bg-white p-5">
               <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[#86868B]">
                 {t("success_order_id_label")}
               </div>

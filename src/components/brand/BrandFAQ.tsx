@@ -11,7 +11,7 @@ export function BrandFAQ({ brand }: Props) {
   const t = useTranslations("brand_page.faq");
   return (
     <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-      <div className="mx-auto max-w-4xl px-6 py-14 md:px-8 md:py-20">
+      <div className="mx-auto max-w-3xl px-6 py-14 md:px-8 md:py-20">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("eyebrow")}
         </p>

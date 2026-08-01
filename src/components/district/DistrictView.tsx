@@ -40,7 +40,7 @@ export function DistrictView({ district }: Props) {
           district.gradient,
         )}
       >
-        <div className="mx-auto max-w-5xl px-6 py-24 md:px-8 md:py-36">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
             Wien {district.postalCodes.join(", ")}
           </p>
@@ -72,7 +72,7 @@ export function DistrictView({ district }: Props) {
       </section>
 
       <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <a
               href="tel:+436606071414"

@@ -63,7 +63,7 @@ export function ServiceShowcase() {
       className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]"
     >
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
-        <header className="max-w-3xl">
+        <header className="max-w-2xl">
           <motion.p
             initial={{ opacity: 0.999, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}

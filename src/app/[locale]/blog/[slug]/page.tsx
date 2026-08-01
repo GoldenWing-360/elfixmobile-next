@@ -190,7 +190,7 @@ export default async function BlogArticlePage({
           <h2 className="text-[22px] font-semibold tracking-[-0.01em] md:text-[26px]">
             Reparatur nötig? Wir sind in Wien 1220 für dich da.
           </h2>
-          <p className="mt-3 max-w-xl text-[16px] leading-[1.55] text-white/70">
+          <p className="mt-3 max-w-2xl text-[16px] leading-[1.55] text-white/70">
             Kostenlose Diagnose, Festpreis vor der Reparatur, Express in 30
             Minuten. Mo–Sa 9–19 Uhr geöffnet.
           </p>

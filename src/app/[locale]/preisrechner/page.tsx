@@ -41,7 +41,7 @@ export default async function PreisrechnerPage({
   const t = await getTranslations({ locale, namespace: "calc_page" });
   return (
     <section className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-5xl px-6 pt-24 md:px-8 md:pt-32">
+      <div className="mx-auto max-w-7xl px-6 pt-24 md:px-8 md:pt-32">
         <header className="text-center">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("eyebrow")}

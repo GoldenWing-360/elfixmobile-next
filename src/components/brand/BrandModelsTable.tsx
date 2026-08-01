@@ -58,8 +58,8 @@ export function BrandModelsTable({ brand, limit = 20 }: Props) {
 
   return (
     <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
-        <header className="max-w-3xl">
+      <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+        <header className="max-w-2xl">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("table_eyebrow")}
           </p>

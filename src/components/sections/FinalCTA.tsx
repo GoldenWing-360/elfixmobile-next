@@ -26,7 +26,7 @@ export function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="mx-auto mt-6 max-w-xl text-[17px] leading-[1.55] text-white/65 md:mx-0 md:text-[18px]"
+            className="mx-auto mt-6 max-w-2xl text-[17px] leading-[1.55] text-white/65 md:mx-0 md:text-[18px]"
           >
             {t("sub")}
           </motion.p>

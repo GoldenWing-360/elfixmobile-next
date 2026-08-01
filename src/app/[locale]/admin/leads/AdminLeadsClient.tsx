@@ -81,7 +81,7 @@ export function AdminLeadsClient() {
 
   return (
     <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">

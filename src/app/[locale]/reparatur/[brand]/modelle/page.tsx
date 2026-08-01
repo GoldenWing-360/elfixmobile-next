@@ -129,7 +129,7 @@ export default async function BrandModelsIndexPage({
       <section
         className={`relative overflow-hidden bg-gradient-to-br ${brand.gradient} text-white`}
       >
-        <div className="mx-auto max-w-5xl px-6 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
             {brand.label.toUpperCase()} {t("eyebrow_suffix")}
           </p>
@@ -143,7 +143,7 @@ export default async function BrandModelsIndexPage({
       </section>
 
       <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-        <div className="mx-auto max-w-5xl px-6 py-16 md:px-8 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
           {groups.map((g) => (
             <div key={String(g.year)} className="mb-12">
               <h2 className="t-h3">

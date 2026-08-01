@@ -39,7 +39,7 @@ export function ProcessSteps() {
             <h2 className="mt-4 t-h1">
               {t("headline")}
             </h2>
-            <p className="mt-6 max-w-md text-[17px] leading-[1.55] text-white/65">
+            <p className="mt-6 max-w-2xl text-[17px] leading-[1.55] text-white/65">
               {t("sub")}
             </p>
           </div>
@@ -82,7 +82,7 @@ export function ProcessSteps() {
                 <h3 className="text-[22px] font-semibold tracking-[-0.01em]">
                   {s.title}
                 </h3>
-                <p className="mt-2 max-w-md text-[16px] leading-[1.6] text-white/65">
+                <p className="mt-2 max-w-2xl text-[16px] leading-[1.6] text-white/65">
                   {s.desc}
                 </p>
               </div>

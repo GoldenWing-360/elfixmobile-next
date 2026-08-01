@@ -16,7 +16,7 @@ export function BrandHero({ brand }: Props) {
         brand.gradient,
       )}
     >
-      <div className="mx-auto max-w-6xl px-6 py-24 md:px-8 md:py-36">
+      <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
           {t("eyebrow")}
         </p>

@@ -138,7 +138,7 @@ export function Calculator() {
   // page for SSR-SEO; this client tree starts at the Progress stepper.
   return (
     <section className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-5xl px-6 pb-24 md:px-8 md:pb-32">
+      <div className="mx-auto max-w-7xl px-6 pb-24 md:px-8 md:pb-32">
         <Progress step={state.step} />
 
         <div className="relative mt-10 overflow-hidden rounded-3xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_60px_-30px_rgba(0,0,0,0.2)] ring-1 ring-black/[0.04] md:mt-14">

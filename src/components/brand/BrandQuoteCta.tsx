@@ -16,7 +16,7 @@ export function BrandQuoteCta({ brand }: Props) {
 
   return (
     <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-4xl px-6 py-20 md:px-8 md:py-28 text-center">
+      <div className="mx-auto max-w-3xl px-6 py-20 md:px-8 md:py-28 text-center">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("quote_eyebrow")}
         </p>

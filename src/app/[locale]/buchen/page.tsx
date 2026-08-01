@@ -47,7 +47,7 @@ export default async function BuchenPage({
           <h1 className="mt-3 t-h1">
             {t("headline")}
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-[17px] leading-[1.55] text-[#525257]">
+          <p className="mx-auto mt-5 max-w-2xl text-[17px] leading-[1.55] text-[#525257]">
             {t("sub")}
           </p>
         </header>

@@ -83,7 +83,7 @@ export default async function BlogHubPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-32 md:px-8 md:pb-36 md:pt-44">
-        <header className="max-w-3xl">
+        <header className="max-w-2xl">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             Ratgeber
           </p>

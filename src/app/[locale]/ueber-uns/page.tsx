@@ -89,7 +89,7 @@ export default async function UeberUnsPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-        <div className="mx-auto max-w-4xl px-6 py-24 md:px-8 md:py-36">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {t("eyebrow")}
           </p>
@@ -103,7 +103,7 @@ export default async function UeberUnsPage({
       </section>
 
       <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-        <div className="mx-auto max-w-4xl px-6 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
           <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-16">
             <div>
               <h2 className="t-h3">
@@ -127,7 +127,7 @@ export default async function UeberUnsPage({
 
       {/* Inhaberin + Zertifizierungen — the E-E-A-T core of the page */}
       <section className="bg-white text-[var(--color-text-dark)]">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14">
             <div>
               <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
@@ -185,7 +185,7 @@ export default async function UeberUnsPage({
       </section>
 
       <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
           <h2 className="t-h2">
             {t("section_values_title")}
           </h2>

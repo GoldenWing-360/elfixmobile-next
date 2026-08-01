@@ -33,7 +33,7 @@ export function ContactView() {
   return (
     <div className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
       {/* 1. Page header */}
-      <section className="mx-auto max-w-5xl px-6 pt-24 md:px-8 md:pt-32">
+      <section className="mx-auto max-w-7xl px-6 pt-24 md:px-8 md:pt-32">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("eyebrow")}
         </p>
@@ -46,7 +46,7 @@ export function ContactView() {
       </section>
 
       {/* 2. Three quick-action tiles */}
-      <section className="mx-auto max-w-5xl px-6 pt-16 md:px-8 md:pt-20">
+      <section className="mx-auto max-w-7xl px-6 pt-16 md:px-8 md:pt-20">
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           <a
             href={`tel:${PHONE}`}
@@ -90,7 +90,7 @@ export function ContactView() {
       </section>
 
       {/* 3. Ansprechperson */}
-      <section className="mx-auto max-w-5xl px-6 pt-16 md:px-8 md:pt-24">
+      <section className="mx-auto max-w-7xl px-6 pt-16 md:px-8 md:pt-24">
         <div className="flex items-center gap-5">
           <div
             aria-hidden
@@ -113,7 +113,7 @@ export function ContactView() {
       </section>
 
       {/* 4. Map */}
-      <section className="mx-auto max-w-5xl px-6 pt-16 md:px-8 md:pt-24">
+      <section className="mx-auto max-w-7xl px-6 pt-16 md:px-8 md:pt-24">
         <div className="overflow-hidden rounded-3xl ring-1 ring-black/[0.06]">
           <iframe
             src={MAPS_EMBED}
@@ -127,7 +127,7 @@ export function ContactView() {
       </section>
 
       {/* 5. Facts grid */}
-      <section className="mx-auto max-w-5xl px-6 pt-16 md:px-8 md:pt-24">
+      <section className="mx-auto max-w-7xl px-6 pt-16 md:px-8 md:pt-24">
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
           <Fact icon={<MapPin className="h-4 w-4" />} label={tc("address_label")}>
             {tl("address_line_1")}

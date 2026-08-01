@@ -13,7 +13,7 @@ export function LegalLayout({
 }) {
   return (
     <section className="relative bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-      <div className="mx-auto max-w-2xl px-6 py-24 md:px-8 md:py-36">
+      <div className="mx-auto max-w-3xl px-6 py-24 md:px-8 md:py-36">
         <header className="border-b border-black/[0.08] pb-10">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {eyebrow}

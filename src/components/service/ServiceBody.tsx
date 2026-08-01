@@ -47,7 +47,7 @@ export function ServiceBody({ service }: Props) {
     <>
       {/* What's included */}
       <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {tCommon("included_eyebrow")}
           </p>
@@ -79,7 +79,7 @@ export function ServiceBody({ service }: Props) {
 
       {/* 3-step process */}
       <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {tCommon("process_eyebrow")}
           </p>
@@ -125,7 +125,7 @@ export function ServiceBody({ service }: Props) {
 
       {/* FAQ */}
       <section className="bg-[var(--color-bg-secondary)] text-[var(--color-text-dark)]">
-        <div className="mx-auto max-w-4xl px-6 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-3xl px-6 py-20 md:px-8 md:py-28">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {tCommon("faq_eyebrow")}
           </p>
