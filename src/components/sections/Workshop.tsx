@@ -31,6 +31,9 @@ export function Workshop() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video || prefersReduced) return;
+    // React drops the muted attr in SSR markup; iOS needs it for autoplay.
+    video.muted = true;
+    video.defaultMuted = true;
     if (inView) {
       video.play().catch(() => {
         /* autoplay blocked — poster stays, no error surface */

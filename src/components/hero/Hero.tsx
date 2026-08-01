@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {
@@ -87,9 +87,37 @@ function MaskedLine({ text, baseIndex = 0 }: { text: string; baseIndex?: number 
 export function Hero() {
   const t = useTranslations("hero");
   const ref = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   // Respect the OS-level prefers-reduced-motion setting: no scroll
   // parallax, and the healing clip is swapped for its final still.
   const prefersReduced = useReducedMotion();
+
+  // Mobile autoplay: React drops the `muted` attribute from SSR markup,
+  // and iOS refuses to autoplay any video it doesn't consider muted —
+  // so set it imperatively and kick play(). The IntersectionObserver
+  // replays the healing clip each time the hero re-enters the viewport,
+  // so mobile visitors actually see the animation instead of the frozen
+  // end frame.
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.defaultMuted = true;
+    const play = () => v.play().catch(() => {});
+    play();
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          v.currentTime = 0;
+          play();
+        }
+      },
+      { threshold: 0.35 },
+    );
+    io.observe(v);
+    return () => io.disconnect();
+  }, [prefersReduced]);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -205,6 +233,7 @@ export function Hero() {
               />
             ) : (
               <video
+                ref={videoRef}
                 autoPlay
                 muted
                 playsInline
