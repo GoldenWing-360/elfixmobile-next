@@ -41,14 +41,35 @@ const nextConfig: NextConfig = {
       "/agb",
     ];
     return [
+      // Host canonicalization: apex + the old test domains all 308 to
+      // the canonical www host. Runs inside the Worker (the API token
+      // lacks permission for CF Redirect Rules, and legacy Page Rules
+      // never fire on Workers custom domains).
+      // NOTE: has.value is an UNANCHORED regex — "elfixmobile.at" would
+      // also match "www.elfixmobile.at" and loop the whole site. Anchor
+      // and escape every host explicitly.
+      ...[
+        "^elfixmobile\\.at$",
+        "^bersaev\\.com$",
+        "^www\\.bersaev\\.com$",
+        "^elfixmobile-next\\.deni-4b0\\.workers\\.dev$",
+      ].map((host) => ({
+        source: "/:path*",
+        has: [{ type: "host" as const, value: host }],
+        destination: "https://www.elfixmobile.at/:path*",
+        permanent: true,
+      })),
       { source: "/", destination: "/de", permanent: false /* locale pick, keep 302 */ },
       ...TOP.map((p) => ({
         source: p,
         destination: `/de${p}`,
         permanent: true,
       })),
-      // /reparatur/<brand>/<model> deep links
-      { source: "/reparatur/:rest*", destination: "/de/reparatur/:rest*", permanent: true },
+      // /reparatur/<brand>/<model> deep links. The bare path needs its
+      // own rule — Next interpolates a literal ":rest*" into the
+      // destination when the catch-all matches zero segments.
+      { source: "/reparatur", destination: "/de/reparatur", permanent: true },
+      { source: "/reparatur/:rest+", destination: "/de/reparatur/:rest+", permanent: true },
       // /status/<id>?t=<token> share links
       { source: "/status/:rest*", destination: "/de/status/:rest*", permanent: false },
       // Service- and district-slugs are leaf URLs (no sub-segments),
