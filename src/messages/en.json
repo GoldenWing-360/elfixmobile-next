@@ -1016,7 +1016,11 @@
     "stat_founded": "founded",
     "stat_reviews": "294 Google reviews",
     "stat_models": "models with fixed prices",
-    "stat_express": "express repair"
+    "stat_express": "express repair",
+    "team_eyebrow": "THE TEAM",
+    "team_title": "Three people, one standard.",
+    "team_body": "Sales, advice and workshop – all under one roof on Maria-Tusch-Strasse. We know our regulars by name and treat every device as if it were our own.",
+    "team_alt": "The EL Fix Mobile team in a studio portrait"
   },
   "bewertungen": {
     "eyebrow": "REVIEWS",

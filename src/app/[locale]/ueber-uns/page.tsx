@@ -3,6 +3,7 @@ import Image from "next/image";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { TeamPortrait } from "@/components/TeamPortrait";
 
 export async function generateMetadata({
   params,
@@ -181,6 +182,26 @@ export default async function UeberUnsPage({
               </div>
             ))}
           </dl>
+        </div>
+      </section>
+
+      {/* Team — Higgsfield studio adaptation of the real team photo */}
+      <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+          <div className="grid grid-cols-1 items-center gap-x-10 gap-y-10 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
+                {t("team_eyebrow")}
+              </p>
+              <h2 className="mt-4 t-h2">{t("team_title")}</h2>
+              <p className="mt-5 max-w-2xl text-[17px] leading-[1.6] text-white/70">
+                {t("team_body")}
+              </p>
+            </div>
+            <div className="md:col-span-7">
+              <TeamPortrait alt={t("team_alt")} />
+            </div>
+          </div>
         </div>
       </section>
 

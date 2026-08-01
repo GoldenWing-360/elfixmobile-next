@@ -1016,7 +1016,11 @@
     "stat_founded": "kuruluş",
     "stat_reviews": "294 Google yorumu",
     "stat_models": "sabit fiyatlı model",
-    "stat_express": "ekspres onarım"
+    "stat_express": "ekspres onarım",
+    "team_eyebrow": "EKİP",
+    "team_title": "Üç kişi, tek standart.",
+    "team_body": "Satış, danışmanlık ve atölye – hepsi Maria-Tusch-Strasse'de tek çatı altında. Müdavimlerimizi ismen tanırız ve her cihaza kendi cihazımız gibi bakarız.",
+    "team_alt": "EL Fix Mobile ekibi stüdyo portresi"
   },
   "bewertungen": {
     "eyebrow": "YORUMLAR",

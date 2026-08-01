@@ -1016,7 +1016,11 @@
     "stat_founded": "gegründet",
     "stat_reviews": "294 Google-Bewertungen",
     "stat_models": "Modelle mit Festpreis",
-    "stat_express": "Express-Reparatur"
+    "stat_express": "Express-Reparatur",
+    "team_eyebrow": "DAS TEAM",
+    "team_title": "Drei Menschen, ein Anspruch.",
+    "team_body": "Verkauf, Beratung und Werkstatt – alles aus einer Hand, in der Maria-Tusch-Straße. Wir kennen unsere Stammkunden beim Namen und behandeln jedes Gerät, als wäre es unser eigenes.",
+    "team_alt": "Das Team von EL Fix Mobile im Studio-Porträt"
   },
   "bewertungen": {
     "eyebrow": "BEWERTUNGEN",
