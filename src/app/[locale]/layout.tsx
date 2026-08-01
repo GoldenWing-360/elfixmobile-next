@@ -12,6 +12,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { StickyMobileCTAGate } from "@/components/StickyMobileCTAGate";
 import { CookieBanner } from "@/components/CookieBanner";
 import { ChromeGate } from "@/components/ChromeGate";
+import { Analytics } from "@/components/Analytics";
 import { SITE, alternateLanguagesFor, localBusinessJsonLd } from "@/lib/seo";
 
 // Routes that render WITHOUT the customer-facing chrome (admin panel +
@@ -181,6 +182,7 @@ export default async function LocaleLayout({
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token": "b7957042348e4e50a40b14611f75def2"}'
         />
+        <Analytics />
         <NextIntlClientProvider>
             {/* Two-layer chrome gate: server-side (via request headers)
              * keeps the SSR HTML clean, client-side ChromeGate is the

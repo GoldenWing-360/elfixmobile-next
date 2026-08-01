@@ -42,6 +42,8 @@ export function CookieBanner() {
     } catch {
       // ignore — user can re-decide on next visit
     }
+    // Notify the Analytics component so consent applies without reload.
+    window.dispatchEvent(new CustomEvent("elfix-consent", { detail: value }));
     setVisible(false);
   };
 

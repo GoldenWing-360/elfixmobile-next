@@ -36,7 +36,9 @@
 		// setting NEXT_PUBLIC_SITE_URL on the Worker.
 		// NOTE: switching this off the bersaev test domain also disables
 		// the robots/noindex kill-switch — intended, this is the cutover.
-		"NEXT_PUBLIC_SITE_URL": "https://www.elfixmobile.at"
+		"NEXT_PUBLIC_SITE_URL": "https://www.elfixmobile.at",
+		// GA4 Measurement ID (G-XXXXXXX). Empty = analytics stays inert.
+		"NEXT_PUBLIC_GA4_ID": ""
 	},
 	"observability": {
 		"enabled": true

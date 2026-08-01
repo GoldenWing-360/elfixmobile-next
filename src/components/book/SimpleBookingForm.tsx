@@ -1,5 +1,7 @@
 "use client";
 
+import { track } from "@/lib/track";
+
 import { useEffect, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
@@ -146,6 +148,7 @@ export function SimpleBookingForm() {
     };
     if (body.id) setLeadId(body.id);
     if (body.token) setLeadToken(body.token);
+    track("generate_lead", { lead_type: "booking", service: data.service });
     setSubmitted(true);
   };
 
