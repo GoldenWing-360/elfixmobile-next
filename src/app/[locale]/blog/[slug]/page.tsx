@@ -34,6 +34,8 @@ export async function generateMetadata({
       type: "article",
       title: article.metaTitle,
       description: article.metaDescription,
+      url: `${SITE.url}/de/blog/${article.slug}`,
+      siteName: "EL Fix Mobile",
       publishedTime: article.date,
       modifiedTime: article.modified,
     },

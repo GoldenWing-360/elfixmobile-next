@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { SITE } from "@/lib/seo";
 
 export const OG_SIZE = { width: 1200, height: 630 } as const;
 export const OG_CONTENT_TYPE = "image/png" as const;
@@ -75,9 +76,10 @@ export function renderOg({ eyebrow, primary, secondary, background }: OgProps) {
           )}
           <div
             style={{
-              fontSize: primary.length > 28 ? 80 : 110,
+              fontSize:
+                primary.length > 45 ? 58 : primary.length > 28 ? 80 : 110,
               fontWeight: 700,
-              lineHeight: 1,
+              lineHeight: 1.05,
               letterSpacing: "-0.04em",
             }}
           >
@@ -106,7 +108,10 @@ export function renderOg({ eyebrow, primary, secondary, background }: OgProps) {
             color: "rgba(255,255,255,0.7)",
           }}
         >
-          <span>4,4 / 5 · 294 Bewertungen</span>
+          <span>
+            {String(SITE.rating.value).replace(".", ",")} / 5 ·{" "}
+            {SITE.rating.count} Bewertungen
+          </span>
           <span>·</span>
           <span>Express in 30 Min</span>
           <span>·</span>

@@ -97,6 +97,7 @@ export async function generateMetadata({
       languages: alts,
     },
     openGraph: {
+      images: [{ url: `${SITE.url}/opengraph-image`, width: 1200, height: 630 }],
       type: "website",
       locale: t.ogLocale,
       url: SITE.url,

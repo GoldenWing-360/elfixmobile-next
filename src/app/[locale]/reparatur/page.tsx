@@ -23,6 +23,7 @@ export async function generateMetadata({
       languages: alternateLanguagesFor("/reparatur"),
     },
     openGraph: {
+      images: [{ url: `${SITE.url}/opengraph-image`, width: 1200, height: 630 }],
       type: "website",
       title,
       description,

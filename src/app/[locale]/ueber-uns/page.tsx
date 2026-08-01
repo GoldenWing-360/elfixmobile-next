@@ -19,6 +19,7 @@ export async function generateMetadata({
       languages: alternateLanguagesFor("/ueber-uns"),
     },
     openGraph: {
+      images: [{ url: `${SITE.url}/opengraph-image`, width: 1200, height: 630 }],
       type: "website",
       title: t("meta_title"),
       description: t("meta_description"),
