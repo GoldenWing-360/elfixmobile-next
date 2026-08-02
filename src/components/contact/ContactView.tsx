@@ -159,7 +159,7 @@ export function ContactView() {
       {/* 6. Closing CTA back to booking flow for users who decided to
         * commit to a repair while reading the contact page. Single
         * sentence + a primary action, nothing else. */}
-      <section className="mx-auto max-w-3xl px-6 py-24 text-center md:px-8 md:py-36">
+      <section className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
         <h2 className="t-h3">
           Schon bereit für die Reparatur?
         </h2>
