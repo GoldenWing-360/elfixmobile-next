@@ -15,6 +15,12 @@ export default function Error({
 }) {
   useEffect(() => {
     console.error("[error.tsx]", error);
+    // GA4 built-in exception event — client errors become trackable too.
+    window.gtag?.("event", "exception", {
+      description: `${error.name}: ${error.message}`.slice(0, 150),
+      fatal: false,
+      page_path: window.location.pathname,
+    });
   }, [error]);
 
   return (

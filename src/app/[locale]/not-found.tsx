@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { NotFoundTracker } from "@/components/NotFoundTracker";
 
 // Per-locale 404. Picked up by Next 16's `not-found.tsx` convention
 // whenever notFound() is called from a route in this segment.
@@ -7,6 +8,7 @@ export default async function NotFound() {
   const t = await getTranslations("not_found");
   return (
     <section className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
+      <NotFoundTracker />
       <div className="mx-auto max-w-3xl px-6 py-24 md:px-8 md:py-36 text-center">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[var(--color-accent)]">
           {t("eyebrow")}
