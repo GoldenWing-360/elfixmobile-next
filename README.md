@@ -27,7 +27,7 @@ Prerendered pages are served from the Workers static assets
 `headers()`, `cookies()` or `force-dynamic` on public routes, they make the
 page render inside the Worker on every request again. After a deploy check
 that `curl -sI https://www.elfixmobile.at/de` shows `x-nextjs-cache: HIT`.
-Last deployed version: 63a01490 (2026-10-23).
+Last deployed version: d72a57ab (2026-10-23).
 
 The Worker reads two pieces of remote state:
 
