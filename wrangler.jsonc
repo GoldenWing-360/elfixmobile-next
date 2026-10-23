@@ -4,9 +4,7 @@
 	"name": "elfixmobile-next",
 	"compatibility_date": "2026-05-13",
 	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
-	// Keep the workers.dev fallback URL active alongside the custom domain
-	// so we can A/B against bersaev.com from
-	// elfixmobile-next.deni-4b0.workers.dev during the test phase.
+	// Keep the workers.dev fallback URL active alongside the custom domain.
 	"workers_dev": true,
 	"assets": {
 		"directory": ".open-next/assets",
@@ -18,13 +16,7 @@
 			"id": "d27db3d6fa2941c694318838f925ea12"
 		}
 	],
-	// Public test-domain. Activated after the bersaev.com zone is added to
-	// Cloudflare and its registrar nameservers point at the CF NS pair.
-	// Once that's done, the Worker auto-binds via `wrangler deploy` and
-	// CF provisions SSL within a minute.
 	"routes": [
-		{ "pattern": "bersaev.com", "custom_domain": true },
-		{ "pattern": "www.bersaev.com", "custom_domain": true },
 		// Production domain (cutover 2026-07-31). www is canonical — the
 		// WP incumbent's backlinks all point at www.elfixmobile.at.
 		{ "pattern": "elfixmobile.at", "custom_domain": true },
@@ -34,8 +26,6 @@
 		// Public site URL the app uses for sitemap, hreflang, JSON-LD,
 		// canonical tags and OG image URLs. Override per-environment by
 		// setting NEXT_PUBLIC_SITE_URL on the Worker.
-		// NOTE: switching this off the bersaev test domain also disables
-		// the robots/noindex kill-switch — intended, this is the cutover.
 		"NEXT_PUBLIC_SITE_URL": "https://www.elfixmobile.at",
 		// GA4 Measurement ID (G-XXXXXXX). Empty = analytics stays inert.
 		"NEXT_PUBLIC_GA4_ID": "G-NRR50R5L7N"
