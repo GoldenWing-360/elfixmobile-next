@@ -179,7 +179,7 @@ export default async function BlogArticlePage({
             </p>
             <p className="mt-1">
               Apple Authorized Service Provider · Samsung zertifizierter
-              Reparaturpartner · Partnerbetrieb Wiener Reparaturbon. Seit 2019
+              Reparaturpartner. Seit 2019
               in der Seestadt Aspern, über 294 Google-Bewertungen.
             </p>
           </div>

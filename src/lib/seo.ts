@@ -40,7 +40,6 @@ export const SITE = {
     "Apple Authorized Service Provider",
     "Samsung zertifizierter Reparaturpartner",
   ],
-  reparaturbonPartner: true,
   social: {
     facebook: "https://www.facebook.com/ElFixMobile",
     instagram: "https://www.instagram.com/elfixmobile/",

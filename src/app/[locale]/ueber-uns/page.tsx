@@ -74,7 +74,6 @@ export default async function UeberUnsPage({
   const creds = [
     { title: t("cred_1_title"), body: t("cred_1_body") },
     { title: t("cred_2_title"), body: t("cred_2_body") },
-    { title: t("cred_3_title"), body: t("cred_3_body") },
   ];
   const stats = [
     { value: "2019", label: t("stat_founded") },
@@ -154,7 +153,7 @@ export default async function UeberUnsPage({
           <h2 className="mt-20 t-h3">
             {t("cred_section_title")}
           </h2>
-          <ul className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <ul className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
             {creds.map((c) => (
               <li
                 key={c.title}

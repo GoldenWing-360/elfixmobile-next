@@ -51,7 +51,6 @@ export function GET() {
 - Öffnungszeiten: Montag–Samstag 09:00–19:00 Uhr, Sonntag geschlossen
 - Google-Bewertung: ${SITE.rating.value} von 5 (${SITE.rating.count} Bewertungen)
 - Zertifizierungen: ${SITE.credentials.join(", ")}
-- Partnerbetrieb Wiener Reparaturbon (bis zu 50 % Förderung, max. 100 €)
 - Anfahrt: U2 Aspern Nord / Seestadt, Bus 97A, Parkplätze vorhanden
 - Gratis Abholservice in Wien ab € 70 Reparaturwert
 

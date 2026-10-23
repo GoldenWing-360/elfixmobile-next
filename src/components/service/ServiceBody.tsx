@@ -130,27 +130,6 @@ export function ServiceBody({ service }: Props) {
         headline={tCommon("faq_headline")}
         items={FAQ_KEYS.map((k) => ({ q: t(`${k}.q`), a: t(`${k}.a`) }))}
       >
-        {/* Wiener Reparaturbon — real partner business, strong local
-            conversion + trust signal on every service page */}
-        <aside className="mt-10 rounded-3xl bg-white p-7 ring-1 ring-black/[0.05]">
-          <h3 className="text-[17px] font-semibold tracking-[-0.01em]">
-            {tCommon("reparaturbon_title")}
-          </h3>
-          <p className="mt-2 text-[15px] leading-[1.55] text-[#525257]">
-            {tCommon("reparaturbon_body")}
-            {locale === "de" && (
-              <>
-                {" "}
-                <Link
-                  href="/blog/wiener-reparaturbon-handy-reparatur"
-                  className="font-medium text-[var(--color-accent)] underline underline-offset-2"
-                >
-                  {tCommon("reparaturbon_link")}
-                </Link>
-              </>
-            )}
-          </p>
-        </aside>
 
         {related.length > 0 && (
           <div className="mt-10">

@@ -355,9 +355,6 @@
       "cta_secondary": "Call us",
       "faq_eyebrow": "FAQ",
       "faq_headline": "Common questions",
-      "reparaturbon_title": "Vienna repair voucher: save up to €100",
-      "reparaturbon_body": "EL Fix Mobile is a listed partner of the Wiener Reparaturbon. The City of Vienna covers up to 50% of your repair cost (max. €100) – get the voucher online and redeem it with us.",
-      "reparaturbon_link": "",
       "related_headline": ""
     },
     "display": {
@@ -1011,8 +1008,6 @@
     "cred_1_body": "Authorized Apple service: genuine parts, Apple diagnostic tools and repairs that keep your warranty intact.",
     "cred_2_title": "Samsung certified repair partner",
     "cred_2_body": "Certified by Samsung: Galaxy repairs with service-pack displays and manufacturer-compliant procedures, including Knox security.",
-    "cred_3_title": "Vienna Reparaturbon partner",
-    "cred_3_body": "As a listed partner business you can redeem the Vienna repair voucher with us: up to 50% funding (max. €100) on your repair.",
     "stat_founded": "founded",
     "stat_reviews": "294 Google reviews",
     "stat_models": "models with fixed prices",

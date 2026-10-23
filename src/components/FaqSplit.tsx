@@ -22,7 +22,7 @@ interface Props {
   titleAs?: "h1" | "h2";
   /** Anchor id for in-page links (home uses #faq). */
   id?: string;
-  /** Extra blocks below the accordion (Reparaturbon, related links). */
+  /** Extra blocks below the accordion (related links). */
   children?: ReactNode;
 }
 
