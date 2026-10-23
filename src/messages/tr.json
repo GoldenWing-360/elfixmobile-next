@@ -115,7 +115,7 @@
     "q_express_q": "Ekspres tamir ne kadar sürer?",
     "q_express_a": "Ekran ve pil değişimi yaklaşık 30 dakika; su geçirmez modeller 60 dakika (yeni conta dahil). Ana kart ve su hasarı 24–72 saat.",
     "q_warranty_q": "Hangi garantiyi alıyorum?",
-    "q_warranty_a": "Tüm tamirlerde parça ve işçiliğe 12 ay. Ana kart lehim işlerine 6 ay (endüstri standardı).",
+    "q_warranty_a": "Tüm tamirlerde parça ve işçiliğe 12 ay.",
     "q_data_q": "Verilerim güvende mi?",
     "q_data_a": "Ekran, pil, şarj soketi, kamera, arka kapak için: evet, belleğe dokunulmaz. Ana kart veya veri kurtarma için mümkünse önce yedek alıyoruz. GDPR uyumlu.",
     "q_price_q": "Sabit fiyatlar ne kadar dürüst?",
@@ -722,7 +722,7 @@
       },
       "q_warranty": {
         "q": "Dizüstü tamirine hangi garanti?",
-        "a": "Değiştirilen donanıma 12 ay. Ana kart lehim işlerine 6 ay (endüstri standardı)."
+        "a": "Değiştirilen donanıma 12 ay."
       },
       "q_data": {
         "q": "Verilerim güvende mi?",

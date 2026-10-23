@@ -115,7 +115,7 @@
     "q_express_q": "How long does an express repair take?",
     "q_express_a": "Display and battery swaps about 30 minutes; water-resistant models take 60 minutes (new gasket included). Mainboard and water damage need 24–72 hours.",
     "q_warranty_q": "What warranty do I get?",
-    "q_warranty_a": "12 months on part and labour for every repair. 6 months on mainboard solder work (industry standard).",
+    "q_warranty_a": "12 months on part and labour for every repair.",
     "q_data_q": "Is my data safe?",
     "q_data_a": "For display, battery, charging port, camera, back cover: yes, storage is untouched. For mainboard or data recovery we back up first when possible. GDPR-compliant.",
     "q_price_q": "How honest are the fixed prices?",
@@ -722,7 +722,7 @@
       },
       "q_warranty": {
         "q": "Warranty on laptop repairs?",
-        "a": "12 months on replaced hardware. 6 months on mainboard solder work (industry standard)."
+        "a": "12 months on replaced hardware."
       },
       "q_data": {
         "q": "Is my data safe?",

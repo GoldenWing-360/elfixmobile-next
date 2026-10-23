@@ -3190,23 +3190,10 @@
             "display": 150,
             "back_cover": 70,
             "charging_port": 50,
-            "camera_front": 40
-          }
-        },
-        {
-          "slug": "samsunga-a52s",
-          "name": "A52s",
-          "full_name": "Samsung A52s",
-          "year": null,
-          "prices": {
-            "battery": 50,
-            "display": 140,
-            "back_cover": 40,
-            "charging_port": 40,
+            "camera_front": 40,
             "earpiece": 30,
             "microphone": 40,
-            "camera_back": 60,
-            "camera_front": 40
+            "camera_back": 60
           }
         },
         {
@@ -3270,21 +3257,8 @@
             "back_cover": 70,
             "charging_port": 80,
             "microphone": 70,
-            "camera_glass": 50
-          }
-        },
-        {
-          "slug": "samsunga-a56",
-          "name": "A56",
-          "full_name": "Samsung A56",
-          "year": null,
-          "prices": {
-            "battery": 60,
-            "display": 110,
-            "back_cover": 70,
-            "charging_port": 60,
+            "camera_glass": 50,
             "earpiece": 60,
-            "microphone": 60,
             "power_button": 60,
             "speaker": 60
           }

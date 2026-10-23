@@ -79,7 +79,9 @@ async function buildJsonLd(
         "@type": "AggregateOffer",
         priceCurrency: "EUR",
         lowPrice: service.priceRange.from,
-        highPrice: service.priceRange.to,
+        ...(service.priceRange.to != null
+          ? { highPrice: service.priceRange.to }
+          : {}),
       }
     : undefined;
   // ServiceBody renders 4 FAQ items (q_duration, q_warranty, q_data,

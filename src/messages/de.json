@@ -115,7 +115,7 @@
     "q_express_q": "Wie lange dauert eine Express-Reparatur?",
     "q_express_a": "Display- und Akku-Tausch ca. 30 Minuten, bei wasserdichten Modellen rechnen wir 60 Min ein (neue Dichtung inklusive). Mainboard und Wasserschaden brauchen 24–72 Stunden.",
     "q_warranty_q": "Wie viel Garantie bekomme ich?",
-    "q_warranty_a": "12 Monate auf Ersatzteil und Einbau, bei allen Reparaturen. Auf Mainboard-Reparaturen 6 Monate (Industriestandard für Lötarbeit).",
+    "q_warranty_a": "12 Monate auf Ersatzteil und Einbau, bei allen Reparaturen.",
     "q_data_q": "Sind meine Daten sicher?",
     "q_data_a": "Bei Display, Akku, Ladebuchse, Kamera, Backcover: ja, der Speicher wird nicht angetastet. Bei Mainboard-Reparatur oder Datenrettung sichern wir Daten vorab, wenn möglich. DSGVO-konform.",
     "q_price_q": "Wie ehrlich sind eure Festpreise?",
@@ -722,7 +722,7 @@
       },
       "q_warranty": {
         "q": "Garantie auf Notebook-Reparaturen?",
-        "a": "12 Monate auf ersetzte Hardware. Auf Mainboard-Reparaturen 6 Monate (Industriestandard für Lötarbeit)."
+        "a": "12 Monate auf ersetzte Hardware."
       },
       "q_data": {
         "q": "Sind meine Daten sicher?",

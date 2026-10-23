@@ -46,10 +46,7 @@ export function ServiceHero({ service }: Props) {
           {service.priceRange && (
             <div className="flex items-center gap-2 text-white/85">
               <span aria-hidden className="text-white/55">·</span>
-              {tCommon("trust_price", {
-                from: service.priceRange.from,
-                to: service.priceRange.to,
-              })}
+              {tCommon("trust_price", { from: service.priceRange.from })}
             </div>
           )}
         </div>

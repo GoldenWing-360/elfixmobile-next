@@ -26,7 +26,7 @@ export type ServiceSlug =
 
 export interface PriceRange {
   from: number;
-  to: number;
+  to?: number;
 }
 
 export interface ServiceDef {
@@ -74,6 +74,7 @@ export const SERVICES: ReadonlyArray<ServiceDef> = [
     slug: "wasserschaden-handy-reparatur-wien",
     key: "water_damage",
     gradient: "from-sky-950 to-sky-900",
+    priceRange: { from: 69 },
     hasOnlineQuote: false,
   },
   {

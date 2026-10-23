@@ -160,7 +160,7 @@ export default async function BlogArticlePage({
               year: "numeric",
             })}
           </time>{" "}
-          · EL Fix Mobile Wien
+          · Von {SITE.owner}, Inhaberin von EL Fix Mobile
         </p>
 
         <div
@@ -171,11 +171,11 @@ export default async function BlogArticlePage({
         {/* E-E-A-T author box: real workshop, real certifications */}
         <aside className="mt-12 flex items-start gap-4 rounded-2xl bg-white p-6 ring-1 ring-black/[0.05]">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[15px] font-semibold text-white">
-            EL
+            NR
           </div>
           <div className="text-[14px] leading-[1.55] text-[#525257]">
             <p className="font-semibold text-black">
-              Geprüft vom Werkstatt-Team von EL Fix Mobile
+              {SITE.owner}, Inhaberin von EL Fix Mobile
             </p>
             <p className="mt-1">
               Apple Authorized Service Provider · Samsung zertifizierter
