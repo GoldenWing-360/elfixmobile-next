@@ -22,6 +22,13 @@ pnpm cf:preview   # local Workers preview via wrangler
 pnpm cf:deploy    # build + push to Cloudflare
 ```
 
+Prerendered pages are served from the Workers static assets
+(`incrementalCache` in `open-next.config.ts`, read-only, no ISR). Do not use
+`headers()`, `cookies()` or `force-dynamic` on public routes, they make the
+page render inside the Worker on every request again. After a deploy check
+that `curl -sI https://www.elfixmobile.at/de` shows `x-nextjs-cache: HIT`.
+Last deployed version: 63a01490 (2026-10-23).
+
 The Worker reads two pieces of remote state:
 
 - `LEADS_KV` namespace (`d27db3d6fa2941c694318838f925ea12`) holds rate-
