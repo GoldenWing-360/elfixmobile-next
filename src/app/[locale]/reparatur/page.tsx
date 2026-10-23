@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { BRANDS } from "@/data/brands";
+import pricing from "@/data/pricing.json";
 import { SERVICES } from "@/data/services";
 import { SITE, alternateLanguagesFor } from "@/lib/seo";
 import { ArrowRight } from "lucide-react";
@@ -42,6 +43,32 @@ export default async function ReparaturHubPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "reparatur_hub" });
   const tl = await getTranslations({ locale, namespace: "service_labels" });
+
+  const popular: { brand: string; slug: string }[] = [
+    ...["17-pro-max", "17", "16", "15", "14", "13", "12", "11"].map((n) => ({
+      brand: "apple",
+      slug: `iphone-${n}`,
+    })),
+    ...["s26", "s25", "s24", "s23"].map((n) => ({
+      brand: "samsung",
+      slug: `samsung-${n}`,
+    })),
+  ];
+  type PricedModel = {
+    slug: string;
+    full_name: string;
+    prices: Record<string, number | undefined>;
+  };
+  const allModels = [
+    ...pricing.brands["apple-iphone"].models,
+    ...pricing.brands["samsung-galaxy"].models,
+  ] as unknown as PricedModel[];
+  const popularRows = popular.flatMap((p) => {
+    const m = allModels.find((x) => x.slug === p.slug);
+    return m && m.prices.display != null && m.prices.battery != null
+      ? [{ ...p, name: m.full_name, display: m.prices.display, battery: m.prices.battery }]
+      : [];
+  });
 
   const hubUrl = `${SITE.url}/${locale}/reparatur`;
   const jsonLd = {
@@ -151,6 +178,38 @@ export default async function ReparaturHubPage({
               </li>
             ))}
           </ul>
+
+          <h2 className="mt-20 t-h3">{t("h2_prices")}</h2>
+          <p className="mt-4 max-w-2xl text-[16px] leading-[1.6] text-[#525257]">
+            {t("prices_intro")}
+          </p>
+          <div className="mt-8 overflow-x-auto rounded-2xl border border-black/[0.06] bg-white">
+            <table className="w-full min-w-[420px] text-left text-[15px]">
+              <thead>
+                <tr className="border-b border-black/[0.06] text-[13px] text-[#6e6e73]">
+                  <th scope="col" className="px-5 py-3 font-medium">{t("col_model")}</th>
+                  <th scope="col" className="px-5 py-3 font-medium">{t("col_display")}</th>
+                  <th scope="col" className="px-5 py-3 font-medium">{t("col_battery")}</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-black/[0.06]">
+                {popularRows.map((r) => (
+                  <tr key={r.slug}>
+                    <th scope="row" className="px-5 py-3 font-medium">
+                      <Link
+                        href={`/reparatur/${r.brand}/${r.slug}`}
+                        className="text-[var(--color-accent)] underline-offset-2 hover:underline"
+                      >
+                        {r.name}
+                      </Link>
+                    </th>
+                    <td className="px-5 py-3">€ {r.display}</td>
+                    <td className="px-5 py-3">€ {r.battery}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </>

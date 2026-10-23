@@ -1140,6 +1140,11 @@
     "sub": "8 Marken mit Festpreisen, 219 Modelle, alle Reparatur-Arten. Wähle deine Marke unten oder direkt eine Reparatur-Art.",
     "h2_brand": "Marke wählen",
     "h2_service": "Direkt zur Reparatur-Art",
+    "h2_prices": "Festpreise für beliebte Modelle",
+    "prices_intro": "Alle Preise inkl. MwSt., Ersatzteil und Einbau. Die Diagnose ist kostenlos, dazu gibt es 12 Monate Garantie. Weitere Modelle findest du auf den Marken- und Modellseiten.",
+    "col_model": "Modell",
+    "col_display": "Display",
+    "col_battery": "Akku",
     "model_count": "{count} Modelle"
   },
   "service_labels": {

@@ -4,6 +4,7 @@ import { BRANDS } from "@/data/brands";
 import { DISTRICTS } from "@/data/districts";
 import { getGlossar, getRatgeber } from "@/lib/blog";
 import de from "@/messages/de.json";
+import pricing from "@/data/pricing.json";
 
 /**
  * llms.txt — structured business summary for AI crawlers and answer
@@ -39,6 +40,23 @@ export function GET() {
     .map((a) => `- [${a.title}](${SITE.url}/de/blog/${a.slug})`)
     .join("\n");
 
+  const iphones = pricing.brands["apple-iphone"].models as unknown as {
+    slug: string;
+    full_name: string;
+    prices: Record<string, number | undefined>;
+  }[];
+  const priceExamples = ["iphone-16", "iphone-15", "iphone-14", "iphone-13", "iphone-12"]
+    .map((slug) => iphones.find((m) => m.slug === slug))
+    .filter((m): m is NonNullable<typeof m> => Boolean(m))
+    .map((m) => {
+      const parts = [
+        m.prices.display != null ? `Display € ${m.prices.display}` : null,
+        m.prices.battery != null ? `Akku € ${m.prices.battery}` : null,
+      ].filter(Boolean);
+      return `- [${m.full_name}](${SITE.url}/de/reparatur/apple/${m.slug}): ${parts.join(", ")}`;
+    })
+    .join("\n");
+
   const body = `# EL Fix Mobile — Handy Reparatur Wien 1220 (Seestadt Aspern)
 
 > Express-Werkstatt für Smartphone-, Tablet- und Notebook-Reparaturen in Wien-Donaustadt. Festpreis vor der Reparatur, kostenlose Diagnose, die meisten Reparaturen in 30 Minuten. 12 Monate Garantie auf Ersatzteil und Einbau.
@@ -53,6 +71,18 @@ export function GET() {
 - Zertifizierungen: ${SITE.credentials.join(", ")}
 - Anfahrt: U2 Aspern Nord / Seestadt, Bus 97A, Parkplätze vorhanden
 - Gratis Abholservice in Wien ab € 70 Reparaturwert
+
+## Kurzantworten
+
+- Was kostet eine Handy-Reparatur in Wien? Festpreis pro Modell und Reparatur, vorab im Preisrechner sichtbar. Display ab € 30, Akku ab € 20 (günstigste Modelle), alle Preise inkl. MwSt.
+- Wie lange dauert eine Reparatur? Die meisten Reparaturen dauern ${pricing.meta.express_minutes} Minuten, die Diagnose ist kostenlos.
+- Welche Garantie gibt es? ${pricing.meta.warranty_months} Monate Garantie auf Ersatzteil und Einbau.
+- Wann ist geöffnet? Montag bis Samstag 09:00 bis 19:00 Uhr, Sonntag geschlossen. Walk-in ohne Termin.
+- Wo ist die Werkstatt? ${SITE.address.street}, ${SITE.address.postalCode} ${SITE.address.locality}.
+
+## Preisbeispiele (Festpreis inkl. MwSt., Stand ${pricing.meta.updated})
+
+${priceExamples}
 
 ## Services
 

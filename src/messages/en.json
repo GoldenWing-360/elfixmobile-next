@@ -1140,6 +1140,11 @@
     "sub": "8 brands with fixed prices, 219 models, every repair type. Pick your brand below or jump straight to a repair type.",
     "h2_brand": "Pick a brand",
     "h2_service": "Jump straight to a repair type",
+    "h2_prices": "Fixed prices for popular models",
+    "prices_intro": "All prices include VAT, spare part and installation. Diagnosis is free and repairs come with a 12 month warranty. More models are on the brand and model pages.",
+    "col_model": "Model",
+    "col_display": "Display",
+    "col_battery": "Battery",
     "model_count": "{count} models"
   },
   "service_labels": {

@@ -1140,6 +1140,11 @@
     "sub": "Sabit fiyatlı 8 marka, 219 model, her tamir türü. Aşağıdan markanızı seçin veya doğrudan tamir türüne gidin.",
     "h2_brand": "Marka seç",
     "h2_service": "Doğrudan tamir türüne",
+    "h2_prices": "Popüler modeller için sabit fiyatlar",
+    "prices_intro": "Tüm fiyatlara KDV, yedek parça ve işçilik dahildir. Teşhis ücretsizdir, 12 ay garanti verilir. Diğer modeller marka ve model sayfalarında.",
+    "col_model": "Model",
+    "col_display": "Ekran",
+    "col_battery": "Pil",
     "model_count": "{count} model"
   },
   "service_labels": {
