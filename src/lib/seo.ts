@@ -126,12 +126,6 @@ function localBusinessNode(locale: string) {
       latitude: SITE.geo.latitude,
       longitude: SITE.geo.longitude,
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE.rating.value,
-      reviewCount: SITE.rating.count,
-      bestRating: SITE.rating.best,
-    },
     openingHoursSpecification: SITE.hours.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.days,

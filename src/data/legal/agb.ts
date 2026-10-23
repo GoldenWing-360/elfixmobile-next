@@ -23,7 +23,7 @@ export const html = `<p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten fü
 <h3>5.1 Gesetzliche Gewährleistung</h3>
 <p>Es gelten die gesetzlichen Gewährleistungsbestimmungen gemäß ABGB. Die Gewährleistungsfrist beträgt 2 Jahre ab Übergabe für Verbraucher.</p>
 <h3>5.2 Reparaturgarantie</h3>
-<p>Auf durchgeführte Reparaturen gewährt der Auftragnehmer eine Garantie von 6 Monaten auf die eingebauten Ersatzteile und die Arbeitsleistung. Die Garantie erlischt bei:</p>
+<p>Auf durchgeführte Reparaturen gewährt der Auftragnehmer eine Garantie von 12 Monaten auf die eingebauten Ersatzteile und die Arbeitsleistung. Die Garantie erlischt bei:</p>
 <ul>
 <li>Unsachgemäßer Behandlung oder Fremdeingriff nach der Reparatur</li>
 <li>Wasser- oder Feuchtigkeitsschäden nach der Reparatur</li>

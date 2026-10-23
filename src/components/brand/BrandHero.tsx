@@ -18,7 +18,7 @@ export function BrandHero({ brand }: Props) {
     >
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
-          {t("eyebrow")}
+          {t("eyebrow", { brand: brand.label })}
         </p>
         <h1 className="mt-5 t-h1">
           {t("title_prefix")} {brand.label}{" "}

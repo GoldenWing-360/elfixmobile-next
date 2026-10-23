@@ -14,7 +14,7 @@
     "headline_1": "Dein iPhone.",
     "headline_2": "Wie neu.",
     "headline_3": "In 30 Minuten.",
-    "subline": "Display ab €49. Akku ab €39. Wasserschaden ab €69. Festpreis vor der Reparatur.",
+    "subline": "Display ab €30. Akku ab €20. Wasserschaden ab €69. Festpreis vor der Reparatur.",
     "cta_primary": "Preis berechnen",
     "cta_secondary": "Termin buchen",
     "trust_rating": "4,4 von 5",
@@ -30,10 +30,10 @@
     "cta": "Reparatur starten",
     "display_title": "Display Tausch",
     "display_desc": "Sprung, Touch-Aussetzer, schwarzes Bild. Original Refurbished oder Premium-Nachbau, oft in 30 Minuten.",
-    "display_price": "ab 49 €",
+    "display_price": "ab 30 €",
     "battery_title": "Akku Tausch",
     "battery_desc": "Volle Kapazität, längere Laufzeit. Auf Wunsch Original-Akku ohne iOS-Warnmeldung.",
-    "battery_price": "ab 39 €",
+    "battery_price": "ab 20 €",
     "water_title": "Wasserschaden",
     "water_desc": "Komplett-Reinigung im Ultraschallbad, Bauteil-Diagnose und Reparatur. Auch bei IP68-Geräten.",
     "water_price": "ab 69 €"
@@ -863,7 +863,7 @@
     }
   },
   "model_page": {
-    "eyebrow": "{brand} {model} REPARATUR",
+    "eyebrow": "{model} REPARATUR",
     "title_prefix": "Express-Reparatur:",
     "title_suffix": "in Wien Aspern.",
     "intro": "{model}-Reparatur in 30 Minuten. Festpreis vorab, 12 Monate Garantie auf Ersatzteil und Einbau, Original-Refurbished oder Premium-Aftermarket.",

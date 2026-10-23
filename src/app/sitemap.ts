@@ -35,9 +35,14 @@ const BRAND_MODELS_INDEX_PATHS = BRANDS.filter((b) => b.hasOnlinePrices).map(
 );
 const SERVICE_PATHS = SERVICES.map((s) => `/${s.slug}` as const);
 const DISTRICT_PATHS = DISTRICTS.map((d) => `/${d.slug}` as const);
-const MODEL_PATHS = allBrandModelPairs().map(
-  (p) => `/reparatur/${p.brandSlug}/${p.modelSlug}` as const,
-);
+// Set: two models can still share a slug in the price data; one URL, one entry.
+const MODEL_PATHS = [
+  ...new Set(
+    allBrandModelPairs().map(
+      (p) => `/reparatur/${p.brandSlug}/${p.modelSlug}` as const,
+    ),
+  ),
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

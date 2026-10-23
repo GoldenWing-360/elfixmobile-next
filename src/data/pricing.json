@@ -1728,7 +1728,7 @@
           }
         },
         {
-          "slug": "samsung-s26",
+          "slug": "samsung-s26-plus",
           "name": "S26+",
           "full_name": "Samsung S26+",
           "year": null,
@@ -1781,7 +1781,7 @@
           }
         },
         {
-          "slug": "samsung-s25",
+          "slug": "samsung-s25-plus",
           "name": "S25+",
           "full_name": "Samsung S25+",
           "year": null,
@@ -1839,7 +1839,7 @@
           }
         },
         {
-          "slug": "samsung-s24",
+          "slug": "samsung-s24-plus",
           "name": "S24+",
           "full_name": "Samsung S24+",
           "year": null,
@@ -1903,7 +1903,7 @@
           }
         },
         {
-          "slug": "samsung-s23",
+          "slug": "samsung-s23-plus",
           "name": "S23+",
           "full_name": "Samsung S23+",
           "year": null,
@@ -1958,7 +1958,7 @@
           }
         },
         {
-          "slug": "samsung-s22",
+          "slug": "samsung-s22-plus",
           "name": "S22+",
           "full_name": "Samsung S22+",
           "year": null,
@@ -2005,7 +2005,7 @@
           }
         },
         {
-          "slug": "samsung-s21",
+          "slug": "samsung-s21-plus",
           "name": "S21+",
           "full_name": "Samsung S21+",
           "year": null,
@@ -2069,7 +2069,7 @@
           }
         },
         {
-          "slug": "samsung-s20",
+          "slug": "samsung-s20-plus",
           "name": "S20+",
           "full_name": "Samsung S20+",
           "year": null,
@@ -2151,7 +2151,7 @@
           }
         },
         {
-          "slug": "samsung-s10",
+          "slug": "samsung-s10-plus",
           "name": "S10+",
           "full_name": "Samsung S10+",
           "year": null,
@@ -2223,7 +2223,7 @@
           }
         },
         {
-          "slug": "samsung-s9",
+          "slug": "samsung-s9-plus",
           "name": "S9+",
           "full_name": "Samsung S9+",
           "year": null,
@@ -2261,7 +2261,7 @@
           }
         },
         {
-          "slug": "samsung-s8",
+          "slug": "samsung-s8-plus",
           "name": "S8+",
           "full_name": "Samsung S8+",
           "year": null,
@@ -2358,7 +2358,7 @@
           }
         },
         {
-          "slug": "samsung-s6-edge",
+          "slug": "samsung-s6-edge-plus",
           "name": "S6 Edge+",
           "full_name": "Samsung S6 Edge+",
           "year": null,
@@ -2482,7 +2482,7 @@
           }
         },
         {
-          "slug": "samsung-note-10",
+          "slug": "samsung-note-10-plus",
           "name": "Note 10+",
           "full_name": "Samsung Note 10+",
           "year": null,
@@ -3308,7 +3308,7 @@
           }
         },
         {
-          "slug": "samsunga-a6-2018",
+          "slug": "samsunga-a6-2018-plus",
           "name": "A6+ (2018)",
           "full_name": "Samsung A6+ (2018)",
           "year": 2018,
@@ -3479,7 +3479,7 @@
           }
         },
         {
-          "slug": "samsunga-a8-2018",
+          "slug": "samsunga-a8-2018-plus",
           "name": "A8+ (2018)",
           "full_name": "Samsung A8+ (2018)",
           "year": 2018,

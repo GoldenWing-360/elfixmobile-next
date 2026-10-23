@@ -14,7 +14,7 @@
     "headline_1": "Your iPhone.",
     "headline_2": "Like new.",
     "headline_3": "In 30 minutes.",
-    "subline": "Display from €49. Battery from €39. Water damage from €69. Fixed price before we open the device.",
+    "subline": "Display from €30. Battery from €20. Water damage from €69. Fixed price before we open the device.",
     "cta_primary": "Get a quote",
     "cta_secondary": "Book a time",
     "trust_rating": "4.4 out of 5",
@@ -30,10 +30,10 @@
     "cta": "Start repair",
     "display_title": "Display replacement",
     "display_desc": "Cracks, dead touch, black screen. Original Refurbished or premium aftermarket parts, often in 30 minutes.",
-    "display_price": "from 49 €",
+    "display_price": "from 30 €",
     "battery_title": "Battery replacement",
     "battery_desc": "Full capacity, longer runtime. Optional genuine Apple battery without iOS warning message.",
-    "battery_price": "from 39 €",
+    "battery_price": "from 20 €",
     "water_title": "Water damage",
     "water_desc": "Ultrasonic deep-clean, component diagnostic and repair. Works on IP68 devices too.",
     "water_price": "from 69 €"
@@ -863,7 +863,7 @@
     }
   },
   "model_page": {
-    "eyebrow": "{brand} {model} REPAIR",
+    "eyebrow": "{model} REPAIR",
     "title_prefix": "Express repair:",
     "title_suffix": "in Vienna Aspern.",
     "intro": "{model} repair in 30 minutes. Fixed price upfront, 12-month warranty on part and labour, original refurbished or premium aftermarket parts.",

@@ -2,6 +2,15 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SITE } from "@/lib/seo";
+import { DISTRICTS } from "@/data/districts";
+
+// Place names are the same in every locale.
+const DISTRICT_LABELS: Record<string, string> = {
+  "handy-reparatur-aspern-seestadt": "Seestadt Aspern",
+  "handy-reparatur-donaustadt": "Donaustadt",
+  "handy-reparatur-floridsdorf": "Floridsdorf",
+  "handy-reparatur-gaenserndorf-niederoesterreich": "Gänserndorf",
+};
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -18,7 +27,7 @@ export function Footer() {
         { href: "/display-reparatur-wien", label: fl("display") },
         { href: "/akku-tausch-wien", label: fl("battery") },
         { href: "/wasserschaden-handy-reparatur-wien", label: fl("water") },
-        { href: "/datenrettung-handy-wien", label: fl("camera") },
+        { href: "/kamera-reparatur-handy-wien", label: fl("camera") },
       ],
     },
     {
@@ -111,7 +120,20 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-[12px] text-white/40 md:flex-row md:items-center">
+        <ul className="mt-12 flex flex-wrap gap-x-6 gap-y-2 text-[13px]">
+          {DISTRICTS.map((d) => (
+            <li key={d.slug}>
+              <Link
+                href={`/${d.slug}`}
+                className="text-white/50 hover:text-white transition-colors"
+              >
+                {DISTRICT_LABELS[d.slug] ?? d.slug}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-[12px] text-white/40 md:flex-row md:items-center">
           <p>
             © {year} {t("copyright")}
           </p>

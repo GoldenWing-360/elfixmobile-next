@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState, type ReactNode } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { MessageCircle, Phone, Plus } from "lucide-react";
 
@@ -147,30 +147,29 @@ export function FaqSplit({
                         <Plus className="h-4 w-4" />
                       </motion.span>
                     </button>
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          id={panelId}
-                          role="region"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{
-                            height: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-                            opacity: { duration: 0.25 },
-                          }}
-                          className="overflow-hidden"
+                    {/* Answers stay in the DOM so crawlers read all of them;
+                        the grid-rows trick only collapses them visually. */}
+                    <div
+                      id={panelId}
+                      role="region"
+                      aria-hidden={!isOpen}
+                      inert={!isOpen}
+                      className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                        isOpen
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <p
+                          className={`pb-6 pr-14 text-[16px] leading-[1.6] ${
+                            dark ? "text-white/70" : "text-[#525257]"
+                          }`}
                         >
-                          <p
-                            className={`pb-6 pr-14 text-[16px] leading-[1.6] ${
-                              dark ? "text-white/70" : "text-[#525257]"
-                            }`}
-                          >
-                            {it.a}
-                          </p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                          {it.a}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 );
               })}

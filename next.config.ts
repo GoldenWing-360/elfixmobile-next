@@ -41,6 +41,14 @@ const nextConfig: NextConfig = {
       "/agb",
     ];
     return [
+      // Plain-HTTP requests (Cloudflare sets x-forwarded-proto to the
+      // visitor's scheme) go straight to the canonical https host.
+      {
+        source: "/:path*",
+        has: [{ type: "header" as const, key: "x-forwarded-proto", value: "^http$" }],
+        destination: "https://www.elfixmobile.at/:path*",
+        permanent: true,
+      },
       // Host canonicalization: apex + the old test domains all 308 to
       // the canonical www host. Runs inside the Worker (the API token
       // lacks permission for CF Redirect Rules, and legacy Page Rules
@@ -121,6 +129,24 @@ const nextConfig: NextConfig = {
           permanent: true,
         }),
       ),
+    ];
+  },
+  poweredByHeader: false,
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "Strict-Transport-Security", value: "max-age=31536000" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=(), payment=()",
+          },
+        ],
+      },
     ];
   },
   experimental: {

@@ -103,36 +103,12 @@ async function buildJsonLd(
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Product",
-        "@id": `${url}#product`,
-        name: `${pair.model.full_name} Reparatur`,
-        brand: { "@type": "Brand", name: pair.brand.label },
-        category: "Smartphone",
-        image: `${url}/opengraph-image`,
-        // Same AggregateOffer as the Service node — Product is the type
-        // Google actually surfaces price rich results for.
-        ...(lo != null && hi != null
-          ? {
-              offers: {
-                "@type": "AggregateOffer",
-                priceCurrency: "EUR",
-                lowPrice: lo,
-                highPrice: hi,
-                offerCount: priced.length,
-                priceValidUntil: `${new Date().getFullYear()}-12-31`,
-                availability: "https://schema.org/InStock",
-                seller: { "@id": `${SITE.url}/#localbusiness` },
-              },
-            }
-          : {}),
-      },
-      {
         "@type": "Service",
         "@id": `${url}#service`,
         name: `${pair.model.full_name} Reparatur Wien`,
         provider: { "@id": `${SITE.url}/#localbusiness` },
         areaServed: { "@type": "City", name: "Wien" },
-        serviceType: `${pair.brand.label} ${pair.model.name} repair`,
+        serviceType: `${pair.model.full_name} repair`,
         url,
         ...(lo != null && hi != null
           ? {
@@ -230,7 +206,7 @@ export default async function ModelPage({
       >
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-36">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
-            {t("eyebrow", { brand: pair.brand.label, model: pair.model.name })}
+            {t("eyebrow", { model: pair.model.full_name })}
           </p>
           <h1 className="mt-5 t-h1">
             {t("title_prefix")}{" "}

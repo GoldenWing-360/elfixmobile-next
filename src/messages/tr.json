@@ -14,7 +14,7 @@
     "headline_1": "iPhone'un.",
     "headline_2": "Sıfır gibi.",
     "headline_3": "30 dakikada.",
-    "subline": "Ekran €49'dan. Pil €39'dan. Su hasarı €69'dan. Tamir öncesi sabit fiyat.",
+    "subline": "Ekran €30'dan. Pil €20'dan. Su hasarı €69'dan. Tamir öncesi sabit fiyat.",
     "cta_primary": "Fiyat al",
     "cta_secondary": "Randevu al",
     "trust_rating": "5 üzerinden 4,4",
@@ -30,10 +30,10 @@
     "cta": "Onarımı başlat",
     "display_title": "Ekran değişimi",
     "display_desc": "Çatlak, dokunma sorunu, siyah ekran. Orijinal Refurbished veya premium muadil, çoğunlukla 30 dakikada.",
-    "display_price": "49 €'dan",
+    "display_price": "30 €'dan",
     "battery_title": "Batarya değişimi",
     "battery_desc": "Tam kapasite, uzun süre. İsteğe göre iOS uyarısı olmayan orijinal Apple bataryası.",
-    "battery_price": "39 €'dan",
+    "battery_price": "20 €'dan",
     "water_title": "Su hasarı",
     "water_desc": "Ultrasonik derin temizlik, parça teşhisi ve onarımı. IP68 cihazlar için de.",
     "water_price": "69 €'dan"
@@ -863,7 +863,7 @@
     }
   },
   "model_page": {
-    "eyebrow": "{brand} {model} TAMİRİ",
+    "eyebrow": "{model} TAMİRİ",
     "title_prefix": "Ekspres tamir:",
     "title_suffix": "Viyana Aspern.",
     "intro": "30 dakikada {model} tamiri. Peşin sabit fiyat, parça ve işçiliğe 12 ay garanti, orijinal yenilenmiş veya premium muadil parça.",
